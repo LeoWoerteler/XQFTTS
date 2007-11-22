@@ -1,0 +1,50 @@
+<project name="Build the XQTS zip file" default="all">
+   
+   <property name="catalogDir" value="../../TestSuiteStagingArea"/>
+   <property name="docDir" value="../../TestSuiteStagingArea/TestSuiteDocumentation"/>
+   <property name="stagingArea" value="../../PublicPagesStagingArea"/>
+   
+   
+   <target name="all">
+      <antcall target="submission"/>
+      <antcall target="copyGuides"/>
+   </target>
+   
+   
+   
+   <target name="copyGuides">
+      
+      <copy todir="${stagingArea}">
+         <fileset dir="${docDir}"/>
+      </copy>
+
+      <replaceregexp
+         file="${stagingArea}/Guidelines for Running the XML Query Test Suite.html"
+         match="../XQTSCatalog.xml"
+         replace="XQTSCatalogExplain.html"
+         />
+
+      <copy todir="${stagingArea}" file="${catalogDir}/XQTSCatalogSubmission.xml" />
+
+      <copy todir="${stagingArea}" file="${catalogDir}/XQTSCatalog.xsl" />
+
+      
+   </target>
+   
+   
+   <target name="submission">
+      
+      <style
+         in="${catalogDir}/XQTSCatalog.xml"
+         basedir="."
+         style="Submission.xsl"
+         out="${catalogDir}/XQTSCatalogSubmission.xml"
+         force="no">
+         <outputproperty name="indent" value="yes" />
+         <outputproperty name="method" value="xml" />
+      </style>     
+      
+      
+   </target>
+   
+</project>

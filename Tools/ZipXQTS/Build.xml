@@ -1,0 +1,92 @@
+<!-- Running this script seems to require more than the deafult heap size -->
+<!-- I've set the ANT_OPTS environment variable to -Xmx256M               -->
+
+<project name="Build the XQTS zip file" default="build">
+   
+   <property name="version" value="current"/>
+   <property name="zipfile" value="../../PublicPagesStagingArea/XQTS_${version}.zip"/>
+   <property name="stagingArea" value="../../TestSuiteStagingArea"/>
+   <property name="catalog" value="${stagingArea}/XQTSCatalog.xml"/>
+   <property name="XQueryXzipfile" value="../../AdditionalFiles/XQueryX.zip"/>
+   
+   
+   <target name="build">
+      
+      <!-- Remove the old XQTS zip file, if it exists. -->
+      
+      <delete file="${zipfile}"/>
+      
+      <!-- Create an initial XQTS zip file with the contents of our staging area. -->
+      
+      <zip
+         destfile="${zipfile}">
+         <fileset dir="${stagingArea}" includes="**"/>
+      </zip>
+      
+      <!-- Update the XQTS zip file with the XQueryX test cases -->
+      
+      
+      <zip
+         destfile="${zipfile}"
+         update="yes">
+         <zipfileset src="${XQueryXzipfile}" prefix="Queries/XQueryX"/>
+      </zip>
+      
+      
+      <antcall target="mergeZipFile">
+         <param name="zipFileName" value="submission-frans.zip"/>
+      </antcall>
+      
+      <antcall target="mergeZipFile">
+         <param name="zipFileName" value="submission-frans2.zip"/>
+      </antcall>
+      
+   </target>
+   
+   <target name="catalog">
+      <antcall target="mergeZipFile">
+         <param name="zipFileName" value="submission-frans.zip"/>
+      </antcall>
+      
+   </target>
+
+
+   
+   <target name="mergeZipFile">
+      
+      <property name="additionalZip" value="../../AdditionalFiles/${zipFileName}"/>
+      
+      <!-- get the catalog file -->
+      
+      <unzip src="${additionalZip}" dest="temp/source" >
+         <patternset>
+            <include name="XQTSCatalogSubmission.xml"/>
+         </patternset>
+      </unzip>
+      
+      <unzip src="${zipfile}" dest="temp/catalog" >
+         <patternset>
+            <include name="XQTSCatalog.xml"/>
+         </patternset>
+      </unzip>
+      
+      <style in="temp/catalog/XQTSCatalog.xml"
+         out="temp/result/XQTSCatalog.xml"
+         basedir="."
+         style="MergeCatalogs.xsl"
+         force="yes"
+         >
+         <param name="additionalCatalog" expression="temp/source/XQTSCatalogSubmission.xml"/> 
+      </style>           
+
+      <zip destfile="${zipfile}" update="true">
+         <zipfileset src="${additionalZip}" includes="Queries/**/*.*"/>
+         <zipfileset src="${additionalZip}" includes="ExpectedTestResults/**/*.*"/>
+         <fileset file="temp/result/XQTSCatalog.xml"/>
+      </zip>
+      
+      <delete dir="temp"/>
+
+   </target>
+   
+</project>
