@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="XQTSCatalog.xsl" ?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
 <test-suite xmlns="http://www.w3.org/2007/06/query-test-XQFTTSCatalog"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             CatalogDesignDate="2003-04-03" version="1.0.2 dev"
