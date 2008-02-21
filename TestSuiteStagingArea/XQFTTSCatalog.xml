@@ -955,7 +955,7 @@
       <test-case is-XPath2="true" name="element-queries-results-q1" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find all book titles containing the word "usability".</description>
           <spec-citation spec="UseCases" section-number="2.2.1" section-title="Q1" section-pointer="element-queries-results-q1"/>
-          <query name="element-queries-results-q1.xq" date="2008-02-18"/>
+          <query name="element-queries-results-q1" date="2008-02-18"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">element-queries-results-q1.txt</output-file>
       </test-case>
