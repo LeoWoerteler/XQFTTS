@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
 <test-suite xmlns="http://www.w3.org/2007/06/query-test-XQFTTSCatalog"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            CatalogDesignDate="2003-04-03" version="1.0.2 dev"
+            CatalogDesignDate="2008-02-18" version="1.0.1 dev"
             SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/"
             XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
@@ -163,8 +163,12 @@
   </scenarios>
   <sources>
     <source ID="XQFTTSCatalog" FileName="XQFTTSCatalog.xml" Creator="Full-Text Task Force" schema="XQFTTSCatalogxsd">
-      <description last-mod="2007-06-26">XQuery 1.0 and Xpath 2.0 Full-Text Test Suite Catalog</description>
+      <description last-mod="2007-06-26">XQuery 1.0 and XPath 2.0 Full-Text Test Suite Catalog</description>
     </source>
+    <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
+       <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+    </source>
+<!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
     </source>
@@ -321,9 +325,14 @@
     <source ID="textWithSpaces" FileName="TestSources/textWithSpaces.xml" Creator="Joanne Tong">
       <description last-mod="2005-09-29">Data for normalize-space functions</description>
     </source>      
+-->
     <schema ID="XQTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQTSCatalog" FileName="XQTSCatalog.xsd">
       <description last-mod="2005-04-14">Schema for XQTSCatalog</description>
     </schema>
+    <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd" Creator="Full-Text Task Force">
+       <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+    </schema>
+<!-- Schema from XQuery main test-suite, add if needed
     <schema ID="atomicxsd" uri="http://www.w3.org/XQueryTest" FileName="TestSources/atomic.xsd">
       <description last-mod="2005-03-08">A Schema for atomic.xml</description>
     </schema>
@@ -354,11 +363,14 @@
     <schema ID="listunion" uri="http://www.w3.org/XQueryTest/ListUnionTypes" FileName="TestSources/listunion.xsd">
       <description last-mod="2006-06-07">A schema defining a list of unions.</description>
     </schema>    
+-->
+<!-- Collections from main XQuery testsuite, add if needed
     <collection ID="collection1" Creator="Jim Melton">
       <description last-mod="2007-06-26">A simple collection of documents.</description>
       <input-document>bib</input-document>
       <input-document>reviews</input-document>
     </collection>
+-->
 <!-- More to be added as the need is recognized
     <collection ID="collection2" Creator="Andrew Eisenberg">
       <description last-mod="2006-06-07">A simple collection of documents.</description>
@@ -367,9 +379,11 @@
       <input-document>books</input-document>
     </collection>  
 -->
+<!-- Modules from XQuery main testsuite, add if needed
     <module ID="module1-lib" FileName="TestSources/module1-lib" Creator="Carmelo Montanez">
       <description last-mod="2006-07-13">Library module for "modules-18" query</description>
     </module>   
+-->
 <!-- More to be added as the need is recognized
     <module ID="module2-lib" FileName="TestSources/module2-lib" Creator="Carmelo Montanez">
       <description last-mod="2006-07-13">Library module for "modules-18" query</description>
@@ -527,7 +541,53 @@
     <implementation-defined-item name="CDATASerialization" spec="Serialization">
       <description last-mod="2005-04-04">An serializer may provide an implementation-defined mechanism to place CDATA sections in the result tree. (See 5.1.4 XML Output Method: the cdata-section-elements Parameter)</description>
     </implementation-defined-item>
+
+    <implementation-defined-item name="Tokenization" spec="XQueryFullText">
+      <description last-mod="2008-02-18">Tokenization, including the definition of the term "tokens", SHOULD be implementation-defined. Implementations SHOULD expose the rules and sample results of tokenization as much as possible to enable users to predict and interpret the results of tokenization. Tokenization is defined more formally in 4.1 Tokenization.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="token" spec="XQueryFullText">
+      <description last-mod="2008-02-18">A token is a non-empty sequence of characters returned by a tokenizer as a basic unit to be searched. Beyond that, tokens are implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="phrase" spec="XQueryFullText">
+      <description last-mod="2008-02-18">A phrase is an ordered sequence of any number of tokens. Beyond that, phrases are implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="sentence" spec="XQueryFullText">
+      <description last-mod="2008-02-18">A sentence is an ordered sequence of any number of tokens. Beyond that, sentences are implementation-defined. A tokenizer is not required to support sentences.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="paragraph" spec="XQueryFullText">
+      <description last-mod="2008-02-18">A paragraph is an ordered sequence of any number of tokens. Beyond that, paragraphs are implementation-defined. A tokenizer is not required to support paragraphs.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Scoring Expressions" spec="XQueryFullText">
+      <description last-mod="2008-02-18">The set of expressions supported by the scoring algorithm is implementation-defined. If an expression not supported by the scoring algorithm is passed to the scoring algorithm, the result is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Matching" spec="XQueryFullText">
+      <description last-mod="2008-02-18">Matching of the tokens in a query phrase to tokens in XDM is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Match Option Order" spec="XQueryFullText">
+      <description last-mod="2008-02-18">The full order of the application of match options is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Language Option" spec="XQueryFullText">
+      <description last-mod="2008-02-18">The "language" option influences tokenization, stemming, and stop words in an implementation-defined way. The "language" option MAY influence the behavior of other match options in an implementation-defined way. The set of valid language identifiers among the standardized set is implementation-defined. It is implementation-defined what additional language identifiers, if any, are valid. If an invalid language identifier is specified, then the behavior is implementation-defined. When an XQuery and XPath Full Text processor evaluates text in a document that is governed by an xml:lang attribute and the portion of the full-text query doing that evaluation contains an FTLanguageOption that specifies a different language from the language specified by the governing xml:lang attribute, the language-related behavior of that full-text query is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Thesaurus Option" spec="XQueryFullText">
+      <description last-mod="2008-02-18">The set of relationships supported by an implementation is implementation-defined. If a query specifies thesaurus relationships or levels not supported by the thesaurus, the behavior is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Stemming Option" spec="XQueryFullText">
+      <description last-mod="2008-02-18">It is implementation-defined what a stem of a token is. It is implementation-defined whether the stemming is based on an algorithm, dictionary, or mixed approach.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="StopWord Option" spec="XQueryFullText">
+      <description last-mod="2008-02-18">Normally a stop word matches exactly one token, but there may be implementation-defined conditions, under which a stop word may match a different number of tokens.  The "with default stop words" option specifies that an implementation-defined collection of stop words is used.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Extension Option" spec="XQueryFullText">
+      <description last-mod="2008-02-18">An extension option is a match option that acts in an implementation-defined way. Each implementation recognizes an implementation-defined set of namespace URIs used to denote extension options.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Extension Selection" spec="XQueryFullText">
+      <description last-mod="2008-02-18">An extension selection is a full-text selection whose semantics are implementation-defined.  Each implementation recognizes an implementation-defined set of namespace URIs used to denote pragmas.</description>
+    </implementation-defined-item>
 <!-- More to be added as the need is recognized
+    <implementation-defined-item name="" spec="XQueryFullText">
+      <description last-mod="2008-02-18"></description>
+    </implementation-defined-item>
 
 -->
   </implementation-defined-items>
@@ -547,6 +607,7 @@
     <feature name="FTLanguageOption"/>
     <feature name="FTIgnoreOption"/>
     <feature name="Scoring"/>
+    <feature name="Weights"/>
   </features>
   <context-properties>
     <context-property name="Statically known namespaces" context-type="static"/>
@@ -579,6 +640,16 @@
     <context-property name="Available documents" context-type="dynamic"/>
     <context-property name="Available collections" context-type="dynamic"/>
     <context-property name="Default collection" context-type="dynamic"/>
+    <context-property name="FTCaseOption" context-type="static"/>
+    <context-property name="FTDiacriticsOption" context-type="static"/>
+    <context-property name="FTStemOption" context-type="static"/>
+    <context-property name="FTThesuarusOption" context-type="static"/>
+    <context-property name="Statically known thesauri" context-type="static"/>
+    <context-property name="FTStopWordOption" context-type="static"/>
+    <context-property name="Statically known stop word lists" context-type="static"/>
+    <context-property name="FTLanguageOption" context-type="static"/>
+    <context-property name="Statically known languages" context-type="static"/>
+    <context-property name="FTWildcardOption" context-type="static"/>
 <!-- More to be added as the need is recognized
 
 -->
@@ -586,49 +657,398 @@
   <test-group name="MinimalConformance">
     <GroupInfo>
       <title>Minimal Conformance</title>
+      <description>Queries covering minimal conformance requirements</description>
+    </GroupInfo>
+    <test-group name="Expressions">
+      <GroupInfo>
+        <title>Expressions</title>
+        <description>Full-text expressions</description>
+      </GroupInfo>
+      <test-group name="FLWOR">
+        <GroupInfo>
+           <title>Tests of For-Let-Where-OrderBy-Return Expressions</title>
+           <description>Tests in this group focus on score variables in FLWOR expressions in Full-Text 2.3.</description>
+        </GroupInfo>
+        <test-group name="ForScoreExpr">
+          <GroupInfo>
+            <title>FOR Clause with Score variable</title>
+            <descriptions>Tests for the FOR...SCORE part of the FLWOR expression syntax</descriptions>
+          </GroupInfo>
+        </test-group>
+        <test-group name="LetScoreExpr" is-XPath2="false">
+          <GroupInfo>
+            <title>Let Clause with Score variable</title>
+            <description>Tests for the LET SCORE part of the FLWOR expression syntax</description>
+          </GroupInfo>
+        </test-group>
+      </test-group>
+      <test-group name="Operators">
+        <GroupInfo>
+          <title>Operators</title>
+          <description/>
+        </GroupInfo>
+        <test-group name="CompExpr">
+          <GroupInfo>
+            <title>Comparison Operators</title>
+            <description/>
+          </GroupInfo>
+          <test-group name="FTContains">
+            <GroupInfo>
+              <title>Full-Text Contains Expressions</title>
+              <description>FTContainsExpr et al.  Subgroups cover section 3; additional tests here for 2.2.1 syntax.</description>
+            </GroupInfo>
+            <test-group name="FTSelection">
+              <GroupInfo>
+                <title>Full-Text Selections</title>
+                <description>Section 3.</description>
+              </GroupInfo>
+              <test-group name="FTWords">
+                <GroupInfo>
+                   <title>Full-Text Tokens and Phrases</title>
+                   <description>Section 3.2.</description>
+                </GroupInfo>
+              </test-group>
+              <!-- Optional
+              <test-group name="FTTimes">
+                <GroupInfo>
+                   <title>Full-Text Cardinality Selection</title>
+                   <description>Cardinality selection. Section 3.3.</description>
+                </GroupInfo>
+              </test-group>
+              -->
+              <test-group name="FTOperators">
+                <GroupInfo>
+                   <title>Full-Text Operators</title>
+                   <description>Logical Full-Text operators. Section 3.5.</description>
+                </GroupInfo>
+                <test-group name="FTOr">
+                  <GroupInfo>
+                    <title>Full-Text ftor Operator</title>
+                    <description>Or-Selection. Section 3.5.1.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTAnd">
+                  <GroupInfo>
+                    <title>Full-Text ftand Operator</title>
+                    <description>And-Selection. Section 3.5.2.</description>
+                  </GroupInfo>
+                </test-group>
+                <!-- Optional:
+                <test-group name="FTMildNot">
+                  <GroupInfo>
+                    <title>Full-Text not in Operator</title>
+                    <description>Mild-not selection.  Section 3.5.3.</description>
+                  </GroupInfo>
+                </test-group>
+                -->
+                <test-group name="FTUnaryNot">
+                  <GroupInfo>
+                    <title>Full-Text ftnot Operator</title>
+                    <description>Minimal Not-selection support. Section 3.5.4.</description>
+                  </GroupInfo>
+                </test-group>
+              </test-group>
+              <test-group name="MatchOptions">
+                <GroupInfo>
+                  <title>Full-text Match Options</title>
+                  <description>Full-text match options. Section 3.4.</description>
+                </GroupInfo>
+                <test-group name="FTLanguage">
+                  <GroupInfo>
+                    <title>Full-Text Language Match Option</title>
+                    <description>Language option. Section 3.4.1.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTWildcard">
+                  <GroupInfo>
+                    <title>Full-Text Wildcard Match Option</title>
+                    <description>Wildcard option. Section 3.4.2.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTThesaurus">
+                  <GroupInfo>
+                    <title>Full-Text Thesaurus Match Option</title>
+                    <description>Thesaurus option. Section 3.4.3.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTStemming">
+                  <GroupInfo>
+                    <title>Full-Text Stemming Match Option</title>
+                    <description>Stemming option. Section 3.4.4.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTCase">
+                  <GroupInfo>
+                    <title>Full-Text Case Match Option</title>
+                    <description>Case option. Section 3.4.5.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTDiacritics">
+                  <GroupInfo>
+                    <title>Full-Text Diacritics Match Option</title>
+                    <description>Diacritics option. Section 3.4.6.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTStopWord">
+                  <GroupInfo>
+                    <title>Full-Text Stop Word Match Option</title>
+                    <description>Stop Word option. Section 3.4.7.</description>
+                  </GroupInfo>
+                </test-group>
+              </test-group>
+              <test-group name="PositionalFilters">
+                <GroupInfo>
+                  <title>Full-Text Positional Filters</title>
+                  <description>Positional filters. Section 3.6.</description>
+                </GroupInfo>
+                <test-group name="FTOrder">
+                  <GroupInfo>
+                    <title>Ordered Selection</title>
+                    <description>Ordered selection. Section 3.6.1.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTWindow">
+                  <GroupInfo>
+                    <title>Window Selection</title>
+                    <description>Window selection. Section 3.6.2.</description>
+                  </GroupInfo>
+                </test-group>
+                <test-group name="FTDistance">
+                  <GroupInfo>
+                    <title>Distance Selection</title>
+                    <description>Distance selection. Section 3.6.3.</description>
+                  </GroupInfo>
+                </test-group>
+                <!-- Optional
+                <test-group name="FTScope">
+                  <GroupInfo>
+                    <title>Scope Selection</title>
+                    <description>Scope selection. Section 3.6.4.</description>
+                  </GroupInfo>
+                </test-group>
+                -->
+                <!-- Optional
+                <test-group name="FTContent">
+                  <GroupInfo>
+                    <title>Anchoring Selection</title>
+                    <description>Anchoring selection. Section 3.6.5.</description>
+                  </GroupInfo>
+                </test-group>
+                -->
+              </test-group>
+            </test-group>
+            <test-group name="FTIgnoreOption">
+              <GroupInfo>
+                <title>Full-Text Ignore</title>
+                <description>Ignore option. Section 3.7.</description>
+              </GroupInfo>
+            </test-group>
+          </test-group>
+        </test-group>
+      </test-group>
+      <test-group name="PrologExpr" is-XPath2="false">
+        <test-group name="FTOptionProlog">
+          <GroupInfo>
+            <title>Full-Text Prolog Options</title>
+            <description>Prolog options. Section 2.4.</description>
+          </GroupInfo>
+        </test-group>
+      </test-group>
+    </test-group>
+  </test-group>
+  <test-group name="Optional">
+    <GroupInfo>
+      <title>Optional Features</title>
       <description/>
     </GroupInfo>
-    <test-group name="OptionalFeatureErrors">
+    <test-group name="FTMildNot">
       <GroupInfo>
-        <title>Optional Feature Errors</title>
-        <description/>
+        <title>Full-Text not in Operator</title>
+        <description>Mild not. Sections 3.5.3 and 5.2.1.</description>
       </GroupInfo>
-       <test-group name="CombinedErrorCodes" featureOwner="NIST">
-        <GroupInfo>
-         <title>Single error code for extra features</title>
-         <description/>
-        </GroupInfo>      
-        <test-case is-XPath2="false" name="combined-errors-1" FilePath="OptionalFeatureErrors/CombinedErrorCodes/" scenario="standard" Creator="Carmelo Montanez">
-         <description>Evaluates simple module import to generate error code if feature not supported.</description>
-         <spec-citation spec="XQuery" section-number="5.2.5" section-title="Module Feature" section-pointer="id-module-feature"/>
-         <query name="combined-errors-1" date="2006-06-06"/>
-         <module namespace="http://www.w3.org/TestModules/defs">module-defs</module>  
-         <module namespace="http://www.w3.org/TestModules/test1">test1-lib</module>                 
-         <input-file role="principal-data" variable="input-context1">emptydoc</input-file>
-         <output-file role="principal" compare="Text">combined-errors-1.txt</output-file>
-         <expected-error>XQST0016</expected-error>
-        </test-case>    
-       </test-group>
-    </test-group>   
-    <test-group name="Basics">
+    </test-group>
+    <test-group name="FTUnaryNotUnconstrained">
+       <GroupInfo>
+        <title>Unconstrained Full-Text ftnot Operator</title>
+        <description>Unary not. Sections 3.5.4 and 5.2.2.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTUnit and FTBigUnit">
       <GroupInfo>
-        <title>XQuery Basics</title>
-        <description/>
+        <title>Unconstrained FTUnit/FTBigUnit</title>
+        <description>Sentences and paragraphs. Sections 3.6 and 5.3.3.</description>
       </GroupInfo>
-      <test-group name="StaticContext">
-        <GroupInfo>
-          <title>Static Context Evaluation</title>
-          <description/>
-        </GroupInfo>      
-           <test-case is-XPath2="true" name="static-context-1" FilePath="Basics/StaticContext/" scenario="runtime-error" Creator="Carmelo Montanez">
-            <description>Evaluates an expression relies on some component of the static context that has not been assigned a value.</description>
-            <spec-citation spec="XQuery" section-number="2.1.1" section-title="Static Context" section-pointer="static_context"/>
-            <query name="static-context-1" date="2006-07-12"/>
-            <input-file role="principal-data" variable="input-context1">emptydoc</input-file>
-            <expected-error>XPST0001</expected-error>
-            <expected-error>XPTY0004</expected-error>            
-           </test-case>
-      </test-group>             
-    </test-group>             
+    </test-group>
+    <test-group name="FTOrderUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Order Selection</title>
+        <description>Order selection. Sections 3.6.1 and 5.2.4.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTScope">
+      <GroupInfo>
+        <title>Scope Selection</title>
+        <description>Scope selection. Sections 3.6.4 and 5.2.5.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTWindowUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Window Selection</title>
+        <description>Window selection. Sections 3.6.2 and 5.2.6.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTDistanceUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Distance Selection</title>
+        <description>Distance selection.  Sections 3.6.3 and 5.2.7.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTTimes">
+      <GroupInfo>
+         <title>Full-Text Cardinality Selection</title>
+         <description>Cardinality selection. Sections 3.3 and 5.2.8.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTContent">
+      <GroupInfo>
+        <title>Anchoring Selection</title>
+        <description>Anchoring selection. Sections 3.6.5 and 5.2.9.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTCaseUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Full-Text Case Option</title>
+        <description>Case option. Sections 3.4.5 and 5.2.10.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTStopWordUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Full-Text Stop Word Option</title>
+        <description>Stop-word option. Sections 3.4.7 and 5.2.11.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="FTLanguageUnconstrained">
+      <GroupInfo>
+        <title>Unconstrained Full-Text Language Option</title>
+        <description>Language option. Sections 3.4.1 and 5.2.12.</description>
+      </GroupInfo>
+    </test-group>
+    <!-- Nothing for FTIgnore/Scoring optionalities: separate test cases
+         not possible: sections 5.2.13, 5.2.14 -->
+    <test-group name="NegativeWeights">
+      <GroupInfo>
+        <title>Unconstrained Weight Range</title>
+        <description>Negative weights. Sections 3 and 5.2.15.</description>
+      </GroupInfo>
+    </test-group>
+  </test-group>
+  <test-group name="UseCase">
+    <GroupInfo>
+      <title>Use Cases</title>
+      <description/>
+    </GroupInfo>
+    <test-group name="UseCase-ELEMENT">
+      <GroupInfo>
+        <title>Use Case "ELEMENT"</title>
+        <description>Query words and phrases in XML elements with simple content. Section 2.</description>
+      </GroupInfo>
+      <test-case is-XPath2="true" name="element-queries-results-q1" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book titles containing the word "usability".</description>
+          <spec-citation spec="UseCases" section-number="2.2.1" section-title="Q1" section-pointer="element-queries-results-q1"/>
+          <query name="element-queries-results-q1.xq" date="2008-02-18"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">element-queries-results-q1.txt</output-file>
+      </test-case>
+    </test-group>
+    <test-group name="UseCase-ACROSS">
+      <GroupInfo>
+        <title>Use Case "ACROSS"</title>
+        <description>Query across element boundaries. Section 3.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-OTHER">
+      <GroupInfo>
+        <title>Use Case "OTHER"</title>
+        <description>Explicit query of attributes. Section 4.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-WILDCARD">
+      <GroupInfo>
+        <title>Use Case "WILDCARD"</title>
+        <description>Queries which use wildcards to append or insert a character or sequence of characters to a word or a part of a word. Section 5.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-STEMMING">
+      <GroupInfo>
+        <title>Use Case "STEMMING"</title>
+        <description>Queries involving a stemming algorithm (e.g., Porter) which returns noun, verb, adjective, and adverb forms of a word or root of a word in singular and plural. Section 6.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-THESAURUS">
+      <GroupInfo>
+        <title>Use Case "THESAURUS"</title>
+        <description>Queries which return synonyms or related words identified by thesauri, dictionaries, and taxonomies. Section 7.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-STOP-WORD">
+      <GroupInfo>
+        <title>Use Case "STOP-WORD"</title>
+        <description>Queries on stop-words. Section 8.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-CHARACTER">
+      <GroupInfo>
+        <title>Use Case "CHARACTER"</title>
+        <description>Queries specifying normalized forms of characters and tokenized words. Section 9.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-LOGICAL">
+      <GroupInfo>
+        <title>Use Case "LOGICAL"</title>
+        <description>Queries containing logical expressions: or, and, the unary not, and not, and mild not. Section 10.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-CARDINALITY">
+      <GroupInfo>
+        <title>Use Case "CARDINALITY"</title>
+        <description>Queries in same, any, every instance of an element, and occurrence count query. Section 11.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-PROXIMITY">
+      <GroupInfo>
+        <title>Use Case "PROXIMITY"</title>
+        <description>Queries on proximity relationships including distance, window, sentence, and paragraph. Section 12.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-AXES">
+      <GroupInfo>
+        <title>Use Case "AXES"</title>
+        <description>Queries traversing relative XPath axes. Section 13.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-IGNORE">
+      <GroupInfo>
+        <title>Use Case "IGNORE"</title>
+        <description>Queries ignoring descendant element content. Section 14.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-FULL-TEXT-COMPOSIBILITY">
+      <GroupInfo>
+        <title>Use Case "FULL-TEXT-COMPOSIBILITY"</title>
+        <description>Queries illustrating composability of Full-Text with itself. Section 15.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-XQUERY-XPATH-COMPOSIBILITY">
+      <GroupInfo>
+        <title>Use Case "XQUERY-XPATH-COMPOSIBILITY"</title>
+        <description>Queries combining full-text queries with other XQuery and XPath functionalities. Section 16.</description>
+      </GroupInfo>
+    </test-group>
+    <test-group name="UseCase-SCORE">
+      <GroupInfo>
+        <title>Use Case "SCORE"</title>
+        <description>Queries that must be written with score.  Section 17.</description>
+      </GroupInfo>
+    </test-group>
   </test-group>
 </test-suite>
