@@ -1,5 +1,5 @@
 (: insert-start :)
-define variable $input-context external
+declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[count(./content/part/introduction ftcontains 
