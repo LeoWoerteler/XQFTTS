@@ -1,5 +1,5 @@
 (: insert-start :)
-define variable $input-context external
+declare variable $input-context external;
 (: insert-end :)
 
 for $book in $input-context/books/book
