@@ -1138,7 +1138,7 @@
           <spec-citation spec="FTUseCases" section-number="4.2.2" section-title="Q2 Query on Element and Attribute" section-pointer="other-queries-results-q2"/>
           <query name="other-queries-results-q2" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">other-queries-results-q2.txt</output-file>
+          <output-file role="principal" compare="Fragment">other-queries-results-q2.txt</output-file>
       </test-case>       
     </test-group>
     <test-group name="UseCase-WILDCARD">
