@@ -27,11 +27,11 @@
          <subject>Ergonomie de site web</subject>     
       </subjects>
       <subjects xml:lang="zh">    
-         <subject>可用性测试</subject>
+         <subject>�_�用性测试</subject>
          <subject>网站建置</subject>        
-         <subject>启发式评价</subject>
+         <subject>�_��_��_评价</subject>
          <subject>认知推演</subject>
-         <subject>网站可用性</subject>
+         <subject>网站�_�用性</subject>
       </subjects>
    </metadata>
    <content>
@@ -124,7 +124,6 @@
       </part> 
    </content>
 </book>
-
 <book number="2">
    <metadata>
       <title shortTitle="Usability Basics">Usability 
@@ -150,9 +149,9 @@
          <subject>Guides et outils de recherche</subject>
       </subjects>
       <subjects xml:lang="zh">
-         <subject>可用性测试</subject>
+         <subject>�_�用性测试</subject>
          <subject>网站建置</subject>
-         <subject>指南和检索工具</subject>
+         <subject>指�_�和检索工具</subject>
       </subjects>
    </metadata>
    <content>
@@ -221,7 +220,6 @@
       </part>
    </content>
 </book>
-
 <book number="3">
    <metadata>
       <title shortTitle="Usabilityguy Manuscript 
@@ -251,8 +249,8 @@
       <subjects xml:lang="zh">
          <subject>计算机</subject>
          <subject>软件评价</subject>
-         <subject>可用性测试</subject>
-         <subject>手稿专藏</subject>
+         <subject>�_�用性测试</subject>
+         <subject>手稿专�_</subject>
       </subjects>
    </metadata>
    <content>
