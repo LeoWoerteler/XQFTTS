@@ -659,6 +659,56 @@
       <title>Minimal Conformance</title>
       <description>Queries covering minimal conformance requirements</description>
     </GroupInfo>
+    <test-group name="Examples">
+      <GroupInfo>
+        <title>Examples</title>
+        <description>Examples in Section 2.2.2.</description>
+      </GroupInfo>
+      <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2/examples-222-q1" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
+          <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
+          <query name="ft-222-examples-q1" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftexamples</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
+      </test-case>
+
+      <test-case is-XPath2="true" name="across-queries-results-q1b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book chapters containing the phrase "one of the best known lists of heuristics is Ten Usability Heuristics".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.1" section-title="Q1 Query Across Descendent Elements (No Element Content)" section-pointer="across-queries-results-q1"/>
+          <query name="across-queries-results-q1b" date="2008-04-04"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="across-queries-results-q2" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all part introductions containing the word "prototypes".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
+          <query name="across-queries-results-q2" date="2008-04-04"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="across-queries-results-q2b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all part introductions containing the word "prototypes".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
+          <query name="across-queries-results-q2b" date="2008-04-04"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
+      </test-case>
+      <test-case is-XPath3="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book text with the word "tests".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
+          <query name="across-queries-results-q3" date="3008-04-04"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+      </test-case>
+      <test-case is-XPath3="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book text with the word "tests".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
+          <query name="across-queries-results-q3b" date="3008-04-04"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+      </test-case>
+    </test-group>
+  </test-group>
     <test-group name="Expressions">
       <GroupInfo>
         <title>Expressions</title>
