@@ -2,14 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
 <test-suite xmlns="http://www.w3.org/2005/02/query-test-update"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            CatalogDesignDate="2008-02-18" version="1.0.1 dev"
+            CatalogDesignDate="2008-02-18" version="0.1.0 dev"
             SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/"
             XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
             xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update XQFTTSCatalog.xsd">
 
   <test-suite-info> 
-    <title>XQuery and XPath Full Text 1.0 Test Suite 0.1 Development Version</title> 
+    <title>XQuery and XPath Full Text 1.0 Test Suite 0.1.0 Development Version</title> 
     <description>
       Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://www.w3.org/XML/Query/full-text-test-suite/. 
@@ -330,10 +330,10 @@
       <description last-mod="2005-09-29">Data for normalize-space functions</description>
     </source>      
 -->
-    <schema ID="XQTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQTSCatalog" FileName="XQTSCatalog.xsd">
+    <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQTSCatalog" FileName="XQTSCatalog.xsd">
       <description last-mod="2005-04-14">Schema for XQTSCatalog</description>
     </schema>
-    <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd" Creator="Full-Text Task Force">
+    <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
        <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </schema>
 <!-- Schema from XQuery main test-suite, add if needed
@@ -864,6 +864,10 @@
         </test-group>
       </test-group>
       <test-group name="PrologExpr" is-XPath2="false">
+        <GroupInfo>
+          <title>Prolog Expressions</title>
+          <description>Prolog Options</description>
+        </GroupInfo>
         <test-group name="FTOptionProlog">
           <GroupInfo>
             <title>Full-Text Prolog Options</title>
@@ -1081,14 +1085,14 @@
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
       </test-case>
-      <test-case is-XPath3="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find all book text with the word "tests".</description>
           <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
           <query name="across-queries-results-q3" date="3008-04-04"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
-      <test-case is-XPath3="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find all book text with the word "tests".</description>
           <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
           <query name="across-queries-results-q3b" date="3008-04-04"/>
