@@ -1099,12 +1099,26 @@
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
-            <test-case is-XPath2="false" name="across-queries-results-q4" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book text with the phrase "usability testing once the problems".</description>
+      <test-case is-XPath2="false" name="across-queries-results-q4" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book text with the phrase "usability testing once the problems". This query finds a phrase which begins in one element and ends in a sibling.</description>
           <spec-citation spec="FTUseCases" section-number="3.2.4" section-title="Q4 Query Across Siblings" section-pointer="across-queries-results-q4"/>
           <query name="across-queries-results-q4" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">across-queries-results-q4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="across-queries-results-q5" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all books with word "identify" in book introductions or part introductions. This query finds a word in an element in different sub-trees.</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.5" section-title="Q5 Query in Different Sub-Trees" section-pointer="across-queries-results-q5"/>
+          <query name="across-queries-results-q5" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q5.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="across-queries-results-q6" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all books if any one contains the word "mouse". This query finds a word in a document (anywhere in the document), crossing all element boundaries.</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.6" section-title="Q6 Query on Entire Document" section-pointer="across-queries-results-q6"/>
+          <query name="across-queries-results-q6" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="UseCase-OTHER">
@@ -1112,6 +1126,20 @@
         <title>Use Case "OTHER"</title>
         <description>Explicit query of attributes. Section 4.</description>
       </GroupInfo>
+      <test-case is-XPath2="false" name="other-queries-results-q1" FilePath="UseCase/UseCase-OTHER/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all books with "improve" "web" "usability" in the short title. This query finds multiple words in an attribute allowing word variants and allowing the words in any order with up to a specified number of intervening words.</description>
+          <spec-citation spec="FTUseCases" section-number="4.2.1" section-title="Q1 Query on Attribute" section-pointer="other-queries-results-q1"/>
+          <query name="other-queries-results-q1" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">other-queries-results-q1.xml</output-file>
+      </test-case>     
+       <test-case is-XPath2="false" name="other-queries-results-q2" FilePath="UseCase/UseCase-OTHER/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all books with the phrase "manuscript guides" in the short title and the phrase "user profiling" in a component title. This query finds a phrase in an attribute and a phrase in an element.</description>
+          <spec-citation spec="FTUseCases" section-number="4.2.2" section-title="Q2 Query on Element and Attribute" section-pointer="other-queries-results-q2"/>
+          <query name="other-queries-results-q2" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">other-queries-results-q2.txt</output-file>
+      </test-case>       
     </test-group>
     <test-group name="UseCase-WILDCARD">
       <GroupInfo>
