@@ -673,7 +673,7 @@
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="ft-222-examples-q1" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-          <output-file role="principal" compare="XML">ft-222-examples-results-q1.xml</output-file>
+          <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="Expressions">
