@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
-<test-suite xmlns="http://www.w3.org/2007/06/query-test-XQFTTSCatalog"
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
+<test-suite xmlns="http://www.w3.org/2005/02/query-test-update"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             CatalogDesignDate="2008-02-18" version="1.0.1 dev"
             SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/"
             XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
-            xsi:schemaLocation="http://www.w3.org/2007/06/query-test-XQFTTSCatalog XQFTTSCatalog.xsd">
+            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update XQFTTSCatalog.xsd">
 
   <test-suite-info> 
     <title>XQuery and XPath Full Text 1.0 Test Suite 0.1 Development Version</title> 
