@@ -1,0 +1,35 @@
+<!--* This is a copy of the example from the USe Cases,
+    * but with some books that will match or not match
+    * the examples in the Full Text spec.
+    *-->
+<books>
+  <book>
+    <title>The Story of a Dog and a Cat</title>
+    <author>Melton Mowbray</author>
+    <date>1832</date>
+    <publisher>Example Books</publisher>
+    <price>100</price>
+  </book>
+  <book>
+    <title>Animals With Fewer Than Five Feet, Such as Cats</title>
+    <author>Dr Eisenhower</author>
+    <date>2008</date>
+    <publisher>Example Books</publisher>
+    <price>3</price>
+  </book>
+  <book>
+    <title>Animal Training</title>
+    <author>Jim Woodhouse</author>
+    <date>1997</date>
+    <publisher>Example Books</publisher>
+    <price>31</price>
+  </book>
+  <book>
+    <title>Angelic Intervention For Those Who Train Cats</title>
+    <author>John Dee</author>
+    <date>1607</date>
+    <publisher>Example Books</publisher>
+    <price>41000</price>
+  </book>
+</books>
+
