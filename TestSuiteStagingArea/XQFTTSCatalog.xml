@@ -1100,6 +1100,13 @@
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
+      <test-case is-XPath2="false" name="across-queries-results-q4" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find all book text with the phrase "usability testing once the problems".</description>
+          <spec-citation spec="FTUseCases" section-number="3.2.4" section-title="Q4 Query Across Siblings" section-pointer="across-queries-results-q4"/>
+          <query name="across-queries-results-q4" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">across-queries-results-q4.xml</output-file>
+      </test-case>
     </test-group>
     <test-group name="UseCase-OTHER">
       <GroupInfo>
