@@ -124,7 +124,6 @@
       </part> 
    </content>
 </book>
-
 <book number="2">
    <metadata>
       <title shortTitle="Usability Basics">Usability 
@@ -221,7 +220,6 @@
       </part>
    </content>
 </book>
-
 <book number="3">
    <metadata>
       <title shortTitle="Usabilityguy Manuscript 
