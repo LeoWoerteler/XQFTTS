@@ -3,7 +3,7 @@
 
 <project name="Build XQTS Result Summary" default="createboth">
    
-   <property name="catalog" location="..\XQTSCatalog.xml" />
+   <property name="catalog" location="../XQFTTSCatalog.xml" />
    
    <property name="schema" location="XQTSResult.xsd" />
    
@@ -31,10 +31,10 @@
       
       <style
          in="${catalog}"
-         out="XQTSReport.html"
+         out="XQFTTSReport.html"
          destdir="."
          basedir="."
-         style="XQTSResults.xsl"
+         style="XQFTTSResults.xsl"
          force="yes">
          <param name="creationDate" expression="${now}"/> 
          <param name="documentAuthor" expression="${user.name}"/> 
@@ -52,10 +52,10 @@
       
       <style
          in="${catalog}"
-         out="XQTSReportSimple.html"
+         out="XQFTTSReportSimple.html"
          destdir="."
          basedir="."
-         style="XQTSResults.xsl"
+         style="XQFTTSResults.xsl"
          force="yes">
          <param name="now" expression="${now}"/> 
          <param name="resultFiles" expression="${results}"/> 
@@ -76,7 +76,7 @@
          lenient="no"
          warn="yes"
          >
-         <fileset dir="." includes="XQTSSampleResult.xml"/>
+         <fileset dir="." includes="XQFTTSSampleResult.xml"/>
          <attribute name="http://xml.org/sax/features/validation" value="true"/>
          <attribute name="http://apache.org/xml/features/validation/schema"  value="true"/>
          <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
