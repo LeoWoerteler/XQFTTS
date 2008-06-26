@@ -169,6 +169,9 @@
     <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
        <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </source>
+    <source ID="ftexamples" FileName="Textsources/ftexamples.xml" Creator="Liam Quin" schema="ftusecasesxsd">
+       <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
+    </source>
 <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
