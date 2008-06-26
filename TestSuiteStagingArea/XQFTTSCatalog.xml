@@ -172,6 +172,9 @@
     <source ID="ftbookexample" FileName="Textsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexample.xsd">
        <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
     </source>
+    <source ID="ftspec" FileName="Textsources/xpath-full-text-10.xml" Creator="Full-Text Task Force" schema="xslquerydtd">
+       <description last-mod="2008-06-26">The Full Text spec itself</description>
+    </source>
 <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
@@ -328,13 +331,16 @@
     </source>
     <source ID="textWithSpaces" FileName="TestSources/textWithSpaces.xml" Creator="Joanne Tong">
       <description last-mod="2005-09-29">Data for normalize-space functions</description>
-    </source>      
+    </source>
 -->
     <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQTSCatalog" FileName="XQTSCatalog.xsd">
       <description last-mod="2005-04-14">Schema for XQTSCatalog</description>
     </schema>
     <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
        <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+    </schema>
+    <schema ID="xslquerydtd" uri="" FileName="TestSources/xsl-query.dtd">
+       <description last-mod="2008-02-18">DTD for Full Text 1.0 specification</description>
     </schema>
 <!-- Schema from XQuery main test-suite, add if needed
     <schema ID="atomicxsd" uri="http://www.w3.org/XQueryTest" FileName="TestSources/atomic.xsd">
@@ -852,6 +858,41 @@
                   </GroupInfo>
                 </test-group>
                 -->
+              </test-group>
+              <test-group name="Weight">
+                <GroupInfo>
+                  <title>Full-Text FTSelection weight</title>
+                  <description>Full-Text Selections. Section 3.</description>
+                </GroupInfo>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Positive test to demonstrate that weight is supported</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-1a" date="2008-06-26"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Positive test to demonstrate that weight is supported with a value of 0.0</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-1b" date="2008-06-26"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Positive test to demonstrate that weight is supported with a value of 1000.0</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-1c" date="2008-06-26"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="runtime-error" Creator="Full-Text Task Force">
+                  <description>Negative test to demonstrate that weight values greater than 1000 are not supported</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-2" date="2008-06-26">
+                    <description>Specifies a weight > 1000, expecting either a static error or a dynamic error (spec unclear)</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                </test-case>
               </test-group>
             </test-group>
             <test-group name="FTIgnoreOption">
