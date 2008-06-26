@@ -4,6 +4,13 @@
     *-->
 <books>
   <book>
+    <title>Dogs and Cats</title>
+    <author>Heavy Rain</author>
+    <date>1924</date>
+    <publisher>Example Books</publisher>
+    <price>10</price>
+  </book>
+  <book>
     <title>The Story of a Dog and a Cat</title>
     <author>Melton Mowbray</author>
     <date>1832</date>
