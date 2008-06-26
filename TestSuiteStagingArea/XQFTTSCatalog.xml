@@ -169,7 +169,7 @@
     <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
        <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </source>
-    <source ID="ftexamples" FileName="Textsources/ftexamples.xml" Creator="Liam Quin" schema="ftusecasesxsd">
+    <source ID="ftbookexample" FileName="Textsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexample.xsd">
        <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
     </source>
 <!-- Sources from XQuery main testsuite; add if needed
@@ -672,8 +672,8 @@
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="ft-222-examples-q1" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftexamples</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-222-examples-results-q1.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="Expressions">
