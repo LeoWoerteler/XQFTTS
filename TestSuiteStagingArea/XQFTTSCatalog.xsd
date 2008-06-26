@@ -1,7 +1,7 @@
 <xs:schema
    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-   xmlns:test="http://www.w3.org/2007/06/query-test-XQFTTSCatalog"
-   targetNamespace="http://www.w3.org/2007/06/query-test-XQFTTSCatalog"
+   xmlns:test="http://www.w3.org/2005/02/query-test-update"
+   targetNamespace="http://www.w3.org/2005/02/query-test-update"
    elementFormDefault="qualified">
    
    
