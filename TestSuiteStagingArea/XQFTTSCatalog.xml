@@ -6,7 +6,7 @@
             SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/"
             XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
-            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update XQFTTSCatalog.xsd">
+            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info> 
     <title>XQuery and XPath Full Text 1.0 Test Suite 0.1.0 Development Version</title> 
