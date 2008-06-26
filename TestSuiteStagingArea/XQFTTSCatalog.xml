@@ -680,35 +680,6 @@
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
       </test-case>
-      <test-case is-XPath2="false" name="across-queries-results-q2" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all part introductions containing the word "prototypes".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
-          <query name="across-queries-results-q2" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
-      </test-case>
-      <test-case is-XPath2="true" name="across-queries-results-q2b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all part introductions containing the word "prototypes".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
-          <query name="across-queries-results-q2b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
-      </test-case>
-      <test-case is-XPath3="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book text with the word "tests".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
-          <query name="across-queries-results-q3" date="3008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
-      </test-case>
-      <test-case is-XPath3="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book text with the word "tests".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
-          <query name="across-queries-results-q3b" date="3008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
-      </test-case>
-    </test-group>
   </test-group>
     <test-group name="Expressions">
       <GroupInfo>
