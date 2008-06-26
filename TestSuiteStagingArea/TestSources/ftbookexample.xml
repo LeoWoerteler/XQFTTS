@@ -29,14 +29,14 @@
     <author>Jim Woodhouse</author>
     <date>1997</date>
     <publisher>Example Books</publisher>
-    <price>31</price>
+    <price>310</price>
   </book>
   <book>
     <title>Angelic Intervention For Those Who Train Cats</title>
     <author>John Dee</author>
     <date>1607</date>
     <publisher>Example Books</publisher>
-    <price>41000</price>
+    <price>41</price>
   </book>
 </books>
 
