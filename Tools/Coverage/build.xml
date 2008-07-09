@@ -1,0 +1,81 @@
+<project name="XQery Full Text Test Suite Coverage" default="all">
+   
+   <description>
+      Show the coverage of the test cases in the test suite
+      for each section of the specification.
+   </description>
+   
+   <property
+      name="FullTextCatalog"
+      location="..\..\TestSuiteStagingArea\XQFTTSCatalog.xml"
+      />
+   
+   <property
+      name="destination"
+      value=""
+      />
+   
+   <property
+      name="sourceDocs"
+      value="http://www.w3.org/TR/"
+      />
+
+
+
+   <target name="all">
+      <mkdir dir="temp" />
+      <antcall target="getDocuments" />
+      <antcall target="process">
+         <param name="specname" value="fulltext"/> 
+         <param name="spec" value="XQueryFullText"/> 
+      </antcall>
+      <antcall target="fulltextCoverage">
+         <param name="specName" value="XQueryFullText"/> 
+         <param name="prefix1" value="fulltext"/> 
+         <param name="prefix2" value="fulltext"/> 
+      </antcall>
+      <delete dir="temp" />
+   </target>
+   
+
+
+   <target name='getDocuments'>
+      <get src="${sourceDocs}xpath-full-text-10/" dest="temp/fulltext.html"/>
+   </target>
+
+
+
+   <target name="process">
+      <style in="temp/${specname}.html"
+         out="temp/${specname}_citations.xml"
+         destdir="."
+         basedir="."
+         style="TOCCitations.xsl"
+         force="yes">
+         <param name="spec" expression="${spec}"/> 
+      </style>     
+   </target>
+   
+
+
+   <target name="fulltextCoverage">
+      
+      <tstamp>
+         <format property="now" pattern="MM/dd/yyyy HH:mm" />
+      </tstamp>
+      
+      <style
+         in="temp/${prefix1}_citations.xml"
+         basedir="."
+         style="FullTextCoverage.xsl"
+         out="${prefix2}_coverage.html"
+         force="yes">
+         <param name="now" expression="${now}"/> 
+         <param name="catalogName" expression="${FullTextCatalog}"/> 
+         <param name="specName" expression="${specName}"/> 
+      </style>     
+      
+   </target>
+   
+   
+</project>
