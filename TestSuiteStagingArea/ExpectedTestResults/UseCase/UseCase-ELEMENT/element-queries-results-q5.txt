@@ -7,8 +7,7 @@ and Usability Testing</title>
 Basics: How to Plan for and Conduct Usability Tests 
 on Web Site Thereby Improving the Usability of Your 
 Web Site</title>
-<title shortTitle="Usabilityguy Manuscript 
-Guide">John Wesley Usabilityguy: A Register of His 
+<title shortTitle="Usabilityguy Manuscript Guide">John Wesley Usabilityguy: A Register of His 
 Papers</title>
 <author>Millicent Marigold</author>
 <author>Morty Marigold</author>

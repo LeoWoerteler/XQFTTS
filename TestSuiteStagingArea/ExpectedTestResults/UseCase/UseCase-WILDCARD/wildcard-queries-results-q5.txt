@@ -176,8 +176,7 @@
             a script of questions or instructions which 
             will prompt the user to attempt those 
             tasks.</step> <step number="4">Identify your 
-            users and begin recruiting them.</step> <step 
-            number="5">Conduct a pretest on a few users.
+            users and begin recruiting them.</step> <step number="5">Conduct a pretest on a few users.
             </step> <step number="6">Edit the script based 
             on insights gleaned from the pretest.</step> 
             <step number="7">Resume testing.</step></p>
