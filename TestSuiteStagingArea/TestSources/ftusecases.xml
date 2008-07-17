@@ -82,12 +82,9 @@
             <p>Expert reviewers critique an interface to 
             determine conformance with recognized 
             usability principles. <footnote>One of the 
-            best known lists of heuristics is <citation 
-            url="http://www.useit.com/papers/heuristic
-            /heuristic_list.html">Ten Usability 
+            best known lists of heuristics is <citation url="http://www.useit.com/papers/heuristic/heuristic_list.html">Ten Usability 
             Heuristics by Jacob Nielson</citation>. Another 
-            is <citation url="http://usability.gov
-            /guidelines/index.html"> Research-Based Web 
+            is <citation url="http://usability.gov/guidelines/index.html"> Research-Based Web 
             Design and Usability Guidelines</citation>
             </footnote></p> 
          </chapter>
@@ -178,8 +175,7 @@
             a script of questions or instructions which 
             will prompt the user to attempt those 
             tasks.</step> <step number="4">Identify your 
-            users and begin recruiting them.</step> <step 
-            number="5">Conduct a pretest on a few users.
+            users and begin recruiting them.</step> <step number="5">Conduct a pretest on a few users.
             </step> <step number="6">Edit the script based 
             on insights gleaned from the pretest.</step> 
             <step number="7">Resume testing.</step></p>
@@ -225,8 +221,7 @@
 
 <book number="3">
    <metadata>
-      <title shortTitle="Usabilityguy Manuscript 
-      Guide">John Wesley Usabilityguy: A Register of His 
+      <title shortTitle="Usabilityguy Manuscript Guide">John Wesley Usabilityguy: A Register of His 
       Papers</title>
       <author>Millicent Marigold</author>
       <author>Morty Marigold</author>
@@ -367,8 +362,7 @@
             </componentTitle> 
             <subComponent>
                <componentTitle>Diseases: AIDS, Hepatitis, 
-               Tuberculosis <componentDate normalize=
-               "1990/1999">1990-1999</componentDate>
+               Tuberculosis <componentDate normalize="1990/1999">1990-1999</componentDate>
                </componentTitle>
             </subComponent> 
             <subComponent>
