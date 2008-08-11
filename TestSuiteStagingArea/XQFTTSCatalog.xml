@@ -169,10 +169,10 @@
     <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
        <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </source>
-    <source ID="ftbookexample" FileName="Textsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexample.xsd">
+    <source ID="ftbookexample" FileName="Testsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexample.xsd">
        <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
     </source>
-    <source ID="ftspec" FileName="Textsources/xpath-full-text-10.xml" Creator="Full-Text Task Force" schema="xslquerydtd">
+    <source ID="ftspec" FileName="Testsources/xpath-full-text-10.xml" Creator="Full-Text Task Force" schema="xslquerydtd">
        <description last-mod="2008-06-26">The Full Text spec itself</description>
     </source>
 <!-- Sources from XQuery main testsuite; add if needed
