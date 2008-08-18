@@ -1,0 +1,16 @@
+<paragraphs>
+<p>
+Note that, along with the syntax rules above, there is an extra-grammatical 
+constraint,
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="#parse-note-multiple-match-options" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">multiple-match-options
+      </loc>,
+which needs to be considered, if multiple match options are specified.
+It states that within a single <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>
+at most one match option of any given 
+<termref def="dt-match-option-group">match option group</termref> may
+be specified. 
+For example, if the <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTCaseOption" xlink:type="simple">FTCaseOption</nt> "lowercase" 
+is specified, then "uppercase" cannot also be specified as part of the same 
+<nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>.
+</p>
+</paragraphs>
