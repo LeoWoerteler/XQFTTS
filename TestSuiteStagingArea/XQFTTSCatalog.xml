@@ -672,7 +672,12 @@
     <test-group name="Examples">
       <GroupInfo>
         <title>Examples</title>
-        <description>Examples in Section 2.2.2.</description>
+        <description>Examples from Full Text language document.</description>
+      </GroupInfo>
+    <test-group name="Examples2.2.2">
+      <GroupInfo>
+        <title>Section 2.2.2</title>
+        <description>Examples Section 2.2.2</description>
       </GroupInfo>
       <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
@@ -681,6 +686,27 @@
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
       </test-case>
+         </test-group> 
+     <test-group name="Examples3.4">
+      <GroupInfo>
+        <title>Section 3.4</title>
+        <description>Examples Section 3.4</description>
+      </GroupInfo>
+            <test-case is-XPath2="true" name="examples-34-q1" FilePath="Examples/3.4MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find the word "usability" using match options defaults without match option declarations.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Examples" section-pointer="section-ftmacthoptions-examples"/>
+          <query name="ft-34-examples-q1" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-34-examples-results-q1.xml</output-file>
+      </test-case>
+                  <test-case is-XPath2="true" name="examples-34-q2" FilePath="Examples/3.4MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find the word "usability" using match options defaults with match option declarations.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Examples" section-pointer="section-ftmacthoptions-examples"/>
+          <query name="ft-34-examples-q2" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-34-examples-results-q2.xml</output-file>
+      </test-case>
+    </test-group>
     </test-group>
     <test-group name="Expressions">
       <GroupInfo>
