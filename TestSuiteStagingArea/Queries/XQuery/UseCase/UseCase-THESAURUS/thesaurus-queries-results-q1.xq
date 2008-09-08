@@ -4,9 +4,8 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $intro := $book//introduction[. ftcontains "quote" 
-   with thesaurus at
+let $intro := $book//introduction 
+where $intro ftcontains "quote" with thesaurus at
    "http://bstore1.example.com/UsabilityThesaurus.xml" 
-   relationship "synonyms"]
-where count($intro)>0
+   relationship "synonyms"
 return $book

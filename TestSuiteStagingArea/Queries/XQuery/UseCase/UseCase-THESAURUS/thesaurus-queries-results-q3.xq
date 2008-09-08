@@ -4,9 +4,9 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book/content[. ftcontains 
-   "letters" ftor "holiday cards" with thesaurus at 
+let $cont := $book/content 
+where $cont ftcontains ("letters" ftor "holiday cards") 
+   with thesaurus at 
    "http://bstore1.example.com/UsabilityThesaurus.xml" 
-   relationship "BT" exactly 1 levels]
-where count($cont)>0
+   relationship "BT" exactly 1 levels
 return $book

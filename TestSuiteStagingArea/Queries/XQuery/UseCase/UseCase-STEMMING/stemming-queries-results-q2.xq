@@ -4,8 +4,7 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book//content[. ftcontains 
-   (("usable" with stemming) ftand "testing" phrase) 
-   ftor (("use" with stemming) ftand "testing" phrase)]
-where count($cont)>0
-return ($book/@number, $book/metadata/title/text(), $cont)
+let $cont := $book/content 
+where $cont ftcontains ("usable" with stemming ftand "testing" 
+   phrase) ftor ("use" with stemming ftand "testing" phrase)
+return $book

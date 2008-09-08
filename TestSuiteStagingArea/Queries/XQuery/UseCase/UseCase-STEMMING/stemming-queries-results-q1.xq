@@ -4,7 +4,6 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book//content[. ftcontains "test" 
-   with stemming]
-where count($cont)>0
+let $cont := $book/content
+where $cont ftcontains "test" with stemming
 return $book

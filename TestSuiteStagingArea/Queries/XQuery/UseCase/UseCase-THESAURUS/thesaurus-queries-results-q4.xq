@@ -8,4 +8,3 @@ for $book in $input-context/books/book[. ftcontains "Merrygould"
    "http://bstore1.example.com/UsabilitySoundex.xml" 
    relationship "sounds like"]
 return $book
-

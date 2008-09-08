@@ -8,5 +8,3 @@ for $book in $input-context/books/book[. ftcontains "sucessfull"
    "http://bstore1.example.com/spellcheck.xml" 
    relationship "misspelling of"]
 return $book
-
-
