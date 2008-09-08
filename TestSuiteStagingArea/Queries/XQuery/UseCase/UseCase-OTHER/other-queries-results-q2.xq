@@ -4,9 +4,9 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $stitle := $book/metadata/title[./@shortTitle ftcontains 
-   "manuscript guides" with stemming]
-let $cont := $book//componentTitle[. ftcontains 
-   "user profiling" with stemming]
-where count($stitle)>0 and count($cont)>0
-return data($book/metadata/title/@shortTitle)
+let $stitle := $book/metadata/title/@shortTitle    
+let $ctitle := $book//componentTitle  
+where $stitle ftcontains "manuscript guides"
+   with stemming and $ctitle ftcontains "user profiling" 
+   with stemming
+return data($stitle)

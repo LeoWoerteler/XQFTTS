@@ -3,6 +3,6 @@ declare variable $input-context external;
 (: insert-end :)
 
 for $book in $input-context/books/book
-let $cont := $book/content[. ftcontains "tests"]
-where count($cont)>0
+let $cont := $book/content
+where $cont ftcontains "tests"
 return $book

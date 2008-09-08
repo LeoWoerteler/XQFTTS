@@ -4,8 +4,7 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book//content[. ftcontains ".?way" 
-   with wildcards]
-where count($cont)>0
+let $cont := $book/content
+where $cont ftcontains ".?way" with wildcards
 return $book
 

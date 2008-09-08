@@ -4,7 +4,6 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book//content[. ftcontains "test.{3,4}" 
-   with wildcards]
-where count($cont)>0
-return ($book/@number, $cont)
+let $cont := $book/content 
+where $cont ftcontains "test.{3,4}" with wildcards
+return $book
