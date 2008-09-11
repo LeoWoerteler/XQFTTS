@@ -4,7 +4,7 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $cont := $book//content[. ftcontains 
-   "expert review methods" occurs at least 2 times]
-where count($cont)&gt;0
+let $cont := $book/content
+where $cont ftcontains "expert review methods" 
+   occurs at least 2 times
 return $book

@@ -4,9 +4,8 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book 
-let $not := $book[. ftcontains ftnot "us.* testing"
-   with wildcards]
-where count($not) > 0
+where $book ftcontains ftnot "us.* testing" with 
+   wildcards
 return $book
 
 

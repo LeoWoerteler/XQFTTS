@@ -4,12 +4,11 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book 
-let $cont := $book/content[. ftcontains 
-   (("résumés" diacritics sensitive) ftor "drafts" 
-   ftor "correspondence") ftand ftnot "book drafts"]
-where count($cont)>0
+let $cont := $book/content
+where $cont ftcontains ("résumés" diacritics sensitive 
+   ftor "drafts" ftor "correspondence") ftand ftnot 
+   "book drafts"
 return $book
-
 
 
 

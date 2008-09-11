@@ -4,7 +4,6 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-let $subj := $book/metadata/subjects/subject[. ftcontains 
-   "web site" ftand "usability"]
-where count($subj)&gt;0
+let $subj := $book/metadata/subjects/subject
+where $subj ftcontains "web site" ftand "usability"
 return $book
