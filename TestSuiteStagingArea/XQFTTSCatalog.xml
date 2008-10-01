@@ -169,18 +169,18 @@
     <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
        <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </source>
-    <source ID="ftbookexample" FileName="Testsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexample.xsd">
+    <source ID="ftbookexample" FileName="Testsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexamplexsd">
        <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
     </source>
     <source ID="ftspec" FileName="Testsources/xpath-full-text-10.xml" Creator="Full-Text Task Force" schema="xslquerydtd">
        <description last-mod="2008-06-26">The Full Text spec itself</description>
     </source>
+    <source ID="emptydoc" FileName="TestSources/emptydoc.xml" Creator="David Marston">
+      <description last-mod="2003-03-25">Contains just a "doc" element, no comments/text/PIs.</description>
+    </source>
 <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
-    </source>
-    <source ID="emptydoc" FileName="TestSources/emptydoc.xml" Creator="David Marston">
-      <description last-mod="2003-03-25">Contains just a "doc" element, no comments/text/PIs.</description>
     </source>
     <source ID="fsx" FileName="TestSources/fsx.xml" Creator="Mike Rorke">
       <description last-mod="2003-03-25">Data about a filesystem represented in XML.</description>
@@ -338,6 +338,9 @@
     </schema>
     <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
        <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+    </schema>
+    <schema ID="ftbookexamplexsd" uri="" FileName="TestSources/ftbookexample.xsd">
+       <description last-mod="2008-10-01">Schema for example queries used in XQuery 1.0 and XPath 2.0 Full-Text</description>
     </schema>
     <schema ID="xslquerydtd" uri="" FileName="TestSources/xsl-query.dtd">
        <description last-mod="2008-02-18">DTD for Full Text 1.0 specification</description>
@@ -760,7 +763,7 @@
            <output-file role="principal" compare="Inspect">examples-23-q6.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-       <test-group>
+       </test-group>
      <test-group name="Examples3.4">
       <GroupInfo>
         <title>Section 3.4</title>
@@ -780,7 +783,7 @@
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-34-examples-results-q2.xml</output-file>
       </test-case>
-    </test-group>
+     </test-group>
      <test-group name="Examples3.4.1">
       <GroupInfo>
         <title>Section 3.4.1</title>
@@ -864,8 +867,7 @@
             <title>FOR Clause with Score variable</title>
             <description>Tests for the FOR...SCORE part of the FLWOR expression syntax</description>
           </GroupInfo>
-xyzzy
-          <test-case is-XPath2="true" name="ForScoreExpr-1" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -874,7 +876,7 @@ xyzzy
             <output-file role="principal" compare="Fragment">ForScoreExpr-1.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-2" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with as clause</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -883,7 +885,7 @@ xyzzy
             <output-file role="principal" compare="Text">ForScoreExpr-2.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-3" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position variable</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -892,7 +894,7 @@ xyzzy
             <output-file role="principal" compare="Fragment">ForScoreExpr-3.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-4" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-4" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position
             variable and as clause</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
@@ -902,7 +904,7 @@ xyzzy
             <output-file role="principal" compare="Text">ForScoreExpr-4.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="true" name="ForScoreExpr-5" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-5" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position
             variable and as clause</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
@@ -912,7 +914,7 @@ xyzzy
             <output-file role="principal" compare="Fragment">ForScoreExpr-5.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-6" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-6" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Order by score</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -922,7 +924,7 @@ xyzzy
             <output-file role="principal" compare="Fragment">ForScoreExpr-6-alt.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="true" name="ForScoreExpr-BadVar1" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-BadVar1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as main variable: error</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -931,7 +933,7 @@ xyzzy
             <expected-error>XQST0089</expected-error>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-BadVar2" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-BadVar2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as position variable: error</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -940,7 +942,7 @@ xyzzy
             <expected-error>XQST0089</expected-error>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-Var1" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-Var1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable shadowed by let variable</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -949,7 +951,7 @@ xyzzy
             <output-file role="principal" compare="Text">ForScoreExpr-Var1.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="true" name="ForScoreExpr-Var2" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-Var2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable between 0 and 1</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -958,7 +960,7 @@ xyzzy
             <output-file role="principal" compare="Text">ForScoreExpr-Var2.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="true" name="ForScoreExpr-Var3" FilePath="Expressions/FLWOR/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-Var3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable shadows gloval</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -973,7 +975,7 @@ xyzzy
             <title>Let Clause with Score variable</title>
             <description>Tests for the LET SCORE part of the FLWOR expression syntax</description>
           </GroupInfo>
-          <test-case is-XPath2="false" name="LetScoreExpr-1" FilePath="Expressions/FLWOR/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="LetScoreExpr-1" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -982,7 +984,7 @@ xyzzy
             <output-file role="principal" compare="Text">LetScoreExpr-1.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="LetScoreExpr-2" FilePath="Expressions/FLWOR/LetScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="LetScoreExpr-2" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable with as</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -991,7 +993,7 @@ xyzzy
             <expected-error>XPST0003</expected-error>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="LetScoreExpr-3" FilePath="Expressions/FLWOR/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="LetScoreExpr-3" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -1000,7 +1002,7 @@ xyzzy
             <output-file role="principal" compare="Fragment">LetScoreExpr-3.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="LetScoreExpr-4" FilePath="Expressions/FLWOR/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="LetScoreExpr-4" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
             <spec-citation spec="XQueryFullText" section-number="2.3"
            section-title="Score Variables" section-pointer="section-score-variables"/>
