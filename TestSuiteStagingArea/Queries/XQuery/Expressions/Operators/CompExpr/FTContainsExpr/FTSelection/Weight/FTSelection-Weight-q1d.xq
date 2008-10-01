@@ -1,3 +1,5 @@
+(: 3 Full-Text Selections: Test valid weight value (within negative part of range) :)
+
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)
