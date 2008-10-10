@@ -9,10 +9,10 @@
             xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info> 
-    <title>XQuery and XPath Full Text 1.0 Test Suite 0.1.0a Development Version</title> 
+    <title>XQuery and XPath Full Text 1.0 Test Suite 0.5.0 Development Version</title> 
     <description>
       Test Suite for XQuery and XPath Full-Text 1.0. 
-      See http://www.w3.org/XML/Query/full-text-test-suite/. 
+      See http://dev.w3.org/2007/xpath-full-text-10-test-suite/. 
     </description> 
   </test-suite-info> 
 
@@ -63,6 +63,7 @@
       <spec-URI>http://www.w3c.org/TR/xquery-use-cases/</spec-URI>
     </citation-spec>
   </citations>
+
   <comparisons>
     <comparison name="XML">
       <description last-mod="2003-03-25">The XML InfoSets should be canonicalized and compared.</description>
@@ -95,6 +96,7 @@
       </description>
     </comparison>
   </comparisons>
+
   <roles>
     <role name="principal-data">
       <description last-mod="2003-03-25">
@@ -141,6 +143,7 @@
       </note>
     </role>
   </roles>
+
   <scenarios>
     <scenario name="standard">
       <description last-mod="2005-06-10">
@@ -162,6 +165,7 @@
       </description>
     </scenario>
   </scenarios>
+
   <sources>
     <source ID="XQFTTSCatalog" FileName="XQFTTSCatalog.xml" Creator="Full-Text Task Force" schema="XQFTTSCatalogxsd">
       <description last-mod="2007-06-26">XQuery 1.0 and XPath 2.0 Full-Text Test Suite Catalog</description>
@@ -177,6 +181,9 @@
     </source>
     <source ID="emptydoc" FileName="TestSources/emptydoc.xml" Creator="David Marston">
       <description last-mod="2003-03-25">Contains just a "doc" element, no comments/text/PIs.</description>
+    </source>
+    <source ID="FT-3-examples-source-document" FileName="TestSources/FT-3-examples-source-document" Creator="Jim Melton">
+      <description last-mod="2008-10-10">Contains a "books" element containing a single "book" element.</description>
     </source>
 <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
@@ -442,6 +449,7 @@
     </module>  
 -->
   </sources>
+
   <implementation-defined-items>
     <implementation-defined-item name="expressionUnicode" spec="XQuery">
       <description last-mod="2005-04-04">The version of Unicode that is used to construct expressions.</description>
@@ -604,6 +612,7 @@
 
 -->
   </implementation-defined-items>
+
   <features>
     <feature name="Minimal Conformance"/>
     <feature name="FTMildNot Operator"/>
@@ -622,6 +631,7 @@
     <feature name="Scoring"/>
     <feature name="Weights"/>
   </features>
+
   <context-properties>
     <context-property name="Statically known namespaces" context-type="static"/>
     <context-property name="Default element/type namespace" context-type="static"/>
@@ -667,6 +677,7 @@
 
 -->
   </context-properties>
+
   <test-group name="MinimalConformance">
     <GroupInfo>
       <title>Minimal Conformance</title>
@@ -682,7 +693,7 @@
           <title>Section 2.2.2</title>
           <description>Examples Section 2.2.2</description>
         </GroupInfo>
-        <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
             <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
             <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
             <query name="ft-222-examples-q1" date="2008-06-26"/>
@@ -695,7 +706,7 @@
            <title>Section 2.3</title>
            <description>Examples Section 2.3</description>
          </GroupInfo>
-         <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return scores for books whose content contains "web
            site" and "usability" and whose title contains "testing"</description>
            <spec-citation spec="XQueryFullText" section-number="2.3"
@@ -705,7 +716,7 @@
            <output-file role="principal" compare="Inspect">examples-23-q1.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-         <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return titles and scores for books whose content 
            contains "web site" and "usability" where the score is more than 0.5
            </description>
@@ -716,7 +727,7 @@
            <output-file role="principal" compare="Inspect">examples-23-q2.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-         <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return paragraphs containing "usability" of books 
            whose title contains "software", ordered by score
            </description>
@@ -728,7 +739,7 @@
            <output-file role="principal" compare="Fragment">examples-23-q3-alt.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-         <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return paragraphs containing "usability" of books 
            whose title contains "software", ordered by score
            </description>
@@ -740,7 +751,7 @@
            <output-file role="principal" compare="Fragment">examples-23-q4-alt.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-         <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return books whose chapter title contains "testing",
            ordered by the score of their content containing "web site" and
            "usability"
@@ -752,7 +763,7 @@
            <output-file role="principal" compare="Inspect">examples-23-q5.txt</output-file>
            <expected-error>FTST0014</expected-error>
          </test-case>
-         <test-case is-XPath2="false" name="examples-23-q6" FilePath="Examples/2.3/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="false" name="examples-23-q6" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
            <description>Return books with a score based on weighting 
            "web site" in their content 0.5 and "usability" in their content 2
            </description>
@@ -769,14 +780,14 @@
         <title>Section 3.4</title>
         <description>Examples Section 3.4</description>
       </GroupInfo>
-            <test-case is-XPath2="true" name="ft-34-examples-q1" FilePath="Examples/3.4MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="ft-34-examples-q1" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults without match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-34-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-34-examples-results-q1.xml</output-file>
       </test-case>
-                  <test-case is-XPath2="true" name="ft-34-examples-q2" FilePath="Examples/3.4MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="ft-34-examples-q2" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults with match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-34-examples-q2" date="2008-08-21"/>
@@ -789,7 +800,7 @@
         <title>Section 3.4.1</title>
         <description>Examples Section 3.4.1</description>
       </GroupInfo>
-            <test-case is-XPath2="true" name="ft-341-examples-q1" FilePath="Examples/3.4.1LanguageOption/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="ft-341-examples-q1" FilePath="Examples/3.4.1-LanguageOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query where the language option is used to select the appropriate stop word list.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-341-examples-q1" date="2008-08-21"/>
@@ -802,28 +813,28 @@
         <title>Section 3.4.2</title>
         <description>Examples Section 3.4.2</description>
       </GroupInfo>
-                  <test-case is-XPath2="true" name="ft-342-examples-q1" FilePath="Examples/3.4.2WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="ft-342-examples-q1" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "improv.*" allowing zero or more characters at the end.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q1.xml</output-file>
       </test-case>
-                  <test-case is-XPath2="true" name="ft-342-examples-q2" FilePath="Examples/3.4.2WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="ft-342-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find ".?site" allowing zero or one character at the start.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q2.xml</output-file>
       </test-case>
-            <test-case is-XPath2="true" name="ft-342-examples-q3" FilePath="Examples/3.4.2WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="ft-342-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" allowing one inserted character at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q3.xml</output-file>
       </test-case>
-                  <test-case is-XPath2="true" name="ft-342-examples-q4" FilePath="Examples/3.4.2WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="ft-342-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" expecting a period at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q4" date="2008-08-21"/>
@@ -836,14 +847,14 @@
           <title>Section 3.4.8</title>
           <description>Examples Section 3.4.8</description>
         </GroupInfo>
-        <test-case is-XPath2="false" name="ft-348-examples-q1" FilePath="Examples/3.4.8ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="ft-348-examples-q1" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoperator"/>
           <query name="ft-341-examples-q1" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">ft-348-examples-results-q1.xml</output-file>
        </test-case>
-        <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoperator"/>
           <query name="ft-341-examples-q2" date="2008-09-17"/>
