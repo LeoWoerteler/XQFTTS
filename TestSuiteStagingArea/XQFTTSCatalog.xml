@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
-<test-suite xmlns="http://www.w3.org/2005/02/query-test-update"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            CatalogDesignDate="2008-02-18" version="0.1.0 dev"
-            SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
-            XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/"
-            XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
+<test-suite xmlns="http://www.w3.org/2005/02/query-test-update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CatalogDesignDate="2008-02-18" version="0.1.0 dev" SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
+            XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/" XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
             xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
-  <test-suite-info> 
-    <title>XQuery and XPath Full Text 1.0 Test Suite 0.5.0 Development Version</title> 
-    <description>
-      Test Suite for XQuery and XPath Full-Text 1.0. 
-      See http://dev.w3.org/2007/xpath-full-text-10-test-suite/. 
-    </description> 
-  </test-suite-info> 
+  <test-suite-info>
+    <title>XQuery and XPath Full Text 1.0 Test Suite 0.5.0 Development Version</title>
+    <description>Test Suite for XQuery and XPath Full-Text 1.0. 
+      See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
+  </test-suite-info>
 
   <citations>
     <citation-spec name="XQueryFullText">
@@ -69,100 +63,72 @@
       <description last-mod="2003-03-25">The XML InfoSets should be canonicalized and compared.</description>
     </comparison>
     <comparison name="Fragment">
-      <description last-mod="2004-10-20">
-        A 'fragment' refers to an XML based instance which has multiple top-level elements and NO XML declaration.
-        The comparator for this should simply wrap the entire fragment in a container element and perform XML comparison.
-      </description>
+      <description last-mod="2004-10-20">A 'fragment' refers to an XML based instance which has multiple top-level elements and NO XML declaration.
+        The comparator for this should simply wrap the entire fragment in a container element and perform XML comparison.</description>
     </comparison>
     <comparison name="Text">
-      <description last-mod="2003-03-25">
-        Each line of non-whitespace text should match. New-line sequences
+      <description last-mod="2003-03-25">Each line of non-whitespace text should match. New-line sequences
         may vary and should be neutralized. Due to issues with the XML serialization of certain characters (e.g. '&lt;'),
         it is not possible to simply compare the actual and expected results. Rather (as is the case with the 'Fragment' comparator)
         the test harness should convert the results into valid XML (by adding a container element) and perform comparison
-        on the XML canonicalized versions of the results.
-      </description>
+        on the XML canonicalized versions of the results.</description>
     </comparison>
     <comparison name="Ignore">
-      <description last-mod="2003-03-25">
-        Only the presence/absence of this file is significant,
-        not its content.
-      </description>
+      <description last-mod="2003-03-25">Only the presence/absence of this file is significant,
+        not its content.</description>
     </comparison>
     <comparison name="Inspect">
-      <description last-mod="2003-03-25">
-        Automated comparison is not possible. the output should be
-        inspected by a human.
-      </description>
+      <description last-mod="2003-03-25">Automated comparison is not possible. the output should be
+        inspected by a human.</description>
     </comparison>
   </comparisons>
 
   <roles>
     <role name="principal-data">
-      <description last-mod="2003-03-25">
-        This is the source that is handed in to the processor as the
-        initial input sequence, setting the "evaluation context" as described in XQuery chapter 2.
-      </description>
+      <description last-mod="2003-03-25">This is the source that is handed in to the processor as the
+        initial input sequence, setting the "evaluation context" as described in XQuery chapter 2.</description>
     </role>
     <role name="supplemental-data">
-      <description last-mod="2003-03-25">
-        These are sources that may be read by functions such as
-        fn:document() as the query is evaluated.
-      </description>
+      <description last-mod="2003-03-25">These are sources that may be read by functions such as
+        fn:document() as the query is evaluated.</description>
     </role>
     <role name="schema">
-      <description last-mod="2003-03-25">
-        These are schema definitions that may be referenced by sources
-        or in the query.
-      </description>
+      <description last-mod="2003-03-25">These are schema definitions that may be referenced by sources
+        or in the query.</description>
     </role>
     <role name="dtd">
-      <description last-mod="2003-03-25">
-        These are dtd definitions that may be referenced by sources
-        or in the query.
-      </description>
+      <description last-mod="2003-03-25">These are dtd definitions that may be referenced by sources
+        or in the query.</description>
     </role>
     <role name="principal">
-      <description last-mod="2003-03-25">
-        This is an output (either text or XML) that will contain the
+      <description last-mod="2003-03-25">This is an output (either text or XML) that will contain the
         query results. If the processor invocation sequence accepts a filename for results, this name may be
         passed, possibly prefixed by a partial directory path to allow storage of the results in a separate
-        directory tree.
-      </description>
+        directory tree.</description>
     </role>
     <role name="console-log">
-      <description last-mod="2003-03-25">
-        This is an output (text file tagged .log) that will contain the
+      <description last-mod="2003-03-25">This is an output (text file tagged .log) that will contain the
         captured "console" output for a command-line invocation, or equivalent messages from a harness. The
-        main goal is to capture error messages that came from the processor.
-      </description>
-      <note>
-        A test lab may choose to capture console output for every test case, in which case the presence
+        main goal is to capture error messages that came from the processor.</description>
+      <note>A test lab may choose to capture console output for every test case, in which case the presence
         of this element is a signal that the console log of this test contains messages that are significant to
-        the pass/fail determination.
-      </note>
+        the pass/fail determination.</note>
     </role>
   </roles>
 
   <scenarios>
     <scenario name="standard">
-      <description last-mod="2005-06-10">
-        A query this is expected to produce valid results. 
-        Principal input should always be specified, even if the query doesn't have any PathExpr.
-      </description>
+      <description last-mod="2005-06-10">A query this is expected to produce valid results. 
+        Principal input should always be specified, even if the query doesn't have any PathExpr.</description>
     </scenario>
     <scenario name="parse-error">
-      <description last-mod="2005-06-10">
-        A query this is expected to raise a parsing/syntax error at query parse time. 
-        Principal input should always be specified, even if the query doesn't have any PathExpr.
-      </description>
+      <description last-mod="2005-06-10">A query this is expected to raise a parsing/syntax error at query parse time. 
+        Principal input should always be specified, even if the query doesn't have any PathExpr.</description>
     </scenario>
     <scenario name="runtime-error">
-      <description last-mod="2005-06-10">
-        A query this is expected to raise a runtime error at query parse time. 
+      <description last-mod="2005-06-10">A query this is expected to raise a runtime error at query parse time. 
         Runtime errors in this case include those raised by static typing rules. 
-        Principal input should always be specified, even if the query doesn't have any PathExpr.
-      </description>
+        Principal input should always be specified, even if the query doesn't have any PathExpr.</description>
     </scenario>
   </scenarios>
 
@@ -171,13 +137,13 @@
       <description last-mod="2007-06-26">XQuery 1.0 and XPath 2.0 Full-Text Test Suite Catalog</description>
     </source>
     <source ID="ftusecases" FileName="TestSources/ftusecases.xml" Creator="Full-Text Task Force" schema="ftusecasesxsd">
-       <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+      <description last-mod="2008-02-18">Example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </source>
     <source ID="ftbookexample" FileName="Testsources/ftbookexample.xml" Creator="Liam Quin" schema="ftbookexamplexsd">
-       <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
+      <description last-mod="2008-06-26">XML suitable for example queries in the Full Text specification</description>
     </source>
     <source ID="ftspec" FileName="Testsources/xpath-full-text-10.xml" Creator="Full-Text Task Force" schema="xslquerydtd">
-       <description last-mod="2008-06-26">The Full Text spec itself</description>
+      <description last-mod="2008-06-26">The Full Text spec itself</description>
     </source>
     <source ID="emptydoc" FileName="TestSources/emptydoc.xml" Creator="David Marston">
       <description last-mod="2003-03-25">Contains just a "doc" element, no comments/text/PIs.</description>
@@ -185,7 +151,7 @@
     <source ID="FT-3-examples-source-document" FileName="TestSources/FT-3-examples-source-document" Creator="Jim Melton">
       <description last-mod="2008-10-10">Contains a "books" element containing a single "book" element.</description>
     </source>
-<!-- Sources from XQuery main testsuite; add if needed
+    <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
     </source>
@@ -344,15 +310,15 @@
       <description last-mod="2005-04-14">Schema for XQTSCatalog</description>
     </schema>
     <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
-       <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
+      <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
     </schema>
     <schema ID="ftbookexamplexsd" uri="" FileName="TestSources/ftbookexample.xsd">
-       <description last-mod="2008-10-01">Schema for example queries used in XQuery 1.0 and XPath 2.0 Full-Text</description>
+      <description last-mod="2008-10-01">Schema for example queries used in XQuery 1.0 and XPath 2.0 Full-Text</description>
     </schema>
     <schema ID="xslquerydtd" uri="" FileName="TestSources/xsl-query.dtd">
-       <description last-mod="2008-02-18">DTD for Full Text 1.0 specification</description>
+      <description last-mod="2008-02-18">DTD for Full Text 1.0 specification</description>
     </schema>
-<!-- Schema from XQuery main test-suite, add if needed
+    <!-- Schema from XQuery main test-suite, add if needed
     <schema ID="atomicxsd" uri="http://www.w3.org/XQueryTest" FileName="TestSources/atomic.xsd">
       <description last-mod="2005-03-08">A Schema for atomic.xml</description>
     </schema>
@@ -384,14 +350,14 @@
       <description last-mod="2006-06-07">A schema defining a list of unions.</description>
     </schema>    
 -->
-<!-- Collections from main XQuery testsuite, add if needed
+    <!-- Collections from main XQuery testsuite, add if needed
     <collection ID="collection1" Creator="Jim Melton">
       <description last-mod="2007-06-26">A simple collection of documents.</description>
       <input-document>bib</input-document>
       <input-document>reviews</input-document>
     </collection>
 -->
-<!-- More to be added as the need is recognized
+    <!-- More to be added as the need is recognized
     <collection ID="collection2" Creator="Andrew Eisenberg">
       <description last-mod="2006-06-07">A simple collection of documents.</description>
       <input-document>bib</input-document>
@@ -399,12 +365,12 @@
       <input-document>books</input-document>
     </collection>  
 -->
-<!-- Modules from XQuery main testsuite, add if needed
+    <!-- Modules from XQuery main testsuite, add if needed
     <module ID="module1-lib" FileName="TestSources/module1-lib" Creator="Carmelo Montanez">
       <description last-mod="2006-07-13">Library module for "modules-18" query</description>
     </module>   
 -->
-<!-- More to be added as the need is recognized
+    <!-- More to be added as the need is recognized
     <module ID="module2-lib" FileName="TestSources/module2-lib" Creator="Carmelo Montanez">
       <description last-mod="2006-07-13">Library module for "modules-18" query</description>
     </module>          
@@ -605,7 +571,7 @@
     <implementation-defined-item name="Extension Selection" spec="XQueryFullText">
       <description last-mod="2008-02-18">An extension selection is a full-text selection whose semantics are implementation-defined.  Each implementation recognizes an implementation-defined set of namespace URIs used to denote pragmas.</description>
     </implementation-defined-item>
-<!-- More to be added as the need is recognized
+    <!-- More to be added as the need is recognized
     <implementation-defined-item name="" spec="XQueryFullText">
       <description last-mod="2008-02-18"></description>
     </implementation-defined-item>
@@ -673,7 +639,7 @@
     <context-property name="FTLanguageOption" context-type="static"/>
     <context-property name="Statically known languages" context-type="static"/>
     <context-property name="FTWildcardOption" context-type="static"/>
-<!-- More to be added as the need is recognized
+    <!-- More to be added as the need is recognized
 
 -->
   </context-properties>
@@ -694,154 +660,204 @@
           <description>Examples Section 2.2.2</description>
         </GroupInfo>
         <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
-            <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
-            <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
-            <query name="ft-222-examples-q1" date="2008-06-26"/>
-            <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-            <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
+          <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
+          <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
+          <query name="ft-222-examples-q1" date="2008-06-26"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
         </test-case>
-       </test-group> 
-       <test-group name="Examples2.3">
-         <GroupInfo>
-           <title>Section 2.3</title>
-           <description>Examples Section 2.3</description>
-         </GroupInfo>
-         <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return scores for books whose content contains "web
+      </test-group>
+      <test-group name="Examples2.3">
+        <GroupInfo>
+          <title>Section 2.3</title>
+          <description>Examples Section 2.3</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return scores for books whose content contains "web
            site" and "usability" and whose title contains "testing"</description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q1" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-           <output-file role="principal" compare="Inspect">examples-23-q1.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-         <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return titles and scores for books whose content 
-           contains "web site" and "usability" where the score is more than 0.5
-           </description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q2" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-           <output-file role="principal" compare="Inspect">examples-23-q2.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-         <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return paragraphs containing "usability" of books 
-           whose title contains "software", ordered by score
-           </description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q3" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-           <output-file role="principal" compare="Fragment">examples-23-q3.txt</output-file>
-           <output-file role="principal" compare="Fragment">examples-23-q3-alt.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-         <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return paragraphs containing "usability" of books 
-           whose title contains "software", ordered by score
-           </description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q4" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-           <output-file role="principal" compare="Fragment">examples-23-q4.txt</output-file>
-           <output-file role="principal" compare="Fragment">examples-23-q4-alt.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-         <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return books whose chapter title contains "testing",
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q1" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Inspect">examples-23-q1.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+        <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return titles and scores for books whose content 
+           contains "web site" and "usability" where the score is more than 0.5</description>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q2" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Inspect">examples-23-q2.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+        <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return paragraphs containing "usability" of books 
+           whose title contains "software", ordered by score</description>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q3" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="Fragment">examples-23-q3.txt</output-file>
+          <output-file role="principal" compare="Fragment">examples-23-q3-alt.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+        <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return paragraphs containing "usability" of books 
+           whose title contains "software", ordered by score</description>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q4" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="Fragment">examples-23-q4.txt</output-file>
+          <output-file role="principal" compare="Fragment">examples-23-q4-alt.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+        <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return books whose chapter title contains "testing",
            ordered by the score of their content containing "web site" and
-           "usability"
-           </description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q5" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-           <output-file role="principal" compare="Inspect">examples-23-q5.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-         <test-case is-XPath2="false" name="examples-23-q6" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
-           <description>Return books with a score based on weighting 
-           "web site" in their content 0.5 and "usability" in their content 2
-           </description>
-           <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
-           <query name="examples-23-q6" date="2008-08-17"/>
-           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-           <output-file role="principal" compare="Inspect">examples-23-q6.txt</output-file>
-           <expected-error>FTST0014</expected-error>
-         </test-case>
-       </test-group>
-     <test-group name="Examples3.4">
-      <GroupInfo>
-        <title>Section 3.4</title>
-        <description>Examples Section 3.4</description>
-      </GroupInfo>
-            <test-case is-XPath2="true" name="ft-34-examples-q1" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+           "usability"</description>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q5" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Inspect">examples-23-q5.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+        <test-case is-XPath2="false" name="examples-23-q6" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return books with a score based on weighting 
+           "web site" in their content 0.5 and "usability" in their content 2</description>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
+          <query name="examples-23-q6" date="2008-08-17"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Inspect">examples-23-q6.txt</output-file>
+          <expected-error>FTST0014</expected-error>
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.2">
+        <GroupInfo>
+          <title>Section 3.2</title>
+          <description>Examples from Section 3.2</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-3.2-examples-q1" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns the sample book element, because its title element contains the token "Expert"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+          <query name="ft-3.2-examples-q1" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="XML">ft-3.2-examples-q1.xml</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="ft-3.2-examples-q2" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns the sample book element, because its title element contains the phrase "Expert Reviews"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+          <query name="ft-3.2-examples-q2" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="XML">ft-3.2-examples-q2.xml</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="ft-3.2-examples-q3" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns the sample book element, because its title element contains the two tokens "Expert" and "Reviews"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+          <query name="ft-3.2-examples-q3" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="XML">ft-3.2-examples-q3.xml</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="ft-3.2-examples-q4" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns false for the sample document, because the p element doesn't contain the phrase "Web Site Usability" although it contains all of the tokens in the phrase</description>
+          <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+          <query name="ft-3.2-examples-q4" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="Text">ft-3.2-examples-q4.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="false" name="ft-3.2-examples-q5" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns book numbers of book elements by "Marigold" with a title about "Web Site Usability", sorting them in descending score order</description>
+          <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+          <query name="ft-3.2-examples-q5" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="Text">ft-3.2-examples-q5.txt</output-file>
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.3">
+        <GroupInfo>
+          <title>Section 3.3</title>
+          <description>Examples from Section 3.3</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-3.3-examples-q1" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+          <description>Returns the example book element's number, because the book element contains 2 or more occurrences of "usability"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+          <query name="ft-3.3-examples-q1" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="XML">ft-3.3-examples-q1.xml</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="ft-3.3-examples-q2" FilePath="Examples/3.3-CardinalitySelection/" scenario="standard" Creator="Jim Melton">
+          <description>Returns the empty sequence, because there are 3 occurrences of {"usability", "testing"} any in the designated title</description>
+          <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+          <query name="ft-3.3-examples-q2" date="2008-10-10"/>
+          <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
+          <output-file role="principal" compare="Fragment">ft-3.3-examples-q2.xml</output-file>
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.4">
+        <GroupInfo>
+          <title>Section 3.4</title>
+          <description>Examples Section 3.4</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-34-examples-q1" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults without match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-34-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-34-examples-results-q1.xml</output-file>
-      </test-case>
-                  <test-case is-XPath2="true" name="ft-34-examples-q2" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+        <test-case is-XPath2="true" name="ft-34-examples-q2" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults with match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-34-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-34-examples-results-q2.xml</output-file>
-      </test-case>
-     </test-group>
-     <test-group name="Examples3.4.1">
-      <GroupInfo>
-        <title>Section 3.4.1</title>
-        <description>Examples Section 3.4.1</description>
-      </GroupInfo>
-            <test-case is-XPath2="true" name="ft-341-examples-q1" FilePath="Examples/3.4.1-LanguageOption/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.4.1">
+        <GroupInfo>
+          <title>Section 3.4.1</title>
+          <description>Examples Section 3.4.1</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-341-examples-q1" FilePath="Examples/3.4.1-LanguageOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query where the language option is used to select the appropriate stop word list.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-341-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-341-examples-results-q1.xml</output-file>
-       </test-case>
-          </test-group>  
-          <test-group name="Examples3.4.2">
-      <GroupInfo>
-        <title>Section 3.4.2</title>
-        <description>Examples Section 3.4.2</description>
-      </GroupInfo>
-                  <test-case is-XPath2="true" name="ft-342-examples-q1" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.4.2">
+        <GroupInfo>
+          <title>Section 3.4.2</title>
+          <description>Examples Section 3.4.2</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-342-examples-q1" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "improv.*" allowing zero or more characters at the end.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q1.xml</output-file>
-      </test-case>
-                  <test-case is-XPath2="true" name="ft-342-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+        <test-case is-XPath2="true" name="ft-342-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find ".?site" allowing zero or one character at the start.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q2.xml</output-file>
-      </test-case>
-            <test-case is-XPath2="true" name="ft-342-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+        <test-case is-XPath2="true" name="ft-342-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" allowing one inserted character at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q3.xml</output-file>
-      </test-case>
-                  <test-case is-XPath2="true" name="ft-342-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
+        </test-case>
+        <test-case is-XPath2="true" name="ft-342-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" expecting a period at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q4" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q4.xml</output-file>
-      </test-case>
-    </test-group> 
+        </test-case>
+      </test-group>
       <test-group name="Examples3.4.8">
         <GroupInfo>
           <title>Section 3.4.8</title>
@@ -853,15 +869,15 @@
           <query name="ft-341-examples-q1" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">ft-348-examples-results-q1.xml</output-file>
-       </test-case>
+        </test-case>
         <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoperator"/>
           <query name="ft-341-examples-q2" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">ft-348-examples-results-q2.xml</output-file>
-       </test-case>
-      </test-group>  
+        </test-case>
+      </test-group>
     </test-group>
     <test-group name="Expressions">
       <GroupInfo>
@@ -870,8 +886,8 @@
       </GroupInfo>
       <test-group name="FLWOR">
         <GroupInfo>
-           <title>Tests of For-Let-Where-OrderBy-Return Expressions</title>
-           <description>Tests in this group focus on score variables in FLWOR expressions in Full-Text 2.3.</description>
+          <title>Tests of For-Let-Where-OrderBy-Return Expressions</title>
+          <description>Tests in this group focus on score variables in FLWOR expressions in Full-Text 2.3.</description>
         </GroupInfo>
         <test-group name="ForScoreExpr">
           <GroupInfo>
@@ -880,8 +896,7 @@
           </GroupInfo>
           <test-case is-XPath2="true" name="ForScoreExpr-1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-1" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">ForScoreExpr-1.txt</output-file>
@@ -889,8 +904,7 @@
           </test-case>
           <test-case is-XPath2="false" name="ForScoreExpr-2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with as clause</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-2" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">ForScoreExpr-2.txt</output-file>
@@ -898,8 +912,7 @@
           </test-case>
           <test-case is-XPath2="false" name="ForScoreExpr-3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position variable</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-3" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">ForScoreExpr-3.txt</output-file>
@@ -908,8 +921,7 @@
           <test-case is-XPath2="false" name="ForScoreExpr-4" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position
             variable and as clause</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-4" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">ForScoreExpr-4.txt</output-file>
@@ -918,8 +930,7 @@
           <test-case is-XPath2="true" name="ForScoreExpr-5" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax checking of for+score with position
             variable and as clause</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-5" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">ForScoreExpr-5.txt</output-file>
@@ -927,8 +938,7 @@
           </test-case>
           <test-case is-XPath2="false" name="ForScoreExpr-6" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Order by score</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-6" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">ForScoreExpr-6.txt</output-file>
@@ -937,8 +947,7 @@
           </test-case>
           <test-case is-XPath2="true" name="ForScoreExpr-BadVar1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as main variable: error</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-BadVar1" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <expected-error>XQST0089</expected-error>
@@ -946,8 +955,7 @@
           </test-case>
           <test-case is-XPath2="false" name="ForScoreExpr-BadVar2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as position variable: error</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-BadVar2" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <expected-error>XQST0089</expected-error>
@@ -955,8 +963,7 @@
           </test-case>
           <test-case is-XPath2="false" name="ForScoreExpr-Var1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable shadowed by let variable</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-Var1" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">ForScoreExpr-Var1.txt</output-file>
@@ -964,8 +971,7 @@
           </test-case>
           <test-case is-XPath2="true" name="ForScoreExpr-Var2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable between 0 and 1</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-Var2" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">ForScoreExpr-Var2.txt</output-file>
@@ -973,8 +979,7 @@
           </test-case>
           <test-case is-XPath2="true" name="ForScoreExpr-Var3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Score variable shadows gloval</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-Var2" date="2008-09-17"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">ForScoreExpr-Var2.txt</output-file>
@@ -988,8 +993,7 @@
           </GroupInfo>
           <test-case is-XPath2="false" name="LetScoreExpr-1" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="LetScoreExpr-1" date="2008-09-22"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Text">LetScoreExpr-1.txt</output-file>
@@ -997,8 +1001,7 @@
           </test-case>
           <test-case is-XPath2="false" name="LetScoreExpr-2" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable with as</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="LetScoreExpr-2" date="2008-09-22"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <expected-error>XPST0003</expected-error>
@@ -1006,8 +1009,7 @@
           </test-case>
           <test-case is-XPath2="false" name="LetScoreExpr-3" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="LetScoreExpr-3" date="2008-09-22"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">LetScoreExpr-3.txt</output-file>
@@ -1015,8 +1017,7 @@
           </test-case>
           <test-case is-XPath2="false" name="LetScoreExpr-4" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
             <description>Basic syntax: score variable</description>
-            <spec-citation spec="XQueryFullText" section-number="2.3"
-           section-title="Score Variables" section-pointer="section-score-variables"/>
+            <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="LetScoreExpr-4" date="2008-09-22"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
             <output-file role="principal" compare="Fragment">LetScoreExpr-4.txt</output-file>
@@ -1040,94 +1041,74 @@
               <title>Full-Text Contains Expressions</title>
               <description>FTContainsExpr et al.  Subgroups cover section 3; additional tests here for 2.2.1 syntax.</description>
             </GroupInfo>
-            <test-case is-XPath2="true" name="FTContains-1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>Basic syntax checking of ftcontains</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Text">FTContains-1.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-pred1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-pred1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in a predicate</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-pred1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">FTContains-pred1.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-predcomp1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-predcomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in a predicate with comparison</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-predcomp1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="XML">FTContains-predcomp1.xml</output-file>
             </test-case>
-            <test-case is-XPath2="false" name="FTContains-where1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="false" name="FTContains-where1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in where clause</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-where1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">FTContains-where1.txt</output-file>
             </test-case>
-            <test-case is-XPath2="false" name="FTContains-wherecomp1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="false" name="FTContains-wherecomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in where clause with comparison</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-wherecomp1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">FTContains-wherecomp1.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-comp1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-comp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains higher precedence than other comparison operators</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-comp1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Text">FTContains-comp1.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-comp2"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-comp2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains higher precedence than other comparison operators</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-comp2" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Text">FTContains-comp2.txt</output-file>
             </test-case>
-            <test-case is-XPath2="false" name="FTContains-order1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="false" name="FTContains-order1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in order by clause</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-order1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Text">FTContains-order1.txt</output-file>
               <output-file role="principal" compare="Text">FTContains-order1-alt.txt</output-file>
             </test-case>
-            <test-case is-XPath2="false" name="FTContains-ordercomp1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+            <test-case is-XPath2="false" name="FTContains-ordercomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>ftcontains in order by clause with comparison</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-ordercomp1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Text">FTContains-ordercomp1.txt</output-file>
               <output-file role="principal" compare="Text">FTContains-ordercomp1-alt.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-badcomp1"
-              FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-badcomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
               <description>ftcontains higher precedence than other comparison operators</description>
-              <spec-citation spec="XQueryFullText" section-number="2.2"
-           section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
+              <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-badcomp1" date="2008-09-22"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <expected-error>XPTY0004</expected-error>
@@ -1169,8 +1150,8 @@
 
               <test-group name="FTWords">
                 <GroupInfo>
-                   <title>Full-Text Tokens and Phrases</title>
-                   <description>Section 3.2.</description>
+                  <title>Full-Text Tokens and Phrases</title>
+                  <description>Section 3.2.</description>
                 </GroupInfo>
               </test-group>
               <!-- Optional
@@ -1183,8 +1164,8 @@
               -->
               <test-group name="FTOperators">
                 <GroupInfo>
-                   <title>Full-Text Operators</title>
-                   <description>Logical Full-Text operators. Section 3.5.</description>
+                  <title>Full-Text Operators</title>
+                  <description>Logical Full-Text operators. Section 3.5.</description>
                 </GroupInfo>
                 <test-group name="FTOr">
                   <GroupInfo>
@@ -1425,7 +1406,7 @@
       </GroupInfo>
     </test-group>
     <test-group name="FTUnaryNotUnconstrained">
-       <GroupInfo>
+      <GroupInfo>
         <title>Unconstrained Full-Text ftnot Operator</title>
         <description>Unary not. Sections 3.5.4 and 5.2.2.</description>
       </GroupInfo>
@@ -1462,8 +1443,8 @@
     </test-group>
     <test-group name="FTTimes">
       <GroupInfo>
-         <title>Full-Text Cardinality Selection</title>
-         <description>Cardinality selection. Sections 3.3 and 5.2.8.</description>
+        <title>Full-Text Cardinality Selection</title>
+        <description>Cardinality selection. Sections 3.3 and 5.2.8.</description>
       </GroupInfo>
     </test-group>
     <test-group name="FTContent">
@@ -1510,82 +1491,82 @@
         <description>Query words and phrases in XML elements with simple content. Section 2.</description>
       </GroupInfo>
       <test-case is-XPath2="true" name="element-queries-results-q1" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book titles containing the word "usability".</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.1" section-title="Q1 Word Query in Element" section-pointer="element-queries-results-q1"/>
-          <query name="element-queries-results-q1" date="2008-02-18"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">element-queries-results-q1.txt</output-file>
+        <description>Find all book titles containing the word "usability".</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.1" section-title="Q1 Word Query in Element" section-pointer="element-queries-results-q1"/>
+        <query name="element-queries-results-q1" date="2008-02-18"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">element-queries-results-q1.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q2" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book subjects containing the phrase "usability testing".</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.2" section-title="Q2 Phrase Query in Element" section-pointer="element-queries-results-q2"/>
-          <query name="element-queries-results-q2" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">element-queries-results-q2.txt</output-file>
+        <description>Find all book subjects containing the phrase "usability testing".</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.2" section-title="Q2 Phrase Query in Element" section-pointer="element-queries-results-q2"/>
+        <query name="element-queries-results-q2" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">element-queries-results-q2.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q3" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book subjects containing the phrase "网站".</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.3" section-title="Q3 Phrase Query on Chinese Characters in Element" section-pointer="element-queries-results-q3"/>
-          <query name="element-queries-results-q3" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">element-queries-results-q3.txt</output-file>
-          <expected-error>FTST0009</expected-error>
+        <description>Find all book subjects containing the phrase "网站".</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.3" section-title="Q3 Phrase Query on Chinese Characters in Element" section-pointer="element-queries-results-q3"/>
+        <query name="element-queries-results-q3" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">element-queries-results-q3.txt</output-file>
+        <expected-error>FTST0009</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="element-queries-results-q4" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all books with "usability tests" in book or chapter titles.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.4" section-title="Q4 Query on Different Elements" section-pointer="element-queries-results-q4"/>
-          <query name="element-queries-results-q4" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q4.xml</output-file>
+        <description>Find all books with "usability tests" in book or chapter titles.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.4" section-title="Q4 Query on Different Elements" section-pointer="element-queries-results-q4"/>
+        <query name="element-queries-results-q4" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q4.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q4b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all books with "usability tests" in book or chapter titles.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.4" section-title="Q4 Query on Different Elements" section-pointer="element-queries-results-q4"/>
-          <query name="element-queries-results-q4b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q4.xml</output-file>
+        <description>Find all books with "usability tests" in book or chapter titles.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.4" section-title="Q4 Query on Different Elements" section-pointer="element-queries-results-q4"/>
+        <query name="element-queries-results-q4b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q4.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="element-queries-results-q5" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all books with "usability tests" in some subject.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.5" section-title="Q5 Query on an Element Returning Different Elements" section-pointer="element-queries-results-q5"/>
-          <query name="element-queries-results-q5" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">element-queries-results-q5.txt</output-file>
+        <description>Find all books with "usability tests" in some subject.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.5" section-title="Q5 Query on an Element Returning Different Elements" section-pointer="element-queries-results-q5"/>
+        <query name="element-queries-results-q5" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">element-queries-results-q5.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q5b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all books with "usability tests" in some subject.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.5" section-title="Q5 Query on an Element Returning Different Elements" section-pointer="element-queries-results-q5"/>
-          <query name="element-queries-results-q5b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">element-queries-results-q5.txt</output-file>
+        <description>Find all books with "usability tests" in some subject.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.5" section-title="Q5 Query on an Element Returning Different Elements" section-pointer="element-queries-results-q5"/>
+        <query name="element-queries-results-q5b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">element-queries-results-q5.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="element-queries-results-q6" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book titles which start with "improving" followed within 2 words by "usability".</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.6" section-title="Q6 Starts-with Query" section-pointer="element-queries-results-q6"/>
-          <query name="element-queries-results-q6" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
+        <description>Find all book titles which start with "improving" followed within 2 words by "usability".</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.6" section-title="Q6 Starts-with Query" section-pointer="element-queries-results-q6"/>
+        <query name="element-queries-results-q6" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q6b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book titles which start with "improving" followed within 2 words by "usability".</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.6" section-title="Q6 Starts-with Query" section-pointer="element-queries-results-q6"/>
-          <query name="element-queries-results-q6b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
+        <description>Find all book titles which start with "improving" followed within 2 words by "usability".</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.6" section-title="Q6 Starts-with Query" section-pointer="element-queries-results-q6"/>
+        <query name="element-queries-results-q6b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="element-queries-results-q7" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find the phrase when it is the entire content of an element.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.7" section-title="Q7 Entire Element Content Query" section-pointer="element-queries-results-q7"/>
-          <query name="element-queries-results-q7" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
+        <description>Find the phrase when it is the entire content of an element.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.7" section-title="Q7 Entire Element Content Query" section-pointer="element-queries-results-q7"/>
+        <query name="element-queries-results-q7" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q7b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find the phrase when it is the entire content of an element.</description>
-          <spec-citation spec="FTUseCases" section-number="2.2.7" section-title="Q7 Entire Element Content Query" section-pointer="element-queries-results-q7"/>
-          <query name="element-queries-results-q7b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
+        <description>Find the phrase when it is the entire content of an element.</description>
+        <spec-citation spec="FTUseCases" section-number="2.2.7" section-title="Q7 Entire Element Content Query" section-pointer="element-queries-results-q7"/>
+        <query name="element-queries-results-q7b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="UseCase-ACROSS">
@@ -1594,67 +1575,67 @@
         <description>Query across element boundaries. Section 3.</description>
       </GroupInfo>
       <test-case is-XPath2="false" name="across-queries-results-q1" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book chapters containing the phrase "one of the best known lists of heuristics is Ten Usability Heuristics".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.1" section-title="Q1 Query Across Descendent Elements (No Element Content)" section-pointer="across-queries-results-q1"/>
-          <query name="across-queries-results-q1" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
+        <description>Find all book chapters containing the phrase "one of the best known lists of heuristics is Ten Usability Heuristics".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.1" section-title="Q1 Query Across Descendent Elements (No Element Content)" section-pointer="across-queries-results-q1"/>
+        <query name="across-queries-results-q1" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="across-queries-results-q1b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book chapters containing the phrase "one of the best known lists of heuristics is Ten Usability Heuristics".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.1" section-title="Q1 Query Across Descendent Elements (No Element Content)" section-pointer="across-queries-results-q1"/>
-          <query name="across-queries-results-q1b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
+        <description>Find all book chapters containing the phrase "one of the best known lists of heuristics is Ten Usability Heuristics".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.1" section-title="Q1 Query Across Descendent Elements (No Element Content)" section-pointer="across-queries-results-q1"/>
+        <query name="across-queries-results-q1b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q2" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all part introductions containing the word "prototypes".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
-          <query name="across-queries-results-q2" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
+        <description>Find all part introductions containing the word "prototypes".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
+        <query name="across-queries-results-q2" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="across-queries-results-q2b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all part introductions containing the word "prototypes".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
-          <query name="across-queries-results-q2b" date="2008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
+        <description>Find all part introductions containing the word "prototypes".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
+        <query name="across-queries-results-q2b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book text with the word "tests".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
-          <query name="across-queries-results-q3" date="3008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+        <description>Find all book text with the word "tests".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
+        <query name="across-queries-results-q3" date="3008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find all book text with the word "tests".</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
-          <query name="across-queries-results-q3b" date="3008-04-04"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+        <description>Find all book text with the word "tests".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
+        <query name="across-queries-results-q3b" date="3008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q4" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Q4 Query Across Siblings: Find all book text with the phrase "usability testing once the problems". This query finds a phrase which begins in one element and ends in a sibling.</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.4" section-title="Q4 Query Across Siblings" section-pointer="across-queries-results-q4"/>
-          <query name="across-queries-results-q4" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q4.xml</output-file>
+        <description>Q4 Query Across Siblings: Find all book text with the phrase "usability testing once the problems". This query finds a phrase which begins in one element and ends in a sibling.</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.4" section-title="Q4 Query Across Siblings" section-pointer="across-queries-results-q4"/>
+        <query name="across-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q4.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q5" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Q5 Query in Different Sub-Trees: Find all books with word "identify" in book introductions or part introductions. This query finds a word in an element in different sub-trees.</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.5" section-title="Q5 Query in Different Sub-Trees" section-pointer="across-queries-results-q5"/>
-          <query name="across-queries-results-q5" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">across-queries-results-q5.xml</output-file>
+        <description>Q5 Query in Different Sub-Trees: Find all books with word "identify" in book introductions or part introductions. This query finds a word in an element in different sub-trees.</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.5" section-title="Q5 Query in Different Sub-Trees" section-pointer="across-queries-results-q5"/>
+        <query name="across-queries-results-q5" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q5.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q6" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Q6 Query on Entire Document: Find all books if any one contains the word "mouse". This query finds a word in a document (anywhere in the document), crossing all element boundaries.</description>
-          <spec-citation spec="FTUseCases" section-number="3.2.6" section-title="Q6 Query on Entire Document" section-pointer="across-queries-results-q6"/>
-          <query name="across-queries-results-q6" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
+        <description>Q6 Query on Entire Document: Find all books if any one contains the word "mouse". This query finds a word in a document (anywhere in the document), crossing all element boundaries.</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.6" section-title="Q6 Query on Entire Document" section-pointer="across-queries-results-q6"/>
+        <query name="across-queries-results-q6" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="UseCase-OTHER">
@@ -1663,19 +1644,19 @@
         <description>Explicit query of attributes. Section 4.</description>
       </GroupInfo>
       <test-case is-XPath2="false" name="other-queries-results-q1" FilePath="UseCase/UseCase-OTHER/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Q1 Query on Attribute: Find all books with "improve" "web" "usability" in the short title. This query finds multiple words in an attribute allowing word variants and allowing the words in any order with up to a specified number of intervening words.</description>
-          <spec-citation spec="FTUseCases" section-number="4.2.1" section-title="Q1 Query on Attribute" section-pointer="other-queries-results-q1"/>
-          <query name="other-queries-results-q1" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">other-queries-results-q1.xml</output-file>
-      </test-case>     
-       <test-case is-XPath2="false" name="other-queries-results-q2" FilePath="UseCase/UseCase-OTHER/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Q2 Query on Element and Attribute: Find all books with the phrase "manuscript guides" in the short title and the phrase "user profiling" in a component title. This query finds a phrase in an attribute and a phrase in an element.</description>
-          <spec-citation spec="FTUseCases" section-number="4.2.2" section-title="Q2 Query on Element and Attribute" section-pointer="other-queries-results-q2"/>
-          <query name="other-queries-results-q2" date="2008-06-26"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">other-queries-results-q2.txt</output-file>
-      </test-case>       
+        <description>Q1 Query on Attribute: Find all books with "improve" "web" "usability" in the short title. This query finds multiple words in an attribute allowing word variants and allowing the words in any order with up to a specified number of intervening words.</description>
+        <spec-citation spec="FTUseCases" section-number="4.2.1" section-title="Q1 Query on Attribute" section-pointer="other-queries-results-q1"/>
+        <query name="other-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">other-queries-results-q1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="other-queries-results-q2" FilePath="UseCase/UseCase-OTHER/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query on Element and Attribute: Find all books with the phrase "manuscript guides" in the short title and the phrase "user profiling" in a component title. This query finds a phrase in an attribute and a phrase in an element.</description>
+        <spec-citation spec="FTUseCases" section-number="4.2.2" section-title="Q2 Query on Element and Attribute" section-pointer="other-queries-results-q2"/>
+        <query name="other-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">other-queries-results-q2.txt</output-file>
+      </test-case>
     </test-group>
     <test-group name="UseCase-WILDCARD">
       <GroupInfo>
