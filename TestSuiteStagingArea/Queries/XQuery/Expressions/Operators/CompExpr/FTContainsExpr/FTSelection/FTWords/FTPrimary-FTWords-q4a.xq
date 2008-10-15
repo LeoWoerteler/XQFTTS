@@ -1,5 +1,5 @@
 (: 3.2 FTPrimary ::= FTWordsValue FTAnyAllOption?      :)
-(:     FTAnyAllOption ::= ... | ( "all" "words"? | ... :)
+(:     FTAnyAllOption ::= ... | "phrase"               :)
 (:   Test to ensure that the syntax is recognized      :)
 (:   Test assumes $input-context identifies FT spec    :)
 
