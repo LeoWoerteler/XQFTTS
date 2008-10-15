@@ -1,3 +1,7 @@
+(: 3.1 FTPrimary ::= ... | FTSelection  | ...        :)
+(:   Test to ensure that the syntax is recognized    :)
+(:   Test assumes $input-context identifies FT spec  :)
+
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)
