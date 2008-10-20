@@ -44,7 +44,7 @@
     <date>1981</date>
     <publisher>Minipub, Inc.</publisher>
     <price>20</price>
-    <para>Sometimes usability is the most important thing. Somes usability is
+    <para>Sometimes usability is the most important thing. Sometimes usability is
     the only thing. Sometimes usability is nothing.</para>
   </book>
   <book>
@@ -57,7 +57,6 @@
     Heinlein gave prospective authors: you must write, you must finish what
     you write, you must publish what you write.  Ship software, pay the bills.
     </para>
-    </content>
   </book>
   <book>
     <title>The Blues</title>

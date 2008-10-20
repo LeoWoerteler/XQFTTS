@@ -1178,6 +1178,83 @@
                     <title>Full-Text ftand Operator</title>
                     <description>And-Selection. Section 3.5.2.</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTAnd-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-q1" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTAnd-q1.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Using 'and' instead of 'ftand'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-q2" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTAnd-q2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand query, all branches false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-q3" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTAnd-q3.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-q4" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTAnd-q4.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-q5" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTAnd-q5.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand with computed arguments</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-expr1" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTAnd-expr1.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-expr2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand with computed arguments, which need atomization</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-expr2" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTAnd-expr2.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-badexpr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>FTAnd with empty sequence</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-badexpr1" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPTY0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-bad1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>Using 'and' instead of 'ftand'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-bad1" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>Bad nesting with 'ftand'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-bad2" date="2008-10-09"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPTY0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTAnd-andor" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
+                    <query name="FTAnd-andor" date="2008-10-20"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTAnd-andor.xml</output-file>
+                  </test-case>
                 </test-group>
                 <!-- Optional:
                 <test-group name="FTMildNot">
