@@ -218,8 +218,7 @@
 </book>
 <book number="3">
    <metadata>
-      <title shortTitle="Usabilityguy Manuscript 
-      Guide">John Wesley Usabilityguy: A Register of His 
+      <title shortTitle="Usabilityguy Manuscript Guide">John Wesley Usabilityguy: A Register of His 
       Papers</title>
       <author>Millicent Marigold</author>
       <author>Morty Marigold</author>
