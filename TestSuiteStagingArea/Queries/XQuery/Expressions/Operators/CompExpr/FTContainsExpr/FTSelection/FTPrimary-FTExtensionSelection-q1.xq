@@ -8,7 +8,7 @@ declare variable $input-context external;
 
 declare namespace exq = "http://example.org/examples/pragmas";
 <paragraphs>
-{ for $p in $input-context/div2[head = "Match Options"]/p
+{ for $p in $input-context//div2[head = "Match Options"]/p
 where $p ftcontains (# exq:classifier with class 'Antonyms' #) { "single" }
 return $p }
 </paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.

@@ -1,4 +1,4 @@
-<!--* This is a copy of the example from the USe Cases,
+<!--* This is a copy of the example from the Use Cases,
     * but with some books that will match or not match
     * the examples in the Full Text spec.
     *-->
@@ -65,7 +65,7 @@
     <publisher>Azure Times</publisher>
     <price>12</price>
     <para>The secret of the blues is, you gotta sing the first line twice.
-    Yes, the secret if the blues is, you gotta sing that first line twice.
+    Yes, the secret of the blues is, you gotta sing that first line twice.
     After that, it all comes out just nice.</para>
   </book>
   <book>
@@ -83,7 +83,7 @@
     <date>2007</date>
     <publisher>Ninja Publications</publisher>
     <price>10</price>
-    <para>Amazingly enough, many people believe that numchucks are not useful
+    <para>Amazingly enough, many people believe that nunchuks are not useful
     to software development! They prefer usability studies to the swift
     application of physical means of persuasion. Hah! The ninja coder knows
     otherwise.
