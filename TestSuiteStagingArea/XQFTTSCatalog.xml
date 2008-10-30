@@ -1754,6 +1754,34 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">wildcard-queries-results-q1.txt</output-file>
       </test-case>
+            <test-case is-XPath2="false" name="wildcard-queries-results-q2" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Zero or One Character Prefix Wildcard Query: Find all books with the word "way" with no prefix or a one character prefix in the text.This query finds a word with no prefix or a one character prefix (zero or one character before the first character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.2" section-title="Q2 Zero or One Character Prefix Wildcard Query" section-pointer="wildcard-queries-results-q2"/>
+        <query name="wildcard-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">wildcard-queries-results-q2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="wildcard-queries-results-q2b" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Zero or One Character Prefix Wildcard Query: Find all books with the word "way" with no prefix or a one character prefix in the text.This query finds a word with no prefix or a one character prefix (zero or one character before the first character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.2" section-title="Q2 Zero or One Character Prefix Wildcard Query" section-pointer="wildcard-queries-results-q2"/>
+        <query name="wildcard-queries-results-q2b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">wildcard-queries-results-q2.xml</output-file>
+      </test-case>
+         <test-case is-XPath2="false" name="wildcard-queries-results-q3" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Zero or More Character Infix Wildcard Query: Find all books with the words "serve" or "service" in the text. This query finds words with no infix character or any number of infix characters (zero or more characters inserted in the middle of a word).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.3" section-title="Q3 Zero or More Character Infix Wildcard Query" section-pointer="wildcard-queries-results-q3"/>
+        <query name="wildcard-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q3.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="wildcard-queries-results-q3b" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Zero or More Character Infix Wildcard Query: Find all books with the words "serve" or "service" in the text. This query finds words with no infix character or any number of infix characters (zero or more characters inserted in the middle of a word).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.3" section-title="Q3 Zero or More Character Infix Wildcard Query" section-pointer="wildcard-queries-results-q3"/>
+        <query name="wildcard-queries-results-q3b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q3.txt</output-file>
+      </test-case>   
     </test-group>
     <test-group name="UseCase-STEMMING">
       <GroupInfo>
