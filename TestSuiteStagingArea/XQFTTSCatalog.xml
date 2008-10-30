@@ -1781,19 +1781,159 @@
         <query name="wildcard-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">wildcard-queries-results-q3.txt</output-file>
-      </test-case>   
+      </test-case>
+            <test-case is-XPath2="false" name="wildcard-queries-results-q4" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 One or More Character Suffix Wildcard Query on Part of a Word: Find all books with the phrases "usability testing" or "user testing" in the text. This query finds a phrase allowing a suffix of one or more characters (one or more characters after the last character) on a part of one of the words.</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.4" section-title="Q4 One or More Character Suffix Wildcard Query on Part of a Word" section-pointer="wildcard-queries-results-q4"/>
+        <query name="wildcard-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q4.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="wildcard-queries-results-q4b" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 One or More Character Suffix Wildcard Query on Part of a Word: Find all books with the phrases "usability testing" or "user testing" in the text. This query finds a phrase allowing a suffix of one or more characters (one or more characters after the last character) on a part of one of the words.</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.4" section-title="Q4 One or More Character Suffix Wildcard Query on Part of a Word" section-pointer="wildcard-queries-results-q4"/>
+        <query name="wildcard-queries-results-q4b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q4.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="wildcard-queries-results-q5" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Specified Range of Characters Suffix Wildcard Query: Find all books with the word "test" with a three to four character suffix in the text. This query finds a word with a number of characters within a specified range in a suffix (specified range of characters after the last character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.5" section-title="Q5 Specified Range of Characters Suffix Wildcard Query" section-pointer="wildcard-queries-results-q5"/>
+        <query name="wildcard-queries-results-q5" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q5.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="wildcard-queries-results-q5b" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Specified Range of Characters Suffix Wildcard Query: Find all books with the word "test" with a three to four character suffix in the text. This query finds a word with a number of characters within a specified range in a suffix (specified range of characters after the last character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.5" section-title="Q5 Specified Range of Characters Suffix Wildcard Query" section-pointer="wildcard-queries-results-q5"/>
+        <query name="wildcard-queries-results-q5b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q5.txt</output-file>
+      </test-case>         
     </test-group>
     <test-group name="UseCase-STEMMING">
       <GroupInfo>
         <title>Use Case "STEMMING"</title>
         <description>Queries involving a stemming algorithm (e.g., Porter) which returns noun, verb, adjective, and adverb forms of a word or root of a word in singular and plural. Section 6.</description>
       </GroupInfo>
+      <test-case is-XPath2="false" name="stemming-queries-results-q1" FilePath="UseCase/UseCase-STEMMING/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query Stemming on Word Root: Find all books with the word "test" in the text. This query finds a word and its variants applying a stemming algorithm.</description>
+        <spec-citation spec="FTUseCases" section-number="6.2.1" section-title="Q1 Query Stemming on Word Root" section-pointer="stemming-queries-results-q1"/>
+        <query name="stemming-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">stemming-queries-results-q1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="stemming-queries-results-q1b" FilePath="UseCase/UseCase-STEMMING/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query Stemming on Word Root: Find all books with the word "test" in the text. This query finds a word and its variants applying a stemming algorithm.</description>
+        <spec-citation spec="FTUseCases" section-number="6.2.1" section-title="Q1 Query Stemming on Word Root" section-pointer="stemming-queries-results-q1"/>
+        <query name="stemming-queries-results-q1b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">stemming-queries-results-q1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="stemming-queries-results-q2" FilePath="UseCase/UseCase-STEMMING/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query Stemming on Multiple Word Roots: Find all books with the phrases "usability testing" or "user testing" in the text. This query finds phrases applying a stemming algorithm to selected words within the phrases.</description>
+        <spec-citation spec="FTUseCases" section-number="6.2.2" section-title="Q2 Query Stemming on Multiple Word Rootst" section-pointer="stemming-queries-results-q2"/>
+        <query name="stemming-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">stemming-queries-results-q2.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="stemming-queries-results-q2b" FilePath="UseCase/UseCase-STEMMING/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query Stemming on Multiple Word Roots: Find all books with the phrases "usability testing" or "user testing" in the text. This query finds phrases applying a stemming algorithm to selected words within the phrases.</description>
+        <spec-citation spec="FTUseCases" section-number="6.2.2" section-title="Q2 Query Stemming on Multiple Word Rootst" section-pointer="stemming-queries-results-q2"/>
+        <query name="stemming-queries-results-q2b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">stemming-queries-results-q2.txt</output-file>
+      </test-case>      
     </test-group>
     <test-group name="UseCase-THESAURUS">
       <GroupInfo>
         <title>Use Case "THESAURUS"</title>
         <description>Queries which return synonyms or related words identified by thesauri, dictionaries, and taxonomies. Section 7.</description>
       </GroupInfo>
+      <test-case is-XPath2="false" name="thesaurus-queries-results-q1" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query on Synonyms Identified by a Thesaurus: Find all introductions which quote someone. This query finds words and phrases using a thesaurus to return synonyms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.1" section-title="Q1 Query on Synonyms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q1"/>
+        <query name="thesaurus-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="thesaurus-queries-results-q1b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query on Synonyms Identified by a Thesaurus: Find all introductions which quote someone. This query finds words and phrases using a thesaurus to return synonyms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.1" section-title="Q1 Query on Synonyms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q1"/>
+        <query name="thesaurus-queries-results-q1b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="thesaurus-queries-results-q2" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query on Narrower Terms Identified by a Thesaurus: Find all books with text on improving "web site components". This query finds words using a thesaurus to identify narrower terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.2" section-title="Q2 Query on Narrower Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q2"/>
+        <query name="thesaurus-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q2.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="thesaurus-queries-results-q2b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query on Narrower Terms Identified by a Thesaurus: Find all books with text on improving "web site components". This query finds words using a thesaurus to identify narrower terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.2" section-title="Q2 Query on Narrower Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q2"/>
+        <query name="thesaurus-queries-results-q2b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q2.txt</output-file>
+      </test-case>     
+     <test-case is-XPath2="false" name="thesaurus-queries-results-q3" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query on Broader Terms Identified by a Thesaurus: Are there any "letters" or "holiday cards" in John Wesley Usabilityguy's papers? This query finds words and phrases using a thesaurus to identify broader terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.3" section-title="Q3 Query on Broader Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q3"/>
+        <query name="thesaurus-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q3.xml</output-file>
+      </test-case>  
+      <test-case is-XPath2="true" name="thesaurus-queries-results-q3b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query on Broader Terms Identified by a Thesaurus: Are there any "letters" or "holiday cards" in John Wesley Usabilityguy's papers? This query finds words and phrases using a thesaurus to identify broader terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.3" section-title="Q3 Query on Broader Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q3"/>
+        <query name="thesaurus-queries-results-q3b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q3.xml</output-file>
+      </test-case>    
+      <test-case is-XPath2="false" name="thesaurus-queries-results-q4" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Query on Word Which Sounds Like Other Words: Find all books with words which sound like "Merrygould". This query finds words using a dictionary of words which sound like the word queried.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.4" section-title="Q4 Query on Word Which Sounds Like Other Words" section-pointer="thesaurus-queries-results-q4"/>
+        <query name="thesaurus-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q4.txt</output-file>
+      </test-case>      
+      <test-case is-XPath2="true" name="thesaurus-queries-results-q4b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Query on Word Which Sounds Like Other Words: Find all books with words which sound like "Merrygould". This query finds words using a dictionary of words which sound like the word queried.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.4" section-title="Q4 Query on Word Which Sounds Like Other Words" section-pointer="thesaurus-queries-results-q4"/>
+        <query name="thesaurus-queries-results-q4b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q4.txt</output-file>
+      </test-case>       
+      <test-case is-XPath2="false" name="thesaurus-queries-results-q5" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
+        <query name="thesaurus-queries-results-q5" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
+      </test-case>       
+      <test-case is-XPath2="true" name="thesaurus-queries-results-q5b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
+        <query name="thesaurus-queries-results-q5b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
+      </test-case>             
+      <test-case is-XPath2="false" name="thesaurus-queries-results-q6" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
+        <query name="thesaurus-queries-results-q6" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
+      </test-case>      
+       <test-case is-XPath2="true" name="thesaurus-queries-results-q6b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
+        <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
+        <query name="thesaurus-queries-results-q6b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
+      </test-case>        
     </test-group>
     <test-group name="UseCase-STOP-WORD">
       <GroupInfo>
