@@ -1740,6 +1740,20 @@
         <title>Use Case "WILDCARD"</title>
         <description>Queries which use wildcards to append or insert a character or sequence of characters to a word or a part of a word. Section 5.</description>
       </GroupInfo>
+       <test-case is-XPath2="false" name="wildcard-queries-results-q1" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 One Character Suffix Wildcard Query: Find all books with the word "test" with a one character suffix in the text. This query finds a word with a one character suffix (one character after the last character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.1" section-title="Q1 One Character Suffix Wildcard Query" section-pointer="wildcard-queries-results-q1"/>
+        <query name="wildcard-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="wildcard-queries-results-q1b" FilePath="UseCase/UseCase-WILDCARD/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 One Character Suffix Wildcard Query: Find all books with the word "test" with a one character suffix in the text. This query finds a word with a one character suffix (one character after the last character).</description>
+        <spec-citation spec="FTUseCases" section-number="5.2.1" section-title="Q1 One Character Suffix Wildcard Query" section-pointer="wildcard-queries-results-q1"/>
+        <query name="wildcard-queries-results-q1b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">wildcard-queries-results-q1.txt</output-file>
+      </test-case>
     </test-group>
     <test-group name="UseCase-STEMMING">
       <GroupInfo>
