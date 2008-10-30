@@ -1,0 +1,17 @@
+<title shortTitle="Improving Web Site Usability">Improving 
+the Usability of a Web Site Through Expert Reviews and 
+Usability Testing</title>
+ <chapter>
+     <title>Usability Testing</title>
+     <p>Once the problems identified by expert 
+     reviews have been corrected, it is time to 
+     conduct some tests of the site with your unique 
+     audience or audiences by conducting usability 
+     testing.</p>
+     <p>Users are asked to complete tasks which 
+     measure the success of the information 
+     architecture and navigational elements of the 
+     site.</p>
+     <p>Then changes are made to improve service to 
+     users.</p>
+</chapter>
