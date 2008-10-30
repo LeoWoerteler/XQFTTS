@@ -15,8 +15,8 @@
    <xsl:param name="specName" select="''" />
    <xsl:param name="catalogName" select="''" />
    <xsl:variable name="green" select='"lime"'/>
-   <xsl:variable name="max" select='200'/>
-   <xsl:variable name="threshhold" select='20'/>
+   <xsl:variable name="max" select='50'/>
+   <xsl:variable name="threshhold" select='5'/>
    <xsl:variable name="catalog" select='document($catalogName)'/>
    <xsl:variable name="title" select='"XQuery Full-Text Test Suite Coverage Summary"'/>
    
@@ -136,3 +136,8 @@
    </xsl:template>
    
 </xsl:stylesheet>
+<!-- Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.
+<metaInformation>
+<scenarios/><MapperMetaTag><MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/><MapperBlockPosition></MapperBlockPosition><TemplateContext></TemplateContext><MapperFilter side="source"></MapperFilter></MapperMetaTag>
+</metaInformation>
+-->
