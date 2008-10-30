@@ -1990,59 +1990,59 @@
       </GroupInfo>
           <test-case is-XPath2="false" name="character-queries-results-q1" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Diacritics Sensitive Query: Verify the existence of a "résumé" in the papers of John Wesley Usabilityguy. This query finds a word only if it contains the diacritics as written in the query.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.1" section-title="Q1 Diacritics Sensitive Query" section-pointer="character--queries-results-q1"/>
-        <query name="character--queries-results-q1" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.1" section-title="Q1 Diacritics Sensitive Query" section-pointer="character-queries-results-q1"/>
+        <query name="character-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">character--queries-results-q1.xml</output-file>
+        <output-file role="principal" compare="XML">character-queries-results-q1.xml</output-file>
      </test-case>
      <test-case is-XPath2="true" name="character-queries-results-q1b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Diacritics Sensitive Query: Verify the existence of a "résumé" in the papers of John Wesley Usabilityguy. This query finds a word only if it contains the diacritics as written in the query.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.1" section-title="Q1 Diacritics Sensitive Query" section-pointer="character--queries-results-q1"/>
-        <query name="character--queries-results-q1b" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.1" section-title="Q1 Diacritics Sensitive Query" section-pointer="character-queries-results-q1"/>
+        <query name="character-queries-results-q1b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">character--queries-results-q1.xml</output-file>
+        <output-file role="principal" compare="XML">character-queries-results-q1.xml</output-file>
      </test-case>
      <test-case is-XPath2="false" name="character-queries-results-q2" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Diacritics Insensitive Query: Verify the existence of a résumé in the papers of John Wesley Usabilityguy. This query finds a word whether diacritics are present or not.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.2" section-title="Q2 Diacritics Insensitive Query" section-pointer="character--queries-results-q2"/>
-        <query name="character--queries-results-q2" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.2" section-title="Q2 Diacritics Insensitive Query" section-pointer="character-queries-results-q2"/>
+        <query name="character-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">character--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">character-queries-results-q2.txt</output-file>
      </test-case>     
      <test-case is-XPath2="true" name="character-queries-results-q2b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Diacritics Insensitive Query: Verify the existence of a résumé in the papers of John Wesley Usabilityguy. This query finds a word whether diacritics are present or not.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.2" section-title="Q2 Diacritics Insensitive Query" section-pointer="character--queries-results-q2"/>
-        <query name="character--queries-results-q2b" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.2" section-title="Q2 Diacritics Insensitive Query" section-pointer="character-queries-results-q2"/>
+        <query name="character-queries-results-q2b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">character--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">character-queries-results-q2.txt</output-file>
      </test-case>       
      <test-case is-XPath2="false" name="character-queries-results-q3" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query on Word with Upper Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word in upper case characters.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.3" section-title="Q3 Query on Word with Upper Case Characters" section-pointer="character--queries-results-q3"/>
-        <query name="character--queries-results-q3" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.3" section-title="Q3 Query on Word with Upper Case Characters" section-pointer="character-queries-results-q3"/>
+        <query name="character-queries-results-q3" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">character--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">character-queries-results-q3.xml</output-file>
      </test-case>     
      <test-case is-XPath2="true" name="character-queries-results-q3b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query on Word with Upper Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word in upper case characters.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.3" section-title="Q3 Query on Word with Upper Case Characters" section-pointer="character--queries-results-q3"/>
-        <query name="character--queries-results-q3b" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.3" section-title="Q3 Query on Word with Upper Case Characters" section-pointer="character-queries-results-q3"/>
+        <query name="character-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">character--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">character-queries-results-q3.xml</output-file>
      </test-case>     
      <test-case is-XPath2="false" name="character-queries-results-q4" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Query on Word with Upper Case and Lower Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word with upper or lower case characters.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.4" section-title="Q4 Query on Word with Upper Case and Lower Case Characters" section-pointer="character--queries-results-q4"/>
-        <query name="character--queries-results-q4" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.4" section-title="Q4 Query on Word with Upper Case and Lower Case Characters" section-pointer="character-queries-results-q4"/>
+        <query name="character-queries-results-q4" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">character--queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Fragment">character-queries-results-q4.txt</output-file>
      </test-case>      
      <test-case is-XPath2="true" name="character-queries-results-q4b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Query on Word with Upper Case and Lower Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word with upper or lower case characters.</description>
-        <spec-citation spec="FTUseCases" section-number="9.2.4" section-title="Q4 Query on Word with Upper Case and Lower Case Characters" section-pointer="character--queries-results-q4"/>
-        <query name="character--queries-results-q4b" date="2008-06-26"/>
+        <spec-citation spec="FTUseCases" section-number="9.2.4" section-title="Q4 Query on Word with Upper Case and Lower Case Characters" section-pointer="character-queries-results-q4"/>
+        <query name="character-queries-results-q4b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">character--queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Fragment">character-queries-results-q4.txt</output-file>
      </test-case>   
     </test-group>
     <test-group name="UseCase-LOGICAL">
@@ -2052,101 +2052,101 @@
       </GroupInfo>
      <test-case is-XPath2="false" name="logical-queries-results-q1" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Or Query: Find all books with the words "web" or "software" in the text. This query finds any or all of the words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.1" section-title="Q1 Or Query" section-pointer="logical--queries-results-q1"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.1" section-title="Q1 Or Query" section-pointer="logical-queries-results-q1"/>
         <query name="logical-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q1.txt</output-file>
      </test-case>
      <test-case is-XPath2="true" name="logical-queries-results-q1b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Or Query: Find all books with the words "web" or "software" in the text. This query finds any or all of the words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.1" section-title="Q1 Or Query" section-pointer="logical--queries-results-q1"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.1" section-title="Q1 Or Query" section-pointer="logical-queries-results-q1"/>
         <query name="logical-queries-results-q1b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q1.txt</output-file>
      </test-case>     
      <test-case is-XPath2="false" name="logical-queries-results-q2" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 And Query: Find all books with the words "web" "software" in the text. This query finds all of the words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.2" section-title="Q2 And Query" section-pointer="logical--queries-results-q2"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.2" section-title="Q2 And Query" section-pointer="logical-queries-results-q2"/>
         <query name="logical-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q2.txt</output-file>
      </test-case>     
      <test-case is-XPath2="true" name="logical-queries-results-q2b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 And Query: Find all books with the words "web" "software" in the text. This query finds all of the words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.2" section-title="Q2 And Query" section-pointer="logical--queries-results-q2"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.2" section-title="Q2 And Query" section-pointer="logical-queries-results-q2"/>
         <query name="logical-queries-results-q2b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q2.txt</output-file>
      </test-case>       
      <test-case is-XPath2="false" name="logical-queries-results-q3" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 And Query Ordered: Find all book text containing the words "goal" "obstacles" "task" in this order. This query finds multiple words in the order queried.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.3" section-title="Q3 And Query Ordered" section-pointer="logical--queries-results-q3"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.3" section-title="Q3 And Query Ordered" section-pointer="logical-queries-results-q3"/>
         <query name="logical-queries-results-q3" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">logical--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">logical-queries-results-q3.xml</output-file>
      </test-case>    
      <test-case is-XPath2="true" name="logical-queries-results-q3b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 And Query Ordered: Find all book text containing the words "goal" "obstacles" "task" in this order. This query finds multiple words in the order queried.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.3" section-title="Q3 And Query Ordered" section-pointer="logical--queries-results-q3"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.3" section-title="Q3 And Query Ordered" section-pointer="logical-queries-results-q3"/>
         <query name="logical-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">logical--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">logical-queries-results-q3.xml</output-file>
      </test-case>         
      <test-case is-XPath2="false" name="logical-queries-results-q4" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Unary Not Query: Find all books which do not belong in a collection on "usability testing". This query finds books which do not contain a phrase in an element and its descendants.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.4" section-title="Q4 Unary Not Query" section-pointer="logical--queries-results-q4"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.4" section-title="Q4 Unary Not Query" section-pointer="logical-queries-results-q4"/>
         <query name="logical-queries-results-q4" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q4.txt</output-file>
      </test-case>   
      <test-case is-XPath2="true" name="logical-queries-results-q4b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Unary Not Query: Find all books which do not belong in a collection on "usability testing". This query finds books which do not contain a phrase in an element and its descendants.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.4" section-title="Q4 Unary Not Query" section-pointer="logical--queries-results-q4"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.4" section-title="Q4 Unary Not Query" section-pointer="logical-queries-results-q4"/>
         <query name="logical-queries-results-q4b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q4.txt</output-file>
      </test-case>              
      <test-case is-XPath2="false" name="logical-queries-results-q5" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q5 And Not Query: Find all books with the word "usability" and not the word "plan" in the metadata. This query finds a word only when another is not found in an element or its descendants.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.5" section-title="Q5 And Not Query" section-pointer="logical--queries-results-q5"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.5" section-title="Q5 And Not Query" section-pointer="logical-queries-results-q5"/>
         <query name="logical-queries-results-q5" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q5.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q5.txt</output-file>
      </test-case>    
      <test-case is-XPath2="true" name="logical-queries-results-q5b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q5 And Not Query: Find all books with the word "usability" and not the word "plan" in the metadata. This query finds a word only when another is not found in an element or its descendants.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.5" section-title="Q5 And Not Query" section-pointer="logical--queries-results-q5"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.5" section-title="Q5 And Not Query" section-pointer="logical-queries-results-q5"/>
         <query name="logical-queries-results-q5b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q5.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q5.txt</output-file>
      </test-case>          
      <test-case is-XPath2="false" name="logical-queries-results-q6" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q6 And Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts" in the text. This query finds books with multiple words and not a phrase containing one of those words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.6" section-title="Q6 And Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical--queries-results-q6"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.6" section-title="Q6 And Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical-queries-results-q6"/>
         <query name="logical-queries-results-q6" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q6.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q6.txt</output-file>
      </test-case>     
       <test-case is-XPath2="true" name="logical-queries-results-q6b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q6 And Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts" in the text. This query finds books with multiple words and not a phrase containing one of those words.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.6" section-title="Q6 And Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical--queries-results-q6"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.6" section-title="Q6 And Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical-queries-results-q6"/>
         <query name="logical-queries-results-q6b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">logical--queries-results-q6.txt</output-file>
+        <output-file role="principal" compare="Fragment">logical-queries-results-q6.txt</output-file>
      </test-case>       
      <test-case is-XPath2="false" name="logical-queries-results-q7" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts", in the metadata or text. This query finds books with multiple words and not a phrase which contains one of the words, while not eliminating a result if it contains the phrase as well as one of  the words searched.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.7" section-title="Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical--queries-results-q7"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.7" section-title="Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical-queries-results-q7"/>
         <query name="logical-queries-results-q7" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">logical--queries-results-q7.xml</output-file>
+        <output-file role="principal" compare="XML">logical-queries-results-q7.xml</output-file>
      </test-case>    
      <test-case is-XPath2="true" name="logical-queries-results-q7b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts", in the metadata or text. This query finds books with multiple words and not a phrase which contains one of the words, while not eliminating a result if it contains the phrase as well as one of  the words searched.</description>
-        <spec-citation spec="FTUseCases" section-number="10.2.7" section-title="Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical--queries-results-q7"/>
+        <spec-citation spec="FTUseCases" section-number="10.2.7" section-title="Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand" section-pointer="logical-queries-results-q7"/>
         <query name="logical-queries-results-q7b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">logical--queries-results-q7.xml</output-file>
+        <output-file role="principal" compare="XML">logical-queries-results-q7.xml</output-file>
      </test-case>           
     </test-group>
     <test-group name="UseCase-CARDINALITY">
@@ -2156,59 +2156,59 @@
       </GroupInfo>
       <test-case is-XPath2="false" name="cardinality-queries-results-q1" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Query in Same Instance of an Element: Find all books with the phrase "web site" and the word "usability" in the same subject. This query finds a word and a phrase in the same instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.1" section-title="Q1 Query in Same Instance of an Element" section-pointer="cardinality--queries-results-q1"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.1" section-title="Q1 Query in Same Instance of an Element" section-pointer="cardinality-queries-results-q1"/>
         <query name="cardinality-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q1.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q1.xml</output-file>
      </test-case>
      <test-case is-XPath2="true" name="cardinality-queries-results-q1b" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Query in Same Instance of an Element: Find all books with the phrase "web site" and the word "usability" in the same subject. This query finds a word and a phrase in the same instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.1" section-title="Q1 Query in Same Instance of an Element" section-pointer="cardinality--queries-results-q1"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.1" section-title="Q1 Query in Same Instance of an Element" section-pointer="cardinality-queries-results-q1"/>
         <query name="cardinality-queries-results-q1b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q1.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q1.xml</output-file>
      </test-case> 
      <test-case is-XPath2="false" name="cardinality-queries-results-q2" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Query in Any Instance of an Element (Existential Quantification): Find all books with the phrase "web site" and the word "usability" in any subject. This query finds a word and a phrase in any instance of an element across the siblings of the same element. The word and the phrase may be in different elements.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.2" section-title="Q2 Query in Any Instance of an Element (Existential Quantification)" section-pointer="cardinality--queries-results-q2"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.2" section-title="Q2 Query in Any Instance of an Element (Existential Quantification)" section-pointer="cardinality-queries-results-q2"/>
         <query name="cardinality-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">cardinality--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">cardinality-queries-results-q2.txt</output-file>
      </test-case>     
      <test-case is-XPath2="true" name="cardinality-queries-results-q2b" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Query in Any Instance of an Element (Existential Quantification): Find all books with the phrase "web site" and the word "usability" in any subject. This query finds a word and a phrase in any instance of an element across the siblings of the same element. The word and the phrase may be in different elements.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.2" section-title="Q2 Query in Any Instance of an Element (Existential Quantification)" section-pointer="cardinality--queries-results-q2"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.2" section-title="Q2 Query in Any Instance of an Element (Existential Quantification)" section-pointer="cardinality-queries-results-q2"/>
         <query name="cardinality-queries-results-q2b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">cardinality--queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">cardinality-queries-results-q2.txt</output-file>
      </test-case>          
      <test-case is-XPath2="false" name="cardinality-queries-results-q3" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query in Every Instance of an Element (Universal Quantification): Find all books with the words "ersatz" and "publications" in every publisher name. This query finds two words in every instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.3" section-title="Q3 Query in Every Instance of an Element (Universal Quantification)" section-pointer="cardinality--queries-results-q3"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.3" section-title="Q3 Query in Every Instance of an Element (Universal Quantification)" section-pointer="cardinality-queries-results-q3"/>
         <query name="cardinality-queries-results-q3" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q3.xml</output-file>
      </test-case>     
      <test-case is-XPath2="true" name="cardinality-queries-results-q3b" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query in Every Instance of an Element (Universal Quantification): Find all books with the words "ersatz" and "publications" in every publisher name. This query finds two words in every instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.3" section-title="Q3 Query in Every Instance of an Element (Universal Quantification)" section-pointer="cardinality--queries-results-q3"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.3" section-title="Q3 Query in Every Instance of an Element (Universal Quantification)" section-pointer="cardinality-queries-results-q3"/>
         <query name="cardinality-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q3.xml</output-file>
      </test-case>   
      <test-case is-XPath2="false" name="cardinality-queries-results-q4" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Occurrence Count Query: Find all books which repeat the phrase "expert review methods" in the text at least two times. This query finds a phrase which is repeated a specified number of times.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.4" section-title="Q4 Occurrence Count Query" section-pointer="cardinality--queries-results-q4"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.4" section-title="Q4 Occurrence Count Query" section-pointer="cardinality-queries-results-q4"/>
         <query name="cardinality-queries-results-q4" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q4.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q4.xml</output-file>
      </test-case>        
       <test-case is-XPath2="true" name="cardinality-queries-results-q4b" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Occurrence Count Query: Find all books which repeat the phrase "expert review methods" in the text at least two times. This query finds a phrase which is repeated a specified number of times.</description>
-        <spec-citation spec="FTUseCases" section-number="11.2.4" section-title="Q4 Occurrence Count Query" section-pointer="cardinality--queries-results-q4"/>
+        <spec-citation spec="FTUseCases" section-number="11.2.4" section-title="Q4 Occurrence Count Query" section-pointer="cardinality-queries-results-q4"/>
         <query name="cardinality-queries-results-q4b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">cardinality--queries-results-q4.xml</output-file>
+        <output-file role="principal" compare="XML">cardinality-queries-results-q4.xml</output-file>
      </test-case>         
     </test-group>
     <test-group name="UseCase-PROXIMITY">
@@ -2216,6 +2216,7 @@
         <title>Use Case "PROXIMITY"</title>
         <description>Queries on proximity relationships including distance, window, sentence, and paragraph. Section 12.</description>
       </GroupInfo>
+      
     </test-group>
     <test-group name="UseCase-AXES">
       <GroupInfo>
