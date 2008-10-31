@@ -2396,6 +2396,64 @@
         <title>Use Case "IGNORE"</title>
         <description>Queries ignoring descendant element content. Section 14.</description>
       </GroupInfo>
+     <test-case is-XPath2="false" name="ignore-queries-results-q1" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Distance Query Ignoring Content of All Descendant Elements: Find advice on whether the observer should "correct" or provide "guidance" to the user during usability "testing". This query ignores the content of all descendant elements.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.1" section-title="Q1 Distance Query Ignoring Content of All Descendant Elements" section-pointer="ignore-queries-results-q1"/>
+        <query name="ignore-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">ignore-queries-results-q1.xml</output-file>
+     </test-case>
+      <test-case is-XPath2="true" name="ignore-queries-results-q1b" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Distance Query Ignoring Content of All Descendant Elements: Find advice on whether the observer should "correct" or provide "guidance" to the user during usability "testing". This query ignores the content of all descendant elements.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.1" section-title="Q1 Distance Query Ignoring Content of All Descendant Elements" section-pointer="ignore-queries-results-q1"/>
+        <query name="ignore-queries-results-q1b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">ignore-queries-results-q1.xml</output-file>
+     </test-case>
+      <test-case is-XPath2="false" name="ignore-queries-results-q2" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Phrase Query Ignoring Content of Descendant Element Specified by XPath Expression: Find all book chapters containing "users can be tested at any computer
+workstation or in a lab" ignoring footnotes. This query finds book chapters containing the phrase "users can be tested at any computer workstation or in a lab" ignoring the content of a descendant element explicitly specified by an XPath expression.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.2" section-title="Q2 Phrase Query Ignoring Content of Descendant Element Specified by XPath Expression" section-pointer="ignore-queries-results-q2"/>
+        <query name="ignore-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q2.txt</output-file>
+     </test-case>
+      <test-case is-XPath2="true" name="ignore-queries-results-q2b" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Phrase Query Ignoring Content of Descendant Element Specified by XPath Expression: Find all book chapters containing "users can be tested at any computer
+workstation or in a lab" ignoring footnotes. This query finds book chapters containing the phrase "users can be tested at any computer workstation or in a lab" ignoring the content of a descendant element explicitly specified by an XPath expression.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.2" section-title="Q2 Phrase Query Ignoring Content of Descendant Element Specified by XPath Expression" section-pointer="ignore-queries-results-q2"/>
+        <query name="ignore-queries-results-q2b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q2.txt</output-file>
+     </test-case>
+      <test-case is-XPath2="false" name="ignore-queries-results-q3" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Phrase Query Ignoring Content of Descendant Element Specified by Full-Text Query: Find all book chapters containing the phrase "at any computer workstation or in a lab" ignoring footnotes on workstations. This query ignores the content of a descendant element specified by a full-text query.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.3" section-title="Q3 Phrase Query Ignoring Content of Descendant Element Specified by Full-Text Query" section-pointer="ignore-queries-results-q3"/>
+        <query name="ignore-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q3.txt</output-file>
+     </test-case>     
+      <test-case is-XPath2="true" name="ignore-queries-results-q3b" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Phrase Query Ignoring Content of Descendant Element Specified by Full-Text Query: Find all book chapters containing the phrase "at any computer workstation or in a lab" ignoring footnotes on workstations. This query ignores the content of a descendant element specified by a full-text query.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.3" section-title="Q3 Phrase Query Ignoring Content of Descendant Element Specified by Full-Text Query" section-pointer="ignore-queries-results-q3"/>
+        <query name="ignore-queries-results-q3b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q3.txt</output-file>
+     </test-case>     
+      <test-case is-XPath2="false" name="ignore-queries-results-q4" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Distance Query Ignoring Content of Descendant Elements Level by Level: Find all books with the word "workstation" near the word "lab". This query performs a level-by-level ignore. It ignores the content of descendant elements when querying the content of the parent element. Its descendant elements are promoted and then their content is queried. It differs from the ignore queries above because it queries the content of parent elements skipping over the descendant elements, then instead of stopping there it queries the content of descendent elements in isolation.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.4" section-title="Q4 Distance Query Ignoring Content of Descendant Elements Level by Level" section-pointer="ignore-queries-results-q4"/>
+        <query name="ignore-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q4.txt</output-file>
+     </test-case>        
+      <test-case is-XPath2="true" name="ignore-queries-results-q4b" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Distance Query Ignoring Content of Descendant Elements Level by Level: Find all books with the word "workstation" near the word "lab". This query performs a level-by-level ignore. It ignores the content of descendant elements when querying the content of the parent element. Its descendant elements are promoted and then their content is queried. It differs from the ignore queries above because it queries the content of parent elements skipping over the descendant elements, then instead of stopping there it queries the content of descendent elements in isolation.</description>
+        <spec-citation spec="FTUseCases" section-number="14.2.4" section-title="Q4 Distance Query Ignoring Content of Descendant Elements Level by Level" section-pointer="ignore-queries-results-q4"/>
+        <query name="ignore-queries-results-q4b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">ignore-queries-results-q4.txt</output-file>
+     </test-case>      
     </test-group>
     <test-group name="UseCase-FULL-TEXT-COMPOSIBILITY">
       <GroupInfo>
