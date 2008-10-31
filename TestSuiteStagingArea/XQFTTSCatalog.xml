@@ -2515,13 +2515,132 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <title>Use Case "XQUERY-XPATH-COMPOSABILITY"</title>
         <description>Queries combining full-text queries with other XQuery and XPath functionalities. Section 16.</description>
       </GroupInfo>
-      
+     <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q1" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Full-Text Query Constructing New Element: For books with "usability" in the title create a flat list of all title-author pairs, with each pair enclosed in a newly constructed element. This query finds a word in an element and returns the element and another wrapped in a new element.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.1" section-title="Q1 Full-Text Query Constructing New Element" section-pointer="xquery-xpath-composability-queries-results-q1"/>
+        <query name="xquery-xpath-composability-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q1.txt</output-file>
+     </test-case>
+    <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q2" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Full-Text Query Returning Count of Descendant Element Occurrences: Find all books with a chapter title on "usability tests". Return book title, chapter title, and the number of steps in chapters.  This query finds words then returns among other elements a constructed element reporting the number of occurrences of a descendant element.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.2" section-title="Q2 Full-Text Query Returning Count of Descendant Element Occurrences" section-pointer="xquery-xpath-composability-queries-results-q2"/>
+        <query name="xquery-xpath-composability-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q2.txt</output-file>
+     </test-case>     
+    <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q3" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Full-Text Query with Conditional Return: For each book with "usability" in the book title, return the book title and a second element. Return the book 
+title and a third element if the second element does not exist. This query finds a word and contains a conditional return.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.3" section-title="Q3 Full-Text Query with Conditional Return" section-pointer="xquery-xpath-composability-queries-results-q3"/>
+        <query name="xquery-xpath-composability-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q3.txt</output-file>
+     </test-case>       
+    <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q4" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Full-Text Query with Numeric Value Comparison: For each book with "usability" in the book title, return its book title and the round number of its suggested price if the price exceeds $25. This query finds a word and contains a conditional return based on a function on a numeric value.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.4" section-title="Q4 Full-Text Query with Numeric Value Comparison" section-pointer="xquery-xpath-composability-queries-results-q4"/>
+        <query name="xquery-xpath-composability-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q4.txt</output-file>
+     </test-case>        
+    <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q5" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Full-Text Query with Character String Query: Find all introductions in books, published in "Washington, D.C.", which include listings for "résumés", "drafts", and "correspondence". This query finds words and a character string.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.5" section-title="Q5 Full-Text Query with Character String Query" section-pointer="xquery-xpath-composability-queries-results-q5"/>
+        <query name="xquery-xpath-composability-queries-results-q5" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q5.txt</output-file>
+     </test-case>        
+     <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q6" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q6 Full-Text Query with Conditional Return of Boolean Values: For each book on "usability" return the book title and a new has-publishers element with value true if the book has more than 1 publisher. Return the title and a new has-publishers element with value false if the book does not have more than one publisher. This query finds a word, then returns Boolean values based on the number of occurrences of an element.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.6" section-title="Q6 Full-Text Query with Conditional Return of Boolean Values" section-pointer="xquery-xpath-composability-queries-results-q6"/>
+        <query name="xquery-xpath-composability-queries-results-q6" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q6.txt</output-file>
+     </test-case>      
+     <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q7" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q7 Full-Text Query with Date Comparison and Element Occurrence Count: Find all books about conducting "usability tests" which have more than one author and are published after "2000". This query finds a phrase, counts the number of occurrences of an element, runs a greater than comparison on dates, and combines the results.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.7" section-title="Q7 Full-Text Query with Date Comparison and Element Occurrence Count" section-pointer="xquery-xpath-composability-queries-results-q7"/>
+        <query name="xquery-xpath-composability-queries-results-q7" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q7.txt</output-file>
+     </test-case>         
+     <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q8" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q8 Query with XPath Expression Within Full-Text Expression: Find all books published after "2001" which share a subject with the book with the short title "Usability Basics". This query finds words using an XPath expression to identify the words queried and looks for a publication date after the one specified.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.8" section-title="Q8 Query with XPath Expression Within Full-Text Expression" section-pointer="xquery-xpath-composability-queries-results-q8"/>
+        <query name="xquery-xpath-composability-queries-results-q8" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q8.txt</output-file>
+     </test-case>       
+     <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q9" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q9 Query Using an XQuery Expression to Determine the Number of Words Allowed in a Window: Find all books which discuss "successfully completing tasks". This query finds words within a window, allowing more words within the window depending on the number of chapters in the book.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.9" section-title="Q9 Query Using an XQuery Expression to Determine the Number of Words Allowed in a Window" section-pointer="xquery-xpath-composability-queries-results-q9"/>
+        <query name="xquery-xpath-composability-queries-results-q9" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q9.txt</output-file>
+     </test-case>     
+     <test-case is-XPath2="true" name="xquery-xpath-composability-queries-results-q9b" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q9 Query Using an XQuery Expression to Determine the Number of Words Allowed in a Window: Find all books which discuss "successfully completing tasks". This query finds words within a window, allowing more words within the window depending on the number of chapters in the book.</description>
+        <spec-citation spec="FTUseCases" section-number="16.2.9" section-title="Q9 Query Using an XQuery Expression to Determine the Number of Words Allowed in a Window" section-pointer="xquery-xpath-composability-queries-results-q9"/>
+        <query name="xquery-xpath-composability-queries-results-q9b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q9.txt</output-file>
+     </test-case>      
     </test-group>
     <test-group name="UseCase-SCORE">
       <GroupInfo>
         <title>Use Case "SCORE"</title>
         <description>Queries that must be written with score.  Section 17.</description>
       </GroupInfo>
+     <test-case is-XPath2="false" name="score-queries-results-q1" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query Returning Scores: Find all books which mention "usability" in the title or the text. Return book titles and scores. This query performs a word query and returns scores, highest scores first.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.1" section-title="Q1 Query Returning Scores" section-pointer="score-queries-results-q1"/>
+        <query name="score-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q1.txt</output-file>
+     </test-case>
+     <test-case is-XPath2="false" name="score-queries-results-q2" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query Returning Results with Top Scores: Find the best two books on "usability". This query performs a word query and returns only the results with the two top scores.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.2" section-title="Q2 Query Returning Results with Top Scores" section-pointer="score-queries-results-q2"/>
+        <query name="score-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q2.txt</output-file>
+     </test-case>    
+     <test-case is-XPath2="false" name="score-queries-results-q3" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.3" section-title="Q3 Query Filtering on Scores" section-pointer="score-queries-results-q3"/>
+        <query name="score-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q3.txt</output-file>
+     </test-case>        
+     <test-case is-XPath2="true" name="score-queries-results-q3b" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.3" section-title="Q3 Query Filtering on Scores" section-pointer="score-queries-results-q3"/>
+        <query name="score-queries-results-q3b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q3.txt</output-file>
+     </test-case>   
+     <test-case is-XPath2="false" name="score-queries-results-q4" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Query Combining Score and XML Structure with a Conditional Return: Find all books with parts about "usability testing". This query finds books which contain parts about usability testing, returning entire books, but without part elements identified as irrelevant via score.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.4" section-title="Q4 Query Combining Score and XML Structure with a Conditional Return" section-pointer="score-queries-results-q4"/>
+        <query name="score-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q4.txt</output-file>
+     </test-case>            
+     <test-case is-XPath2="false" name="score-queries-results-q5" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q5 Query Returning All Books Ordered by Score: Return all books, listing books with text on "software" first. This query performs a word query, returns all the documents in the database, and orders them returning those with found word first, those without last.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.5" section-title="Q5 Query Returning All Books Ordered by Score" section-pointer="score-queries-results-q5"/>
+        <query name="score-queries-results-q5" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q5.txt</output-file>
+     </test-case>      
+     <test-case is-XPath2="false" name="score-queries-results-q6" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q6 Query with Weight Declaration: Finds books which discuss "conducting usability tests" returning those which mention "measuring success" first. This query finds words using weighting on optional words to impact the scoring and sorting.</description>
+        <spec-citation spec="FTUseCases" section-number="17.2.6" section-title="Q6 Query with Weight Declaration" section-pointer="score-queries-results-q6"/>
+        <query name="score-queries-results-q6" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">score-queries-results-q6.txt</output-file>
+     </test-case>         
     </test-group>
   </test-group>
 </test-suite>
