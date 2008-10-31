@@ -2341,6 +2341,55 @@
         <title>Use Case "AXES"</title>
         <description>Queries traversing relative XPath axes. Section 13.</description>
       </GroupInfo>
+     <test-case is-XPath2="false" name="axes-queries-results-q1" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query on Element and Its Children: Find all books with paragraphs containing the phrase "computer workstation" and footnotes within those paragraphs containing the word "comfortable". This query finds a phrase in an element, then finds a word in a child element.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.1" section-title="Q1 Query on Element and Its Children" section-pointer="axes-queries-results-q1"/>
+        <query name="axes-queries-results-q1" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q1.txt</output-file>
+     </test-case>
+      <test-case is-XPath2="true" name="axes-queries-results-q1b" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q1 Query on Element and Its Children: Find all books with paragraphs containing the phrase "computer workstation" and footnotes within those paragraphs containing the word "comfortable". This query finds a phrase in an element, then finds a word in a child element.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.1" section-title="Q1 Query on Element and Its Children" section-pointer="axes-queries-results-q1"/>
+        <query name="axes-queries-results-q1b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q1.txt</output-file>
+     </test-case>
+      <test-case is-XPath2="false" name="axes-queries-results-q2" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query on Element Returning Its First Two Children: Find the first two steps in chapters on "conducting usability tests." This query finds words in an element, then returns its first two children elements.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.2" section-title="Q2 Query on Element Returning Its First Two Children" section-pointer="axes-queries-results-q2"/>
+        <query name="axes-queries-results-q2" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q2.txt</output-file>
+     </test-case>
+       <test-case is-XPath2="true" name="axes-queries-results-q2b" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q2 Query on Element Returning Its First Two Children: Find the first two steps in chapters on "conducting usability tests." This query finds words in an element, then returns its first two children elements.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.2" section-title="Q2 Query on Element Returning Its First Two Children" section-pointer="axes-queries-results-q2"/>
+        <query name="axes-queries-results-q2b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q2.txt</output-file>
+     </test-case>    
+      <test-case is-XPath2="false" name="axes-queries-results-q3" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query on Element and Its Ancestors: Are there any "flow diagrams" of "human computer interaction" scenarios in John Wesley Usabilityguy's papers? This query finds a phrase in an element, then finds another phrase in an ancestor element.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.3" section-title="Q3 Query on Element and Its Ancestors" section-pointer="axes-queries-results-q3"/>
+        <query name="axes-queries-results-q3" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q3.txt</output-file>
+     </test-case>     
+      <test-case is-XPath2="true" name="axes-queries-results-q3b" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q3 Query on Element and Its Ancestors: Are there any "flow diagrams" of "human computer interaction" scenarios in John Wesley Usabilityguy's papers? This query finds a phrase in an element, then finds another phrase in an ancestor element.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.3" section-title="Q3 Query on Element and Its Ancestors" section-pointer="axes-queries-results-q3"/>
+        <query name="axes-queries-results-q3b" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q3.txt</output-file>
+     </test-case>  
+       <test-case is-XPath2="false" name="axes-queries-results-q4" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Q4 Query on Element and Its Right Siblings: Find all book chapters with paragraphs on "usability testing" followed by paragraphs on "information architecture". This query finds a phrase in an element, then finds another phrase in one of its right siblings.</description>
+        <spec-citation spec="FTUseCases" section-number="13.2.4" section-title="Q4 Query on Element and Its Right Siblings" section-pointer="axes-queries-results-q4"/>
+        <query name="axes-queries-results-q4" date="2008-06-26"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q4.txt</output-file>
+     </test-case>      
     </test-group>
     <test-group name="UseCase-IGNORE">
       <GroupInfo>
