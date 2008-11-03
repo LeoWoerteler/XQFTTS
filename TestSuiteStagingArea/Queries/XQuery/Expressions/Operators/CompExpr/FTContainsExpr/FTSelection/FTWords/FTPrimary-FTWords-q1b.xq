@@ -10,7 +10,7 @@ declare variable $input-context external;
 declare variable $search-token := "FTAnyAllOption";
 <paragraphs>
 { for $p in $input-context//p
-where $p ftcontains { $input-context }
+where $p ftcontains { $search-token }
 return $p }
 </paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.
 <metaInformation>
