@@ -1,0 +1,13 @@
+<paragraphs>
+<p><termdef id="dt-cardinality-selection" term="cardinality selection">A
+<term>cardinality selection</term> consist of an 
+<nt def="FTWords">FTWords</nt> followed
+by the <nt def="FTTimes">FTTimes</nt> postfix operator.</termdef>
+A cardinality selection selects matches for which the operand 
+<nt def="FTWords">FTWords</nt> is matched a specified number of
+times. </p>
+<p>A cardinality selection limits the number of different
+matches of <nt def="FTWords">FTWords</nt> within the
+specified range. The semantics of FTRange are described in 
+<specref ref="ftdistance"/>. </p>
+</paragraphs>
