@@ -11,6 +11,6 @@ where $au ftcontains ftnot ("montana" ftand "marigold")
    stemming ftor "guidance" ftor "assistance" 
    ftor "help" ftand "usability test.*" with wildcards 
    window 80 words without content .//footnote
-return &lt;book number="{$book/@number}"&gt; 
+return <book number="{$book/@number}"> 
           {$book/metadata/title, $co}
-          &lt;/book&gt;
+          </book>

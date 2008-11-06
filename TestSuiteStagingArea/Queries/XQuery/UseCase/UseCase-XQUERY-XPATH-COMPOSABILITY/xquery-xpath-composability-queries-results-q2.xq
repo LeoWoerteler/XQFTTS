@@ -7,12 +7,12 @@ for $book in $input-context/books/book
 let $ct := $book/content/part/chapter/title
 where $ct ftcontains "usability" ftand "test" 
    with stemming
-return &lt;book number="{$book/@number}"&gt; 
+return <book number="{$book/@number}"> 
           {$book/metadata/title,
           for $title in $ct
           return 
              ($title, 
-             &lt;number-of-steps&gt; 
+             <number-of-steps> 
                 {count($title/..//step)}
-             &lt;/number-of-steps&gt;)}
-       &lt;/book&gt;
+             </number-of-steps>)}
+       </book>

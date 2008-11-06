@@ -4,10 +4,10 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book[metadata/title ftcontains "usability"]
-return &lt;book number="{$book/@number}"&gt;
+return <book number="{$book/@number}">
            {$book/metadata/title,  
-             if ($book/metadata/price &gt; 25)
-             then &lt;price&gt;{concat("$", round($book/metadata/price))}&lt;/price&gt;
+             if ($book/metadata/price > 25)
+             then <price>{concat("$", round($book/metadata/price))}</price>
              else ()
            }   
-       &lt;/book&gt;
+       </book>

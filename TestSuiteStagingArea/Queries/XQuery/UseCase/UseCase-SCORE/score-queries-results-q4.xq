@@ -26,7 +26,7 @@ let $irrelevantParts :=
    for $part in $book//part
    let score $score := $part ftcontains "usability test.*" 
       with wildcards
-   where $score &lt; 0.5
+   where $score < 0.5
    return $part
-where count($irrelevantParts) &lt; count($book//part)
+where count($irrelevantParts) < count($book//part)
 return local:filter($book, $irrelevantParts)

@@ -5,9 +5,9 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book[./metadata/title ftcontains 
    "usability"]
-return &lt;book number="{$book/@number}"&gt;
+return <book number="{$book/@number}">
           {$book/metadata/title,
-             if (count($book/metadata//author) &gt; 0) 
+             if (count($book/metadata//author) > 0) 
              then $book/metadata//author 
              else $book/metadata//publisher}
-       &lt;/book&gt;
+       </book>

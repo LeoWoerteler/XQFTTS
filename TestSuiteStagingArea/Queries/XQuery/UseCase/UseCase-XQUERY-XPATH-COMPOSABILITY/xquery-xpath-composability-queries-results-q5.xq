@@ -8,6 +8,6 @@ for $book in $input-context/books/book[.//publicationInfo/place/text()
 let $intro := $book/content/introduction
 where $intro ftcontains "résumés" diacritics sensitive
    ftand "drafts" ftand "correspondence"
-return &lt;book number="{$book/@number}"&gt; 
+return <book number="{$book/@number}">
            {$book/metadata/title, $intro}
-           &lt;/book&gt;
+           </book>

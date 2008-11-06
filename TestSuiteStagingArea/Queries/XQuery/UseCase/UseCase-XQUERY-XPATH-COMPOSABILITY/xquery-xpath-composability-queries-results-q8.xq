@@ -9,11 +9,11 @@ let $bookSubject :=
    ftcontains "Usability Basics"]/subjects/subject
 for $book in $books   
 where $book/metadata/publicationInfo/
-(dateIssued|dateRevised) &gt; 2001 and 
+(dateIssued|dateRevised) > 2001 and 
 $book/metadata/subjects/subject ftcontains 
      {$bookSubject} any
 return
-        &lt;book number="{$book/@number}"&gt;
+        <book number="{$book/@number}">
            {$book/metadata/title,
            $book/metadata/author}
-        &lt;/book&gt;
+        </book>

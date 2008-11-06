@@ -10,9 +10,9 @@ let $pin := $book/content/part/introduction
 where $title ftcontains "usability" and $in ftcontains 
    "satisfaction" and $pin ftcontains "identify 
    problems"
-return &lt;book number="{$book/@number}"&gt; 
+return <book number="{$book/@number}">
           {$title} 
           if (count($book/metadata/author) &gt; 0)
           then {$book/metadata/author, $in, $pin}
           else {$book/metadata/publicationInfo/publisher, $in, $pin}
-       &lt;/book&gt;
+       </book>
