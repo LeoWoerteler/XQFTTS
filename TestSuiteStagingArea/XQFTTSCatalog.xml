@@ -1437,6 +1437,7 @@
                   <query name="FTSelection-Weight-q1b" date="2008-06-26"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTSelection-Weight-q1b_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1b_result2.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTSelection-Weight-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
                   <description>Positive test to demonstrate that weight is supported with a value of 1000.0</description>
