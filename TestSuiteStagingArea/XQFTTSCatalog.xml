@@ -148,7 +148,7 @@
     <source ID="emptydoc" FileName="TestSources/emptydoc.xml" Creator="David Marston">
       <description last-mod="2003-03-25">Contains just a "doc" element, no comments/text/PIs.</description>
     </source>
-    <source ID="FT-3-examples-source-document" FileName="TestSources/FT-3-examples-source-document" Creator="Jim Melton">
+    <source ID="FT-3-examples-source-document" FileName="TestSources/FT-3-examples-source-document.xml" Creator="Jim Melton">
       <description last-mod="2008-10-10">Contains a "books" element containing a single "book" element.</description>
     </source>
     <!-- Sources from XQuery main testsuite; add if needed
