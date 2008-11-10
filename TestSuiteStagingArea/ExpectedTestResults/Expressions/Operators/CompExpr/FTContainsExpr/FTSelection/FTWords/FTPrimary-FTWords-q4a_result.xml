@@ -1,4 +1,0 @@
-<paragraphs>
-  <p>If <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTAnyallOption" xlink:type="simple">FTAnyallOption</nt> is "phrase", the tokens from all the strings are
-concatenated in a single sequence, which is considered as a phrase. The resulting matches must contain the generated phrase.</p>
-</paragraphs>
