@@ -1294,7 +1294,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
                     <query name="FTAnd-bad2" date="2008-10-09"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <expected-error>XPTY0004</expected-error>
+                    <expected-error>XPST0003</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="FTAnd-andor" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftand query</description>

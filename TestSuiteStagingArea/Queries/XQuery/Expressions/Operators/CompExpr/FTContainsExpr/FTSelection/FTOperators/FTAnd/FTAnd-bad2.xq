@@ -1,4 +1,4 @@
-(: FTAnd-bad2: 'ftand' in nested expression: type error :)
+(: FTAnd-bad2: 'ftand' in nested expression: parse error :)
 
 (: insert-start :)
 declare variable $input-context external;
