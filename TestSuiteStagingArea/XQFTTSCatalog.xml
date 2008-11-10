@@ -800,14 +800,14 @@
           <description>Find the word "usability" using match options defaults without match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-3.4-examples-q1" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">???</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4-examples-results-q1.xml</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4-examples-q2" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults with match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-3.4-examples-q2" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">???</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4-examples-results-q2.xml</output-file>
         </test-case>
       </test-group>
@@ -820,7 +820,7 @@
           <description>Query where the language option is used to select the appropriate stop word list.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-341-examples-q1" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-341-examples-results-q1.xml</output-file>
         </test-case>
       </test-group>
@@ -833,28 +833,28 @@
           <description>Find "improv.*" allowing zero or more characters at the end.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q1" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q1.xml</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-342-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find ".?site" allowing zero or one character at the start.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q2" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q2.xml</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-342-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" allowing one inserted character at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q3" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q3.xml</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-342-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" expecting a period at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-342-examples-q4" date="2008-08-21"/>
-          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-342-examples-results-q4.xml</output-file>
         </test-case>
       </test-group>
