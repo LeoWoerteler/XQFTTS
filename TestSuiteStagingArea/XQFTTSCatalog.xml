@@ -1682,6 +1682,7 @@
                   <query name="FTSelection-Weight-q1e" date="2008-08-18"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTSelection-Weight-q1e_result.xml</output-file>
+                  <expected-error>FTDY0016</expected-error>
                 </test-case>
                 <test-case is-XPath2="false" name="FTSelection-Weight-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="runtime-error" Creator="Full-Text Task Force, Jim">
                   <description>Negative test to demonstrate that weight values greater than 1000 are not supported</description>
@@ -1705,10 +1706,10 @@
                   <description>Negative test to demonstrate that weight values that are non-numeric are not supported</description>
                   <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
                   <query name="FTSelection-Weight-q3" date="2008-08-18">
-                    <description>Specifies a weight 'abcd', expecting a dynamic error</description>
+                    <description>Specifies a weight 'abcd', expecting a type error</description>
                   </query>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <expected-error>FTDY0016</expected-error>
+                  <expected-error>XPTY0004</expected-error>
                 </test-case>
               </test-group>
             </test-group>
