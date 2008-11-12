@@ -411,6 +411,42 @@
                   </xs:complexContent>
                </xs:complexType>
             </xs:element>
+
+            <xs:element name="stopwords" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:complexContent>
+                     <xs:extension base="test:infoBase">
+                        <xs:attribute name="ID" type="xs:ID" use="required" />
+                        <xs:attribute name="FileName" type="xs:anyURI" use="required" />
+                        <xs:attribute name="Creator" type="xs:string" use="required" />
+                     </xs:extension>
+                  </xs:complexContent>
+               </xs:complexType>
+            </xs:element>
+
+            <xs:element name="thesaurus" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:complexContent>
+                     <xs:extension base="test:infoBase">
+                        <xs:attribute name="ID" type="xs:ID" use="required" />
+                        <xs:attribute name="FileName" type="xs:anyURI" use="required" />
+                        <xs:attribute name="Creator" type="xs:string" use="required" />
+                     </xs:extension>
+                  </xs:complexContent>
+               </xs:complexType>
+            </xs:element>
+
+            <xs:element name="stemming-dictionary" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:complexContent>
+                     <xs:extension base="test:infoBase">
+                        <xs:attribute name="ID" type="xs:ID" use="required" />
+                        <xs:attribute name="FileName" type="xs:anyURI" use="required" />
+                        <xs:attribute name="Creator" type="xs:string" use="required" />
+                     </xs:extension>
+                  </xs:complexContent>
+               </xs:complexType>
+            </xs:element>
          </xs:sequence>
       </xs:complexType>
    </xs:element>
@@ -687,6 +723,31 @@
             </xs:complexType>
          </xs:element>
          
+         <!-- Zero or more auxiliary URIs that will be used by this query -->
+         
+         <xs:element name="aux-URI" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+               <xs:documentation>
+                  Zero or more auxiliary URIs that will be used by this query.
+               </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="xs:IDREF">
+                     <!-- this attribute contains only stopwords, thesaurus, or stemming-dictionary -->
+                     <xs:attribute name="role" type="test:role-enum" use="required" >
+                        <xs:annotation>
+                           <xs:documentation>
+                              this attribute contains only stopwords,
+                              thesaurus, or stemming-dictionary
+                           </xs:documentation>
+                        </xs:annotation>
+                     </xs:attribute>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+
          <!-- Zero or more input files that will be used by this query -->
          
          <xs:element name="input-file" minOccurs="0" maxOccurs="unbounded">

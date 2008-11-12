@@ -364,6 +364,25 @@ from TreeCompass<br>
   </tbody>
 </table>
 <br>
+<br>
+<h3>Special Sources: Stop Word List, Thesaurus, and Stemming Dictionary<br>
+</h3>
+The stopwords, thesaurus, and stemming-dictionary sources are not intended to
+be used directly in the form in which they are given, but to provide
+information to those running the test suite about the expectations a particular
+test has about various implementation-specific aspects of the execution
+context. Implementations are expected to provide equivalent information to the
+query, but in whatever form is appropriate in their context.
+A stopwords source is a plain text file containing list of stop words, one per
+line.  When a query references this stop word list, the implementation is
+expected to provide that list of stop words to the query. A thesaurus source is
+an XML document defined against the thesaurus.xsd XML Schema.  When a query
+references this thesaurus, the implementation is expected to provide equivalent
+thesaurus information to the query. The stemming-dictionary is a plain text
+file containing lines of whitespace-separated tokens. Each token on the line
+should stem to the first token on the line. When the catalog entry for a query
+references a stemming dictionary, the implementation is expected to provide
+stemming equivalent to the rules given in the stemming dictionary.
 <h3>Customizing XQueryX Tests<br>
 </h3>
 Customizing XQueryX tests must follow the same rules provided above.
@@ -500,8 +519,8 @@ Submitting XQFTTS Results<br>
 XQuery 1.0 Serialization</a></p>
 <hr>
 <address> <a href="http://www.w3.org/Help/Webmaster">Webmaster</a>
-&middot; Last modified: $Date: 2007/11/23 02:22:20 $ by
-$Author: mdyck $ </address>
+&middot; Last modified: $Date: 2008/11/12 22:38:50 $ by
+$Author: mholstege $ </address>
 <p><a rel="Copyright"
  href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
 &copy; 1994-2007<a href="http://www.w3.org/"><acronym
