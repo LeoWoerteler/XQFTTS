@@ -852,21 +852,21 @@
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4.2-examples-results-q1.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find ".?site" allowing zero or one character at the start.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4.2-examples-results-q2.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q2.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" allowing one inserted character at the period.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4.2-examples-results-q3.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q3.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find "w.ll" expecting a period at the period.</description>
