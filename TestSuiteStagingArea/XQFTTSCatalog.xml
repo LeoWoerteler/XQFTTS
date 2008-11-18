@@ -839,7 +839,7 @@
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftlanguageoption"/>
           <query name="ft-3.4.1-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4.1-examples-results-q1.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.1-examples-results-q1.txt</output-file>
         </test-case>
       </test-group>
       <test-group name="Examples3.4.2">
