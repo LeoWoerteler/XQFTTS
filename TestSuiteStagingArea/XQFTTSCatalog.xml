@@ -819,14 +819,14 @@
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-3.4-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4-examples-results-q1.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4-examples-results-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4-examples-q2" FilePath="Examples/3.4-MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the word "usability" using match options defaults with match option declarations.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-3.4-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">ft-3.4-examples-results-q2.xml</output-file>
+          <output-file role="principal" compare="Fragment">ft-3.4-examples-results-q2.txt</output-file>
         </test-case>
       </test-group>
       <test-group name="Examples3.4.1">
