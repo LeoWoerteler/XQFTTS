@@ -908,7 +908,7 @@
           <title>Section 3.4.4</title>
           <description>Examples Section 3.4.4</description>
         </GroupInfo>
-        <test-case is-XPath2="true" name="ft-3.4.4-examples-q1" FilePath="Examples/3.4.4-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="ft-3.4.4-examples-q1" FilePath="Examples/3.4.4-StemmingOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that there is a stemmed version of improve in the document.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ft-3.4.4-examples-q1" date="2008-08-21"/>
