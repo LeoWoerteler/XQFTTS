@@ -2302,12 +2302,54 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
         <title>Unconstrained Full-Text Case Option</title>
         <description>Case option. Sections 3.4.5 and 5.2.10.</description>
       </GroupInfo>
+         <test-case is-XPath2="true" name="ft-3.4.5-examples-q1" FilePath="Examples/3.4.5-CaseOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find out whether or not it is true that the title contains usability in lower case letters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.5-examples-q1" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.5-examples-results-q1.txt</output-file>
+        </test-case> 
     </test-group>
     <test-group name="FTStopWordUnconstrained">
       <GroupInfo>
         <title>Unconstrained Full-Text Stop Word Option</title>
         <description>Stop-word option. Sections 3.4.7 and 5.2.11.</description>
       </GroupInfo>
+     <test-case is-XPath2="true" name="ft-3.4.7-examples-q1" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find out whether or not it is true that the document contains propagating few errors.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.7-examples-q1" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q1.txt</output-file>
+        </test-case>
+         <test-case is-XPath2="true" name="ft-3.4.7-examples-q2" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find out whether or not it is true that the document contains propagating errors.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.7-examples-q2" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q2.txt</output-file>
+        </test-case>  
+       <test-case is-XPath2="true" name="ft-3.4.7-examples-q3" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find out whether or not it is true that the document contains propagating of errors.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q3.txt</output-file>
+        </test-case>   
+          <test-case is-XPath2="true" name="ft-3.4.7-examples-q4" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find planning (allow any intervening word) conducting.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.7-examples-q4" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">ft-3.4.7-examples-results-q4.xml</output-file>
+        </test-case>   
+       <test-case is-XPath2="true" name="ft-3.4.7-examples-q5" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find planning then conducting by excluding then form the stop word list.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.7-examples-q5" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q5.txt</output-file>
+        </test-case>    
     </test-group>
     <test-group name="FTLanguageUnconstrained">
       <GroupInfo>
