@@ -876,6 +876,33 @@
           <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q4.txt</output-file>
         </test-case>
       </test-group>
+      <test-group name="Examples3.4.3">
+        <GroupInfo>
+          <title>Section 3.4.3</title>
+          <description>Examples Section 3.4.3</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="ft-3.4.3-examples-q1" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find tasks by searching on its synonyms and finding duties.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.3-examples-q1" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.3-examples-results-q1.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="ft-3.4.3-examples-q2" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find web site components and types of web site components such as navigation and layout by searching for narrower terms.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.3-examples-q2" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q2.xml</output-file>
+        </test-case>
+                <test-case is-XPath2="true" name="ft-3.4.3-examples-q3" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find words that sound like Merrygould.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ft-3.4.3-examples-q3" date="2008-08-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q3.xml</output-file>
+        </test-case>
+      </test-group>
       <test-group name="Examples3.4.8">
         <GroupInfo>
           <title>Section 3.4.8</title>
