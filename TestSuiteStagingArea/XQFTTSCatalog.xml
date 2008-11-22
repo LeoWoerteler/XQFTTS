@@ -1898,21 +1898,6 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text Language Match Option</title>
                     <description>Language option. Section 3.4.1.</description>
                   </GroupInfo>
-                 <test-case is-XPath2="false" name="ft-3.4.1-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
-                <description>Language option is en, castable into xs:language.</description>
-                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
-                <query name="ftlanguage-q1" date="2008-11-22"/>
-                <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                <output-file role="principal" compare="XML">ftlanguage-results-q1.xml</output-file>
-                </test-case>        
-                <test-case is-XPath2="false" name="ft-3.4.1-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
-                <description>Language option is not castable into xs:language.</description>
-                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
-                <query name="ftlanguage-q2" date="2008-11-22"/>
-                <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                <output-file role="principal" compare="Inspect">ftlanguage-results-q2.txt</output-file>
-                <expected-error>XPTY0004</expected-error>         
-                </test-case>               
                 </test-group>
                 <test-group name="FTWildcard">
                   <GroupInfo>
@@ -2412,21 +2397,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
         <title>Unconstrained Full-Text Language Option</title>
         <description>Language option. Sections 3.4.1 and 5.2.12.</description>
       </GroupInfo>
-         <test-case is-XPath2="false" name="ft-5.2.12-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Multiple language options are supported.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
-          <query name="ftlanguageunconstrained-q1" date="2008-11-22"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="XML">ftlanguageunconstrained-results-q1.xml</output-file>
-        </test-case>        
-         <test-case is-XPath2="false" name="ft-5.2.12-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Language option is not supported.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
-          <query name="ftlanguageunconstained-q2" date="2008-11-22"/>
-          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Inspect">ftlanguageunconstrained-results-q2.txt</output-file>
-          <expected-error>FTST0009</expected-error>         
-        </test-case>               
+        
     </test-group>
     <!-- Nothing for FTIgnore/Scoring optionalities: separate test cases
          not possible: sections 5.2.13, 5.2.14 -->
