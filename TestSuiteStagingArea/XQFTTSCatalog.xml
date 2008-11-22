@@ -1951,8 +1951,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcase-results-q2.txt</output-file>
         </test-case>                             
-      </test-group>
-           <test-case is-XPath2="false" name="ft-3.4.5-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
+           <test-case is-XPath2="false" name="ft-3.4.5-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Case sensitive query.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ftcase-q3" date="2008-11-22"/>
