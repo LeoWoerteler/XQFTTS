@@ -432,6 +432,19 @@
       <description last-mod="2006-04-11">Library module with variable on different namespace than target.</description>
     </module>  
 -->
+    <stopwords ID="stopwords1" uri="http://bstore1.example.com/StopWordList.xml" FileName="TestSources/stopwords.txt"
+        Creator="Full-Text Task Force">
+       <description last-mod="2008-11-10">Stop word list for use cases</description>
+     </stopwords>
+     <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilitySoundex.xml" FileName="TestSources/soundex.xml" Creator="Full-Text Task Force">
+       <description last-mod="2008-11-10">Soundex thesaurus for examples</description>
+     </thesaurus>
+     <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilityThesaurus.xml" FileName="TestSources/usability.xml" Creator="Full-Text Task Force">
+       <description last-mod="2008-11-10">Usability thesaurus for examples</description>
+     </thesaurus>
+     <stemming-dictionary ID="english-stems" FileName="TestSources/english-stems.txt" Creator="Full-Text Task Force">
+       <description last-mod="2008-11-10">English stems</description>
+     </stemming-dictionary>
   </sources>
 
   <implementation-defined-items>

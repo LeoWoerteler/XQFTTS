@@ -1023,6 +1023,9 @@
          <xs:enumeration value="principal" />
          <xs:enumeration value="console-log" />
          <xs:enumeration value="dtd" />
+         <xs:enumeration value="stopwords" />
+         <xs:enumeration value="thesaurus" />
+         <xs:enumeration value="stemming-dictionary" />
       </xs:restriction>
    </xs:simpleType>
    

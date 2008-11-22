@@ -1,0 +1,23 @@
+<thesaurus xmlns="http://www.w3.org/xqftts/thesarus">
+  <entry>
+    <term>duties</term>
+    <synonym>
+      <term>tasks</term>
+      <relationship>UF</relationship>
+    </synonym>
+  </entry>
+  <entry>
+    <term>web site components</term>
+    <synonym>
+      <term>navigation</term>
+      <relationship>NT</relationship>
+    </synonym>
+    <synonym>
+      <term>layout</term>
+      <relationship>NT</relationship>
+    </synonym>
+  </entry>
+</thesaurus>
+
+
+
