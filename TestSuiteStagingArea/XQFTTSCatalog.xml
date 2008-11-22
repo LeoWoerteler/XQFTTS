@@ -2015,6 +2015,28 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text Stemming Match Option</title>
                     <description>Stemming option. Section 3.4.4.</description>
                   </GroupInfo>
+                 <test-case is-XPath2="false" name="ft-3.4.4-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Stemming default query. Same as without stemming. Find picture without stemming.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftstemming-q1" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftsteming-results-q1.txt</output-file>
+        </test-case>  
+         <test-case is-XPath2="false" name="ft-3.4.4-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Without stemming query. Find picture without stemming.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftstemming-q2" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstemming-results-q2.txt</output-file>
+        </test-case>  
+         <test-case is-XPath2="false" name="ft-3.4.4-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With stemming query. Find picture with stemming.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftstemming-q3" date="2008-11-22"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftstemming-results-q3.xml</output-file>
+        </test-case>     
                 </test-group>
                 <test-group name="FTCase">
                   <GroupInfo>
