@@ -1919,6 +1919,90 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text Wildcard Match Option</title>
                     <description>Wildcard option. Section 3.4.2.</description>
                   </GroupInfo>
+             <test-case is-XPath2="false" name="ft-3.4.2-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Wildcard default query. Same as without wildcards. Find site without wildcards.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q1" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q1.txt</output-file>
+        </test-case>  
+          <test-case is-XPath2="false" name="ft-3.4.2-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Without wildcard query containing a period. The period is a period, not an indicator. Find site. ending in a period.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q2" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q2.xml</output-file>
+        </test-case>        
+          <test-case is-XPath2="false" name="ft-3.4.2-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query containing a period. The period is an indicator. Find site. where the indicator is replaced by any one character.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q3" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q3.txt</output-file>
+        </test-case> 
+           <test-case is-XPath2="false" name="ft-3.4.2-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard query containing a question mark not preceded by a period. There is no period, no indicator. Find site? where the question mark is a question mark.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q4" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q4.xml</output-file>
+        </test-case>        
+            <test-case is-XPath2="false" name="ft-3.4.2-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Without wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Find site.? where the period is a period and the question mark is a question mark.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q5" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q5.txt</output-file>
+        </test-case>  
+            <test-case is-XPath2="false" name="ft-3.4.2-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find site.? where the period and the question mark are replaced by zero or one characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q6" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q6.txt</output-file>
+        </test-case>  
+             <test-case is-XPath2="false" name="ft-3.4.2-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find completi.? where the period and the question mark are replaced by zero or one characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q7" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q7.txt</output-file>
+            </test-case>    
+            <test-case is-XPath2="false" name="ft-3.4.2-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query containing a period and an asterisk. The period is an indicator. The asterisk is a qualifier. Find completi.* where the period and the asterisk are replaced by zero or more characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q8" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q8.xml</output-file>
+        </test-case> 
+        <test-case is-XPath2="false" name="ft-3.4.2-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query containing a period and a plus sign. The period is an indicator. The plus sign is a qualifier. Find completi.+ where the period and the plus sign are replaced by one or more characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q9" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q9.xml</output-file>
+        </test-case> 
+        <test-case is-XPath2="false" name="ft-3.4.2-expressions-q10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (infix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that begins with u, ends with e, and has 3-4 characters between the u and the e.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q10" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q10.txt</output-file>
+        </test-case>  
+         <test-case is-XPath2="false" name="ft-3.4.2-expressions-q11" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (prefix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that ends with proved, and has 0-2 beginning characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q11" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftwildcard-results-q11.txt</output-file>
+        </test-case>         
+         <test-case is-XPath2="false" name="ft-3.4.2-expressions-q12" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (prefix and suffix) query containing two indicators and two qualifiers. Find a word containing view with zero or more adidtional beginning characters and one or more ending characters.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftwildcard-q12" date="2008-11-22"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q12.xml</output-file>
+        </test-case>               
                 </test-group>
                 <test-group name="FTThesaurus">
                   <GroupInfo>
