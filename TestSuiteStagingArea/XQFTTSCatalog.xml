@@ -849,7 +849,7 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.1-examples-q1" FilePath="Examples/3.4.1-LanguageOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query where the language option is used to select the appropriate stop word list.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftlanguageoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
           <query name="ft-3.4.1-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.1-examples-results-q1.txt</output-file>
@@ -862,28 +862,28 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q1" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether it is true that the document contains "improv.*" allowing zero or more characters at the end.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q2" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether it is true that the document contains ".?site" allowing zero or one character at the start.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q2.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q3" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether it is true that the document contains "w.ll" allowing one inserted character at the period.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q3.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.2-examples-q4" FilePath="Examples/3.4.2-WildcardOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether it is true that the document contains "w.ll" expecting a period at the period.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftwildcardoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ft-3.4.2-examples-q4" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.2-examples-results-q4.txt</output-file>
@@ -896,21 +896,21 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.3-examples-q1" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether it is true that by searching on tasks by searching on its synonyms you will find duties.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.3-examples-results-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="ft-3.4.3-examples-q2" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find web site components and types of web site components such as navigation and layout by searching for narrower terms.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q2.xml</output-file>
         </test-case>
                 <test-case is-XPath2="true" name="ft-3.4.3-examples-q3" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find words that sound like Merrygould.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q3.xml</output-file>
@@ -923,7 +923,7 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.4-examples-q1" FilePath="Examples/3.4.4-StemmingOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that there is a stemmed version of improve in the document.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
           <query name="ft-3.4.4-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.4-examples-results-q1.txt</output-file>
@@ -936,7 +936,7 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.5-examples-q2" FilePath="Examples/3.4.5-CaseOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains usability regardless of case. Note: Example 1 of this section is of an optional feature. Find it under Optional Features.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ft-3.4.5-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.5-examples-results-q2.txt</output-file>
@@ -949,14 +949,14 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.6-examples-q1" FilePath="Examples/3.4.6-DiacriticsOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains Vera regardless of diacritics provided in the query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ft-3.4.6-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.6-examples-results-q1.txt</output-file>
         </test-case>
                <test-case is-XPath2="true" name="ft-3.4.6-examples-q2" FilePath="Examples/3.4.6-DiacriticsOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains Vera with same diacritics provided in the query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ft-3.4.6-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.6-examples-results-q2.txt</output-file>
@@ -1900,14 +1900,14 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                   </GroupInfo>
                  <test-case is-XPath2="false" name="ft-3.4.1-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
                 <description>Language option is en, castable into xs:language.</description>
-                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                 <query name="ftlanguage-q1" date="2008-11-22"/>
                 <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                 <output-file role="principal" compare="XML">ftlanguage-results-q1.xml</output-file>
                 </test-case>        
                 <test-case is-XPath2="false" name="ft-3.4.1-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
                 <description>Language option is not castable into xs:language.</description>
-                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                 <query name="ftlanguage-q2" date="2008-11-22"/>
                 <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                 <output-file role="principal" compare="Inspect">ftlanguage-results-q2.txt</output-file>
@@ -1921,84 +1921,84 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                   </GroupInfo>
              <test-case is-XPath2="false" name="ft-3.4.2-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>Wildcard default query. Same as without wildcards. Find site without wildcards.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q1.txt</output-file>
         </test-case>  
           <test-case is-XPath2="false" name="ft-3.4.2-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>Without wildcard query containing a period. The period is a period, not an indicator. Find site. ending in a period.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q2.xml</output-file>
         </test-case>        
           <test-case is-XPath2="false" name="ft-3.4.2-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (suffix) query containing a period. The period is an indicator. Find site. where the indicator is replaced by any one character.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q3" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q3.txt</output-file>
         </test-case> 
            <test-case is-XPath2="false" name="ft-3.4.2-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard query containing a question mark not preceded by a period. There is no period, no indicator. Find site? where the question mark is a question mark.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q4" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q4.xml</output-file>
         </test-case>        
             <test-case is-XPath2="false" name="ft-3.4.2-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>Without wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Find site.? where the period is a period and the question mark is a question mark.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q5" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q5.txt</output-file>
         </test-case>  
             <test-case is-XPath2="false" name="ft-3.4.2-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find site.? where the period and the question mark are replaced by zero or one characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q6" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q6.txt</output-file>
         </test-case>  
              <test-case is-XPath2="false" name="ft-3.4.2-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find completi.? where the period and the question mark are replaced by zero or one characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q7" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q7.txt</output-file>
             </test-case>    
             <test-case is-XPath2="false" name="ft-3.4.2-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (suffix) query containing a period and an asterisk. The period is an indicator. The asterisk is a qualifier. Find completi.* where the period and the asterisk are replaced by zero or more characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q8" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q8.xml</output-file>
         </test-case> 
         <test-case is-XPath2="false" name="ft-3.4.2-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (suffix) query containing a period and a plus sign. The period is an indicator. The plus sign is a qualifier. Find completi.+ where the period and the plus sign are replaced by one or more characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q9" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q9.xml</output-file>
         </test-case> 
         <test-case is-XPath2="false" name="ft-3.4.2-expressions-q10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (infix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that begins with u, ends with e, and has 3-4 characters between the u and the e.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q10" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q10.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.2-expressions-q11" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (prefix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that ends with proved, and has 0-2 beginning characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q11" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftwildcard-results-q11.txt</output-file>
         </test-case>         
          <test-case is-XPath2="false" name="ft-3.4.2-expressions-q12" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
           <description>With wildcard (prefix and suffix) query containing two indicators and two qualifiers. Find a word containing view with zero or more adidtional beginning characters and one or more ending characters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
           <query name="ftwildcard-q12" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q12.xml</output-file>
@@ -2009,6 +2009,8 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text Thesaurus Match Option</title>
                     <description>Thesaurus option. Section 3.4.3.</description>
                   </GroupInfo>
+                  
+                  
                 </test-group>
                 <test-group name="FTStemming">
                   <GroupInfo>
@@ -2017,21 +2019,21 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                   </GroupInfo>
                  <test-case is-XPath2="false" name="ft-3.4.4-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>Stemming default query. Same as without stemming. Find picture without stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
           <query name="ftstemming-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftsteming-results-q1.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.4-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>Without stemming query. Find picture without stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
           <query name="ftstemming-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstemming-results-q2.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.4-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>With stemming query. Find picture with stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
           <query name="ftstemming-q3" date="2008-11-22"/>
           <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -2045,21 +2047,21 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                   </GroupInfo>
           <test-case is-XPath2="false" name="ft-3.4.5-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Case default query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcase-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcase-results-q1.txt</output-file>
         </test-case> 
          <test-case is-XPath2="false" name="ft-3.4.5-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Case insensitive query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcase-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcase-results-q2.txt</output-file>
         </test-case>                             
            <test-case is-XPath2="false" name="ft-3.4.5-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Case sensitive query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcase-q3" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcase-results-q3.txt</output-file>
@@ -2072,28 +2074,28 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                   </GroupInfo>
          <test-case is-XPath2="false" name="ft-3.4.6-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
           <description>Diacritics case sensitive query. Characters in query have no diacritics. Characters in the document have diacritics.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ftdiacritics-q1" date="2008-11-20"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftdiacritics-results-q1.txt</output-file>
         </test-case>   
           <test-case is-XPath2="false" name="ft-3.4.6-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
           <description>Diacritics case sensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ftdiacritics-q2" date="2008-11-20"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftdiacritics-results-q2.txt</output-file>
         </test-case>      
             <test-case is-XPath2="false" name="ft-3.4.6-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
           <description>Diacritics case insensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ftdiacritics-q3" date="2008-11-20"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftdiacritics-results-q3.xml</output-file>
         </test-case>        
          <test-case is-XPath2="false" name="ft-3.4.6-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
           <description>Diacritics default query. Character in query has a diacritic. Character in the document has no diacritic.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
           <query name="ftdiacritics-q4" date="2008-11-20"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftdiacritics-results-q4.xml</output-file>
@@ -2487,28 +2489,28 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
       </GroupInfo>
          <test-case is-XPath2="true" name="ft-3.4.5-examples-q1" FilePath="Examples/3.4.5-CaseOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the title contains usability in lower case letters.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ft-3.4.5-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.5-examples-results-q1.txt</output-file>
         </test-case> 
          <test-case is-XPath2="false" name="ft-5.2.10-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Lower case query.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcaseunconstrained-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q1.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-5.2.10-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Upper case query. </description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcaseunconstrained-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q2.txt</output-file>
         </test-case>          
           <test-case is-XPath2="false" name="ft-5.2.10-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Upper case query. Only initial character in query is uppercase.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option" section-pointer="ftcaseoption"/>
           <query name="ftcaseunconstrained-q3" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q3.txt</output-file>
@@ -2519,37 +2521,37 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
         <title>Unconstrained Full-Text Stop Word Option</title>
         <description>Stop-word option. Sections 3.4.7 and 5.2.11.</description>
       </GroupInfo>
-     <test-case is-XPath2="true" name="ft-3.4.7-examples-q1" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+     <test-case is-XPath2="true" name="ft-3.4.7-examples-q1" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains propagating few errors.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q1.txt</output-file>
         </test-case>
-         <test-case is-XPath2="true" name="ft-3.4.7-examples-q2" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+         <test-case is-XPath2="true" name="ft-3.4.7-examples-q2" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains propagating errors.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q2" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q2.txt</output-file>
         </test-case>  
-       <test-case is-XPath2="true" name="ft-3.4.7-examples-q3" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+       <test-case is-XPath2="true" name="ft-3.4.7-examples-q3" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that the document contains propagating of errors.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q3.txt</output-file>
         </test-case>   
-          <test-case is-XPath2="true" name="ft-3.4.7-examples-q4" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ft-3.4.7-examples-q4" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find planning (allow any intervening word) conducting.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q4" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4.7-examples-results-q4.xml</output-file>
         </test-case>   
-       <test-case is-XPath2="true" name="ft-3.4.7-examples-q5" FilePath="Examples/3.4.7-StopWordsOption/" scenario="standard" Creator="Full-Text Task Force">
+       <test-case is-XPath2="true" name="ft-3.4.7-examples-q5" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find planning then conducting by excluding then form the stop word list.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q5" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q5.txt</output-file>
@@ -2562,14 +2564,14 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
       </GroupInfo>
          <test-case is-XPath2="false" name="ft-5.2.12-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
           <description>Multiple language options are supported.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
           <query name="ftlanguageunconstrained-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftlanguageunconstrained-results-q1.xml</output-file>
         </test-case>        
          <test-case is-XPath2="false" name="ft-5.2.12-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
           <description>Language option is not supported.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
           <query name="ftlanguageunconstained-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Inspect">ftlanguageunconstrained-results-q2.txt</output-file>
