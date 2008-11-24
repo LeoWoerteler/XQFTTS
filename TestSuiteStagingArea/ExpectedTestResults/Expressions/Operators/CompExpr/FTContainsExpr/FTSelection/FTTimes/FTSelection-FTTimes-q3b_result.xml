@@ -9,7 +9,7 @@ times. </p>
 <p>A cardinality selection limits the number of different
 matches of <nt def="FTWords">FTWords</nt> within the
 specified range. The semantics of FTRange are described in 
-<specref ref="ftdistance"/>. </p>
+<specref ref="ftdistance"></specref>. </p>
 <p>In the document fragment "very very big":</p>
 <p>
 The <nt def="FTWords">FTWords</nt> <code>"very big"</code> has 1

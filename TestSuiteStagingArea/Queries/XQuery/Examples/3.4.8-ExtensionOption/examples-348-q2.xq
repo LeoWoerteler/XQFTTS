@@ -2,11 +2,11 @@
   but the query should at least parse.
  :)
 
+declare namespace exq = "http://example.org/XQueryImplementation";
+
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)
-
-declare namespace exq = "http://example.org/XQueryImplementation";
 
 $input-context//para[. ftcontains
          ("Kinder" ftand "Platz" distance exactly 1 words)

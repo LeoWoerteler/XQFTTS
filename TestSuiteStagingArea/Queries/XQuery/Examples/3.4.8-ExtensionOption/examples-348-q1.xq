@@ -2,12 +2,12 @@
   but the query should at least parse.
  :)
 
-(: insert-start :)
-declare variable $input-context external;
-(: insert-end :)
-
 declare namespace exq = "http://example.org/XQueryImplementation";
 
 declare ft-option option exq:diacritics "short-vowel insensitive";
+
+(: insert-start :)
+declare variable $input-context external;
+(: insert-end :)
 
 "ok"
