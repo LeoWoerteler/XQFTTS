@@ -693,7 +693,7 @@
         <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
-          <query name="ft-222-examples-q1" date="2008-06-26"/>
+          <query name="222-examples-q1" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
         </test-case>
@@ -976,14 +976,14 @@
         <test-case is-XPath2="false" name="ft-348-examples-q1" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoption"/>
-          <query name="ft-341-examples-q1" date="2008-09-17"/>
+          <query name="ft-348-examples-q1" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">ft-348-examples-results-q1.xml</output-file>
         </test-case>
         <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoptopm"/>
-          <query name="ft-341-examples-q2" date="2008-09-17"/>
+          <query name="ft-348-examples-q2" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">ft-348-examples-results-q2.xml</output-file>
         </test-case>
