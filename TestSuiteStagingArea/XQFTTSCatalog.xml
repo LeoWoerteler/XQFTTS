@@ -760,7 +760,7 @@
         <test-case is-XPath2="false" name="examples-231-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return books with a score based on weighting 
            "web site" in their content 0.5 and "usability" in their content 2</description>
-          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-using-weights"/>
+          <spec-citation spec="XQueryFullText" section-number="2.3.1" section-title="Using Weights Within a Scored FTContainsExpr" section-pointer="section-using-weights"/>
           <query name="examples-231-q1" date="2008-08-17"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Inspect">examples-231-q1.txt</output-file>
@@ -1845,6 +1845,83 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text ftor Operator</title>
                     <description>Or-Selection. Section 3.5.1.</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTOr-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftor query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-q1" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-q1.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Using 'or' instead of 'ftor'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-q2" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-q2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftor query, all branches false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-q3" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTOr-q3.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftor query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-q4" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-q4.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftor query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-q5" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-q5.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftor with computed arguments</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-expr1" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-expr1.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-expr2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftor with computed arguments, which need atomization</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-expr2" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTOr-expr2.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-badexpr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>FTOr with empty sequence</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-badexpr1" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPTY0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-bad1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>Using 'or' instead of 'ftor'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-bad1" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>Bad nesting with 'ftor'</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-bad2" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-andor" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftor query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-andor" date="2008-11-25"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTOr-andor.xml</output-file>
+                  </test-case>
                 </test-group>
                 <test-group name="FTAnd">
                   <GroupInfo>
