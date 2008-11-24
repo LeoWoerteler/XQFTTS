@@ -1015,6 +1015,48 @@
           <output-file role="principal" compare="Text">examples-352-2.txt</output-file>
         </test-case>
       </test-group>
+      <test-group name="Examples3.5.3">
+        <GroupInfo>
+          <title>Section 3.5.3</title>
+          <description>Examples Section 3.5.3</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="examples-353-1" FilePath="Examples/3.5.3-MildNotSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Does any book contain "usability" not in
+          "usability testing"?</description>
+          <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+          <query name="examples-353-1" date="2008-11-24"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-353-1.txt</output-file>
+          <expected-error>FTST0001</expected-error> <!-- unsupported operator -->
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.5.4">
+        <GroupInfo>
+          <title>Section 3.5.4</title>
+          <description>Examples Section 3.5.4</description>
+        </GroupInfo>
+        <test-case is-XPath2="true" name="examples-354-1" FilePath="Examples/3.5.4-NotSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return books that do not contain "usability"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not Selection" section-pointer="sec-ftnot"/>
+          <query name="examples-354-1" date="2008-11-24"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-354-1.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="examples-354-2" FilePath="Examples/3.5.4-NotSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Are there any books containing "improving" and "usability" but not "improving usability"?</description>
+          <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not Selection" section-pointer="sec-ftnot"/>
+          <query name="examples-354-2" date="2008-11-24"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-354-2.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="examples-354-3" FilePath="Examples/3.5.4-NotSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Return books whose short title attribute contains "web site usability" but not "usability testing"</description>
+          <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not Selection" section-pointer="sec-ftnot"/>
+          <query name="examples-354-3" date="2008-11-24"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">examples-354-3.xml</output-file>
+        </test-case>
+      </test-group>
       <test-group name="Examples3.6.1">
         <GroupInfo>
           <title>Section 3.6.1</title>
