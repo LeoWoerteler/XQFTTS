@@ -703,7 +703,7 @@
           <title>Section 2.3</title>
           <description>Examples Section 2.3</description>
         </GroupInfo>
-        <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="examples-23-q1" FilePath="Examples/2.3-ScoreVariables/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return scores for books whose content contains "web
            site" and "usability" and whose title contains "testing"</description>
           <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -712,7 +712,7 @@
           <output-file role="principal" compare="Inspect">examples-23-q1.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
-        <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="examples-23-q2" FilePath="Examples/2.3-ScoreVariables/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return titles and scores for books whose content 
            contains "web site" and "usability" where the score is more than 0.5</description>
           <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -721,7 +721,7 @@
           <output-file role="principal" compare="Inspect">examples-23-q2.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
-        <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="examples-23-q3" FilePath="Examples/2.3-ScoreVariables/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return paragraphs containing "usability" of books 
            whose title contains "software", ordered by score</description>
           <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -731,7 +731,7 @@
           <output-file role="principal" compare="Fragment">examples-23-q3-alt.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
-        <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="examples-23-q4" FilePath="Examples/2.3-ScoreVariables/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return paragraphs containing "usability" of books 
            whose title contains "software", ordered by score</description>
           <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
@@ -741,7 +741,7 @@
           <output-file role="principal" compare="Fragment">examples-23-q4-alt.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
-        <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+        <test-case is-XPath2="false" name="examples-23-q5" FilePath="Examples/2.3-ScoreVariables/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return books whose chapter title contains "testing",
            ordered by the score of their content containing "web site" and
            "usability"</description>
@@ -751,13 +751,19 @@
           <output-file role="principal" compare="Inspect">examples-23-q5.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
-        <test-case is-XPath2="false" name="examples-23-q6" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+      </test-group>
+      <test-group name="Examples2.3.1">
+        <GroupInfo>
+          <title>Section 2.3.1</title>
+          <description>Examples Section 2.3.1</description>
+        </GroupInfo>
+        <test-case is-XPath2="false" name="examples-231-q1" FilePath="Examples/2.3.1-UsingWeightsWithinAScoredFTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>Return books with a score based on weighting 
            "web site" in their content 0.5 and "usability" in their content 2</description>
-          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
-          <query name="examples-23-q6" date="2008-08-17"/>
+          <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-using-weights"/>
+          <query name="examples-231-q1" date="2008-08-17"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Inspect">examples-23-q6.txt</output-file>
+          <output-file role="principal" compare="Inspect">examples-231-q1.txt</output-file>
           <expected-error>FTST0014</expected-error>
         </test-case>
       </test-group>
