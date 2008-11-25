@@ -184,7 +184,7 @@
 <th>ID</th><th>Type</th><th>URI</th><th>File Name</th>
 </tr>
 <tr>
-<td><A name="XQFTTSCatalogxsd"><b>XQFTTSCatalogxsd</b></A></td><td></td><td><A href=""></A></td><td><A href="./XQTSCatalog.xsd">XQTSCatalog.xsd</A></td>
+<td><A name="XQFTTSCatalogxsd"><b>XQFTTSCatalogxsd</b></A></td><td></td><td><A href="http://www.w3.org/2005/02/query-test-XQTSCatalog">http://www.w3.org/2005/02/query-test-XQTSCatalog</A></td><td><A href="./XQTSCatalog.xsd">XQTSCatalog.xsd</A></td>
 </tr>
 <tr>
 <td><A name="ftusecasesxsd"><b>ftusecasesxsd</b></A></td><td></td><td><A href=""></A></td><td><A href="./TestSources/ftusecases.xsd">TestSources/ftusecases.xsd</A></td>
@@ -206,6 +206,36 @@
 <table>
 <tr>
 <th>ID</th><th>Creator</th><th>File</th><th>Description</th>
+</tr>
+</table>
+<h2>Stop Word Lists</h2>
+<table>
+<tr>
+<th>ID</th><th>URI</th><th>File Name</th>
+</tr>
+<tr>
+<td><A name="stopwords1"><b>stopwords1</b></A></td><td><A href="http://bstore1.example.com/StopWordList.xml">http://bstore1.example.com/StopWordList.xml</A></td><td><A href="./TestSources/stopwords.txt">TestSources/stopwords.txt</A></td>
+</tr>
+</table>
+<h2>Thesauri</h2>
+<table>
+<tr>
+<th>ID</th><th>Type</th><th>URI</th><th>File Name</th>
+</tr>
+<tr>
+<td><A name="soundex"><b>soundex</b></A></td><td></td><td><A href="http://bstore1.example.com/UsabilitySoundex.xml">http://bstore1.example.com/UsabilitySoundex.xml</A></td><td><A href="./TestSources/soundex.xml">TestSources/soundex.xml</A></td>
+</tr>
+<tr>
+<td><A name="usability"><b>usability</b></A></td><td></td><td><A href="http://bstore1.example.com/UsabilityThesaurus.xml">http://bstore1.example.com/UsabilityThesaurus.xml</A></td><td><A href="./TestSources/usability.xml">TestSources/usability.xml</A></td>
+</tr>
+</table>
+<h2>Stemming Dictionary</h2>
+<table>
+<tr>
+<th>ID</th><th>Creator</th><th>File</th><th>Description</th>
+</tr>
+<tr>
+<td><A name="english-stems"><b>english-stems</b></A></td><td>Full-Text Task Force</td><td><A href="./TestSources/english-stems.txt">TestSources/english-stems.txt</A></td><td>English stems</td>
 </tr>
 </table>
 <h2>Test Groups</h2>
@@ -8036,6 +8066,605 @@
 <h3>1.2.2.1.1.1.2.1Full-Text ftor Operator</h3>
 <p></p>Or-Selection. Section 3.5.1.<p></p>
 <ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-q1"></a>
+<tr>
+<td><b>FTOr-q1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftor query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q1.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-q2"></a>
+<tr>
+<td><b>FTOr-q2</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Using 'or' instead of 'ftor'</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q2.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q2.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-q3"></a>
+<tr>
+<td><b>FTOr-q3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftor query, all branches false</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q3.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q3.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-q4"></a>
+<tr>
+<td><b>FTOr-q4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftor query, one branch false</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q4.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q4.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q4.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-q5"></a>
+<tr>
+<td><b>FTOr-q5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftor query, one branch false</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q5.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q5.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-q5.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-expr1"></a>
+<tr>
+<td><b>FTOr-expr1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftor with computed arguments</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr1.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-expr2"></a>
+<tr>
+<td><b>FTOr-expr2</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftor with computed arguments, which need atomization</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr2.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr2.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-badexpr1"></a>
+<tr>
+<td><b>FTOr-badexpr1</b></td><td>
+               Scenario:
+               <A href="#runtime-error">runtime-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">FTOr with empty sequence</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-badexpr1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-badexpr1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPTY0004">
+                     err:XPTY0004</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-bad1"></a>
+<tr>
+<td><b>FTOr-bad1</b></td><td>
+               Scenario:
+               <A href="#parse-error">parse-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Using 'or' instead of 'ftor'</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-bad1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-bad1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-bad2"></a>
+<tr>
+<td><b>FTOr-bad2</b></td><td>
+               Scenario:
+               <A href="#runtime-error">runtime-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Bad nesting with 'ftor'</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-bad2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-bad2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTOr-andor"></a>
+<tr>
+<td><b>FTOr-andor</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftor query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-andor.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-andor.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-andor.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-andor.xml</A></td>
+</tr>
+</table>
+<p></p>
 <A name="FTAnd"></A>
 <h3>1.2.2.1.1.1.2.2Full-Text ftand Operator</h3>
 <p></p>And-Selection. Section 3.5.2.<p></p>
@@ -8643,6 +9272,427 @@
 <h3>1.2.2.1.1.1.2.3Full-Text ftnot Operator</h3>
 <p></p>Minimal Not-selection support. Section 3.5.4.<p></p>
 <ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q1"></a>
+<tr>
+<td><b>FTNot-q1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftnot query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q1.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q1.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0002">
+                     err:FTST0002</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q2"></a>
+<tr>
+<td><b>FTNot-q2</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftand ftnot query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q3"></a>
+<tr>
+<td><b>FTNot-q3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftnot with ftor query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q3.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q3.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0002">
+                     err:FTST0002</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q4"></a>
+<tr>
+<td><b>FTNot-q4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftand ftnot with complex ftnot</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q4.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q4.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q4.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q5"></a>
+<tr>
+<td><b>FTNot-q5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftand ftnot with ftand and window</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q5.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q5.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q5.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0003">
+                     err:FTST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q6"></a>
+<tr>
+<td><b>FTNot-q6</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftand ftnot with window</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q6.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q6.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q6.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q6.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0002">
+                     err:FTST0002</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0003">
+                     err:FTST0003</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0011">
+                     err:FTST0011</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-q7"></a>
+<tr>
+<td><b>FTNot-q7</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">precedence: ftand and ftnot</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q7.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q7.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q7.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q7.txt</A></td>
+</tr>
+</table>
+<p></p>
 <A name="MatchOptions"></A>
 <h3>1.2.2.1.1.1.2.4Full-text Match Options</h3>
 <p></p>Full-text match options. Section 3.4.<p></p>
@@ -9556,6 +10606,13 @@
                   <A href="#principal-data">principal-data</A></td><td>
                   Source ID:
                   <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
 <td colspan="3"><B>Outputs:</B></td>
@@ -10602,6 +11659,244 @@
 <h3>2.2Unconstrained Full-Text ftnot Operator</h3>
 <p></p>Unary not. Sections 3.5.4 and 5.2.2.<p></p>
 <ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-unconstrained-q1"></a>
+<tr>
+<td><b>FTNot-unconstrained-q1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Simple ftnot query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q1.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-unconstrained-q3"></a>
+<tr>
+<td><b>FTNot-unconstrained-q3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftnot with ftor query</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q3.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q3.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-unconstrained-q5"></a>
+<tr>
+<td><b>FTNot-unconstrained-q5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftand ftnot with ftand and window</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0003">
+                     err:FTST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTNot-unconstrained-q6"></a>
+<tr>
+<td><b>FTNot-unconstrained-q6</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">ftand ftnot with window</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftnot">#sec-ftnot</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q6.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q6.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q6.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q6.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0003">
+                     err:FTST0003</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0011">
+                     err:FTST0011</A></td>
+</tr>
+</table>
+<p></p>
 <A name="FTUnit and FTBigUnit"></A>
 <h3>2.3Unconstrained FTUnit/FTBigUnit</h3>
 <p></p>Sentences and paragraphs. Sections 3.6 and 5.3.3.<p></p>

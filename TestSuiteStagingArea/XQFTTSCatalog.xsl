@@ -183,8 +183,8 @@
                      </td>
                      <td>
                         <A>
-                           <xsl:attribute name="href"><xsl:value-of select="@URI"/></xsl:attribute>
-                           <xsl:value-of select="@URI"/>
+                           <xsl:attribute name="href"><xsl:value-of select="@uri"/></xsl:attribute>
+                           <xsl:value-of select="@uri"/>
                         </A>
                      </td>
                      <td>
@@ -264,6 +264,114 @@
                            <xsl:attribute name="href">
                               <xsl:value-of select="$SourceOffsetPath"/><xsl:value-of select="@FileName"/><xsl:value-of select="$XQueryFileExtension"/>
                            </xsl:attribute>
+                           <xsl:value-of select="@FileName"/>
+                        </A>
+                     </td>
+                     <td>
+                        <xsl:value-of select="test:description"/>
+                     </td>
+                  </tr>
+               </xsl:for-each>
+            </table>
+            <h2>Stop Word Lists</h2>
+            <table>
+               <tr>
+                  <th>ID</th>
+                  <th>URI</th>
+                  <th>File Name</th>
+               </tr>
+               <xsl:for-each select="test:test-suite/test:sources/test:stopwords">
+                  <tr>
+                     <td>
+                        <A>
+                           <xsl:attribute name="name">
+                              <xsl:value-of select="@ID"/>
+                           </xsl:attribute>
+                           <b>
+                              <xsl:value-of select="@ID"/>
+                           </b>
+                        </A>
+                     </td>
+                     <td>
+                        <A>
+                           <xsl:attribute name="href"><xsl:value-of select="@uri"/></xsl:attribute>
+                           <xsl:value-of select="@uri"/>
+                        </A>
+                     </td>
+                     <td>
+                        <A>
+                           <xsl:attribute name="href"><xsl:value-of select="$SourceOffsetPath"/><xsl:value-of select="@FileName"/></xsl:attribute>
+                           <xsl:value-of select="@FileName"/>
+                        </A>
+                     </td>
+                  </tr>
+               </xsl:for-each>
+            </table>
+            <h2>Thesauri</h2>
+            <table>
+               <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>URI</th>
+                  <th>File Name</th>
+               </tr>
+               <xsl:for-each select="test:test-suite/test:sources/test:thesaurus">
+                  <tr>
+                     <td>
+                        <A>
+                           <xsl:attribute name="name">
+                              <xsl:value-of select="@ID"/>
+                           </xsl:attribute>
+                           <b>
+                              <xsl:value-of select="@ID"/>
+                           </b>
+                        </A>
+                     </td>
+                     <td>
+                        <xsl:value-of select="@Type"/>
+                     </td>
+                     <td>
+                        <A>
+                           <xsl:attribute name="href"><xsl:value-of select="@uri"/></xsl:attribute>
+                           <xsl:value-of select="@uri"/>
+                        </A>
+                     </td>
+                     <td>
+                        <A>
+                           <xsl:attribute name="href"><xsl:value-of select="$SourceOffsetPath"/><xsl:value-of select="@FileName"/></xsl:attribute>
+                           <xsl:value-of select="@FileName"/>
+                        </A>
+                     </td>
+                  </tr>
+               </xsl:for-each>
+            </table>
+            <h2>Stemming Dictionary</h2>
+            <table>
+               <tr>
+                  <th>ID</th>
+                  <th>Creator</th>
+                  <th>File</th>
+                  <th>Description</th>
+               </tr>
+               <xsl:for-each select="test:test-suite/test:sources/test:stemming-dictionary">
+                  <tr>
+                     <td>
+                        <A>
+                           <xsl:attribute name="name">
+                              <xsl:value-of select="@ID"/>
+                           </xsl:attribute>
+                           <b>
+                              <xsl:value-of select="@ID"/>
+                           </b>
+                        </A>
+                     </td>
+                     <td>
+                        <xsl:value-of select="@Creator"/>
+                     </td>
+                     <td>
+                        <A>
+                           <xsl:attribute name="href">
+                              <xsl:value-of select="$SourceOffsetPath"/><xsl:value-of select="@FileName"/></xsl:attribute>
                            <xsl:value-of select="@FileName"/>
                         </A>
                      </td>
@@ -562,6 +670,27 @@
                </td>
                <td>
 	          <xsl:text>(as input URI)</xsl:text>
+               </td>
+            </tr>
+         </xsl:for-each>
+         <xsl:for-each select="test:aux-URI">
+            <tr>
+               <td>
+                  Role:
+                  <A>
+                     <xsl:attribute name="href">#<xsl:value-of select="@role"/></xsl:attribute>
+                     <xsl:value-of select="@role"/>
+                  </A>
+               </td>
+               <td>
+                  Source ID:
+                  <A>
+                     <xsl:attribute name="href">#<xsl:value-of select="."/></xsl:attribute>
+                     <xsl:value-of select="."/>
+                  </A>
+               </td>
+               <td>
+	          <xsl:text>(as auxiliary URI)</xsl:text>
                </td>
             </tr>
          </xsl:for-each>

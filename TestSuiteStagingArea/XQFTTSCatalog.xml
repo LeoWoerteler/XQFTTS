@@ -439,7 +439,7 @@
      <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilitySoundex.xml" FileName="TestSources/soundex.xml" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">Soundex thesaurus for examples</description>
      </thesaurus>
-     <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilityThesaurus.xml" FileName="TestSources/usability.xml" Creator="Full-Text Task Force">
+     <thesaurus ID="usability" uri="http://bstore1.example.com/UsabilityThesaurus.xml" FileName="TestSources/usability.xml" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">Usability thesaurus for examples</description>
      </thesaurus>
      <stemming-dictionary ID="english-stems" FileName="TestSources/english-stems.txt" Creator="Full-Text Task Force">
@@ -1090,7 +1090,6 @@
           <title>Section 3.6.2</title>
           <description>Examples Section 3.6.2</description>
         </GroupInfo>
-err:FTST0003  unsupported units (words, sentences, paragraphs)
         <test-case is-XPath2="true" name="examples-362-1" FilePath="Examples/3.6.2-WindowSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Windowing example 1</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.2" section-title="Window Selection" section-pointer="ftwindow"/>
@@ -1147,7 +1146,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <query name="examples-363-1" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">examples-363-1.txt</output-file>
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-2" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Distance example 1</description>
@@ -1155,7 +1154,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <query name="examples-363-2" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">examples-363-2.txt</output-file>
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-3" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Distance example 1</description>
@@ -1163,7 +1162,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <query name="examples-363-3" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">examples-363-3.txt</output-file>
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-4" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Distance example 1</description>
@@ -1171,7 +1170,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <query name="examples-363-4" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">examples-363-4.xml</output-file>
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-5" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Distance example 1</description>
@@ -1179,7 +1178,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <query name="examples-363-5" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">examples-363-5.txt</output-file>
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
       </test-group>
       <test-group name="Examples3.6.4">
@@ -1262,7 +1261,7 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">examples-365-2.xml</output-file>
           <expected-error>FTST0012</expected-error><!-- unsupported anchoring -->
-          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+          <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-365-3" FilePath="Examples/3.6.5-AnchoringSelection/" scenario="standard" Creator="Full-Text Task Force">
           <description>Anchoring example 3</description>
@@ -2011,6 +2010,61 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
                     <title>Full-Text ftnot Operator</title>
                     <description>Minimal Not-selection support. Section 3.5.4.</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTNot-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftnot query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q1" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q1.txt</output-file>
+                    <expected-error>FTST0002</expected-error> <!-- restricted not -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple ftand ftnot query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q2" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTNot-q2.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftnot with ftor query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q3" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q3.txt</output-file>
+                    <expected-error>FTST0002</expected-error> <!-- restricted not -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand ftnot with complex ftnot</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q4" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTNot-q4.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand ftnot with ftand and window</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q5" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTNot-q5.xml</output-file>
+                    <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand ftnot with window</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q6" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTNot-q6.txt</output-file>
+                    <expected-error>FTST0002</expected-error> <!-- restricted ftnot -->
+                    <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
+                    <expected-error>FTST0011</expected-error> <!-- restricted window -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTNot-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>precedence: ftand and ftnot</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
+                    <query name="FTNot-q7" date="2008-11-24"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTNot-q7.txt</output-file>
+                  </test-case>
               </test-group>
               <test-group name="MatchOptions">
                 <GroupInfo>
@@ -2398,12 +2452,51 @@ err:FTST0003  unsupported units (words, sentences, paragraphs)
         <title>Full-Text not in Operator</title>
         <description>Mild not. Sections 3.5.3 and 5.2.1.</description>
       </GroupInfo>
+      <test-case is-XPath2="true" name="unconstrained-examples-353-1" FilePath="Examples/3.5.3-MildNotSelection/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Does any book contain "usability" not in
+        "usability testing"?</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNot Operator" section-pointer="id-ftmildnot-option"/>
+        <query name="unconstrained-examples-353-1" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="Text">unconstrained-examples-353-1.txt</output-file>
+      </test-case>
     </test-group>
     <test-group name="FTUnaryNotUnconstrained">
       <GroupInfo>
         <title>Unconstrained Full-Text ftnot Operator</title>
         <description>Unary not. Sections 3.5.4 and 5.2.2.</description>
       </GroupInfo>
+      <test-case is-XPath2="true" name="FTNot-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Simple ftnot query</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
+        <query name="FTNot-unconstrained-q1" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTNot-unconstrained-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftnot with ftor query</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
+        <query name="FTNot-unconstrained-q3" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q3.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTNot-unconstrained-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftand ftnot with ftand and window</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
+        <query name="FTNot-unconstrained-q5" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTNot-unconstrained-q5.xml</output-file>
+        <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTNot-unconstrained-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftand ftnot with window</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
+        <query name="FTNot-unconstrained-q6" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Text">FTNot-unconstrained-q6.txt</output-file>
+        <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
+        <expected-error>FTST0011</expected-error> <!-- restricted window -->
+      </test-case>
     </test-group>
     <test-group name="FTUnit and FTBigUnit">
       <GroupInfo>
