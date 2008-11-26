@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-/books/book[@number="1"]/title ftcontains "improve" with stemming 
+$input-contex/books/book[@number="1"]/title ftcontains "improve" with stemming 

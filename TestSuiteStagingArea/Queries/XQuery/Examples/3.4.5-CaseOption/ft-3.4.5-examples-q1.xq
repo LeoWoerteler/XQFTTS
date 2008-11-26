@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-contex//book[@number="1"]/title ftcontains "improv.*" with wildcards
+$input-context/books/book/title ftcontains "usability"
