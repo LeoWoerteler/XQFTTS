@@ -2430,6 +2430,48 @@
                 <title>Full-Text Extension Selections</title>
                 <description>Extension Selections. Section 3.8.</description>
               </GroupInfo>
+
+                <test-case is-XPath2="false" name="FTExtension-Opt-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that prefix of the ft-option must be defined</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <query name="FTExtension-Opt-q1" date="2008-08-25">
+                    <description>prefix is not declared, expecting a static error</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0081</expected-error>
+                </test-case>
+
+                <test-case is-XPath2="false" name="FTExtension-Opt-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that the string literal of the ft-option must be present</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <query name="FTExtension-Opt-q2" date="2008-08-25">
+                    <description>string literal for option is missing, expecting a syntax error</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
+
+                <test-case is-XPath2="false" name="FTExtension-Opt-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that the string literal of the ft-option must be present when used in ftcontains</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <query name="FTExtension-Opt-q3" date="2008-08-25">
+                    <description>string literal for option is missing, expecting a syntax error</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
+
+                <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Positive case, behavior is implementation defined </description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <query name="FTExtension-Opt-q4" date="2008-08-25">
+                    <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file/>
+                  <expected-error/>
+                </test-case>
+
             </test-group>
           </test-group>
         </test-group>
