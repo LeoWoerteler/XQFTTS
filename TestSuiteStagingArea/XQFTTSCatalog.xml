@@ -2425,6 +2425,12 @@
                 <description>Ignore option. Section 3.7.</description>
               </GroupInfo>
             </test-group>
+            <test-group name="FTExtensionSelections">
+              <GroupInfo>
+                <title>Full-Text Extension Selections</title>
+                <description>Extension Selections. Section 3.8.</description>
+              </GroupInfo>
+            </test-group>
           </test-group>
         </test-group>
       </test-group>
