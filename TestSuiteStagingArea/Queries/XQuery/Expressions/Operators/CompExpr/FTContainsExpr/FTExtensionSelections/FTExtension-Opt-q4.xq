@@ -1,7 +1,7 @@
-(: 3.4.8 Extension Option  positive case, it is implementation defined how the option is handled. :)
+(: 3.4.8 Extension Option  positive case :)
 
+declare namespace oraxqft = "http://www.oracle.com/technology/tech/xml/xmldb/index.html";
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)
-declare namespace oraxqft = "http://www.oracle.com/technology/tech/xml/xmldb/index.html"
-//para[. ftcontains "Pizza" option oraxqft:op1 "semantic match"]
+/books/book/author[name ftcontains (# oraxqft:user-index #){'Berner-lee'}]

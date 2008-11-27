@@ -3,5 +3,4 @@
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)
-declare ft-option option oraxqft:op "use semantic matches";
-1
+/books/book/author[name ftcontains (# oraxqft:user-index #){'Berner-lee'}]
