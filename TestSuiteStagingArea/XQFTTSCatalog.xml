@@ -2442,20 +2442,20 @@
                 </test-case>
 
                 <test-case is-XPath2="false" name="FTExtension-Opt-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
-                  <description>Negative test to demonstrate that the string literal of the ft-option must be present</description>
+                  <description>Negative test to test the extension syntax error </description>
                   <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
                   <query name="FTExtension-Opt-q2" date="2008-08-25">
-                    <description>string literal for option is missing, expecting a syntax error</description>
+                    <description>Negative test to test the extension syntax error</description>
                   </query>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <expected-error>XPST0003</expected-error>
                 </test-case>
 
                 <test-case is-XPath2="false" name="FTExtension-Opt-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
-                  <description>Negative test to demonstrate that the string literal of the ft-option must be present when used in ftcontains</description>
+                  <description>Negative test to test the extension syntax error</description>
                   <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
                   <query name="FTExtension-Opt-q3" date="2008-08-25">
-                    <description>string literal for option is missing, expecting a syntax error</description>
+                    <description>Negative test to test the extension syntax error</description>
                   </query>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <expected-error>XPST0003</expected-error>
