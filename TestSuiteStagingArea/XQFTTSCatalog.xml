@@ -446,6 +446,9 @@
      <thesaurus ID="usability" uri="http://bstore1.example.com/UsabilityThesaurus.xml" FileName="TestSources/usability.xml" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">Usability thesaurus for examples</description>
      </thesaurus>
+       <thesaurus ID="usability" uri="http://bstore1.example.com/UsabilityThesaurus2.xml" FileName="TestSources/usability2.xml" Creator="Full-Text Task Force">
+       <description last-mod="2008-11-10">Usability thesaurus for examples</description>
+     </thesaurus>   
      <stemming-dictionary ID="english-stems" FileName="TestSources/english-stems.txt" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">English stems</description>
      </stemming-dictionary>
@@ -909,6 +912,7 @@
           <description>Find out whether it is true that by searching on tasks by searching on its synonyms you will find duties.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q1" date="2008-08-21"/>
+          <aux-URI role="thesaurus">usability</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">ft-3.4.3-examples-results-q1.txt</output-file>
         </test-case>
@@ -916,6 +920,7 @@
           <description>Find web site components and types of web site components such as navigation and layout by searching for narrower terms.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q2" date="2008-08-21"/>
+          <aux-URI role="thesaurus">usability</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q2.xml</output-file>
         </test-case>
@@ -923,6 +928,7 @@
           <description>Find words that sound like Merrygould.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q3" date="2008-08-21"/>
+          <aux-URI role="thesaurus">soundex</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="XML">ft-3.4.3-examples-results-q3.xml</output-file>
         </test-case>
@@ -2201,8 +2207,53 @@
                     <title>Full-Text Thesaurus Match Option</title>
                     <description>Thesaurus option. Section 3.4.3.</description>
                   </GroupInfo>
-                  
-                  
+            <test-case is-XPath2="false" name="ft-3.4.3-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Thesaurus default query. Same as without thesaurus. Find program without thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q1" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftthesaurus-results-q1.txt</output-file>
+        </test-case>  
+         <test-case is-XPath2="false" name="ft-3.4.3-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Without thesaurus query. Find program without thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q2" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftthesaurus-results-q2.txt</output-file>
+        </test-case>  
+           <test-case is-XPath2="false" name="ft-3.4.3-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
+          <description>WIth thesaurus query. Find program with thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q3" date="2008-11-28"/>
+          <aux-URI role="thesaurus">usability</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftthesaurus-results-q3.xml</output-file>
+        </test-case>     
+            <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="parse-error" Creator="Full-Text Task Force">
+          <description>WIth thesaurus query. Find program with thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q4" date="2008-11-28"/>
+          <aux-URI role="thesaurus">technical</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <expected-error>FTST0018</expected-error>
+        </test-case>      
+            <test-case is-XPath2="false" name="ft-3.4.3-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
+          <description>WIth thesaurus level query. Find infrastructure at the 2nd level of narrower terms in a thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q5" date="2008-11-28"/>
+          <aux-URI role="thesaurus">usability</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftthesaurus-results-q5.txt</output-file>
+        </test-case>   
+        <test-case is-XPath2="false" name="ft-3.4.3-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Query calling a default thesaurus and an addiitonal thesaurus.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+          <query name="ftthesaurus-q6" date="2008-11-28"/>
+          <aux-URI role="thesaurus">usability</aux-URI>
+          <aux-URI role="thesaurus">usability2</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftthesaurus-results-q6.xml</output-file>
+        </test-case>                
                 </test-group>
                 <test-group name="FTStemming">
                   <GroupInfo>
@@ -3233,6 +3284,7 @@
         <description>Q1 Query on Synonyms Identified by a Thesaurus: Find all introductions which quote someone. This query finds words and phrases using a thesaurus to return synonyms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.1" section-title="Q1 Query on Synonyms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q1"/>
         <query name="thesaurus-queries-results-q1" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q1.xml</output-file>
       </test-case>
@@ -3240,6 +3292,7 @@
         <description>Q1 Query on Synonyms Identified by a Thesaurus: Find all introductions which quote someone. This query finds words and phrases using a thesaurus to return synonyms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.1" section-title="Q1 Query on Synonyms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q1"/>
         <query name="thesaurus-queries-results-q1b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q1.xml</output-file>
       </test-case>
@@ -3247,6 +3300,7 @@
         <description>Q2 Query on Narrower Terms Identified by a Thesaurus: Find all books with text on improving "web site components". This query finds words using a thesaurus to identify narrower terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.2" section-title="Q2 Query on Narrower Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q2"/>
         <query name="thesaurus-queries-results-q2" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q2.txt</output-file>
       </test-case>
@@ -3254,6 +3308,7 @@
         <description>Q2 Query on Narrower Terms Identified by a Thesaurus: Find all books with text on improving "web site components". This query finds words using a thesaurus to identify narrower terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.2" section-title="Q2 Query on Narrower Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q2"/>
         <query name="thesaurus-queries-results-q2b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q2.txt</output-file>
       </test-case>     
@@ -3261,6 +3316,7 @@
         <description>Q3 Query on Broader Terms Identified by a Thesaurus: Are there any "letters" or "holiday cards" in John Wesley Usabilityguy's papers? This query finds words and phrases using a thesaurus to identify broader terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.3" section-title="Q3 Query on Broader Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q3"/>
         <query name="thesaurus-queries-results-q3" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q3.xml</output-file>
       </test-case>  
@@ -3268,6 +3324,7 @@
         <description>Q3 Query on Broader Terms Identified by a Thesaurus: Are there any "letters" or "holiday cards" in John Wesley Usabilityguy's papers? This query finds words and phrases using a thesaurus to identify broader terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.3" section-title="Q3 Query on Broader Terms Identified by a Thesaurus" section-pointer="thesaurus-queries-results-q3"/>
         <query name="thesaurus-queries-results-q3b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q3.xml</output-file>
       </test-case>    
@@ -3275,6 +3332,7 @@
         <description>Q4 Query on Word Which Sounds Like Other Words: Find all books with words which sound like "Merrygould". This query finds words using a dictionary of words which sound like the word queried.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.4" section-title="Q4 Query on Word Which Sounds Like Other Words" section-pointer="thesaurus-queries-results-q4"/>
         <query name="thesaurus-queries-results-q4" date="2008-06-26"/>
+        <aux-URI role="thesaurus">soundex</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q4.txt</output-file>
       </test-case>      
@@ -3282,6 +3340,7 @@
         <description>Q4 Query on Word Which Sounds Like Other Words: Find all books with words which sound like "Merrygould". This query finds words using a dictionary of words which sound like the word queried.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.4" section-title="Q4 Query on Word Which Sounds Like Other Words" section-pointer="thesaurus-queries-results-q4"/>
         <query name="thesaurus-queries-results-q4b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">soundex</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q4.txt</output-file>
       </test-case>       
@@ -3289,6 +3348,7 @@
         <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
         <query name="thesaurus-queries-results-q5" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
       </test-case>       
@@ -3296,6 +3356,7 @@
         <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
         <query name="thesaurus-queries-results-q5b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
       </test-case>             
@@ -3303,6 +3364,7 @@
         <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
         <query name="thesaurus-queries-results-q6" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
       </test-case>      
@@ -3310,6 +3372,7 @@
         <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
         <query name="thesaurus-queries-results-q6b" date="2008-06-26"/>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
       </test-case>        
@@ -3835,6 +3898,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
+        <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
      </test-case>         
