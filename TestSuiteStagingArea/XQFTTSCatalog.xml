@@ -977,7 +977,7 @@
        <test-group name="Examples3.4.7">
         <GroupInfo>
           <title>Section 3.4.7</title>
-          <description>Examples Section 3.4.7. See Optional/3.4.7 and 5.2.11 FTStopWordOption</description>
+          <description>Examples Section 3.4.7. See Optional/Unconstrained Full-Text Stop Word Option</description>
         </GroupInfo>
       </test-group>       
       <!-- All stop word examples and expressions under optional. -->
@@ -2295,8 +2295,8 @@
                 </test-group>
                 <test-group name="FTStopWord">
                   <GroupInfo>
-                    <title>Full-Text Stop Word Match Option</title>
-                    <description>Stop Word option. Section 3.4.7.  See Optional/3.4.7 and 5.2.11 FTStopWordOption</description>
+                    <title>Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</title>
+                    <description>Stop Word option. Section 3.4.7.</description>
                   </GroupInfo>
                 </test-group>
                 <!-- All stop word examples and expressions under optional. -->
@@ -2773,6 +2773,7 @@
           <query name="ft-3.4.5-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">ft-3.4.5-examples-results-q1.txt</output-file>
+          <expected-error>FTST0015</expected-error> 
         </test-case> 
          <test-case is-XPath2="false" name="ft-5.2.10-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Lower case query.</description>
@@ -2780,6 +2781,7 @@
           <query name="ftcaseunconstrained-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q1.txt</output-file>
+          <expected-error>FTST0015</expected-error> 
         </test-case>  
          <test-case is-XPath2="false" name="ft-5.2.10-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Upper case query. </description>
@@ -2787,6 +2789,7 @@
           <query name="ftcaseunconstrained-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q2.txt</output-file>
+          <expected-error>FTST0015</expected-error>
         </test-case>          
           <test-case is-XPath2="false" name="ft-5.2.10-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
           <description>Upper case query. Only initial character in query is uppercase.</description>
@@ -2794,6 +2797,7 @@
           <query name="ftcaseunconstrained-q3" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftcaseunconstrained-results-q3.txt</output-file>
+          <expected-error>FTST0015</expected-error>  
         </test-case>  
     </test-group>
     <test-group name="FTStopWordUnconstrained">
@@ -2805,6 +2809,7 @@
           <description>Find out whether or not it is true that the document contains propagating few errors. Stop words are provided in the query.  One of the stop words is in the phrase queried.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q1" date="2008-08-21"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">ft-3.4.7-examples-results-q1.txt</output-file>
           <expected-error>FTST0006</expected-error> 
@@ -2821,6 +2826,7 @@
           <description>Find out whether or not it is true that the document contains propagating of errors without stop words. </description>
           <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">ft-3.4.7-examples-results-q3.txt</output-file>
         </test-case>   
@@ -2845,7 +2851,7 @@
           <expected-error>FTST0008</expected-error>
         </test-case>    
 <test-case is-XPath2="false" name="ft-3.4.7-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find planning (allow any intervening word) conducting. This query calls a default stopword list. The default stop word list is stopword1.</description>
+          <description>Find propagating (allow any intervening word) errors. This query calls a default stopword list. The default stop word list is stopword1.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ftstopword-q1" date="2008-11-28"/>
            <aux-URI role="stopwords">stopwords1</aux-URI>
@@ -2855,7 +2861,7 @@
           <expected-error>FTST0008</expected-error>
         </test-case>  
 <test-case is-XPath2="false" name="ft-3.4.7-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find planning (allow any intervening word) conducting. This query calls a stopword list via a url excluding stop words in a second stop word list also accessed ia url.</description>
+          <description>Find propagating numerous errors. This query calls a stopword list via a url excluding stop words in a second stop word list also accessed ia url.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ftstopword-q2" date="2008-11-28"/>
            <aux-URI role="stopwords">stopwords1</aux-URI>
@@ -2865,7 +2871,7 @@
           <expected-error>FTST0008</expected-error>
         </test-case>          
        <test-case is-XPath2="false" name="ft-3.4.7-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
-          <description>Find planning (allow any intervening word) conducting. This query calls a stopword list that does not exist.</description>
+          <description>Find propagating numerous errors. This query calls a stopword list that does not exist.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
           <query name="ftstopword-q3" date="2008-11-28"/>
            <aux-URI role="stopwords">stopwords3</aux-URI>
