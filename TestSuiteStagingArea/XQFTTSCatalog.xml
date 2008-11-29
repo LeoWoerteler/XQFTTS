@@ -2090,6 +2090,41 @@
                   <title>Full-text Match Options</title>
                   <description>Full-text match options. Section 3.4.</description>
                 </GroupInfo>
+             <test-case is-XPath2="false" name="ftmatchoptions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+          <description>There can be multiple match options applied to an FTWord, written in any order (although there are constraints on processing order). This query applies multiple match options in a random order.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftmatchoptions-q1" date="2008-11-28"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
+          <aux-URI role="stopwords">stopwords1</aux-URI>
+          <aux-URI role="thesaurus">usability</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftmatchoptions-results-q1.xml</output-file>
+          <expected-error>FTST0006</expected-error>
+        </test-case>
+         <test-case is-XPath2="false" name="ftmatchoptions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+          <description>There can be multiple match options applied to an FTSelection, written in any order (although there are constraints on processing order). This query applies multiple match options in a random order.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftmatchoptions-q2" date="2008-11-28"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
+          <aux-URI role="thesaurus">usability</aux-URI>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftmatchoptions-results-q2.xml</output-file>
+        </test-case>
+        <test-case is-XPath2="false" name="ftmatchoptions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
+          <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both with stemming and without stemming to test and returns an error.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftmatchoptions-q3" date="2008-11-28"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI> 
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <expected-error>FTST????</expected-error>
+        </test-case>     
+         <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
+          <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both case sensitive and case insensitive to Complete and returns an error.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+          <query name="ftmatchoptions-q4" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+         <expected-error>FTST????</expected-error>
+        </test-case>      
               </test-group>                
               <test-group name="FTLanguage">
                   <GroupInfo>
@@ -2200,7 +2235,21 @@
           <query name="ftwildcard-q12" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="XML">ftwildcard-results-q12.xml</output-file>
-        </test-case>               
+        </test-case>    
+           <test-case is-XPath2="false" name="ft-3.4.2-expressions-q13" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query with a backslash preceding the period. Find specialist\. where the period is a period, not an indicator.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+          <query name="ftwildcard-q13" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q13.xml</output-file>
+        </test-case>  
+          <test-case is-XPath2="false" name="ft-3.4.2-expressions-q14" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+          <description>With wildcard (suffix) query with a backslash preceding the question mark. Find next.\? where the period is a indicator and the question mark is a queston mark, not a qualifier.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+          <query name="ftwildcard-q14" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="XML">ftwildcard-results-q14.xml</output-file>
+        </test-case>        
                 </test-group>
                 <test-group name="FTThesaurus">
                   <GroupInfo>
