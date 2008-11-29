@@ -2158,7 +2158,7 @@
           <query name="ftmatchoptions-q3" date="2008-11-28"/>
           <aux-URI role="stemming-dictionary">english</aux-URI> 
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <expected-error>FTST????</expected-error>
+          <expected-error>FTST0019</expected-error>
         </test-case>     
          <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
           <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both case sensitive and case insensitive to Complete and returns an error.</description>
@@ -3825,6 +3825,7 @@
         <query name="proximity-queries-results-q5" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q5.xml</output-file>
+        <output-file role="principal" compare="Fragment">proximity-queries-results-q5-alt.txt</output-file>
      </test-case>   
       <test-case is-XPath2="true" name="proximity-queries-results-q5b" FilePath="UseCase/UseCase-PROXIMITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q5 Unordered Within a Paragraph Query: Find all paragraphs which define what "Web site usability" is. This query finds books with multiple words and phrases in any order within a paragraph.</description>
@@ -3832,6 +3833,7 @@
         <query name="proximity-queries-results-q5b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q5.xml</output-file>
+        <output-file role="principal" compare="Fragment">proximity-queries-results-q5-alt.txt</output-file>
      </test-case>         
     </test-group>
     <test-group name="UseCase-AXES">
@@ -3975,6 +3977,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q2.txt</output-file>
+        <expected-error>FTST0009</expected-error>
      </test-case>    
      <test-case is-XPath2="true" name="full-text-composability-queries-results-q2b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert review methods". This query finds multiple words close to each other and a phrase in one instance of an element.</description>
