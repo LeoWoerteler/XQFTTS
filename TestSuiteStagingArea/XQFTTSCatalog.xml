@@ -1534,6 +1534,48 @@
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <expected-error>XPTY0004</expected-error>
             </test-case>
+                     <test-case is-XPath2="false" name="ftstaticcontext-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTCaseOption case insensitive query using the initial default value from the static context.</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q1" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q1.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="false" name="ftstaticcontext-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTCaseOption case sensitive query overriding case insensitive (the initial default value from the static context).</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q2" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTDiacriticsOption diacritics insensitive query using the initial default value from the static context.</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q3" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q3.txt</output-file>
+        </test-case>        
+        <test-case is-XPath2="false" name="ftstaticcontext-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTDiacriticsOption diacritics sensitive query overriding diacritics insensitive (the initial default value from the static context).</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q4" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q4.txt</output-file>
+        </test-case>       
+        <test-case is-XPath2="false" name="ftstaticcontext-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTStemOption without stemming query using the initial default value from the static context.</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q5" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q5.txt</output-file>
+        </test-case>          
+        <test-case is-XPath2="false" name="ftstaticcontext-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+          <description>FTStemOption with stemming query overriding diacritics insensitive (the initial default value from the static context).</description>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <query name="ftstaticcontext-q6" date="2008-11-28"/>
+          <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+          <output-file role="principal" compare="Fragment">ftstaticcontext-results-q6.txt</output-file>
+        </test-case> 
             <test-group name="FTSelection">
               <GroupInfo>
                 <title>Full-Text Selections</title>
