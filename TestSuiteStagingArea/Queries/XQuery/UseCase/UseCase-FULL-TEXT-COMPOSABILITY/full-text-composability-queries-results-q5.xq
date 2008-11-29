@@ -12,7 +12,7 @@ where $title ftcontains "usability" and $in ftcontains
    problems"
 return <book number="{$book/@number}">
           {$title} 
-          if (count($book/metadata/author) &gt; 0)
+          if (count($book/metadata/author) > 0)
           then {$book/metadata/author, $in, $pin}
           else {$book/metadata/publicationInfo/publisher, $in, $pin}
        </book>
