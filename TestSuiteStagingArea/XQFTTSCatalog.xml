@@ -1940,6 +1940,27 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-q5.txt</output-file>
                   </test-case>
+                  <test-case is-XPath2="true" name="FTOr-three-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Thre way ftor query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-three-q1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-three-q1.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-three-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Thre way ftor query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-three-q2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-three-q2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOr-three-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Thre way ftor query, one branch false</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <query name="FTOr-three-q3" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOr-three-q3.txt</output-file>
+                  </test-case>
                   <test-case is-XPath2="true" name="FTOr-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftor with computed arguments</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
@@ -2126,6 +2147,97 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Text">FTNot-q7.txt</output-file>
                   </test-case>
+              </test-group>
+                <test-group name="FTMildNot">
+                  <GroupInfo>
+                    <title>Full-Text not in Operator</title>
+                    <description>Mild Not-selection support. Section 3.5.4.</description>
+                  </GroupInfo>
+                  <test-case is-XPath2="true" name="FTMildNot-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple not in query: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-q1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-q1.txt</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                 </test-case>
+                  <test-case is-XPath2="true" name="FTMildNot-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple not in query: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-q2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTMildNot-q2.xml</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Simple not in query with expressions: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-expr1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-expr1.txt</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTMildNot-and1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Mild not with ftand: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-and1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-and1.txt</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTMildNot-and2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Mild not with ftand: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-and2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTMildNot-and2.xml</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-or1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Mild not with ftor: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-or1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-or1.txt</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                  </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-or2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Mild not with ftor: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-or2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-or2.txt</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-not1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Mild not with fnnot: FTST0001 perhaps</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-not1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTMildNot-not1.xml</output-file>
+                    <expected-error>FTST0001</expected-error> <!-- unsupported -->
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-bad1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>Mild not with bad arg</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-bad1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>FTDY0017</expected-error>
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>Mild not with bad arg</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-bad2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>FTDY0017</expected-error>
+                 </test-case>
+                 <test-case is-XPath2="true" name="FTMildNot-bad3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>Mild not with bad arg</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
+                    <query name="FTMildNot-bad3" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>FTDY0017</expected-error>
+                 </test-case>
               </test-group>
               <test-group name="MatchOptions">
                 <GroupInfo>
@@ -2664,6 +2776,62 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Text">unconstrained-examples-353-1.txt</output-file>
       </test-case>
+      <test-case is-XPath2="true" name="FTMildNot-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Simple not in query: no error allowed</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-q1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-q1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTMildNot-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Simple not in query: no error allowed</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-q2" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-q2.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTMildNot-unconstrained-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+         <description>Simple not in query with expressions: no FTST0001</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+         <query name="FTMildNot-expr1" date="2008-12-03"/>
+         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+         <output-file role="principal" compare="Fragment">FTMildNot-expr1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTMildNot-unconstrained-and1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Mild not with ftand</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-and1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-and1.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTMildNot-unconstrained-and2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Mild not with ftand</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-and2" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTMildNot-and2.xml</output-file>
+     </test-case>
+     <test-case is-XPath2="true" name="FTMildNot-unconstrained-or1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Mild not with ftor</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-or1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-or1.txt</output-file>
+      </test-case>
+     <test-case is-XPath2="true" name="FTMildNot-unconstrained-or2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Mild not with ftor</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-or2" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-or2.txt</output-file>
+     </test-case>
+     <test-case is-XPath2="true" name="FTMildNot-unconstrained-not1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Mild not with fnnot</description>
+         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
+        <query name="FTMildNot-not1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTMildNot-not1.xml</output-file>
+     </test-case>
     </test-group>
     <test-group name="FTUnaryNotUnconstrained">
       <GroupInfo>
@@ -2699,6 +2867,14 @@
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="Text">FTNot-unconstrained-q6.txt</output-file>
         <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
+        <expected-error>FTST0011</expected-error> <!-- restricted window -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTNot-complex1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftand ftnot with window</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
+        <query name="FTNot-complex1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Text">FTNot-complex1.txt</output-file>
         <expected-error>FTST0011</expected-error> <!-- restricted window -->
       </test-case>
     </test-group>
