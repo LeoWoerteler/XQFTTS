@@ -24,7 +24,7 @@
 
    <target name="all">
       <mkdir dir="temp" />
-      <!-- <antcall target="getDocuments" /> -->
+      <antcall target="getDocuments" /> 
       <antcall target="process">
          <param name="specname" value="fulltext"/> 
          <param name="spec" value="XQueryFullText"/> 
@@ -34,7 +34,7 @@
          <param name="prefix1" value="fulltext"/> 
          <param name="prefix2" value="fulltext"/> 
       </antcall>
-      <!-- <delete dir="temp" /> -->
+      <delete dir="temp" /> 
    </target>
    
 
