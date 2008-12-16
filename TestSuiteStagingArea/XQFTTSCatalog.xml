@@ -2585,6 +2585,46 @@
                     <title>Ordered Selection</title>
                     <description>Ordered selection. Section 3.6.1.</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTOrder-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ordered query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+                    <query name="FTOrder-q1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTOrder-q1.xml</output-file>
+                    <expected-error>FTST0010</expected-error> <!-- restricted order -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOrder-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ordered query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+                    <query name="FTOrder-q2" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOrder-q2.txt</output-file>
+                    <expected-error>FTST0010</expected-error> <!-- restricted order -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOrder-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ordered query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+                    <query name="FTOrder-q3" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTOrder-q3.xml</output-file>
+                    <expected-error>FTST0010</expected-error> <!-- restricted order -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOrder-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ordered query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+                    <query name="FTOrder-q4" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTOrder-q4.txt</output-file>
+                    <expected-error>FTST0010</expected-error> <!-- restricted order -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTOrder-andor1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ordered query</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+                    <query name="FTOrder-andor1" date="2008-12-03"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
+                    <expected-error>FTST0010</expected-error> <!-- restricted order -->
+                  </test-case>
                 </test-group>
                 <test-group name="FTWindow">
                   <GroupInfo>
@@ -2889,6 +2929,28 @@
         <title>Unconstrained Order Selection</title>
         <description>Order selection. Sections 3.6.1 and 5.2.4.</description>
       </GroupInfo>
+      <test-case is-XPath2="true" name="FTOrder-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ordered query</description>
+        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="ftorder"/>
+        <query name="FTOrder-q1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTOrder-q1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTOrder-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ordered query</description>
+        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+        <query name="FTOrder-q2" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Fragment">FTOrder-q2.txt</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTOrder-unconstrained-andor1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ordered query</description>
+        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+        <query name="FTOrder-andor1" date="2008-12-03"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
+      </test-case>
     </test-group>
     <test-group name="FTScope">
       <GroupInfo>
