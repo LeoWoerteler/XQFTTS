@@ -324,8 +324,8 @@
       <description last-mod="2005-09-29">Data for normalize-space functions</description>
     </source>
 -->
-    <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQTSCatalog" FileName="XQTSCatalog.xsd">
-      <description last-mod="2005-04-14">Schema for XQTSCatalog</description>
+    <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQFTTSCatalog" FileName="XQFTTSCatalog.xsd">
+      <description last-mod="2005-04-14">Schema for XQFTTSCatalog</description>
     </schema>
     <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
       <description last-mod="2008-02-18">Schema for example used in XQuery 1.0 and XPath 2.0 Full-Text Use Cases</description>
@@ -446,7 +446,7 @@
      <thesaurus ID="usability" uri="http://bstore1.example.com/UsabilityThesaurus.xml" FileName="TestSources/usability.xml" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">Usability thesaurus for examples</description>
      </thesaurus>
-       <thesaurus ID="usability" uri="http://bstore1.example.com/UsabilityThesaurus2.xml" FileName="TestSources/usability2.xml" Creator="Full-Text Task Force">
+       <thesaurus ID="usability2" uri="http://bstore1.example.com/UsabilityThesaurus2.xml" FileName="TestSources/usability2.xml" Creator="Full-Text Task Force">
        <description last-mod="2008-11-10">Usability thesaurus for examples</description>
      </thesaurus>   
      <stemming-dictionary ID="english-stems" FileName="TestSources/english-stems.txt" Creator="Full-Text Task Force">
@@ -700,7 +700,7 @@
         <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
-          <query name="222-examples-q1" date="2008-06-26"/>
+          <query name="examples-222-q1" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
         </test-case>
@@ -820,7 +820,7 @@
           <title>Section 3.3</title>
           <description>Examples from Section 3.3</description>
         </GroupInfo>
-        <test-case is-XPath2="true" name="ft-3.3-examples-q1" FilePath="Examples/3.2-SearchTokensAndPhrases/" scenario="standard" Creator="Jim Melton">
+        <test-case is-XPath2="true" name="ft-3.3-examples-q1" FilePath="Examples/3.3-CardinalitySelection/" scenario="standard" Creator="Jim Melton">
           <description>Returns the example book element's number, because the book element contains 2 or more occurrences of "usability"</description>
           <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
           <query name="ft-3.3-examples-q1" date="2008-10-10"/>
@@ -995,16 +995,16 @@
         <test-case is-XPath2="false" name="ft-348-examples-q1" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoption"/>
-          <query name="ft-348-examples-q1" date="2008-09-17"/>
+          <query name="examples-348-q1" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
-          <output-file role="principal" compare="Text">ft-348-examples-results-q1.xml</output-file>
+          <output-file role="principal" compare="Text">examples-348-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoptopm"/>
-          <query name="ft-348-examples-q2" date="2008-09-17"/>
+          <query name="examples-348-q2" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
-          <output-file role="principal" compare="Text">ft-348-examples-results-q2.xml</output-file>
+          <output-file role="principal" compare="Text">examples-348-q2.txt</output-file>
         </test-case>
       </test-group>
       <test-group name="Examples3.5.1">
@@ -2468,7 +2468,7 @@
           <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
           <query name="ftstemming-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <output-file role="principal" compare="Fragment">ftsteming-results-q1.txt</output-file>
+          <output-file role="principal" compare="Fragment">ftstemming-results-q1.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.4-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>Without stemming query. Find picture without stemming.</description>
@@ -3274,7 +3274,7 @@
          <test-case is-XPath2="false" name="ft-5.2.12-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="parse-error" Creator="Full-Text Task Force">
           <description>Language option is not supported.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
-          <query name="ftlanguageunconstained-q2" date="2008-11-22"/>
+          <query name="ftlanguageunconstrained-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <expected-error>FTST0009</expected-error>         
         </test-case>               
