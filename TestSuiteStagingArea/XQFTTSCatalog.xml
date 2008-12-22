@@ -2679,6 +2679,7 @@
                     <query name="FTWindow-complexwords3" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="XML">FTWindow-complexwords3.xml</output-file>
+                    <expected-error>FTST0011</expected-error>
                   </test-case>
                   <test-case is-XPath2="false" name="FTWindow-complexwords4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftwindow complex</description>
@@ -2791,6 +2792,251 @@
                     <title>Distance Selection</title>
                     <description>Distance selection. Section 3.6.3.</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTDistance-words1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly n words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-words1.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly n words: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-words2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at least n words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-words3.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at least n words: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-words4.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at most n words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words5" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-words5.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at most n words: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words6" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-words6.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance n to m words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words7" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-words7.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance n to m words: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words8" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-words8.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-words9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance n to m words: n more than m</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-words9" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-words9.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-complexwords1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>complex ftdistance: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-complexwords1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-complexwords1.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-complexwords2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>complex ftdistance: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-complexwords2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Fragment">FTDistance-complexwords2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-complexwords3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>complex ftdistance: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-complexwords3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-complexwords3.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-complexwords4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>complex ftdistance: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-complexwords4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-complexwords4.xml</output-file>
+                    <expected-error>FTST0011</expected-error> <!-- Constrained ftdistance -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-complexwords5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>complex ftdistance: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-complexwords5" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-complexwords5.xml</output-file>
+                    <expected-error>FTST0011</expected-error> <!-- Constrained ftdistance -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-badwords1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly n word (not words)</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-badwords1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-badwords2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>ftdistance n words</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-badwords2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprwords1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$n} words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprwords1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprwords1.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprwords2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$n} words: negative</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprwords2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTDistance-exprwords2.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprwords3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance from {$n} to {$m} words: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprwords3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprwords3.xml</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-badexprwords1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$f} word</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-badexprwords1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPTY0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-badexprwords2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="runtime-error" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$s} word</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-badexprwords2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <expected-error>XPTY0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly n sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-sentences1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-sentences1.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-sentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at least n sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-sentences2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-sentences2.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-sentences3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at most n sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-sentences3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-sentences3.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-sentences4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance from n to m sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-sentences4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-sentences4.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprsentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$n} sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprsentences1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprsentences1.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprsentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance from {$n} to {$m} sentences: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprsentences2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprsentences2.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-paragraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly n paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-paragraphs1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-paragraphs1.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-paragraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at least n paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-paragraphs2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-paragraphs2.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance at most n paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-paragraphs3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-paragraphs3.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTDistance-paragraphs4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance from n to m paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-paragraphs4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-paragraphs4.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprparagraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance exactly {$n} paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprparagraphs1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprparagraphs1.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
+                  <test-case is-XPath2="false" name="FTDistance-exprparagraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftdistance from {$n} to {$m} paragraphs: positive</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
+                    <query name="FTDistance-exprparagraphs2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">FTDistance-exprparagraphs2.xml</output-file>
+                    <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
+                  </test-case>
                 </test-group>
                 <!-- Optional
                 <test-group name="FTScope">
@@ -3119,6 +3365,90 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTWindow-paragraphs3.xml</output-file>
       </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance exactly n sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-sentences1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-sentences1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance at least n sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-sentences2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-sentences2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance at most n sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-sentences3" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-sentences3.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance from n to m sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-sentences4" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-sentences4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-exprsentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance exactly {$n} sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-exprsentences1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-exprsentences1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-exprsentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance from {$n} to {$m} sentences: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-exprsentences2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-exprsentences2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance exactly n paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-paragraphs1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-paragraphs1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance at least n paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-paragraphs2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-paragraphs2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance at most n paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-paragraphs3" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-paragraphs3.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance from n to m paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-paragraphs4" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-paragraphs4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-exprparagraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance exactly {$n} paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-exprparagraphs1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-exprparagraphs1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-exprparagraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftdistance from {$n} to {$m} paragraphs: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
+        <query name="FTDistance-unconstrained-exprparagraphs2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">FTDistance-exprparagraphs2.xml</output-file>
+      </test-case>
     </test-group>
     <test-group name="FTOrderUnconstrained">
       <GroupInfo>
@@ -3186,6 +3516,20 @@
         <title>Unconstrained Distance Selection</title>
         <description>Distance selection.  Sections 3.6.3 and 5.2.7.</description>
       </GroupInfo>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-complexwords4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>complex ftdistance: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.7" section-title="FTDistance Operator" section-pointer="id-ftdistance-option"/>
+        <query name="FTDistance-complexwords4" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTDistance-complexwords4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-complexwords5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>complex ftdistance: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.7" section-title="FTDistance Operator" section-pointer="id-ftdistance-option"/>
+        <query name="FTDistance-complexwords5" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTDistance-complexwords5.xml</output-file>
+      </test-case>
     </test-group>
     <test-group name="FTTimes">
       <GroupInfo>
