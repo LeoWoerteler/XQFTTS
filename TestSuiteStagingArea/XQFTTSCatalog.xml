@@ -943,7 +943,7 @@
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.4-examples-q1" FilePath="Examples/3.4.4-StemmingOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Find out whether or not it is true that there is a stemmed version of improve in the document.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
           <query name="ft-3.4.4-examples-q1" date="2008-08-21"/>
           <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1004,7 +1004,7 @@
         </test-case>
         <test-case is-XPath2="false" name="ft-348-examples-q2" FilePath="Examples/3.4.8-ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
           <description>Query that defines an extension option.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoptopm"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoption"/>
           <query name="examples-348-q2" date="2008-09-17"/>
           <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="Text">examples-348-q2.txt</output-file>
@@ -1553,42 +1553,42 @@
             </test-case>
                      <test-case is-XPath2="false" name="ftstaticcontext-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTCaseOption case insensitive query using the initial default value from the static context.</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q1" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q1.txt</output-file>
         </test-case>
         <test-case is-XPath2="false" name="ftstaticcontext-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTCaseOption case sensitive query overriding case insensitive (the initial default value from the static context).</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q2" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
         </test-case>
         <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTDiacriticsOption diacritics insensitive query using the initial default value from the static context.</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q3" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q3.txt</output-file>
         </test-case>        
         <test-case is-XPath2="false" name="ftstaticcontext-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTDiacriticsOption diacritics sensitive query overriding diacritics insensitive (the initial default value from the static context).</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q4" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q4.txt</output-file>
         </test-case>       
         <test-case is-XPath2="false" name="ftstaticcontext-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTStemOption without stemming query using the initial default value from the static context.</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q5" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q5.txt</output-file>
         </test-case>          
         <test-case is-XPath2="false" name="ftstaticcontext-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
           <description>FTStemOption with stemming query overriding diacritics insensitive (the initial default value from the static context).</description>
-          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="ftextensionstostaticcontext"/>
+          <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
           <query name="ftstaticcontext-q6" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstaticcontext-results-q6.txt</output-file>
@@ -1924,98 +1924,98 @@
                   </GroupInfo>
                   <test-case is-XPath2="true" name="FTOr-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftor query</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-q1" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-q1.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Using 'or' instead of 'ftor'</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-q2" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-q2.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftor query, all branches false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-q3" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Text">FTOr-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftor query, one branch false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-q4" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-q4.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftor query, one branch false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-q5" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-q5.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-three-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Thre way ftor query, one branch false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-three-q1" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-three-q1.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-three-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Thre way ftor query, one branch false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-three-q2" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-three-q2.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-three-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Thre way ftor query, one branch false</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-three-q3" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-three-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftor with computed arguments</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-expr1" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="Fragment">FTOr-expr1.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-expr2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftor with computed arguments, which need atomization</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-expr2" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="XML">FTOr-expr2.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-badexpr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>FTOr with empty sequence</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-badexpr1" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>XPTY0004</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-bad1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Using 'or' instead of 'ftor'</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-bad1" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>XPST0003</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Bad nesting with 'ftor'</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-bad2" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>XPST0003</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-andor" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple ftor query</description>
-                    <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Or-Selection" section-pointer="sec-ftor"/>
+                    <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-andor" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="XML">FTOr-andor.xml</output-file>
@@ -2287,14 +2287,14 @@
           <query name="ftmatchoptions-q3" date="2008-11-28"/>
           <aux-URI role="stemming-dictionary">english</aux-URI> 
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-          <expected-error>FTST0019</expected-error>
+          <expected-error>XPST0003</expected-error>
         </test-case>     
          <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
           <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both case sensitive and case insensitive to Complete and returns an error.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
           <query name="ftmatchoptions-q4" date="2008-11-28"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-         <expected-error>FTST????</expected-error>
+         <expected-error>XPST0003</expected-error>
         </test-case>      
               </test-group>                
               <test-group name="FTLanguage">
@@ -2482,21 +2482,21 @@
                   </GroupInfo>
                  <test-case is-XPath2="false" name="ft-3.4.4-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>Stemming default query. Same as without stemming. Find picture without stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
           <query name="ftstemming-q1" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstemming-results-q1.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.4-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>Without stemming query. Find picture without stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
           <query name="ftstemming-q2" date="2008-11-22"/>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
           <output-file role="principal" compare="Fragment">ftstemming-results-q2.txt</output-file>
         </test-case>  
          <test-case is-XPath2="false" name="ft-3.4.4-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
           <description>With stemming query. Find picture with stemming.</description>
-          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemmingoption"/>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
           <query name="ftstemming-q3" date="2008-11-22"/>
           <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -3301,7 +3301,7 @@
 
                 <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                   <description>Positive case, behavior is implementation defined </description>
-                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Extension Selections" section-pointer="id-extension-selections"/>
+                  <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                   <query name="FTExtension-Opt-q4" date="2008-08-25">
                     <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
                   </query>
