@@ -3358,7 +3358,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
         <query name="FTMildNot-q2" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="Fragment">FTMildNot-q2.txt</output-file>
+        <output-file role="principal" compare="XML">FTMildNot-q2.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTMildNot-unconstrained-expr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
          <description>Simple not in query with expressions: no FTST0001</description>
