@@ -177,6 +177,9 @@
 <tr>
 <td><A name="FT-3-examples-source-document"><b>FT-3-examples-source-document</b></A></td><td>Jim Melton</td><td><A href="#"></A></td><td><A href="./TestSources/FT-3-examples-source-document.xml">TestSources/FT-3-examples-source-document.xml</A></td><td>Contains a "books" element containing a single "book" element.</td>
 </tr>
+<tr>
+<td><A name="FT-37-Example"><b>FT-37-Example</b></A></td><td>Mary Holstege</td><td><A href="#"></A></td><td><A href="./TestSources/FT-37-Example.xml">TestSources/FT-37-Example.xml</A></td><td>Contains sample from section 3.7.</td>
+</tr>
 </table>
 <h2>Schemas</h2>
 <table>
@@ -431,6 +434,9 @@
 <li>
 <A href="#Examples3.6.5">1.1.23Section 3.6.5</A>
 </li>
+<li>
+<A href="#Examples3.7">1.1.24Section 3.7</A>
+</li>
 </ul>
 </li>
 <li>
@@ -520,6 +526,9 @@
 </li>
 <li>
 <A href="#Examples3.6.5">1.1.23Section 3.6.5</A>
+</li>
+<li>
+<A href="#Examples3.7">1.1.24Section 3.7</A>
 </li>
 </ul>
 <A name="Examples2.2.2"></A>
@@ -4113,6 +4122,69 @@
                   Error:
                   <A href="http://www.w3.org/TR/xquery/#ERRFTST0012">
                      err:FTST0012</A></td>
+</tr>
+</table>
+<p></p>
+<A name="Examples3.7"></A>
+<h3>1.1.24Section 3.7</h3>
+<p></p>Examples Section 3.7<p></p>
+<ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="examples-37-1"></a>
+<tr>
+<td><b>examples-37-1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Anchoring example 1</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Examples/3.7-/examples-37-1.xq">Queries/XQuery/Examples/3.7-/examples-37-1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#FT-3-Example">FT-3-Example</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Examples/3.7-/examples-37-1.xml">
+                     Results/Examples/3.7-/examples-37-1.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
 </tr>
 </table>
 <p></p>
@@ -17405,6 +17477,301 @@
 <h3>1.2.2.1.1.2Full-Text Ignore</h3>
 <p></p>Ignore option. Section 3.7.<p></p>
 <ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-q1"></a>
+<tr>
+<td><b>FTIgnore-q1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore titles, return titles</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q1.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q1.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-q2"></a>
+<tr>
+<td><b>FTIgnore-q2</b></td><td>
+               Scenario:
+               <A href="#runtime-error">runtime-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Bad ignore sequence</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPTY0004">
+                     err:XPTY0004</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-q3"></a>
+<tr>
+<td><b>FTIgnore-q3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore nothing (implicit)</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q3.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q3.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-q4"></a>
+<tr>
+<td><b>FTIgnore-q4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore nothing (explicit)</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q4.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q4.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q4.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-q5"></a>
+<tr>
+<td><b>FTIgnore-q5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore everything</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q5.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q5.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/FTIgnore-q5.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0007">
+                     err:FTST0007</A></td>
+</tr>
+</table>
+<p></p>
 <A name="FTExtensionSelections"></A>
 <h3>1.2.2.1.1.3Full-Text Extension Selections</h3>
 <p></p>Extension Selections. Section 3.8.<p></p>
@@ -17414,7 +17781,7 @@
 <tr>
 <td><b>FTExtension-Opt-q1</b></td><td>
                Scenario:
-               <A href="#syntax-error">syntax-error</A></td><td>
+               <A href="#parse-error">parse-error</A></td><td>
                Creator:
                Full-Text Task Force, Zhen Hua Liu</td>
 </tr>
@@ -17431,7 +17798,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#Extension Selections">#Extension Selections</A></td>
+<td colspan="3"><A href="#id-extension-selections">#id-extension-selections</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -17465,7 +17832,7 @@
 <tr>
 <td><b>FTExtension-Opt-q2</b></td><td>
                Scenario:
-               <A href="#syntax-error">syntax-error</A></td><td>
+               <A href="#sparse-error">sparse-error</A></td><td>
                Creator:
                Full-Text Task Force, Zhen Hua Liu</td>
 </tr>
@@ -17482,7 +17849,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#Extension Selections">#Extension Selections</A></td>
+<td colspan="3"><A href="#id-extension-selections">#id-extension-selections</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -17516,7 +17883,7 @@
 <tr>
 <td><b>FTExtension-Opt-q3</b></td><td>
                Scenario:
-               <A href="#syntax-error">syntax-error</A></td><td>
+               <A href="#parse-error">parse-error</A></td><td>
                Creator:
                Full-Text Task Force, Zhen Hua Liu</td>
 </tr>
@@ -17533,7 +17900,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#Extension Selections">#Extension Selections</A></td>
+<td colspan="3"><A href="#id-extension-selections">#id-extension-selections</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -17567,7 +17934,7 @@
 <tr>
 <td><b>FTExtension-Opt-q4</b></td><td>
                Scenario:
-               <A href="#syntax-error">syntax-error</A></td><td>
+               <A href="#parse-error">parse-error</A></td><td>
                Creator:
                Full-Text Task Force, Zhen Hua Liu</td>
 </tr>
@@ -17584,7 +17951,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#Extension Selections">#Extension Selections</A></td>
+<td colspan="3"><A href="#id-extension-selections">#id-extension-selections</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>

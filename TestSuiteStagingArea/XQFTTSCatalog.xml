@@ -169,6 +169,9 @@
     <source ID="FT-3-examples-source-document" FileName="TestSources/FT-3-examples-source-document.xml" Creator="Jim Melton">
       <description last-mod="2008-10-10">Contains a "books" element containing a single "book" element.</description>
     </source>
+    <source ID="FT-37-Example" FileName="TestSources/FT-37-Example.xml" Creator="Mary Holstege">
+      <description last-mod="2008-12-21">Contains sample from section 3.7.</description>
+    </source>
     <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
@@ -1297,6 +1300,20 @@
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">examples-365-4.txt</output-file>
           <expected-error>FTST0012</expected-error><!-- unsupported anchoring -->
+        </test-case>
+      </test-group>
+      <test-group name="Examples3.7">
+        <GroupInfo>
+          <title>Section 3.7</title>
+          <description>Examples Section 3.7</description>
+        </GroupInfo>
+        <test-case is-XPath2="false" name="examples-37-1" FilePath="Examples/3.7-/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Anchoring example 1</description>
+          <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+          <query name="examples-37-1" date="2008-12-21"/>
+          <input-file role="principal-data" variable="input-context">FT-3-Example</input-file>
+          <output-file role="principal" compare="XML">examples-37-1.xml</output-file>
+          <expected-error>FTST0007</expected-error><!-- unsupported ignore -->
         </test-case>
       </test-group>
     </test-group>
@@ -3205,6 +3222,46 @@
                 <title>Full-Text Ignore</title>
                 <description>Ignore option. Section 3.7.</description>
               </GroupInfo>
+               <test-case is-XPath2="false" name="FTIgnore-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
+                 <description>Ignore titles, return titles</description>
+                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+                 <query name="FTIgnore-q1" date="2008-12-21"/>
+                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                 <output-file role="principal" compare="XML">FTIgnore-q1.xml</output-file>
+                 <expected-error>FTST0007</expected-error> <!-- unsupported operand -->
+               </test-case>
+               <test-case is-XPath2="true" name="FTIgnore-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/" scenario="runtime-error" Creator="Full-Text Task Force">
+                 <description>Bad ignore sequence</description>
+                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+                 <query name="FTIgnore-q2" date="2008-12-21"/>
+                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                 <expected-error>XPTY0004</expected-error>
+                 <expected-error>FTST0007</expected-error> <!-- unsupported operand -->
+               </test-case>
+               <test-case is-XPath2="false" name="FTIgnore-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
+                 <description>Ignore nothing (implicit)</description>
+                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+                 <query name="FTIgnore-q3" date="2008-12-21"/>
+                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                 <output-file role="principal" compare="XML">FTIgnore-q3.xml</output-file>
+                 <expected-error>FTST0007</expected-error> <!-- unsupported operand -->
+               </test-case>
+               <test-case is-XPath2="false" name="FTIgnore-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
+                 <description>Ignore nothing (explicit)</description>
+                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+                 <query name="FTIgnore-q4" date="2008-12-21"/>
+                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                 <output-file role="principal" compare="XML">FTIgnore-q4.xml</output-file>
+                 <expected-error>FTST0007</expected-error> <!-- unsupported operand -->
+               </test-case>
+               <test-case is-XPath2="false" name="FTIgnore-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
+                 <description>Ignore everything</description>
+                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+                 <query name="FTIgnore-q5" date="2008-12-21"/>
+                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                 <output-file role="principal" compare="Fragment">FTIgnore-q5.txt</output-file>
+                 <expected-error>FTST0007</expected-error> <!-- unsupported operand -->
+               </test-case>
             </test-group>
             <test-group name="FTExtensionSelections">
               <GroupInfo>
@@ -3212,9 +3269,9 @@
                 <description>Extension Selections. Section 3.8.</description>
               </GroupInfo>
 
-                <test-case is-XPath2="false" name="FTExtension-Opt-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                <test-case is-XPath2="false" name="FTExtension-Opt-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                   <description>Negative test to demonstrate that prefix of the ft-option must be defined</description>
-                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                   <query name="FTExtension-Opt-q1" date="2008-08-25">
                     <description>prefix is not declared, expecting a static error</description>
                   </query>
@@ -3222,9 +3279,9 @@
                   <expected-error>XPST0081</expected-error>
                 </test-case>
 
-                <test-case is-XPath2="false" name="FTExtension-Opt-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                <test-case is-XPath2="false" name="FTExtension-Opt-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="sparse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                   <description>Negative test to test the extension syntax error </description>
-                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                   <query name="FTExtension-Opt-q2" date="2008-08-25">
                     <description>Negative test to test the extension syntax error</description>
                   </query>
@@ -3232,9 +3289,9 @@
                   <expected-error>XPST0003</expected-error>
                 </test-case>
 
-                <test-case is-XPath2="false" name="FTExtension-Opt-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                <test-case is-XPath2="false" name="FTExtension-Opt-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                   <description>Negative test to test the extension syntax error</description>
-                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                   <query name="FTExtension-Opt-q3" date="2008-08-25">
                     <description>Negative test to test the extension syntax error</description>
                   </query>
@@ -3242,9 +3299,9 @@
                   <expected-error>XPST0003</expected-error>
                 </test-case>
 
-                <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="syntax-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                   <description>Positive case, behavior is implementation defined </description>
-                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="Extension Selections"/>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                   <query name="FTExtension-Opt-q4" date="2008-08-25">
                     <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
                   </query>
