@@ -3038,14 +3038,48 @@
                     <expected-error>FTST0003</expected-error> <!-- Unsupported unit -->
                   </test-case>
                 </test-group>
-                <!-- Optional
                 <test-group name="FTScope">
                   <GroupInfo>
                     <title>Scope Selection</title>
-                    <description>Scope selection. Section 3.6.4.</description>
+                    <description>Scope selection. Section 3.6.4. FTScope is an optional feature: here we allow error FTST0004</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTScope-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>same sentence</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="FTScope-q1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                    <output-file role="principal" compare="XML">FTScope-q1.xml</output-file>
+                    <expected-error>FTST0004</expected-error> <!-- unsupported feature -->
+                    <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTScope-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>different sentence</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="FTScope-q2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                    <output-file role="principal" compare="XML">FTScope-q2.xml</output-file>
+                    <expected-error>FTST0004</expected-error> <!-- unsupported feature -->
+                    <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTScope-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>same paragraph</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="FTScope-q3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                    <output-file role="principal" compare="XML">FTScope-q3.xml</output-file>
+                    <expected-error>FTST0004</expected-error> <!-- unsupported feature -->
+                    <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTScope-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>different paragraph</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="FTScope-q4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                    <output-file role="principal" compare="XML">FTScope-q4.xml</output-file>
+                    <expected-error>FTST0004</expected-error> <!-- unsupported feature -->
+                    <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+                  </test-case>
                 </test-group>
-                -->
                 <!-- Optional
                 <test-group name="FTContent">
                   <GroupInfo>
@@ -3455,24 +3489,37 @@
         <title>Unconstrained Order Selection</title>
         <description>Order selection. Sections 3.6.1 and 5.2.4.</description>
       </GroupInfo>
+        <test-case is-XPath2="true" name="unconstrained-examples-361-1" FilePath="Examples/3.6.1-OrderedSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Does title contain "web site" and "usability" in order?</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
+          <query name="examples-361-1" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-361-1.txt</output-file>
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-361-2" FilePath="Examples/3.6.1-OrderedSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Does the book contain "Montana" both and "Millicent" in order?</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
+          <query name="examples-361-2" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-361-2.txt</output-file>
+        </test-case>
       <test-case is-XPath2="true" name="FTOrder-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
         <description>ordered query</description>
-        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
-        <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="ftorder"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
         <query name="FTOrder-q1" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTOrder-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTOrder-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
         <description>ordered query</description>
-        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
         <query name="FTOrder-q2" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="Fragment">FTOrder-q2.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTOrder-unconstrained-andor1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTOrder/" scenario="standard" Creator="Full-Text Task Force">
         <description>ordered query</description>
-        <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
         <query name="FTOrder-andor1" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
@@ -3483,6 +3530,86 @@
         <title>Scope Selection</title>
         <description>Scope selection. Sections 3.6.4 and 5.2.5.</description>
       </GroupInfo>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-1" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 1</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-1" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-364-1.txt</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-2" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 2</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-2" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-364-2.txt</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-3" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 3</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-3" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">examples-364-3.xml</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-4" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 4</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-4" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="XML">examples-364-4.xml</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-5" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 5 (same)</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-5" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-364-5.txt</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+        <test-case is-XPath2="true" name="unconstrained-examples-364-5a" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Scope example 5 (different)</description>
+          <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+          <query name="examples-364-5a" date="2008-11-11"/>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Text">examples-364-5a.txt</output-file>
+          <expected-error>FTST0003</expected-error><!-- unsupported units -->
+        </test-case>
+      <test-case is-XPath2="true" name="FTScope-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+        <description>same sentence</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+        <query name="FTScope-q1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+        <output-file role="principal" compare="XML">FTScope-q1.xml</output-file>
+        <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTScope-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+        <description>different sentence</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+        <query name="FTScope-q2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+        <output-file role="principal" compare="XML">FTScope-q2.xml</output-file>
+        <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTScope-unconstrained-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+        <description>same paragraph</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+        <query name="FTScope-q3" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+        <output-file role="principal" compare="XML">FTScope-q3.xml</output-file>
+        <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTScope-unconstrained-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Full-Text Task Force">
+        <description>different paragraph</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
+        <query name="FTScope-q4" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+        <output-file role="principal" compare="XML">FTScope-q4.xml</output-file>
+        <expected-error>FTST0003</expected-error> <!-- unsupported units -->
+      </test-case>
     </test-group>
     <test-group name="FTWindowUnconstrained">
       <GroupInfo>
@@ -3509,6 +3636,15 @@
           <query name="FTWindow-complexwords4" date="2008-12-21"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
            <output-file role="principal" compare="XML">FTWindow-complexwords4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTNot-q6-unconstrained-window" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftand ftnot with window</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.6" section-title="FTWindow Operator" section-pointer="id-ftwindow-option"/>
+        <query name="FTNot-q6" date="2008-11-24"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="Text">FTNot-q6.txt</output-file>
+        <expected-error>FTST0002</expected-error> <!-- restricted ftnot -->
+        <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
       </test-case>
     </test-group>
     <test-group name="FTDistanceUnconstrained">
