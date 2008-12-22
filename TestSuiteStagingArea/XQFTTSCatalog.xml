@@ -3080,14 +3080,53 @@
                     <expected-error>FTST0003</expected-error> <!-- unsupported units -->
                   </test-case>
                 </test-group>
-                <!-- Optional
                 <test-group name="FTContent">
                   <GroupInfo>
                     <title>Anchoring Selection</title>
-                    <description>Anchoring selection. Section 3.6.5.</description>
+                    <description>Anchoring selection. Section 3.6.5. FTContent is an optional feature: here we allow error FTST0012</description>
                   </GroupInfo>
+                  <test-case is-XPath2="true" name="FTContent-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>at start</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-q1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTContent-q1.xml</output-file>
+                    <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTContent-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftnot at start</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-q2" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTContent-q2.xml</output-file>
+                    <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+                    <expected-error>FTST0002</expected-error> <!-- ftnot restriction 1 -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTContent-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>at end</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-q3" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTContent-q3.xml</output-file>
+                    <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTContent-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>entire content</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-q4" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTContent-q4.xml</output-file>
+                    <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+                  </test-case>
+                  <test-case is-XPath2="true" name="FTContent-and1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>ftand entire content</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-and1" date="2008-12-21"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="XML">FTContent-and1.xml</output-file>
+                    <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+                  </test-case>
                 </test-group>
-                -->
               </test-group>
               <test-group name="Weight">
                 <GroupInfo>
@@ -3838,6 +3877,43 @@
         <title>Anchoring Selection</title>
         <description>Anchoring selection. Sections 3.6.5 and 5.2.9.</description>
       </GroupInfo>
+      <test-case is-XPath2="true" name="FTContent-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+        <description>at start</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
+        <query name="FTContent-q1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTContent-q1.xml</output-file>
+        <expected-error>FTST0012</expected-error> <!-- unsupported feature -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTContent-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftnot at start</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
+        <query name="FTContent-q2" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTContent-q2.xml</output-file>
+        <expected-error>FTST0002</expected-error> <!-- ftnot restriction 1 -->
+      </test-case>
+      <test-case is-XPath2="true" name="FTContent-unconstrained-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+        <description>at end</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
+        <query name="FTContent-q3" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTContent-q3.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTContent-unconstrained-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+        <description>entire content</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
+        <query name="FTContent-q4" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTContent-q4.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTContent-unconstrained-and1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftand entire content</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
+        <query name="FTContent-and1" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTContent-and1.xml</output-file>
+      </test-case>
     </test-group>
     <test-group name="FTCaseUnconstrained">
       <GroupInfo>
