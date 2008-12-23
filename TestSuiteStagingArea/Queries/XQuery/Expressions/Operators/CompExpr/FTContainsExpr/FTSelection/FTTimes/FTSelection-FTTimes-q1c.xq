@@ -6,11 +6,11 @@
 
 (: insert-start :)
 declare variable $input-context external;
-declare variable $occurences := 2;
+declare variable $occurrences := 2;
 (: insert-end :)
 
 <paragraphs>
-{ for $p in $input-context/div2[@id="fttimes"]//p
+{ for $p in $input-context//div2[@id="fttimes"]//p
 where $p ftcontains "cardinality" occurs exactly $occurrences times
 return $p }
 </paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.

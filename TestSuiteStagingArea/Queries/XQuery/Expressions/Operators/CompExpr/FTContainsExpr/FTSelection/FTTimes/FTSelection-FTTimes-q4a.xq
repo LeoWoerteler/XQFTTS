@@ -9,7 +9,7 @@ declare variable $input-context external;
 (: insert-end :)
 
 <paragraphs>
-{ for $p in $input-context/div2[@id="fttimes"]//p
+{ for $p in $input-context//div2[@id="fttimes"]//p
 where $p ftcontains "cardinality" occurs from 2 to 3 times
 return $p }
 </paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.

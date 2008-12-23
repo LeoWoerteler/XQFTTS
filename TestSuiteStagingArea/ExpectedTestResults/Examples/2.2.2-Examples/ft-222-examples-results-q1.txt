@@ -1,2 +1,1 @@
-<author>Heavy Rain</author>
 <author>Melton Mowbray</author>
