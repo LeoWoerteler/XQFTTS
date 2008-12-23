@@ -1,4 +1,5 @@
 (: 3.2 FTPrimary ::= FTWordsValue FTAnyAllOption?    :)
+(:     FTWordsValue ::= ... | ( "{" Expr "}" )       :)
 (:     FTAnyAllOption ::= ( "any" "word"? | ...      :)
 (:   Test to ensure that the syntax is recognized    :)
 (:     and that the right result is computed         :)

@@ -1636,282 +1636,472 @@
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
                   <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q1a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q1a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q1a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q1b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q1b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q1b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q1c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q1c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q1c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
                   <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q2a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q2a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q2a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q2b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q2b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q2b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q2c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q2c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q2c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
                   <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q3a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q3a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q3a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q3b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q3b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q3b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
                   <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q4a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q4a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q4a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q4b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q4b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q4b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-noanyall-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with no any/all option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-noanyall-q4c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-noanyall-q4c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-noanyall-q4c_result.xml</output-file>
                 </test-case>
 
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q1a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q1a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q1a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q1b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q1b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q1b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q1c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q1c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q1c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q2a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q2a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q2a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q2b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q2b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q2b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q2c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q2c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q2c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q3a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q3a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q3a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q3b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q3b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q3b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q4a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q4a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q4a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q4b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q4b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q4b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-any-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-any-q4c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-any-q4c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-any-q4c_result.xml</output-file>
                 </test-case>
 
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q1a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q1a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q1a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q1b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q1b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q1b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q1c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q1c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q1c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q2a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q2a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q2a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q2b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q2b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q2b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q2c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q2c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q2c_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q3a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q3a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q3a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q3b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q3b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q3b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q4a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q4a" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q4a_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q4b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q4b" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q4b_result.xml</output-file>
                 </test-case>
                 <test-case is-XPath2="false" name="FTPrimary-FTWords-anyword-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: search term expression wit no any/all option</description>
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "any word" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-anyword-q4c" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-anyword-q4c" date="2008-11-10"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-anyword-q4c_result.xml</output-file>
                 </test-case>
 
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q1a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q1a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q1b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q1b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q1c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q1c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q2a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q2a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q2b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q2b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q2c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q2c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q3a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q3a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q3b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q3b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q4a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q4a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q4b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q4b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-all-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-all-q4c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-all-q4c_result.xml</output-file>
+                </test-case>
 
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q1a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q1a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q1b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q1b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q1c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q1c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q2a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q2a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q2b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q2b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q2c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q2c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q3a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q3a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q3b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q3b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q4a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q4a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q4b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q4b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-allwords-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "all words" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-allwords-q4c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-allwords-q4c_result.xml</output-file>
+                </test-case>
 
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "any word"</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q2a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q1a" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q2a_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q1a_result.xml</output-file>
                 </test-case>
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "any"</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q2b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q1b" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q2b_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q1b_result.xml</output-file>
                 </test-case>
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "all words"</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q3a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q1c" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q3a_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q1c_result.xml</output-file>
                 </test-case>
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "all"</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q3b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q2a" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q3b_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q2a_result.xml</output-file>
                 </test-case>
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase", non-empty result</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q4a" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q2b" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q4a_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q2b_result.xml</output-file>
                 </test-case>
-                <test-case is-XPath2="false" name="FTPrimary-FTWords-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
-                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase", no results found</description>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
                   <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
-                  <query name="FTPrimary-FTWords-q4b" date="2008-10-15"/>
+                  <query name="FTPrimary-FTWords-phrase-q2c" date="2008-12-23"/>
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                  <output-file role="principal" compare="XML">FTPrimary-FTWords-q4b_result.xml</output-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q2c_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-phrase-q3a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q3a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-phrase-q3b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q3b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: literal search term with "phrase" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-phrase-q4a" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q4a_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-phrase-q4b" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q4b_result.xml</output-file>
+                </test-case>
+                <test-case is-XPath2="false" name="FTPrimary-FTWords-phrase-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Tests a syntax variant of FTPrimary: search term expression with "phrase" option</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTPrimary-FTWords-phrase-q4c" date="2008-12-23"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q4c_result.xml</output-file>
                 </test-case>
               </test-group>
+
               <test-group name="FTOperators">
                 <GroupInfo>
                   <title>Full-Text Operators</title>
