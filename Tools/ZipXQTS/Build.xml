@@ -3,7 +3,7 @@
 
 <project name="Build the XQFTTS zip file" default="build">
    
-   <property name="version" value="current"/>
+   <property name="version" value="development"/>
    <property name="zipfile" value="../../PublicPagesStagingArea/XQFTTS_${version}.zip"/>
    <property name="stagingArea" value="../../TestSuiteStagingArea"/>
    <property name="catalog" value="${stagingArea}/XQFTTSCatalog.xml"/>
