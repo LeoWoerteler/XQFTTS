@@ -1,0 +1,65 @@
+<project name="XQuery Full Text Test Suite Error Coverage" default="all">
+
+   <description>
+      Show the coverage of the test cases in the test suite
+      for each section of the specification.
+   </description>
+   
+
+   <property
+      name="sourceDocs"
+      value="http://www.w3.org/TR/"
+      />
+
+   <property
+      name="Catalog"
+      location="..\..\TestSuiteStagingArea\XQFTTSCatalog.xml"
+      />
+
+
+   
+   <target name="all">
+      <mkdir dir="temp" />
+      <antcall target="getDocuments" />
+      <antcall target="getErrors" />
+      <antcall target="updateReport" />
+      <delete dir="temp" />
+   </target>
+   
+
+
+
+   <target name='getDocuments'>
+      <get src="${sourceDocs}xpath-full-text-10/" dest="temp/fulltext.html"/>
+   </target>
+
+
+   <target name='getErrors'>
+      <style
+         in="temp/fulltext.html"
+         basedir="."
+         style="GetErrors.xsl"
+         out="temp/fulltext.xml"
+         force="yes">
+      </style>     
+   </target>
+   
+
+
+   <target name='updateReport'>
+      <tstamp>
+         <format property="now" pattern="MM/dd/yyyy HH:mm" />
+      </tstamp>
+      
+      <style
+         in="${Catalog}"
+         basedir="."
+         style="FullTextErrors.xsl"
+         out="FullTextErrors.html"
+         force="yes">
+         <param name="errors" expression="temp/fulltext.xml"/> 
+         <param name="now" expression="${now}"/> 
+      </style>     
+   </target>
+   
+</project>
