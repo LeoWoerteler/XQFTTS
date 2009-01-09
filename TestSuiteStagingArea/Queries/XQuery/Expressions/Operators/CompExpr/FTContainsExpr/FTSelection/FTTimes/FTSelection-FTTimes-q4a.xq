@@ -12,8 +12,4 @@ declare variable $input-context external;
 { for $p in $input-context//div2[@id="fttimes"]//p
 where $p ftcontains "cardinality" occurs from 2 to 3 times
 return $p }
-</paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.
-<metaInformation>
-<scenarios/><MapperMetaTag><MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/><MapperBlockPosition></MapperBlockPosition><TemplateContext></TemplateContext><MapperFilter side="source"></MapperFilter></MapperMetaTag>
-</metaInformation>
-:)
+</paragraphs>

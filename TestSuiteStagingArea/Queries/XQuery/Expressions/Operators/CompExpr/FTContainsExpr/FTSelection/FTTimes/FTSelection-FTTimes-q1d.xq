@@ -13,8 +13,4 @@ declare variable $occurrences := 1;
 { for $p in $input-context//div2[@id="fttimes"]//p
 where $p ftcontains "cardinality" occurs exactly $occurrences+1 times
 return $p }
-</paragraphs>(: Stylus Studio meta-information - (c) 2004-2006. Progress Software Corporation. All rights reserved.
-<metaInformation>
-<scenarios/><MapperMetaTag><MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/><MapperBlockPosition></MapperBlockPosition><TemplateContext></TemplateContext><MapperFilter side="source"></MapperFilter></MapperMetaTag>
-</metaInformation>
-:)
+</paragraphs>
