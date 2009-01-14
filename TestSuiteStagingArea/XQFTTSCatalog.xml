@@ -4345,7 +4345,7 @@
         <query name="ft-3.4.7-examples-q5" date="2008-08-21"/>
         <aux-URI role="stopwords">stopwords1</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q5.xml</output-file>
+        <output-file role="principal" compare="Fragment">ft-3.4.7-examples-results-q5.txt</output-file>
         <expected-error>FTST0006</expected-error>
         <expected-error>FTST0008</expected-error>
       </test-case>
