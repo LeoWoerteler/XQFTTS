@@ -31,16 +31,16 @@ of the <a href="http://www.w3.org/XML/Query">W3C XML Query Working Group</a>
 and the <a href="http://www.w3.org/Style/XSL/">W3C XSL Working Group</a>. All
 releases of the XQFTTS will be available from this page.</p>
 
-<p>The XQFTTS contains over ??? test cases. It contains a catalog that
-contains general information on the test suite as well as test descriptions
+<p>The XQFTTS contains over 400 test cases. It contains a catalog that
+contains general information on the test suite, as well as test descriptions
 for each of the test cases included in this release. Test queries and
 expected results are contained in individual files. All interpretations of
-this Recommendation are subject to confirmation by the XML Query Working
+this Candidate Recommendation are subject to confirmation by the XML Query Working
 Group and the XSL Working Group.</p>
 
 <p>Implementors are encouraged 1) to write a harness for this test suite and
 to test their implementations, 2) to report their results to the XML Query
-Working Group, and 3) to submit test cases to the XML Query Working Group to
+and XSL Working Groups, and 3) to submit test cases to the XML Query and XSL Working Groups to
 help us complete our coverage of XPath and XQuery Full Text 1.0. All of these areas are
 discussed in greater detail below.</p>
 
@@ -53,36 +53,33 @@ given below.</p>
 
 <h1>Status</h1>
 
-<p>The XPath and XQuery Full Text 1.0 specification has been published as a Last Call Working Drafts on 2007-05-18.</p>
+<p>The XPath and XQuery Full Text 1.0 specification has been published as a Candidate Recommentation on 2008-05-16.</p>
 
-<p>XQFTTS 0.1 provides an early look at this test suite. It contains about
-??% of the tests that will exist when the test suite has been completed. We
+<p>XQFTTS 0.8.0 provides an early look at this test suite. It contains about
+90% of the tests that will exist when the test suite has been completed (except for tests expressed in XQuery's XML syntax, XQueryX). We
 encourage implementors to build their test harnesses and to provide feedback
-to the XML Query Working Group.</p>
+to the XML Query and XSL Working Groups.</p>
 
-<p>XQFTTS 0.1 contains an initial group of Full Text XQueryX test cases. We expect to
+<p>XQFTTS 0.8.0 contains no Full Text XQueryX test cases. We expect to
 have a Full Text XQueryX test case that corresponds to each Full Text test case that is
-not identified as a parse error when FTTS is complete. Right now there are a
-number of Full Text test cases for which this is not true.</p>
-
+not identified as a parse error when the XQFTTS is complete. </p>
 <p>It will take us some time to complete this test suite. We encourage
-members of the public to contribute tests in some <a
-href="Contribution Areas.html">specific areas</a>. The submission of test
-cases is discussed below.</p>
-
+  members of the public to contribute tests in some <a
+href="ContributionAreas.html">specific areas</a>. The submission of test
+  cases is discussed below.</p>
 <h1>Releases</h1>
 
 <table style="border: solid 1px">
   <tbody>
     <tr>
-      <td><strong>Version</strong></td>
-      <td><strong>Date</strong></td>
-      <td><strong>File</strong></td>
+      <td width="109"><strong>Version</strong></td>
+      <td width="97"><strong>Date</strong></td>
+      <td width="138"><strong>File</strong></td>
     </tr>
     <tr>
-      <td>XQFTTS 0.1</td>
-      <td>2007-11-??</td>
-      <td><a href="XQFTTS_0_1.zip">XQFTTS_0_1.zip</a></td>
+      <td>XQFTTS 0.8.0</td>
+      <td>2009-02-??</td>
+      <td><a href="XQFTTS_0_1.zip">XQFTTS_0_8_0.zip</a></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -104,10 +101,10 @@ cases is discussed below.</p>
 
 <p>This zip file contain a large number of files, including XQFTTSCatalog.xml,
 a catalog file contain the metadata for the test suite, files that contain
-source documents, files that contain queries, and files the contain expected
+source documents, files that contain queries, and files that contain expected
 query results. These files also contain a description of the XML document
 that implementors should produce, if they wish to submit their results to us.
-A release_notes.html file has been added in this release.</p>
+The release_notes.html file helps determine what has changed from one release of the XQFTTS to the next.</p>
 
 <p>We have associated a stylesheet with XQFTTSCatalog.xml to make the test
 suite metadata more readable.</p>
@@ -119,12 +116,12 @@ tests and send us your results. These results will help us exit Candidate
 Recommendation (described in the W3C <a
 href="http://www.w3.org/Consortium/Process/">Process Document</a>).</p>
 
-<p>As there is no de jure or de facto API for implementations of XQuery 1.0,
+<p>As there is no <em>de jure</em> or <em>de facto</em> API for implementations of XQuery 1.0,
 we are not able to provide a test harness to execute these tests. You will
 have to write your own test harnesses.</p>
 
 <p>We have provided <a
-href="Guidelines%20for%20Running%20the%20Full%20Text%20Test%20Suite.html">Guidelines
+href="GuidelinesForRunningTheFul TextTestSuite.html">Guidelines
 for Running the XPath and XQuery Full Text 1.0 Test Suite</a> to assist you in running these
 tests. These guidelines will tell you how the queries may be modified before
 they are executed and how to compare your actual results with the expected
@@ -137,7 +134,7 @@ incorrect, then we encourage you to enter bug reports in the public instance
 of Bugzilla at W3C, <a
 href="http://www.w3.org/Bugs/Public/">http://www.w3.org/Bugs/Public/</a>. To
 enter a bug report you will need a Bugzilla signon (email address and
-password). You can create this singon by following the <a
+password). You can create this signon by following the <a
 href="http://www.w3.org/Bugs/Public/createaccount.cgi">Open a new Bugzilla
 account</a> link on the Bugzilla Main Page.</p>
 
@@ -153,14 +150,14 @@ specific about the problem that you are reporting and clearly identify the test
 case or test cases that are problematic. If you believe that the expected
 result is wrong, then tell us what result you believe is correct. If you
 believe that another result for a test case is justified, then please tell us
-what it is. In both cases, please cite portions of one or more of the XQuery
-and the Full Text specifications that support your position.</p>
+what it is. In both cases, please cite portions of one or more of the XPath, XQuery,
+and Full Text specifications that support your position.</p>
 
 <h1>Submission of Test Suite Results</h1>
 
 <p>When you are ready to submit your results to us, we ask that you follow
 the guidelines provided in <a
-href="Guidelines for Submitting XQFTTS Test Results.html">Guidelines for
+href="GuidelinesForSubmittingXQFTTSTestResults.html">Guidelines for
 Submitting XPath and XQuery Full Text Test Suite Results</a>. These guidelines will tell you
 how to generate an XML result document that we can use to generate our
 reports. They will also tell you how to generate your own report from the XML
@@ -182,7 +179,7 @@ the FTTS progresses and as your implementation progresses.</p>
 <p>We welcome submissions of test cases from individuals and organizations
 that are not already participating in the XML Query Working Group or the XSL Working Group. We
 encourage you to look at <a
-href="Guidelines%20for%20Test%20Submission.html">Guidelines for XPath and XQuery
+href="GuidelinesForTestSubmission.html">Guidelines for XPath and XQuery
 Full Text Test Suite Submissions</a> so that the test cases that you submit can be
 added easily to our test suite.</p>
 
@@ -228,13 +225,13 @@ Mail Archives</a>.</p>
 development of this test suite:</p>
 
 <blockquote>
-  <p>Chavdar Botev (invited expert), Pat Case  (Library of Congress), Jochen D&ouml;rre (IBM), Michael Dyck (invited expert), Mary Holstege (Mark Logic), Jim Melton (Oracle), and Michael Rys (Microsoft)</p>
+  <p>Thomas Baby (Oracle, Chavdar Botev (invited expert), Pat Case  (Library of Congress), Jochen D&ouml;rre (IBM), Michael Dyck (invited expert), Zhen Hua Liu (Oracle), Mary Holstege (Mark Logic), Jim Melton (Oracle), and Michael Rys (Microsoft)</p>
 </blockquote>
 
 <hr />
 <address>
   <a href="http://www.w3.org/Help/Webmaster">Webmaster</a> · Last modified:
-  $Date: 2007/11/23 02:22:20 $ by $Author: mdyck $
+  $Date: 2009/01/14 19:10:13 $ by $Author: jmelton $
 </address>
 
 <p><a rel="Copyright"

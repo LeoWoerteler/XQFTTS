@@ -11,7 +11,7 @@
             XQueryXFileExtension=".xqx"
             xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
    <test-suite-info>
-      <title>XQuery and XPath Full Text 1.0 Test Suite 0.5.0 Development Version</title>
+      <title>XQuery and XPath Full Text 1.0 Test Suite 0.8.0 (Development Version)</title>
       <description>Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
    </test-suite-info>
@@ -111,15 +111,13 @@
       <role name="thesaurus">
          <description last-mod="2008-11-10">This is a thesaurus, represented in 
       XML according to the thesaurus.xsd schema, to indicate the desired
-      thesaurus information in a thesaurus referenced by the query.
-        </description>
+      thesaurus information in a thesaurus referenced by the query.</description>
       </role>
       <role name="stemming-dictionary">
          <description last-mod="2008-11-10">This is a list of stemming
         relationships, one per line, where each whitespace-separated token 
         on the line should stem to the first token on the line.  It is used to
-        indicate the desired stemming behaviour expected by the query.
-        </description>
+        indicate the desired stemming behaviour expected by the query.</description>
       </role>
       <role name="principal">
          <description last-mod="2003-03-25">This is an output (either text or XML) that will contain the
@@ -205,6 +203,11 @@
                  Creator="Full-Text Task Force">
          <description last-mod="2008-11-28">A second stop word list for use cases</description>
       </stopwords>
+      <stopwords ID="stopwords3" uri="http://bstore1.example.com/StopWordList3.xml"
+                 FileName="TestSources/intentionally-missing.txt"
+                 Creator="Full-Text Task Force">
+         <description last-mod="2008-11-28">A (intentionally missing) stop word list for use cases</description>
+      </stopwords>
       <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilitySoundex.xml"
                  FileName="TestSources/soundex.xml"
                  Creator="Full-Text Task Force">
@@ -220,7 +223,12 @@
                  Creator="Full-Text Task Force">
          <description last-mod="2008-11-10">Usability thesaurus for examples</description>
       </thesaurus>
-      <stemming-dictionary ID="english-stems" FileName="TestSources/english-stems.txt"
+      <thesaurus ID="technical" uri="http://bstore1.example.com/TechnicalThesaurus.xml"
+                 FileName="TestSources/intentionally-missing.xml"
+                 Creator="Full-Text Task Force">
+         <description last-mod="2009-01-09">(Missing) technical thesaurus</description>
+      </thesaurus>
+      <stemming-dictionary ID="english" FileName="TestSources/english-stems.txt"
                            Creator="Full-Text Task Force">
          <description last-mod="2008-11-10">English stems</description>
       </stemming-dictionary>
@@ -432,7 +440,7 @@
       <context-property name="FTCaseOption" context-type="static"/>
       <context-property name="FTDiacriticsOption" context-type="static"/>
       <context-property name="FTStemOption" context-type="static"/>
-      <context-property name="FTThesuarusOption" context-type="static"/>
+      <context-property name="FTThesaurusOption" context-type="static"/>
       <context-property name="Statically known thesauri" context-type="static"/>
       <context-property name="FTStopWordOption" context-type="static"/>
       <context-property name="Statically known stop word lists" context-type="static"/>
@@ -1295,14 +1303,14 @@
                <title>Section 3.7</title>
                <description>Examples Section 3.7</description>
             </GroupInfo>
-            <test-case is-XPath2="false" name="examples-37-1" FilePath="Examples/3.7-/"
+            <test-case is-XPath2="false" name="examples-37-1" FilePath="Examples/3.7-IgnoreOption/"
                        scenario="standard"
                        Creator="Full-Text Task Force">
                <description>Anchoring example 1</description>
                <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option"
                               section-pointer="ftignoreoption"/>
                <query name="examples-37-1" date="2008-12-21"/>
-               <input-file role="principal-data" variable="input-context">FT-3-Example</input-file>
+               <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
                <output-file role="principal" compare="XML">examples-37-1.xml</output-file>
                <expected-error>FTST0007</expected-error>
             </test-case>
@@ -1453,9 +1461,9 @@
                   <description>Score variable shadows gloval</description>
                   <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables"
                                  section-pointer="section-score-variables"/>
-                  <query name="ForScoreExpr-Var2" date="2008-09-17"/>
+                  <query name="ForScoreExpr-Var3" date="2008-09-17"/>
                   <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                  <output-file role="principal" compare="Text">ForScoreExpr-Var2.txt</output-file>
+                  <output-file role="principal" compare="Text">ForScoreExpr-Var3.txt</output-file>
                   <expected-error>FTST0014</expected-error>
                </test-case>
             </test-group>
@@ -3284,7 +3292,7 @@
                                              section-pointer="ftwildcardoption"/>
                               <query name="ftwildcard-q10" date="2008-11-22"/>
                               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                              <output-file role="principal" compare="Fragment">ftwildcard-results-q10.txt</output-file>
+                              <output-file role="principal" compare="Fragment">ftwildcard-results-q10.xml</output-file>
                            </test-case>
                            <test-case is-XPath2="false" name="ft-3.4.2-expressions-q11"
                                       FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/"
@@ -4512,7 +4520,7 @@
                         <description>Ignore option. Section 3.7.</description>
                      </GroupInfo>
                      <test-case is-XPath2="false" name="FTIgnore-q1"
-                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/"
+                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/"
                                 scenario="standard"
                                 Creator="Full-Text Task Force">
                         <description>Ignore titles, return titles</description>
@@ -4524,7 +4532,7 @@
                         <expected-error>FTST0007</expected-error>
                      </test-case>
                      <test-case is-XPath2="true" name="FTIgnore-q2"
-                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/"
+                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/"
                                 scenario="runtime-error"
                                 Creator="Full-Text Task Force">
                         <description>Bad ignore sequence</description>
@@ -4536,7 +4544,7 @@
                         <expected-error>FTST0007</expected-error>
                      </test-case>
                      <test-case is-XPath2="false" name="FTIgnore-q3"
-                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/"
+                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/"
                                 scenario="standard"
                                 Creator="Full-Text Task Force">
                         <description>Ignore nothing (implicit)</description>
@@ -4548,7 +4556,7 @@
                         <expected-error>FTST0007</expected-error>
                      </test-case>
                      <test-case is-XPath2="false" name="FTIgnore-q4"
-                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/"
+                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/"
                                 scenario="standard"
                                 Creator="Full-Text Task Force">
                         <description>Ignore nothing (explicit)</description>
@@ -4560,7 +4568,7 @@
                         <expected-error>FTST0007</expected-error>
                      </test-case>
                      <test-case is-XPath2="false" name="FTIgnore-q5"
-                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTIgnoreOption/"
+                                FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/"
                                 scenario="standard"
                                 Creator="Full-Text Task Force">
                         <description>Ignore everything</description>
@@ -4592,9 +4600,9 @@
                      </test-case>
                      <test-case is-XPath2="false" name="FTExtension-Opt-q2"
                                 FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/"
-                                scenario="sparse-error"
+                                scenario="parse-error"
                                 Creator="Full-Text Task Force, Zhen Hua Liu">
-                        <description>Negative test to test the extension syntax error </description>
+                        <description>Negative test to test the extension syntax error</description>
                         <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections"
                                        section-pointer="id-extension-selections"/>
                         <query name="FTExtension-Opt-q2" date="2008-08-25">
@@ -4620,15 +4628,14 @@
                                 FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/"
                                 scenario="parse-error"
                                 Creator="Full-Text Task Force, Zhen Hua Liu">
-                        <description>Positive case, behavior is implementation defined </description>
+                        <description>Positive case, behavior is implementation defined</description>
                         <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections"
                                        section-pointer="id-extension-selections"/>
                         <query name="FTExtension-Opt-q4" date="2008-08-25">
                            <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
                         </query>
                         <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                        <output-file/>
-                        <expected-error/>
+                        <expected-error>*</expected-error>
                      </test-case>
                   </test-group>
                </test-group>
@@ -4653,7 +4660,7 @@
          <title>Optional Features</title>
          <description/>
       </GroupInfo>
-      <test-group name="FTMildNot">
+      <test-group name="FTMildNotUnconstrained">
          <GroupInfo>
             <title>Full-Text not in Operator</title>
             <description>Mild not. Sections 3.5.3 and 5.2.1.</description>
@@ -5110,7 +5117,7 @@
             <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
          </test-case>
       </test-group>
-      <test-group name="FTScope">
+      <test-group name="FTScopeUnconstrained">
          <GroupInfo>
             <title>Scope Selection</title>
             <description>Scope selection. Sections 3.6.4 and 5.2.5.</description>
@@ -5583,7 +5590,7 @@
             <expected-error>FTST0005</expected-error>
          </test-case>
       </test-group>
-      <test-group name="FTContent">
+      <test-group name="FTContentUnconstrained">
          <GroupInfo>
             <title>Anchoring Selection</title>
             <description>Anchoring selection. Sections 3.6.5 and 5.2.9.</description>
@@ -5679,7 +5686,7 @@
                     FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/"
                     scenario="standard"
                     Creator="Full-Text Task Force">
-            <description>Upper case query. </description>
+            <description>Upper case query.</description>
             <spec-citation spec="XQueryFullText" section-number="3.4.5" section-title="Case Option"
                            section-pointer="ftcaseoption"/>
             <query name="ftcaseunconstrained-q2" date="2008-11-22"/>
@@ -5734,7 +5741,7 @@
                     FilePath="Examples/3.4.7-StopWordOption/"
                     scenario="standard"
                     Creator="Full-Text Task Force">
-            <description>Find out whether or not it is true that the document contains propagating of errors without stop words. </description>
+            <description>Find out whether or not it is true that the document contains propagating of errors without stop words.</description>
             <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option"
                            section-pointer="ftstopwordoption"/>
             <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
@@ -5780,7 +5787,7 @@
             <query name="ftstopword-q1" date="2008-11-28"/>
             <aux-URI role="stopwords">stopwords1</aux-URI>
             <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-            <output-file role="principal" compare="Fragment">ftstopword-results-q1.txt</output-file>
+            <output-file role="principal" compare="Fragment">ftstopword-results-q1.xml</output-file>
             <expected-error>FTST0006</expected-error>
             <expected-error>FTST0008</expected-error>
          </test-case>
@@ -5794,7 +5801,7 @@
             <query name="ftstopword-q2" date="2008-11-28"/>
             <aux-URI role="stopwords">stopwords1</aux-URI>
             <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-            <output-file role="principal" compare="Fragment">ftstopword-results-q2.txt</output-file>
+            <output-file role="principal" compare="Fragment">ftstopword-results-q2.xml</output-file>
             <expected-error>FTST0006</expected-error>
             <expected-error>FTST0008</expected-error>
          </test-case>
@@ -6063,7 +6070,7 @@
                            section-pointer="across-queries-results-q3"/>
             <query name="across-queries-results-q3b" date="3008-04-04"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-            <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+            <output-file role="principal" compare="Fragment">across-queries-results-q3.xml</output-file>
          </test-case>
          <test-case is-XPath2="false" name="across-queries-results-q4"
                     FilePath="UseCase/UseCase-ACROSS/"
@@ -6123,7 +6130,7 @@
                            section-pointer="across-queries-results-q6"/>
             <query name="across-queries-results-q6" date="2008-06-26"/>
             <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-            <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
+            <output-file role="principal" compare="Fragment">across-queries-results-q6.xml</output-file>
          </test-case>
       </test-group>
       <test-group name="UseCase-OTHER">
