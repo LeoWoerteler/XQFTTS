@@ -4556,7 +4556,7 @@
         <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
         <query name="across-queries-results-q3" date="3008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q3.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all book text with the word "tests".</description>
