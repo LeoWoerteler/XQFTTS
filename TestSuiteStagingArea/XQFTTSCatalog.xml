@@ -1587,20 +1587,23 @@
               <query name="ftstaticcontext-q1" date="2008-11-28"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q1.txt</output-file>
-            </test-case>
+        <expected-error>FOCH0002</expected-error>          
+		    </test-case>
             <test-case is-XPath2="false" name="ftstaticcontext-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>FTCaseOption case sensitive query overriding case insensitive (the initial default value from the static context).</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q2" date="2008-11-28"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
-            </test-case>
+        <expected-error>FOCH0002</expected-error>            
+			</test-case>
             <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>FTDiacriticsOption diacritics insensitive query using the initial default value from the static context.</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q3" date="2008-11-28"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q3.txt</output-file>
+        <expected-error>FOCH0002</expected-error>			  
             </test-case>
             <test-case is-XPath2="false" name="ftstaticcontext-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>FTDiacriticsOption diacritics sensitive query overriding diacritics insensitive (the initial default value from the static context).</description>
@@ -1608,6 +1611,7 @@
               <query name="ftstaticcontext-q4" date="2008-11-28"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q4.txt</output-file>
+        <expected-error>FOCH0002</expected-error>
             </test-case>
             <test-case is-XPath2="false" name="ftstaticcontext-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>FTStemOption without stemming query using the initial default value from the static context.</description>
@@ -1622,6 +1626,7 @@
               <query name="ftstaticcontext-q6" date="2008-11-28"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q6.txt</output-file>
+        <expected-error>FOCH0002</expected-error>			  
             </test-case>
             <test-group name="FTSelection">
               <GroupInfo>
@@ -2527,6 +2532,7 @@
                     <query name="ftmatchoptions-q4" date="2008-11-28"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <expected-error>XPST0003</expected-error>
+                    <expected-error>FOCH0002</expected-error>					
                   </test-case>
                 </test-group>
                 <test-group name="FTLanguage">
@@ -2753,6 +2759,7 @@
                     <query name="ftcase-q2" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftcase-results-q2.txt</output-file>
+        <expected-error>FOCH0002</expected-error>					
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.5-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTCase/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Case sensitive query.</description>
@@ -2760,6 +2767,7 @@
                     <query name="ftcase-q3" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftcase-results-q3.txt</output-file>
+	                <expected-error>FOCH0002</expected-error>				
                   </test-case>
                 </test-group>
                 <test-group name="FTDiacritics">
@@ -2768,25 +2776,28 @@
                     <description>Diacritics option. Section 3.4.6.</description>
                   </GroupInfo>
                   <test-case is-XPath2="false" name="ft-3.4.6-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Diacritics case sensitive query. Characters in query have no diacritics. Characters in the document have diacritics.</description>
+                    <description>Diacritics sensitive query. Characters in query have no diacritics. Characters in the document have diacritics.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
                     <query name="ftdiacritics-q1" date="2008-11-20"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftdiacritics-results-q1.txt</output-file>
+        <expected-error>FOCH0002</expected-error>					
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.6-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Diacritics case sensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
+                    <description>Diacritics sensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
                     <query name="ftdiacritics-q2" date="2008-11-20"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftdiacritics-results-q2.txt</output-file>
+        <expected-error>FOCH0002</expected-error>					
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.6-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Diacritics case insensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
+                    <description>Diacritics insensitive query. Characters in query has one but not both of the diacritics on the characters in the document.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.6" section-title="Diacritics Option" section-pointer="ftdiacriticsoption"/>
                     <query name="ftdiacritics-q3" date="2008-11-20"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftdiacritics-results-q3.xml</output-file>
+        <expected-error>FOCH0002</expected-error>					
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.6-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTDiacritics/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Diacritics default query. Character in query has a diacritic. Character in the document has no diacritic.</description>
@@ -4914,6 +4925,7 @@
         <query name="character-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">character-queries-results-q1.xml</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="true" name="character-queries-results-q1b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Diacritics Sensitive Query: Verify the existence of a "résumé" in the papers of John Wesley Usabilityguy. This query finds a word only if it contains the diacritics as written in the query.</description>
@@ -4921,6 +4933,7 @@
         <query name="character-queries-results-q1b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">character-queries-results-q1.xml</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="false" name="character-queries-results-q2" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Diacritics Insensitive Query: Verify the existence of a résumé in the papers of John Wesley Usabilityguy. This query finds a word whether diacritics are present or not.</description>
@@ -4928,6 +4941,7 @@
         <query name="character-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">character-queries-results-q2.txt</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="true" name="character-queries-results-q2b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Diacritics Insensitive Query: Verify the existence of a résumé in the papers of John Wesley Usabilityguy. This query finds a word whether diacritics are present or not.</description>
@@ -4935,6 +4949,7 @@
         <query name="character-queries-results-q2b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">character-queries-results-q2.txt</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="false" name="character-queries-results-q3" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query on Word with Upper Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word in upper case characters.</description>
@@ -5046,6 +5061,7 @@
         <query name="logical-queries-results-q6" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">logical-queries-results-q6.txt</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="true" name="logical-queries-results-q6b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q6 And Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts" in the text. This query finds books with multiple words and not a phrase containing one of those words.</description>
@@ -5053,6 +5069,7 @@
         <query name="logical-queries-results-q6b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">logical-queries-results-q6.txt</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="false" name="logical-queries-results-q7" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts", in the metadata or text. This query finds books with multiple words and not a phrase which contains one of the words, while not eliminating a result if it contains the phrase as well as one of  the words searched.</description>
@@ -5060,6 +5077,7 @@
         <query name="logical-queries-results-q7" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">logical-queries-results-q7.xml</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="true" name="logical-queries-results-q7b" FilePath="UseCase/UseCase-LOGICAL/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q7 Mild Not Query Where Second Operand Is a Subset of the First Operand: Find all books with listings for "résumés", "drafts", or "correspondence", and not "book drafts", in the metadata or text. This query finds books with multiple words and not a phrase which contains one of the words, while not eliminating a result if it contains the phrase as well as one of  the words searched.</description>
@@ -5067,6 +5085,7 @@
         <query name="logical-queries-results-q7b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">logical-queries-results-q7.xml</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
     </test-group>
     <test-group name="UseCase-CARDINALITY">
@@ -5440,6 +5459,7 @@ title and a third element if the second element does not exist. This query finds
         <query name="xquery-xpath-composability-queries-results-q5" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">xquery-xpath-composability-queries-results-q5.txt</output-file>
+        <expected-error>FOCH0002</expected-error>		
       </test-case>
       <test-case is-XPath2="false" name="xquery-xpath-composability-queries-results-q6" FilePath="UseCase/UseCase-XQUERY-XPATH-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q6 Full-Text Query with Conditional Return of Boolean Values: For each book on "usability" return the book title and a new has-publishers element with value true if the book has more than 1 publisher. Return the title and a new has-publishers element with value false if the book does not have more than one publisher. This query finds a word, then returns Boolean values based on the number of occurrences of an element.</description>
