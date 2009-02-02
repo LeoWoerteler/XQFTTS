@@ -4556,14 +4556,14 @@
         <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
         <query name="across-queries-results-q3" date="3008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">across-queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="across-queries-results-q3b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all book text with the word "tests".</description>
         <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
         <query name="across-queries-results-q3b" date="3008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">across-queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q3.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="across-queries-results-q4" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Query Across Siblings: Find all book text with the phrase "usability testing once the problems". This query finds a phrase which begins in one element and ends in a sibling.</description>
