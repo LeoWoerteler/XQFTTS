@@ -10,4 +10,4 @@ for $result at $i in
       return $book
    where $i <= 2
    return <book number="{$result/@number}"> 
-      $result/metadata/title</book>
+      {$result/metadata/title}</book>
