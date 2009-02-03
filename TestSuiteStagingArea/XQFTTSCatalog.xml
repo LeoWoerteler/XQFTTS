@@ -5505,54 +5505,68 @@ title and a third element if the second element does not exist. This query finds
         <description>Queries that must be written with score.  Section 17.</description>
       </GroupInfo>
       <test-case is-XPath2="false" name="score-queries-results-q1" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q1 Query Returning Scores: Find all books which mention "usability" in the title or the text. Return book titles and scores. This query performs a word query and returns scores, highest scores first.</description>
+        <description>Q1 Query Returning Scores: Find all books which mention "usability" in the title or the text. Return book titles and scores. This query performs a word query and returns scores, highest scores first. Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.1" section-title="Q1 Query Returning Scores" section-pointer="score-queries-results-q1"/>
         <query name="score-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q1-alt.txt</output-file>		
+        <output-file role="principal" compare="Inspect">score-queries-results-q1-alt2.txt</output-file>		
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q2" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Query Returning Results with Top Scores: Find the best two books on "usability". This query performs a word query and returns only the results with the two top scores.</description>
+        <description>Q2 Query Returning Results with Top Scores: Find the best two books on "usability". This query performs a word query and returns only the results with the two top scores.  Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.2" section-title="Q2 Query Returning Results with Top Scores" section-pointer="score-queries-results-q2"/>
         <query name="score-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Inpsect">score-queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Inpsect">score-queries-results-q2-alt.txt</output-file>		
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q3" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.</description>
+        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.3" section-title="Q3 Query Filtering on Scores" section-pointer="score-queries-results-q3"/>
         <query name="score-queries-results-q3" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q3.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt.txt</output-file>		
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt2.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt3.txt</output-file>				
       </test-case>
       <test-case is-XPath2="true" name="score-queries-results-q3b" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.</description>
+        <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores. Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.3" section-title="Q3 Query Filtering on Scores" section-pointer="score-queries-results-q3"/>
         <query name="score-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q3.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt.txt</output-file>		
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt2.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q3-alt3.txt</output-file>			
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q4" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q4 Query Combining Score and XML Structure with a Conditional Return: Find all books with parts about "usability testing". This query finds books which contain parts about usability testing, returning entire books, but without part elements identified as irrelevant via score.</description>
+        <description>Q4 Query Combining Score and XML Structure with a Conditional Return: Find all books with parts about "usability testing". This query finds books which contain parts about usability testing, returning entire books, but without part elements identified as irrelevant via score. Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.4" section-title="Q4 Query Combining Score and XML Structure with a Conditional Return" section-pointer="score-queries-results-q4"/>
         <query name="score-queries-results-q4" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q4.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q4-alt.txt</output-file>		
+        <output-file role="principal" compare="Inspect">score-queries-results-q4-alt2.txt</output-file>		
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q5" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q5 Query Returning All Books Ordered by Score: Return all books, listing books with text on "software" first. This query performs a word query, returns all the documents in the database, and orders them returning those with found word first, those without last.</description>
+        <description>Q5 Query Returning All Books Ordered by Score: Return all books, listing books with text on "software" first. This query performs a word query, returns all the documents in the database, and orders them returning those with found word first, those without last. Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.5" section-title="Q5 Query Returning All Books Ordered by Score" section-pointer="score-queries-results-q5"/>
         <query name="score-queries-results-q5" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q5.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q5.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q5-alt.txt</output-file>		
+		
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q6" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q6 Query with Weight Declaration: Finds books which discuss "conducting usability tests" returning those which mention "measuring success" first. This query finds words using weighting on optional words to impact the scoring and sorting.</description>
+        <description>Q6 Query with Weight Declaration: Finds books which discuss "conducting usability tests" returning those which mention "measuring success" first. This query finds words using weighting on optional words to impact the scoring and sorting. Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>
         <spec-citation spec="FTUseCases" section-number="17.2.6" section-title="Q6 Query with Weight Declaration" section-pointer="score-queries-results-q6"/>
         <query name="score-queries-results-q6" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">score-queries-results-q6.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q6.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q6-alt.txt</output-file>		
       </test-case>
     </test-group>
   </test-group>
