@@ -5260,6 +5260,7 @@
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">axes-queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Fragment">axes-queries-results-q2-alt.txt</output-file>		
       </test-case>
       <test-case is-XPath2="true" name="axes-queries-results-q2b" FilePath="UseCase/UseCase-AXES/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Query on Element Returning Its First Two Children: Find the first two steps in chapters on "conducting usability tests." This query finds words in an element, then returns its first two children elements.</description>
