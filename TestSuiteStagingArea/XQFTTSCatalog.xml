@@ -1581,6 +1581,60 @@
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <expected-error>XPTY0004</expected-error>
             </test-case>
+            <test-case is-XPath2="false" name="ftstaticcontext-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+              <description>FTOptionDecl with FTMatchOption.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q1" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <output-file role="principal" compare="Fragment">ftstaticcontext-results-q1.txt</output-file>
+              <expected-error>FOCH0002</expected-error>          
+		    </test-case>
+            <test-case is-XPath2="false" name="ftstaticcontext-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+              <description>FTOptionDecl with multiple FTMatchOptions.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q2" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
+              <expected-error>FOCH0002</expected-error>            
+			</test-case>
+            <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+              <description>FTOptionDecl with multiple conflicting FTMatchOptions.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q3" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <expected-error>FTST0001</expected-error>			  
+            </test-case>
+            <test-case is-XPath2="false" name="ftstaticcontext-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+              <description>Multiple FTOptionDecls, no conflicts..</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q4" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <output-file role="principal" compare="Fragment">ftstaticcontext-results-q4.txt</output-file>
+              <expected-error>FOCH0002</expected-error>
+            </test-case>
+            <test-case is-XPath2="false" name="ftstaticcontext-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+              <description>Multiple FTOptionDecls, one "conflict", no error.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q5" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <output-file role="principal" compare="Fragment">ftstaticcontext-results-q5.txt</output-file>
+              <expected-error>FOCH0002</expected-error>
+            </test-case>
+             <test-case is-XPath2="false" name="ftstaticcontext-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
+              <description>FTOptionDecl with other prolog decls.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q6" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <output-file role="principal" compare="Fragment">ftstaticcontext-results-q6.txt</output-file>
+              <expected-error>FOCH0002</expected-error>	
+            </test-case> 
+            <test-case is-XPath2="false" name="ftstaticcontext-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+              <description>FTOptionDecl in second part of Prolog, should raise error.</description>
+              <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
+              <query name="ftstaticcontext-q7" date="2009-01-15"/>
+              <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+              <expected-error>FTST0001</expected-error>				  
+            </test-case>
 
             <test-group name="FTSelection">
               <GroupInfo>
@@ -2090,6 +2144,8 @@
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q4c_result.xml</output-file>
                 </test-case>
               </test-group>
+              
+              
 
               <test-group name="FTOperators">
                 <GroupInfo>
@@ -5473,8 +5529,8 @@ title and a third element if the second element does not exist. This query finds
         <spec-citation spec="FTUseCases" section-number="17.2.2" section-title="Q2 Query Returning Results with Top Scores" section-pointer="score-queries-results-q2"/>
         <query name="score-queries-results-q2" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Inpsect">score-queries-results-q2.txt</output-file>
-        <output-file role="principal" compare="Inpsect">score-queries-results-q2-alt.txt</output-file>		
+        <output-file role="principal" compare="Inspect">score-queries-results-q2.txt</output-file>
+        <output-file role="principal" compare="Inspect">score-queries-results-q2-alt.txt</output-file>		
       </test-case>
       <test-case is-XPath2="false" name="score-queries-results-q3" FilePath="UseCase/UseCase-SCORE/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query Filtering on Scores: Find all books that focus on "usability". This query performs a word query and filters on scores.Score is implementation-dependent, so any answer is acceptable, a few possible answers are provided.</description>

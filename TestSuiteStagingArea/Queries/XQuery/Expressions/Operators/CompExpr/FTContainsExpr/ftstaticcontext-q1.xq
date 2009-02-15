@@ -1,5 +1,6 @@
 (: insert-start :)
 declare variable $input-context external;
+declare ft-option case sensitive;
 (: insert-end :)
 
 for $book in $input-context/books/book

@@ -1,10 +1,10 @@
 (: insert-start :)
 declare variable $input-context external;
+declare variable $x := 1;
 declare ft-option case sensitive;
-declare ft-option with stemming without wildcards;
 (: insert-end :)
 
 for $book in $input-context/books/book
-let $cont := $book/content
+let $cont := $book[$x]/content
 where $cont ftcontains "Testing"
 return $book 
