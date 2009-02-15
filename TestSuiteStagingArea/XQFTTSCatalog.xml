@@ -709,12 +709,26 @@
           <description>Examples Section 2.2.2</description>
         </GroupInfo>
         <test-case is-XPath2="false" name="examples-222-q1" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find the author of each book with a title containing a token with the same root as dog and the token cat</description>
+          <description>Find the author of each book with a title containing a token with the same root as dog and the token cat.</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="examples-222-q1" date="2008-06-26"/>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
         </test-case>
+         <test-case is-XPath2="true" name="examples-222-q1b" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find the author of each book with a title containing a token with the same root as dog and the token cat.</description>
+          <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
+          <query name="examples-222-q1b" date="2009-01-15"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-222-examples-results-q1b.txt</output-file>
+        </test-case>       
+         <test-case is-XPath2="false" name="examples-222-q2" FilePath="Examples/2.2.2-Examples/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Find books that have a price of less than 50 and a title which contains a token with the same root as train.</description>
+          <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
+          <query name="examples-222-q2" date="2009-01-15"/>
+          <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+          <output-file role="principal" compare="XML">ft-222-examples-results-q2.txt</output-file>
+        </test-case>        
       </test-group>
       <test-group name="Examples2.3">
         <GroupInfo>
