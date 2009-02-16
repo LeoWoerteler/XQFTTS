@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context//book[@number="1"]/p ftcontains "w.ll" with wildcards
+$input-context//book[@number="1"]//p ftcontains "w.ll" with wildcards
