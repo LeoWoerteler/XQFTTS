@@ -7,7 +7,9 @@
 <title>Guidelines for XPath and XQuery Full Text 1.0 Test Suite Submissions</title>
 <style type="text/css">
 <!--
-.style1 {color: #FF0000}
+.style1 {
+	color: #000000
+}
 -->
 </style>
 </head>
@@ -96,31 +98,8 @@ both the typed and untyped data.</li>
 constructor functions instead of relying on typed data.</li>
 <li>Submitted tests for a particular section <strong>must</strong> include only
 functionality defined by that section and by the provided
-required features. The Full Text Task Force defines the
-following features as core features:</li>
+required features. </li>
 </ul>
-<table frame = "border" style="solid" border = "1" width = "550" align="center">
-<tr>
-<td><h4>Feature Name</h4></td>
-<td><h4>Comments</h4></td>
-</tr>
-<tr>
-<td><span class="style1">TO BE SUPPLIED </span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-</table>
 <h2>Languages, Collations, and URIs</h2>
 <ul type="disc">
 <li>When no language is specified, English is assumed. Tests <strong>must</strong> be written with that in mind. </li>
@@ -138,7 +117,7 @@ extensions.</li>
 </ul>
 <h2>Optional Features and vendor Specific Features</h2>
 <ul type="disc">
-<li>Submitted tests that evaluate non-optional features <strong>should not</strong>use optional features.</li>
+<li>Submitted tests that evaluate non-optional features <strong>should not</strong> use optional features.</li>
 <li>Submitted tests <strong>should not</strong> include any vendor specific
 extensions (pragmas).</li>
 </ul>
@@ -147,18 +126,79 @@ extensions (pragmas).</li>
 in the appendices of the Full Text specification <strong>should</strong> include the
 error code stated for that condition. The following example
 from the catalog file illustrates one of such conditions:</p>
-<table style="solid" border = "1" width = "700" align="center">
+<table style="solid" border = "1" width = "905" align="center">
 <tr>
-<td align = "left"><p class="style1">REWRITE EXAMPLE TO USE FULL TEXT EXPRESSIONS </p>
-  <p>&lt;test-case name=&quot;Literals036&quot; FilePath=&quot;Expressions/PrimaryExpr/Literals/&quot; scenario=&quot;parse-error&quot; Creator=&quot;John Doe&quot;&gt;<br/>
-&lt;description&gt;Test for invalid decimal literal&lt;/description&gt;<br/>
-&lt;spec-citation spec=&quot;XQuery&quot; section-number=&quot;3.1.1&quot; section-title=&quot;Literals&quot; section-pointer=&quot;id-literals&quot;/&gt;<br/>
-&lt;query name=&quot;Literals036.xq&quot; date=&quot;2005-02-03&quot;/&gt;<br/>
-&lt;input-file role=&quot;principal-data&quot; variable=&quot;input-context&quot;&gt;emptydoc&lt;/input-file&gt;<br/>
-&lt;expected-error&gt;XPST0003&lt;/expected-error&gt;<br/>
-&lt;/test-case&gt;</p></td>
+<td width="6120" align = "left"><pre class="style1">&lt;test-case is-XPath2=&quot;true&quot; name=&quot;ft-3.4.1-examples-q1&quot; FilePath=&quot;Examples/3.4.1-LanguageOption/&quot;
+           scenario=&quot;standard&quot; Creator=&quot;Full-Text Task Force&quot;&gt;
+  &lt;description&gt;Query where the language option is used to select the appropriate stop word list.&lt;/description&gt;
+  &lt;spec-citation spec=&quot;XQueryFullText&quot; section-number=&quot;3.4.1&quot; section-title=&quot;Language Option&quot;
+                 section-pointer=&quot;ftlanguageoption&quot;/&gt;
+  &lt;query name=&quot;ft-3.4.1-examples-q1&quot; date=&quot;2008-08-21&quot;/&gt;
+  &lt;input-file role=&quot;principal-data&quot; variable=&quot;input-context&quot;&gt;FT-3-examples-source-document&lt;/input-file&gt;
+  &lt;output-file role=&quot;principal&quot; compare=&quot;Fragment&quot;&gt;ft-3.4.1-examples-results-q1.txt&lt;/output-file&gt;
+  &lt;expected-error&gt;FTST0013&lt;/expected-error&gt;
+&lt;/test-case&gt; </pre>  </td>
 </tr>
 </table>
+<p>For error conditions for which there is not a predefined code, the &quot;*&quot; symbol should be used.</p>
+<h2><a id ="External-Variables-Tests" name = "External-Variables-Tests"></a>External Variable Tests</h2>
+<p>External variable tests are designed to run queries whose external variable values are defined by outsite
+  agents.  The main catalog must define an &lt;input-query&gt; element.  The results of the input query or queries are bound to
+  external variables defined in the main query.  The &lt;input-query&gt; element requires three attributes:</p>
+<ol>
+  <li>name - specifies the name of the input query (no extension required).</li>
+  <li>variable - the name of the variable to which the results of the query should be binded.</li>
+  <li>date - the date the query was written.</li>
+</ol>
+<p>The following example illustrates a possible entry for an external variable test case:</p>
+<table style="text-align: left; width: 750px; height: 47px;" border="2"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-size: 10pt; font-family: Courier; color: black;"> &nbsp;&nbsp;&lt;test-case name=&quot;extvardeclwithtype-17&quot; ...&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&lt;description&gt;External Variable used to evaluate a boolean expression ... .&lt;/description&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&lt;spec-citation spec=&quot;XQuery&quot; section-number=&quot;4.14&quot; ... /&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&lt;state time = &quot;0&quot;&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;query name=&quot;extvardeclwithtype-17&quot; date=&quot;2006-02-09&quot;/&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input-file role=&quot;principal-data&quot; variable=&quot;input-context&quot;&gt;emptydoc&lt;/input-file&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input-query variable=&quot;x&quot; name=&quot;extvardeclwithtypetobind-17&quot; date=&quot;2006-02-09&quot;/&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;output-file role=&quot;principal&quot; compare=&quot;Text&quot;&gt;extvardeclwithtype-17.txt&lt;/output-file&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&lt;/state&gt;<br/>
+        &nbsp;&nbsp;&lt;/test-case&gt; </span></td>
+    </tr>
+  </tbody>
+</table>
+<p>The following are the input query and the main query that corresponds to the entry above:</p>
+<table style="text-align: left; width: 750px; height: 47px;" border="2"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-size: 10pt; font-family: Courier; color: black;">Input Query<br/>
+            <br/>
+        &nbsp;&nbsp;&nbsp;(: Name: extvardeclwithtypetobind-17 :)<br/>
+        &nbsp;&nbsp;&nbsp;(: Description: Binding boolean expression for extvardeclwithtype-17.:)<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;let $var := fn:true() or fn:true()<br/>
+        &nbsp;&nbsp;&nbsp;return $var<br/>
+        <br/>
+        Main Query<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(: Name: extvardeclwithtype-17 :)<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(: Description: Evaluates an external variable used in a boolean expression:)<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(: Both queries perform the operation. :)<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declare variable $x as xs:boolean external;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$x or fn:false()<br/>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+<p>Note the name(s) of the external variable(s) defined in the main query must match the names of the 
+  variable(s) defined in the input queries (&quot;x&quot; in this case).  The main query must be a stand alone query;
+  it should have no input infosets.  At this point, it is not forseen that a lot of tests will be available for the
+  Full Text test suite.</p>
 <h2>XML and Namespaces</h2>
 <ul type="disc">
 <li>Submitted tests <strong>should</strong> be independent of XML versions
@@ -172,9 +212,7 @@ is to evaluate those features.</li>
 </ul>
 <h2>Related Specifications</h2>
 <ul type="disc">
-<li>Submitted tests <strong>should</strong> be based exclusively on the XQuery
-specification, the Functions and Operators
-specification, and the Full Text specification. </li>
+<li>Submitted tests <strong>should</strong> be based exclusively on the XQuery and XPath Full Text 1.0 specification and the main XQuery specification. Some tests may rely   on the Formal Semantics, Data Model, Functions and Operators, and Serialization documents;   however those specifications are not being directly tested.</li>
 </ul>
 <h2>XPath Compatibility</h2>
 <ul type="disc">
@@ -214,15 +252,16 @@ However, if the intent of the testcase is to test other
 lexical representations, then two expected results must be created
 where one result would contain the value if it was cast to
 xs:string, and the other in its original lexical form</li>
+<li>Some tests involve operations on floats/doubles and coverting those results to  strings. Even as one explicit value is given, the task force realizes that  other values may also be acceptable. In such cases, submitters are encouraged  to submit values that may differ.  The task force will eventually determine  if such values are within the acceptable range.</li>
 </ul>
 <hr /> 
 <address> 
   <a href="http://www.w3.org/Help/Webmaster">Webmaster</a> · Last modified: 
-  $Date: 2009/01/14 19:08:00 $ by $Author: jmelton $ 
+  $Date: 2009/02/16 00:57:16 $ by $Author: jmelton $ 
 </address> 
 <p><a rel="Copyright" 
 href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> 
-© 1994-2007<a href="http://www.w3.org/"><acronym 
+© 1994-2009 <a href="http://www.w3.org/"><acronym 
 title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a 
 href="http://www.csail.mit.edu/"><acronym 
 title="Massachusetts Institute of Technology">MIT</acronym></a>, <a 
