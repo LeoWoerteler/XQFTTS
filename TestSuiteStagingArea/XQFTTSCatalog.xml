@@ -2601,11 +2601,12 @@
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q1.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Without wildcard query containing a period. The period is a period, not an indicator. Find site. ending in a period.</description>
+                    <description>Without wildcard query containing a period. The period is a period, not an indicator. Depending on the tokenization find "site" or  "site." ending in a period.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q2" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="XML">ftwildcard-results-q2.xml</output-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q2.xml</output-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q2b.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
                     <description>With wildcard (suffix) query containing a period. The period is an indicator. Find site. where the indicator is replaced by any one character.</description>
@@ -2622,11 +2623,12 @@
                     <output-file role="principal" compare="XML">ftwildcard-results-q4.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Without wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Find site.? where the period is a period and the question mark is a question mark.</description>
+                    <description>Without wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Depending on the tokenization find "site" or "site.?" where the period is a period and the question mark is a question mark.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q5" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="Fragment">ftwildcard-results-q5.txt</output-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q5.txt</output-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q5b.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
                     <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find site.? where the period and the question mark are replaced by zero or one characters.</description>
