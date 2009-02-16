@@ -32,7 +32,7 @@
                information about the tests (e.g. who the author was, what the purpose of the 
                test is) and categorizing the various tests into their relevant sections. For 
                further information and details about this catalog file, please visit the FTTF 
-               homepage at <A HREF="http://www.w3.org/XML/Query/test-suite/">http://www.w3.org/XML/Query/test-suite/</A>.
+               homepage at <A HREF="http://www.w3.org/XML/Query/full-text-test-suite/">http://www.w3.org/XML/Query/full-text-test-suite/</A>.
             </P>
             <h2>Citations</h2>
             <table>
@@ -850,3 +850,15 @@
       </tr>
    </xsl:template>
 </xsl:stylesheet>
+<!-- Stylus Studio meta-information - (c) 2004-2008. Progress Software Corporation. All rights reserved.
+
+<metaInformation>
+  <scenarios/>
+  <MapperMetaTag>
+    <MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+    <MapperBlockPosition></MapperBlockPosition>
+    <TemplateContext></TemplateContext>
+    <MapperFilter side="source"></MapperFilter>
+  </MapperMetaTag>
+</metaInformation>
+-->
