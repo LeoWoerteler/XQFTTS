@@ -6,4 +6,4 @@ declare variable $input-context external;
 
 (: nothing :)
 $input-context/books/book[para ftcontains ("software" ftand ("coder" ftand ftnot
-"ninja")) window 5 words)]/title
+"ninja")) window 5 words]/title
