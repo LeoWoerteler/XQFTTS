@@ -1,8 +1,8 @@
 (: insert-start :)
-declare variable $input-context external;
+declare variable $input-context external; 
 (: insert-end :)
 
 for $book in $input-context/books/book
 let $cont := $book//content
-where $cont ftcontains ("program" ftand "computers") with thesuarus default, at "http://bstore1.example.com/UsabilityThesaurus2.xml" relationship "NT"
+where $cont ftcontains ("program" ftand "computers") with thesaurus default, at "http://bstore1.example.com/UsabilityThesaurus2.xml" relationship "NT"
 return $book
