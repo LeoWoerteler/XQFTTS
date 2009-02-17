@@ -744,7 +744,7 @@ contain the phrase "Web Site Usability" although it contains all of the tokens
 in the phrase:</p><eg role="xpath" xml:space="preserve">//book//p ftcontains "Web Site Usability"</eg><p>The following expression returns book numbers of <code>book</code> elements by
 "Marigold" with a title about "Web Site Usability", sorting them in descending
 score order: </p><eg role="xquery" xml:space="preserve">for $book in /books/book[.//author ftcontains "Marigold"] 
-let score $score := $book/title ftcontains "Web Site Usability" 
+let score $score := $book/title/@shortTitle ftcontains "Web Site Usability" 
 where $score &gt; 0.8 
 order by $score descending
 return $book/@number</eg></div2><div2 id="fttimes"><head>Cardinality Selection</head><scrap headstyle="show"><head/><prod num="156" id="doc-xquery-FTTimes"><lhs>FTTimes</lhs><rhs>"occurs"  <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTRange" xlink:type="simple">FTRange</nt>  "times"</rhs></prod></scrap><p>
@@ -802,15 +802,11 @@ corresponds to one <term>match option group</term>. </termdef>
 The match options from any given group are mutually exclusive, i.e., 
 only one of these settings can be in effect, whereas match options of
 different groups can be combined freely.</p><p>
-Note that, along with the syntax rules above, there is an extra-grammatical 
-constraint,
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="#parse-note-multiple-match-options" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">multiple-match-options
-      </loc>,
-which needs to be considered, if multiple match options are specified.
-It states that within a single <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>
-at most one match option of any given 
-<termref def="dt-match-option-group">match option group</termref> may
-be specified. 
+It is a static error
+<errorref class="ST" code="0019"/> 
+if, within a single <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>,
+there is more than one match option of any given 
+<termref def="dt-match-option-group">match option group</termref>.
 For example, if the <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTCaseOption" xlink:type="simple">FTCaseOption</nt> "lowercase" 
 is specified, then "uppercase" cannot also be specified as part of the same 
 <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>.
@@ -4575,9 +4571,13 @@ declare function fts:ApplyFTDistance (
             consists of only the first <term>Match</term> (with positions 1, 2, and 5) and
             the fifth <term>Match</term> (with positions 25, 27, and 28), because only
             for these <term>Match</term>es the word distance between consecutive
-            <term>TokenInfo</term>s  is always less than or equal to 3. It is 1 for the
-            first pair and 3 for the second in the first case, and 2 and 1 in
-            the second.</p></div4><!-- *************************************************************
+            <term>TokenInfo</term>s  is always less than or equal to 3.
+            For the first <term>Match</term>,
+	    the word distance between the two <term>TokenInfo</term>s
+	    is 2 (<code>startPos</code> 5 - <code>endPos</code> 2 - 1),
+            and for the fifth <term>Match</term>,
+	    it's 1 (<code>startPos</code> 27 - <code>endPos</code> 25 - 1).
+            </p></div4><!-- *************************************************************
              *                            FTTimes                        *
              ************************************************************* --><div4 role="xquery" id="tq-ft-fs-FTTimes"><head>FTTimes</head><p>The parameters of the <function>ApplyFTTimes</function>
             function are 1) an <term>FTRange</term> specification, and 2)
@@ -5533,11 +5533,7 @@ the current XML Query 1.0 grammar (see <loc xmlns:xlink="http://www.w3.org/1999/
                      </phrase>
                   </com></prod></scrap><p>The following symbols are used only in the definition of
   terminal symbols; they are not terminal symbols in the
-  grammar of <specref ref="id-grammar"/>.</p><scrap headstyle="show"><head/><prod num="197" id="prod-xquery-Digits"><lhs>Digits</lhs><rhs>[0-9]+</rhs></prod><prod num="198" id="prod-xquery-CommentContents"><lhs>CommentContents</lhs><rhs>(<nt xmlns:xlink="http://www.w3.org/1999/xlink" def="prod-xquery-Char" xlink:type="simple">Char</nt>+ - (Char* ('(:' | ':)') Char*))</rhs></prod></scrap></div2><div2 id="extra-grammatical-constraints"><head>Extra-grammatical Constraints</head><p>This section contains constraints  on the EBNF productions, which are required to parse legal sentences.  The note below is referenced from the right side of the production, with the notation: <emph>/* xgc: &lt;id&gt; */</emph>.</p><constraintnote id="parse-note-multiple-match-options" type="xgc"><head>multiple-match-options</head><p>No single alternative for FTMatchOption can be specified more 
-than once as part of the same FTMatchOptions.  
-For example, if the FTCaseOption "lowercase" is 
-specified, then "uppercase" cannot also be specified as part of the 
-same FTMatchOptions.</p></constraintnote></div2></div1><div1 id="id-xpath-grammar"><head>EBNF for XPath 2.0 Grammar with Full-Text
+  grammar of <specref ref="id-grammar"/>.</p><scrap headstyle="show"><head/><prod num="197" id="prod-xquery-Digits"><lhs>Digits</lhs><rhs>[0-9]+</rhs></prod><prod num="198" id="prod-xquery-CommentContents"><lhs>CommentContents</lhs><rhs>(<nt xmlns:xlink="http://www.w3.org/1999/xlink" def="prod-xquery-Char" xlink:type="simple">Char</nt>+ - (Char* ('(:' | ':)') Char*))</rhs></prod></scrap></div2></div1><div1 id="id-xpath-grammar"><head>EBNF for XPath 2.0 Grammar with Full-Text
 		extensions</head><p>The EBNF in this document and in this section is aligned with
 the current XPath 2.0 grammar (see <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2005/CR-xpath20-20051103/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.w3.org/TR/2005/CR-xpath20-20051103/</loc>).</p><scrap role="non-terminal-structure-expand" headstyle="show"><head/><prod num="1" id="prod-xpath-XPath"><lhs>XPath</lhs><rhs>
                   <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="prod-xpath-Expr" xlink:type="simple">Expr</nt>
@@ -5873,7 +5869,12 @@ encounters a negative weight value.
 It is a dynamic error if an implementation encounters a mild not 
 selection, one of whose operands evaluates to an <term>AllMatches</term> that contains a
 <term>StringExclude</term> 
-               </p></error><error spec="XP" code="0004" class="TY" type="type"><p>It is a type error if, during the static analysis phase,
+               </p></error><error spec="FT" code="0019" class="ST" type="static"><p>
+It is a static error if,
+within a single <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTMatchOptions" xlink:type="simple">FTMatchOptions</nt>,
+there is more than one match option of any given 
+<termref def="dt-match-option-group">match option group</termref>.
+</p></error><error spec="XP" code="0004" class="TY" type="type"><p>It is a type error if, during the static analysis phase,
 an expression is found to have a static type
 that is not appropriate for the context in which the expression occurs, or during the
 dynamic evaluation phase, the dynamic type of a value does not match a required type as
