@@ -2396,14 +2396,14 @@
                     <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
                     <query name="FTNot-q4" date="2008-11-24"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment"">FTNot-q4.txt</output-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q4.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTNot-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftand ftnot with ftand and window</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
                     <query name="FTNot-q5" date="2008-11-24"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment"">FTNot-q5.txt</output-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q5.txt</output-file>
                     <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
                   </test-case>
                   <test-case is-XPath2="true" name="FTNot-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
@@ -2556,14 +2556,14 @@
                     <query name="ftmatchoptions-q3" date="2008-11-28"/>
                     <aux-URI role="stemming-dictionary">english</aux-URI>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>XPST0003</expected-error>
+                    <expected-error>FTST0019</expected-error>
                   </test-case>
                   <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both case sensitive and case insensitive to Complete and returns an error.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q4" date="2008-11-28"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>XPST0003</expected-error>
+                    <expected-error>FTST0019</expected-error>
                     <expected-error>FOCH0002</expected-error>					
                   </test-case>
                 </test-group>
@@ -2874,6 +2874,34 @@
                   <title>Full-Text Positional Filters</title>
                   <description>Positional filters. Section 3.6.</description>
                 </GroupInfo>
+                <test-case is-XPath2="true" name="FTPosFilter-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Processing order for multiple positional filters</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.6" section-title="Positional Filters" section-pointer="ftposfilter"/>
+                  <query name="FTPosFilter-q1" date="2009-02-19"/>
+                  <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                  <output-file role="principal" compare="Text">FTPosFilter-q1.txt</output-file>
+                </test-case>
+                <test-case is-XPath2="true" name="FTPosFilter-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Processing order for multiple positional filters</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.6" section-title="Positional Filters" section-pointer="ftposfilter"/>
+                  <query name="FTPosFilter-q2" date="2009-02-19"/>
+                  <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                  <output-file role="principal" compare="Text">FTPosFilter-q2.txt</output-file>
+                </test-case>
+                <test-case is-XPath2="true" name="FTPosFilter-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Processing order for multiple positional filters</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.6" section-title="Positional Filters" section-pointer="ftposfilter"/>
+                  <query name="FTPosFilter-q3" date="2009-02-19"/>
+                  <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                  <output-file role="principal" compare="Text">FTPosFilter-q3.txt</output-file>
+                </test-case>
+                <test-case is-XPath2="true" name="FTPosFilter-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
+                  <description>Processing order for multiple positional filters</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.6" section-title="Positional Filters" section-pointer="ftposfilter"/>
+                  <query name="FTPosFilter-q4" date="2009-02-19"/>
+                  <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+                  <output-file role="principal" compare="Text">FTPosFilter-q4.txt</output-file>
+                </test-case>
                 <test-group name="FTOrder">
                   <GroupInfo>
                     <title>Ordered Selection</title>
@@ -3455,7 +3483,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
                     <query name="FTContent-and1" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="XML">FTContent-and1.xml</output-file>
+                    <output-file role="principal" compare="Text">FTContent-and1.txt</output-file>
                     <expected-error>FTST0012</expected-error>
                     <!-- unsupported feature -->
                   </test-case>
@@ -3841,84 +3869,84 @@
       <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance exactly n sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-sentences1" date="2008-12-21"/>
+        <query name="FTDistance-sentences1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-sentences1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance at least n sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-sentences2" date="2008-12-21"/>
+        <query name="FTDistance-sentences2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-sentences2.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance at most n sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-sentences3" date="2008-12-21"/>
+        <query name="FTDistance-sentences3" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-sentences3.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance from n to m sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-sentences4" date="2008-12-21"/>
+        <query name="FTDistance-sentences4" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-sentences4.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTDistance-unconstrained-exprsentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance exactly {$n} sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-exprsentences1" date="2008-12-21"/>
+        <query name="FTDistance-exprsentences1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-exprsentences1.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTDistance-unconstrained-exprsentences2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance from {$n} to {$m} sentences: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-exprsentences2" date="2008-12-21"/>
+        <query name="FTDistance-exprsentences2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-exprsentences2.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance exactly n paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-paragraphs1" date="2008-12-21"/>
+        <query name="FTDistance-paragraphs1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-paragraphs1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance at least n paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-paragraphs2" date="2008-12-21"/>
+        <query name="FTDistance-paragraphs2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-paragraphs2.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance at most n paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-paragraphs3" date="2008-12-21"/>
+        <query name="FTDistance-paragraphs3" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-paragraphs3.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-paragraphs4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance from n to m paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-paragraphs4" date="2008-12-21"/>
+        <query name="FTDistance-paragraphs4" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-paragraphs4.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTDistance-unconstrained-exprparagraphs1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance exactly {$n} paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-exprparagraphs1" date="2008-12-21"/>
+        <query name="FTDistance-exprparagraphs1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-exprparagraphs1.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTDistance-unconstrained-exprparagraphs2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance from {$n} to {$m} paragraphs: positive</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
-        <query name="FTDistance-unconstrained-exprparagraphs2" date="2008-12-21"/>
+        <query name="FTDistance-exprparagraphs2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">FTDistance-exprparagraphs2.xml</output-file>
       </test-case>
@@ -3969,7 +3997,7 @@
         <title>Scope Selection</title>
         <description>Scope selection. Sections 3.6.4 and 5.2.5.</description>
       </GroupInfo>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-1" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-1" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 1</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-1" date="2008-11-11"/>
@@ -3978,7 +4006,7 @@
         <expected-error>FTST0003</expected-error>
         <!-- unsupported units -->
       </test-case>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-2" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-2" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 2</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-2" date="2008-11-11"/>
@@ -3987,7 +4015,7 @@
         <expected-error>FTST0003</expected-error>
         <!-- unsupported units -->
       </test-case>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-3" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-3" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 3</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-3" date="2008-11-11"/>
@@ -3996,7 +4024,7 @@
         <expected-error>FTST0003</expected-error>
         <!-- unsupported units -->
       </test-case>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-4" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-4" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 4</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-4" date="2008-11-11"/>
@@ -4005,7 +4033,7 @@
         <expected-error>FTST0003</expected-error>
         <!-- unsupported units -->
       </test-case>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-5" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-5" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 5 (same)</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-5" date="2008-11-11"/>
@@ -4014,7 +4042,7 @@
         <expected-error>FTST0003</expected-error>
         <!-- unsupported units -->
       </test-case>
-      <test-case is-XPath2="true" name="unconstrained-examples-364-5a" FilePath="Examples/5.2.5-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="unconstrained-examples-364-5a" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
         <description>Scope example 5 (different)</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.5" section-title="FTScope Operator" section-pointer="id-ftscope-option"/>
         <query name="examples-364-5a" date="2008-11-11"/>
