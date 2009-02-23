@@ -1,7 +1,7 @@
 (: insert-start :)
+declare ft-option case sensitive;
 declare variable $input-context external;
 declare variable $x := 1;
-declare ft-option case sensitive;
 (: insert-end :)
 
 for $book in $input-context/books/book
