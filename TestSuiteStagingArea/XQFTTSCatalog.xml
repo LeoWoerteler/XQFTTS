@@ -4716,35 +4716,35 @@
       </GroupInfo>
       <test-case is-XPath2="false" name="FTIgnore-unconstrained-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
         <description>Ignore titles, return titles</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTIgnore-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTIgnore-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/" scenario="runtime-error" Creator="Full-Text Task Force">
         <description>Bad ignore sequence</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <expected-error>XPTY0004</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="FTIgnore-unconstrained-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
         <description>Ignore nothing (implicit)</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q3" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTIgnore-q3.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTIgnore-unconstrained-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
         <description>Ignore nothing (explicit)</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q4" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTIgnore-q4.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTIgnore-unconstrained-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/" scenario="standard" Creator="Full-Text Task Force">
         <description>Ignore everything</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="Ignore Option" section-pointer="ftignoreoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q5" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="Fragment">FTIgnore-q5.txt</output-file>
@@ -4757,21 +4757,21 @@
       </GroupInfo>
       <test-case is-XPath2="true" name="ForScoreExpr-unconstrained-1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax checking of for+score</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-1" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">ForScoreExpr-1.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="ForScoreExpr-unconstrained-2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax checking of for+score with as clause</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-2" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">ForScoreExpr-2.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="ForScoreExpr-unconstrained-3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax checking of for+score with position variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-3" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">ForScoreExpr-3.txt</output-file>
@@ -4779,7 +4779,7 @@
       <test-case is-XPath2="false" name="ForScoreExpr-unconstrained-4" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax checking of for+score with position
         variable and as clause</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-4" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">ForScoreExpr-4.txt</output-file>
@@ -4787,14 +4787,14 @@
       <test-case is-XPath2="true" name="ForScoreExpr-unconstrained-5" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax checking of for+score with position
         variable and as clause</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-5" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">ForScoreExpr-5.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="ForScoreExpr-unconstrained-6" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Order by score</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-6" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">ForScoreExpr-6.txt</output-file>
@@ -4802,42 +4802,42 @@
       </test-case>
       <test-case is-XPath2="false" name="ForScoreExpr-unconstrained-Var1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Score variable shadowed by let variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-Var1" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">ForScoreExpr-Var1.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="ForScoreExpr-unconstrained-Var2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Score variable between 0 and 1</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-Var2" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">ForScoreExpr-Var2.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="ForScoreExpr-unconstrained-Var3" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Score variable shadows gloval</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="ForScoreExpr-Var3" date="2008-09-17"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">ForScoreExpr-Var3.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="LetScoreExpr-unconstrained-1" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax: score variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="LetScoreExpr-1" date="2008-09-22"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Text">LetScoreExpr-1.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="LetScoreExpr-unconstrained-3" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax: score variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="LetScoreExpr-3" date="2008-09-22"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">LetScoreExpr-3.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="LetScoreExpr-unconstrained-4" FilePath="Expressions/FLWORExpr/LetScoreExpr/" scenario="standard" Creator="Full-Text Task Force">
         <description>Basic syntax: score variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Score Variables" section-pointer="section-score-variables"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.14" section-title="Scoring" section-pointer="id-scoring-option"/>
         <query name="LetScoreExpr-4" date="2008-09-22"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">LetScoreExpr-4.txt</output-file>
