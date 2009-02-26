@@ -2,5 +2,5 @@
 declare variable $input-context external;
 (: insert-end :)
 
-/books//p[. ftcontains "propagat.*" with wildcards ftand "few
+$input-context/books//p[. ftcontains "propagat.*" with wildcards ftand "few
 errors" distance at most 2 words at end]

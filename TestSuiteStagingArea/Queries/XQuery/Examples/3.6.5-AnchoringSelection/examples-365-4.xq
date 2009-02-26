@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-/books//* ftcontains "Association" at end
+$input-context/books//* ftcontains "Association" at end

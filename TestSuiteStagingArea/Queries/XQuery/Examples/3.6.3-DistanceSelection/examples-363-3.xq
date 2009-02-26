@@ -2,5 +2,5 @@
 declare variable $input-context external;
 (: insert-end :)
 
-/books/book[.//p ftcontains "web site"
+$input-context/books/book[.//p ftcontains "web site"
 ftand "usability" distance at most 1 words] 

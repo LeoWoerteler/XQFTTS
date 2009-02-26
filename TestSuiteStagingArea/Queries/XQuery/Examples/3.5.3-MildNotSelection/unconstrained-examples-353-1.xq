@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-/books/book ftcontains "usability" not in "usability testing"
+$input-context/books/book ftcontains "usability" not in "usability testing"

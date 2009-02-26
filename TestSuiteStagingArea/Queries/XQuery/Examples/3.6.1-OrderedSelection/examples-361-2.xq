@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-//book[@number="1"] ftcontains ("Montana" ftand "Millicent") ordered
+$input-context//book[@number="1"] ftcontains ("Montana" ftand "Millicent") ordered
