@@ -1,4 +1,4 @@
-(: FTMildNot-and1: mild not with not :)
+(: FTMildNot-not1: mild not with not :)
 
 (: insert-start :)
 declare variable $input-context external;
