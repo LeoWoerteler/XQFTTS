@@ -2429,7 +2429,7 @@
                 <test-group name="FTMildNot">
                   <GroupInfo>
                     <title>Full-Text not in Operator</title>
-                    <description>Mild Not-selection support. Section 3.5.4.</description>
+                    <description>Mild Not-selection support. Section 3.5.3.</description>
                   </GroupInfo>
                   <test-case is-XPath2="true" name="FTMildNot-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Simple not in query: FTST0001 perhaps</description>
@@ -3568,6 +3568,30 @@
                   <output-file role="principal" compare="XML">FTSelection-Weight-q1e_result.xml</output-file>
                   <expected-error>FTDY0016</expected-error>
                 </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1f" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Positive test to demonstrate that weight is supported with some negative value passed by a variable</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q1f" date="2008-08-18"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1f_result.xml</output-file>
+                  <expected-error>FTDY0016</expected-error>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1g" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                 <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed by a variable</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q1g" date="2008-08-18"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1g_result.xml</output-file>
+                  <expected-error>FTDY0016</expected-error>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q1h" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+                  <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed by an arithmetic operation</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q1h" date="2008-08-18"/>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <output-file role="principal" compare="XML">FTSelection-Weight-q1h_result.xml</output-file>
+                  <expected-error>FTDY0016</expected-error>
+                </test-case>
                 <test-case is-XPath2="false" name="FTSelection-Weight-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="runtime-error" Creator="Full-Text Task Force, Jim">
                   <description>Negative test to demonstrate that weight values greater than 1000 are not supported</description>
                   <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
@@ -3578,7 +3602,7 @@
                   <expected-error>FTDY0016</expected-error>
                 </test-case>
                 <test-case is-XPath2="false" name="FTSelection-Weight-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="runtime-error" Creator="Full-Text Task Force, Jim">
-                  <description>Negative test to demonstrate that weight values greater than 1000 are not supported</description>
+                  <description>Negative test to demonstrate that weight values less than -1000 are not supported</description>
                   <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
                   <query name="FTSelection-Weight-q2b" date="2008-08-18">
                     <description>Specifies a weight &lt; -1000, expecting a dynamic error</description>
@@ -4536,6 +4560,41 @@
         <title>Unconstrained Weight Range</title>
         <description>Negative weights. Sections 3 and 5.2.15.</description>
       </GroupInfo>
+      <test-case is-XPath2="false" name="FTSelection-Weight-q1d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+        <description>Positive test to demonstrate that weight is supported with some negative value</description>
+        <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+        <query name="FTSelection-Weight-q1d" date="2008-08-18"/>
+        <input-file role="principal-data" variable="input-context">ftspec</input-file>
+        <output-file role="principal" compare="XML">FTSelection-Weight-q1d_result.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTSelection-Weight-q1e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+        <description>Positive test to demonstrate that weight is supported with a value of -1000.0</description>
+        <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+        <query name="FTSelection-Weight-q1e" date="2008-08-18"/>
+        <input-file role="principal-data" variable="input-context">ftspec</input-file>
+        <output-file role="principal" compare="XML">FTSelection-Weight-q1e_result.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTSelection-Weight-q1f" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+        <description>Positive test to demonstrate that weight is supported with some negative value passed in a variable</description>
+        <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+        <query name="FTSelection-Weight-q1f" date="2008-08-18"/>
+        <input-file role="principal-data" variable="input-context">ftspec</input-file>
+        <output-file role="principal" compare="XML">FTSelection-Weight-q1f_result.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTSelection-Weight-q1g" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+        <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed in a variable</description>
+        <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+        <query name="FTSelection-Weight-q1g" date="2008-08-18"/>
+        <input-file role="principal-data" variable="input-context">ftspec</input-file>
+        <output-file role="principal" compare="XML">FTSelection-Weight-q1g_result.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTSelection-Weight-q1h" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
+        <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed by an arithmetic operation</description>
+        <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+        <query name="FTSelection-Weight-q1h" date="2008-08-18"/>
+        <input-file role="principal-data" variable="input-context">ftspec</input-file>
+        <output-file role="principal" compare="XML">FTSelection-Weight-q1h_result.xml</output-file>
+      </test-case>
     </test-group>
   </test-group>
   <test-group name="UseCase">
