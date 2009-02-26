@@ -981,6 +981,14 @@
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Text">ft-3.4.4-examples-results-q1.txt</output-file>
         </test-case>
+         <test-case is-XPath2="true" name="ft-3.4.4-examples-q2" FilePath="Examples/3.4.4-StemmingOption/" scenario="standard" Creator="Full-Text Task Force">
+          <description>Stem one word in a phrase.</description>
+          <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
+          <query name="ft-3.4.4-examples-q2" date="2009-02-26"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
+          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <output-file role="principal" compare="Fragment">ft-3.4.4-examples-results-q2.txt</output-file>
+        </test-case>      
       </test-group>
       <test-group name="Examples3.4.5">
         <GroupInfo>
