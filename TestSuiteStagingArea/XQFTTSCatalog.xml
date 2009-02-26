@@ -4381,140 +4381,140 @@
       </GroupInfo>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q1a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "exact"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q1a" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q1a_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q1b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "exact"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q1b" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q1b_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q1c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "exact"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q1c" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q1c_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q1d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "exact"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q1d" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q1d_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q1e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "exact"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q1e" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q1e_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q2a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at least"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q2a" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q2a_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q2b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at least"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q2b" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q2b_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q2c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at least"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q2c" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q2c_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q2d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at least"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q2d" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q2d_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q2e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at least"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q2e" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q2e_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q3a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at most"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q3a" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q3a_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q3b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at most"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q3b" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q3b_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q3c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at most"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q3c" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q3c_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q3d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at most"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q3d" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q3d_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q3e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "at most"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q3e" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q3e_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q4a" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "from...to"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q4a" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q4a_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q4b" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "from...to"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q4b" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q4b_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q4c" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "from...to"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q4c" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q4c_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q4d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "from...to"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q4d" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q4d_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-FTTimes-q4e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Test to demonstrate that FTTimes is supported with "from...to"</description>
-        <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.8" section-title="FTTimes Operator" section-pointer="id-fttimes-option"/>
         <query name="FTSelection-FTTimes-q4e" date="2008-11-04"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-FTTimes-q4e_result.xml</output-file>
@@ -4711,35 +4711,35 @@
       </GroupInfo>
       <test-case is-XPath2="false" name="FTSelection-Weight-q1d" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Positive test to demonstrate that weight is supported with some negative value</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Full-Text Selections" section-pointer="id-weights-conf"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Weights" section-pointer="id-weights-conf"/>
         <query name="FTSelection-Weight-q1d" date="2008-08-18"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-Weight-q1d_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-Weight-q1e" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Positive test to demonstrate that weight is supported with a value of -1000.0</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Full-Text Selections" section-pointer="id-weights-conf"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Weights" section-pointer="id-weights-conf"/>
         <query name="FTSelection-Weight-q1e" date="2008-08-18"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-Weight-q1e_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-Weight-q1f" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Positive test to demonstrate that weight is supported with some negative value passed in a variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Full-Text Selections" section-pointer="id-weights-conf"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Weights" section-pointer="id-weights-conf"/>
         <query name="FTSelection-Weight-q1f" date="2008-08-18"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-Weight-q1f_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-Weight-q1g" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed in a variable</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Full-Text Selections" section-pointer="id-weights-conf"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Weights" section-pointer="id-weights-conf"/>
         <query name="FTSelection-Weight-q1g" date="2008-08-18"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-Weight-q1g_result.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="FTSelection-Weight-q1h" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="standard" Creator="Full-Text Task Force, Jim">
         <description>Positive test to demonstrate that weight is supported with a value of -1000.0 passed by an arithmetic operation</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Full-Text Selections" section-pointer="id-weights-conf"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.15" section-title="Weights" section-pointer="id-weights-conf"/>
         <query name="FTSelection-Weight-q1h" date="2008-08-18"/>
         <input-file role="principal-data" variable="input-context">ftspec</input-file>
         <output-file role="principal" compare="XML">FTSelection-Weight-q1h_result.xml</output-file>
