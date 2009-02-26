@@ -3051,6 +3051,13 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <expected-error>XPST0081</expected-error>
                   </test-case>
+                  <test-case is-XPath2="true" name="Extension1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/ExtensionOption/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Extension option syntax</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoption"/>
+                    <query name="Extension1" date="2009-02-26"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="Text">Extension1.txt</output-file>
+                  </test-case>
                 </test-group>
               </test-group>
               <test-group name="PositionalFilters">
@@ -4365,6 +4372,13 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Text">examples-362-5.txt</output-file>
       </test-case>
+      <test-case is-XPath2="false" name="FTWindow-unconstrained-complexwords3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
+        <description>ftwindow complex</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.6" section-title="FTWindow Operator" section-pointer="id-ftwindow-option"/>
+        <query name="FTWindow-complexwords3" date="2008-12-21"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTWindow-complexwords3.xml</output-file>
+      </test-case>
       <test-case is-XPath2="false" name="FTWindow-unconstrained-complexwords4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftwindow complex</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.6" section-title="FTWindow Operator" section-pointer="id-ftwindow-option"/>
@@ -4380,7 +4394,6 @@
         <output-file role="principal" compare="Text">FTNot-q6.txt</output-file>
         <expected-error>FTST0002</expected-error>
         <!-- restricted ftnot -->
-        <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
       </test-case>
     </test-group>
     <test-group name="FTDistanceUnconstrained">
@@ -4401,6 +4414,27 @@
         <query name="FTDistance-complexwords5" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTDistance-complexwords5.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-complexexpr1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>complex ftdistance: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.7" section-title="FTDistance Operator" section-pointer="id-ftdistance-option"/>
+        <query name="FTDistance-complexexpr1" date="2009-02-26"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTDistance-complexexpr1.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="true" name="FTDistance-unconstrained-complexexpr2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>complex ftdistance: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.7" section-title="FTDistance Operator" section-pointer="id-ftdistance-option"/>
+        <query name="FTDistance-complexexpr2" date="2009-02-26"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTDistance-complexexpr2.xml</output-file>
+      </test-case>
+      <test-case is-XPath2="false" name="FTDistance-unconstrained-complexexpr3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
+        <description>complex ftdistance: positive</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.7" section-title="FTDistance Operator" section-pointer="id-ftdistance-option"/>
+        <query name="FTDistance-complexexpr3" date="2009-02-26"/>
+        <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+        <output-file role="principal" compare="XML">FTDistance-complexexpr3.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="FTTimesUnconstrained">
