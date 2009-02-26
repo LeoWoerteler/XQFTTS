@@ -289,7 +289,7 @@
 <A href="#FTDistanceUnconstrained">2.7Unconstrained Distance Selection</A>
 </li>
 <li>
-<A href="#FTTimes">2.8Full-Text Cardinality Selection</A>
+<A href="#FTTimesUnconstrained">2.8Full-Text Cardinality Selection</A>
 </li>
 <li>
 <A href="#FTContentUnconstrained">2.9Anchoring Selection</A>
@@ -304,7 +304,13 @@
 <A href="#FTLanguageUnconstrained">2.12Unconstrained Full-Text Language Option</A>
 </li>
 <li>
-<A href="#NegativeWeights">2.13Unconstrained Weight Range</A>
+<A href="#IgnoreUnconstrained">2.13Unconstrained Ignore Option</A>
+</li>
+<li>
+<A href="#ScoringUnconstrained">2.14Unconstrained Scoring</A>
+</li>
+<li>
+<A href="#NegativeWeights">2.15Unconstrained Weight Range</A>
 </li>
 </ul>
 </li>
@@ -1474,6 +1480,12 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Examples/3.3-CardinalitySelection/ft-3.3-examples-q1.txt">
                      Results/Examples/3.3-CardinalitySelection/ft-3.3-examples-q1.txt</A></td>
 </tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -1528,6 +1540,12 @@
                   Comparator:
                   <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Examples/3.3-CardinalitySelection/ft-3.3-examples-q2.xml">
                      Results/Examples/3.3-CardinalitySelection/ft-3.3-examples-q2.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
 </tr>
 </table>
 <p></p>
@@ -5362,13 +5380,16 @@
 <A href="#FTWords">1.2.2.1.1.1.1Full-Text Tokens and Phrases</A>
 </li>
 <li>
-<A href="#FTOperators">1.2.2.1.1.1.2Full-Text Operators</A>
+<A href="#FTTimes">1.2.2.1.1.1.2Full-Text Cardinality Selection</A>
 </li>
 <li>
-<A href="#PositionalFilters">1.2.2.1.1.1.3Full-Text Positional Filters</A>
+<A href="#FTOperators">1.2.2.1.1.1.3Full-Text Operators</A>
 </li>
 <li>
-<A href="#Weight">1.2.2.1.1.1.4Full-Text FTSelection weight</A>
+<A href="#PositionalFilters">1.2.2.1.1.1.4Full-Text Positional Filters</A>
+</li>
+<li>
+<A href="#Weight">1.2.2.1.1.1.5Full-Text FTSelection weight</A>
 </li>
 </ul>
 </li>
@@ -6340,71 +6361,74 @@
 <A href="#FTWords">1.2.2.1.1.1.1Full-Text Tokens and Phrases</A>
 </li>
 <li>
-<A href="#FTOperators">1.2.2.1.1.1.2Full-Text Operators</A>
+<A href="#FTTimes">1.2.2.1.1.1.2Full-Text Cardinality Selection</A>
+</li>
+<li>
+<A href="#FTOperators">1.2.2.1.1.1.3Full-Text Operators</A>
 <ul>
 <li>
-<A href="#FTOr">1.2.2.1.1.1.2.1Full-Text ftor Operator</A>
+<A href="#FTOr">1.2.2.1.1.1.3.1Full-Text ftor Operator</A>
 </li>
 <li>
-<A href="#FTAnd">1.2.2.1.1.1.2.2Full-Text ftand Operator</A>
+<A href="#FTAnd">1.2.2.1.1.1.3.2Full-Text ftand Operator</A>
 </li>
 <li>
-<A href="#FTUnaryNot">1.2.2.1.1.1.2.3Full-Text ftnot Operator</A>
+<A href="#FTUnaryNot">1.2.2.1.1.1.3.3Full-Text ftnot Operator</A>
 </li>
 <li>
-<A href="#FTMildNot">1.2.2.1.1.1.2.4Full-Text not in Operator</A>
+<A href="#FTMildNot">1.2.2.1.1.1.3.4Full-Text not in Operator</A>
 </li>
 <li>
-<A href="#MatchOptions">1.2.2.1.1.1.2.5Full-text Match Options</A>
+<A href="#MatchOptions">1.2.2.1.1.1.3.5Full-text Match Options</A>
 </li>
 <li>
-<A href="#FTLanguage">1.2.2.1.1.1.2.6Full-Text Language Match Option</A>
+<A href="#FTLanguage">1.2.2.1.1.1.3.6Full-Text Language Match Option</A>
 </li>
 <li>
-<A href="#FTWildcard">1.2.2.1.1.1.2.7Full-Text Wildcard Match Option</A>
+<A href="#FTWildcard">1.2.2.1.1.1.3.7Full-Text Wildcard Match Option</A>
 </li>
 <li>
-<A href="#FTThesaurus">1.2.2.1.1.1.2.8Full-Text Thesaurus Match Option</A>
+<A href="#FTThesaurus">1.2.2.1.1.1.3.8Full-Text Thesaurus Match Option</A>
 </li>
 <li>
-<A href="#FTStemming">1.2.2.1.1.1.2.9Full-Text Stemming Match Option</A>
+<A href="#FTStemming">1.2.2.1.1.1.3.9Full-Text Stemming Match Option</A>
 </li>
 <li>
-<A href="#FTCase">1.2.2.1.1.1.2.10Full-Text Case Match Option</A>
+<A href="#FTCase">1.2.2.1.1.1.3.10Full-Text Case Match Option</A>
 </li>
 <li>
-<A href="#FTDiacritics">1.2.2.1.1.1.2.11Full-Text Diacritics Match Option</A>
+<A href="#FTDiacritics">1.2.2.1.1.1.3.11Full-Text Diacritics Match Option</A>
 </li>
 <li>
-<A href="#FTStopWord">1.2.2.1.1.1.2.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</A>
+<A href="#FTStopWord">1.2.2.1.1.1.3.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</A>
 </li>
 <li>
-<A href="#ExtensionOption">1.2.2.1.1.1.2.13Full-Text Extension Option</A>
+<A href="#ExtensionOption">1.2.2.1.1.1.3.13Full-Text Extension Option</A>
 </li>
 </ul>
 </li>
 <li>
-<A href="#PositionalFilters">1.2.2.1.1.1.3Full-Text Positional Filters</A>
+<A href="#PositionalFilters">1.2.2.1.1.1.4Full-Text Positional Filters</A>
 <ul>
 <li>
-<A href="#FTOrder">1.2.2.1.1.1.3.1Ordered Selection</A>
+<A href="#FTOrder">1.2.2.1.1.1.4.1Ordered Selection</A>
 </li>
 <li>
-<A href="#FTWindow">1.2.2.1.1.1.3.2Window Selection</A>
+<A href="#FTWindow">1.2.2.1.1.1.4.2Window Selection</A>
 </li>
 <li>
-<A href="#FTDistance">1.2.2.1.1.1.3.3Distance Selection</A>
+<A href="#FTDistance">1.2.2.1.1.1.4.3Distance Selection</A>
 </li>
 <li>
-<A href="#FTScope">1.2.2.1.1.1.3.4Scope Selection</A>
+<A href="#FTScope">1.2.2.1.1.1.4.4Scope Selection</A>
 </li>
 <li>
-<A href="#FTContent">1.2.2.1.1.1.3.5Anchoring Selection</A>
+<A href="#FTContent">1.2.2.1.1.1.4.5Anchoring Selection</A>
 </li>
 </ul>
 </li>
 <li>
-<A href="#Weight">1.2.2.1.1.1.4Full-Text FTSelection weight</A>
+<A href="#Weight">1.2.2.1.1.1.5Full-Text FTSelection weight</A>
 </li>
 </ul>
 <table bgcolor="tan" width="80%">
@@ -10121,52 +10145,1236 @@
 </tr>
 </table>
 <p></p>
+<A name="FTTimes"></A>
+<h3>1.2.2.1.1.1.2Full-Text Cardinality Selection</h3>
+<p></p>Cardinality selection. Section 3.3<p></p>
+<ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q1a"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q1a</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "exact"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q1b"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q1b</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "exact"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q1c"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q1c</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "exact"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q1d"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q1d</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "exact"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q1e"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q1e</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "exact"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q2a"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q2a</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at least"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q2b"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q2b</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at least"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q2c"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q2c</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at least"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q2d"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q2d</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at least"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q2e"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q2e</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at least"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q3a"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q3a</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at most"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q3b"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q3b</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at most"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q3c"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q3c</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at most"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q3d"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q3d</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at most"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q3e"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q3e</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "at most"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q4a"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q4a</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "from...to"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q4b"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q4b</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "from...to"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q4c"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q4c</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "from...to"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q4d"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q4d</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "from...to"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-FTTimes-q4e"></a>
+<tr>
+<td><b>FTSelection-FTTimes-q4e</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Test to demonstrate that FTTimes is supported with "from...to"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
+                     err:FTST0005</A></td>
+</tr>
+</table>
+<p></p>
 <A name="FTOperators"></A>
-<h3>1.2.2.1.1.1.2Full-Text Operators</h3>
+<h3>1.2.2.1.1.1.3Full-Text Operators</h3>
 <p></p>Logical Full-Text operators. Section 3.5.<p></p>
 <ul>
 <li>
-<A href="#FTOr">1.2.2.1.1.1.2.1Full-Text ftor Operator</A>
+<A href="#FTOr">1.2.2.1.1.1.3.1Full-Text ftor Operator</A>
 </li>
 <li>
-<A href="#FTAnd">1.2.2.1.1.1.2.2Full-Text ftand Operator</A>
+<A href="#FTAnd">1.2.2.1.1.1.3.2Full-Text ftand Operator</A>
 </li>
 <li>
-<A href="#FTUnaryNot">1.2.2.1.1.1.2.3Full-Text ftnot Operator</A>
+<A href="#FTUnaryNot">1.2.2.1.1.1.3.3Full-Text ftnot Operator</A>
 </li>
 <li>
-<A href="#FTMildNot">1.2.2.1.1.1.2.4Full-Text not in Operator</A>
+<A href="#FTMildNot">1.2.2.1.1.1.3.4Full-Text not in Operator</A>
 </li>
 <li>
-<A href="#MatchOptions">1.2.2.1.1.1.2.5Full-text Match Options</A>
+<A href="#MatchOptions">1.2.2.1.1.1.3.5Full-text Match Options</A>
 </li>
 <li>
-<A href="#FTLanguage">1.2.2.1.1.1.2.6Full-Text Language Match Option</A>
+<A href="#FTLanguage">1.2.2.1.1.1.3.6Full-Text Language Match Option</A>
 </li>
 <li>
-<A href="#FTWildcard">1.2.2.1.1.1.2.7Full-Text Wildcard Match Option</A>
+<A href="#FTWildcard">1.2.2.1.1.1.3.7Full-Text Wildcard Match Option</A>
 </li>
 <li>
-<A href="#FTThesaurus">1.2.2.1.1.1.2.8Full-Text Thesaurus Match Option</A>
+<A href="#FTThesaurus">1.2.2.1.1.1.3.8Full-Text Thesaurus Match Option</A>
 </li>
 <li>
-<A href="#FTStemming">1.2.2.1.1.1.2.9Full-Text Stemming Match Option</A>
+<A href="#FTStemming">1.2.2.1.1.1.3.9Full-Text Stemming Match Option</A>
 </li>
 <li>
-<A href="#FTCase">1.2.2.1.1.1.2.10Full-Text Case Match Option</A>
+<A href="#FTCase">1.2.2.1.1.1.3.10Full-Text Case Match Option</A>
 </li>
 <li>
-<A href="#FTDiacritics">1.2.2.1.1.1.2.11Full-Text Diacritics Match Option</A>
+<A href="#FTDiacritics">1.2.2.1.1.1.3.11Full-Text Diacritics Match Option</A>
 </li>
 <li>
-<A href="#FTStopWord">1.2.2.1.1.1.2.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</A>
+<A href="#FTStopWord">1.2.2.1.1.1.3.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</A>
 </li>
 <li>
-<A href="#ExtensionOption">1.2.2.1.1.1.2.13Full-Text Extension Option</A>
+<A href="#ExtensionOption">1.2.2.1.1.1.3.13Full-Text Extension Option</A>
 </li>
 </ul>
 <A name="FTOr"></A>
-<h3>1.2.2.1.1.1.2.1Full-Text ftor Operator</h3>
+<h3>1.2.2.1.1.1.3.1Full-Text ftor Operator</h3>
 <p></p>Or-Selection. Section 3.5.1.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -10720,6 +11928,61 @@
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
+<a name="FTOr-expr3"></a>
+<tr>
+<td><b>FTOr-expr3</b></td><td>
+               Scenario:
+               <A href="#runtime-error">runtime-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">FTOr with empty sequence</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#sec-ftor">#sec-ftor</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr3.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/FTOr-expr3.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
 <a name="FTOr-badexpr1"></a>
 <tr>
 <td><b>FTOr-badexpr1</b></td><td>
@@ -10732,7 +11995,7 @@
 <td colspan="3"><B>Description:</B></td>
 </tr>
 <tr>
-<td colspan="3">FTOr with empty sequence</td>
+<td colspan="3">FTOr with expression not coercable to xs:string*</td>
 </tr>
 <tr>
 <td colspan="3"></td>
@@ -10934,7 +12197,7 @@
 </table>
 <p></p>
 <A name="FTAnd"></A>
-<h3>1.2.2.1.1.1.2.2Full-Text ftand Operator</h3>
+<h3>1.2.2.1.1.1.3.2Full-Text ftand Operator</h3>
 <p></p>And-Selection. Section 3.5.2.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -11537,7 +12800,7 @@
 </table>
 <p></p>
 <A name="FTUnaryNot"></A>
-<h3>1.2.2.1.1.1.2.3Full-Text ftnot Operator</h3>
+<h3>1.2.2.1.1.1.3.3Full-Text ftnot Operator</h3>
 <p></p>Minimal Not-selection support. Section 3.5.4.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -11651,7 +12914,7 @@
                   Role:
                   <A href="#principal">principal</A></td><td>
                   Comparator:
-                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xml">
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-q2.xml</A></td>
 </tr>
 </table>
@@ -11950,8 +13213,8 @@
 </table>
 <p></p>
 <A name="FTMildNot"></A>
-<h3>1.2.2.1.1.1.2.4Full-Text not in Operator</h3>
-<p></p>Mild Not-selection support. Section 3.5.4.<p></p>
+<h3>1.2.2.1.1.1.3.4Full-Text not in Operator</h3>
+<p></p>Mild Not-selection support. Section 3.5.3.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
 <a name="FTMildNot-q1"></a>
@@ -12430,7 +13693,7 @@
                   Role:
                   <A href="#principal">principal</A></td><td>
                   Comparator:
-                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/FTMildNot-not1.xml">
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/FTMildNot-not1.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/FTMildNot-not1.xml</A></td>
 </tr>
 <tr>
@@ -12601,7 +13864,7 @@
 </table>
 <p></p>
 <A name="MatchOptions"></A>
-<h3>1.2.2.1.1.1.2.5Full-text Match Options</h3>
+<h3>1.2.2.1.1.1.3.5Full-text Match Options</h3>
 <p></p>Full-text match options. Section 3.4.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -12867,7 +14130,7 @@
 </table>
 <p></p>
 <A name="FTLanguage"></A>
-<h3>1.2.2.1.1.1.2.6Full-Text Language Match Option</h3>
+<h3>1.2.2.1.1.1.3.6Full-Text Language Match Option</h3>
 <p></p>Language option. Section 3.4.1.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -12981,7 +14244,7 @@
 </table>
 <p></p>
 <A name="FTWildcard"></A>
-<h3>1.2.2.1.1.1.2.7Full-Text Wildcard Match Option</h3>
+<h3>1.2.2.1.1.1.3.7Full-Text Wildcard Match Option</h3>
 <p></p>Wildcard option. Section 3.4.2.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -13743,7 +15006,7 @@
 </table>
 <p></p>
 <A name="FTThesaurus"></A>
-<h3>1.2.2.1.1.1.2.8Full-Text Thesaurus Match Option</h3>
+<h3>1.2.2.1.1.1.3.8Full-Text Thesaurus Match Option</h3>
 <p></p>Thesaurus option. Section 3.4.3.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -14098,7 +15361,7 @@
 </table>
 <p></p>
 <A name="FTStemming"></A>
-<h3>1.2.2.1.1.1.2.9Full-Text Stemming Match Option</h3>
+<h3>1.2.2.1.1.1.3.9Full-Text Stemming Match Option</h3>
 <p></p>Stemming option. Section 3.4.4.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -14268,7 +15531,7 @@
 </table>
 <p></p>
 <A name="FTCase"></A>
-<h3>1.2.2.1.1.1.2.10Full-Text Case Match Option</h3>
+<h3>1.2.2.1.1.1.3.10Full-Text Case Match Option</h3>
 <p></p>Case option. Section 3.4.5.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -14443,7 +15706,7 @@
 </table>
 <p></p>
 <A name="FTDiacritics"></A>
-<h3>1.2.2.1.1.1.2.11Full-Text Diacritics Match Option</h3>
+<h3>1.2.2.1.1.1.3.11Full-Text Diacritics Match Option</h3>
 <p></p>Diacritics option. Section 3.4.6.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -14677,11 +15940,11 @@
 </table>
 <p></p>
 <A name="FTStopWord"></A>
-<h3>1.2.2.1.1.1.2.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</h3>
+<h3>1.2.2.1.1.1.3.12Full-Text Stop Word Match Option. See Optional/Unconstrained Full-Text Stop Word Option</h3>
 <p></p>Stop Word option. Section 3.4.7.<p></p>
 <ul></ul>
 <A name="ExtensionOption"></A>
-<h3>1.2.2.1.1.1.2.13Full-Text Extension Option</h3>
+<h3>1.2.2.1.1.1.3.13Full-Text Extension Option</h3>
 <p></p>Extension options. Section 3.4.8.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -14793,23 +16056,23 @@
 </table>
 <p></p>
 <A name="PositionalFilters"></A>
-<h3>1.2.2.1.1.1.3Full-Text Positional Filters</h3>
+<h3>1.2.2.1.1.1.4Full-Text Positional Filters</h3>
 <p></p>Positional filters. Section 3.6.<p></p>
 <ul>
 <li>
-<A href="#FTOrder">1.2.2.1.1.1.3.1Ordered Selection</A>
+<A href="#FTOrder">1.2.2.1.1.1.4.1Ordered Selection</A>
 </li>
 <li>
-<A href="#FTWindow">1.2.2.1.1.1.3.2Window Selection</A>
+<A href="#FTWindow">1.2.2.1.1.1.4.2Window Selection</A>
 </li>
 <li>
-<A href="#FTDistance">1.2.2.1.1.1.3.3Distance Selection</A>
+<A href="#FTDistance">1.2.2.1.1.1.4.3Distance Selection</A>
 </li>
 <li>
-<A href="#FTScope">1.2.2.1.1.1.3.4Scope Selection</A>
+<A href="#FTScope">1.2.2.1.1.1.4.4Scope Selection</A>
 </li>
 <li>
-<A href="#FTContent">1.2.2.1.1.1.3.5Anchoring Selection</A>
+<A href="#FTContent">1.2.2.1.1.1.4.5Anchoring Selection</A>
 </li>
 </ul>
 <table bgcolor="tan" width="80%">
@@ -15033,7 +16296,7 @@
 </table>
 <p></p>
 <A name="FTOrder"></A>
-<h3>1.2.2.1.1.1.3.1Ordered Selection</h3>
+<h3>1.2.2.1.1.1.4.1Ordered Selection</h3>
 <p></p>Ordered selection. Section 3.6.1.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -15342,7 +16605,7 @@
 </table>
 <p></p>
 <A name="FTWindow"></A>
-<h3>1.2.2.1.1.1.3.2Window Selection</h3>
+<h3>1.2.2.1.1.1.4.2Window Selection</h3>
 <p></p>Window selection. Section 3.6.2.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -16517,7 +17780,7 @@
 </table>
 <p></p>
 <A name="FTDistance"></A>
-<h3>1.2.2.1.1.1.3.3Distance Selection</h3>
+<h3>1.2.2.1.1.1.4.3Distance Selection</h3>
 <p></p>Distance selection. Section 3.6.3.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -18398,7 +19661,7 @@
 </table>
 <p></p>
 <A name="FTScope"></A>
-<h3>1.2.2.1.1.1.3.4Scope Selection</h3>
+<h3>1.2.2.1.1.1.4.4Scope Selection</h3>
 <p></p>Scope selection. Section 3.6.4. FTScope is an optional feature: here we allow error FTST0004<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -18670,7 +19933,7 @@
 </table>
 <p></p>
 <A name="FTContent"></A>
-<h3>1.2.2.1.1.1.3.5Anchoring Selection</h3>
+<h3>1.2.2.1.1.1.4.5Anchoring Selection</h3>
 <p></p>Anchoring selection. Section 3.6.5. FTContent is an optional feature: here we allow error FTST0012<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -18784,7 +20047,7 @@
                   Role:
                   <A href="#principal">principal</A></td><td>
                   Comparator:
-                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/FTContent-q2.xml">
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/FTContent-q2.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/FTContent-q2.xml</A></td>
 </tr>
 <tr>
@@ -19229,7 +20492,7 @@
 </table>
 <p></p>
 <A name="Weight"></A>
-<h3>1.2.2.1.1.1.4Full-Text FTSelection weight</h3>
+<h3>1.2.2.1.1.1.5Full-Text FTSelection weight</h3>
 <p></p>Full-Text Selections. Section 3.<p></p>
 <ul></ul>
 <table bgcolor="tan" width="80%">
@@ -19518,6 +20781,183 @@
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1f"></a>
+<tr>
+<td><b>FTSelection-Weight-q1f</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with some negative value passed by a variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftselections">#ftselections</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTDY0016">
+                     err:FTDY0016</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1g"></a>
+<tr>
+<td><b>FTSelection-Weight-q1g</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with a value of -1000.0 passed by a variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftselections">#ftselections</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTDY0016">
+                     err:FTDY0016</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1h"></a>
+<tr>
+<td><b>FTSelection-Weight-q1h</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with a value of -1000.0 passed by an arithmetic operation</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftselections">#ftselections</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h_result.xml</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTDY0016">
+                     err:FTDY0016</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
 <a name="FTSelection-Weight-q2a"></a>
 <tr>
 <td><b>FTSelection-Weight-q2a</b></td><td>
@@ -19581,7 +21021,7 @@
 <td colspan="3"><B>Description:</B></td>
 </tr>
 <tr>
-<td colspan="3">Negative test to demonstrate that weight values greater than 1000 are not supported</td>
+<td colspan="3">Negative test to demonstrate that weight values less than -1000 are not supported</td>
 </tr>
 <tr>
 <td colspan="3">Specifies a weight &lt; -1000, expecting a dynamic error</td>
@@ -20318,7 +21758,7 @@
 <A href="#FTDistanceUnconstrained">2.7Unconstrained Distance Selection</A>
 </li>
 <li>
-<A href="#FTTimes">2.8Full-Text Cardinality Selection</A>
+<A href="#FTTimesUnconstrained">2.8Full-Text Cardinality Selection</A>
 </li>
 <li>
 <A href="#FTContentUnconstrained">2.9Anchoring Selection</A>
@@ -20333,7 +21773,13 @@
 <A href="#FTLanguageUnconstrained">2.12Unconstrained Full-Text Language Option</A>
 </li>
 <li>
-<A href="#NegativeWeights">2.13Unconstrained Weight Range</A>
+<A href="#IgnoreUnconstrained">2.13Unconstrained Ignore Option</A>
+</li>
+<li>
+<A href="#ScoringUnconstrained">2.14Unconstrained Scoring</A>
+</li>
+<li>
+<A href="#NegativeWeights">2.15Unconstrained Weight Range</A>
 </li>
 </ul>
 <A name="FTMildNotUnconstrained"></A>
@@ -21000,7 +22446,7 @@
                   Role:
                   <A href="#principal">principal</A></td><td>
                   Comparator:
-                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xml">
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/FTNot-unconstrained-q5.xml</A></td>
 </tr>
 </table>
@@ -23348,7 +24794,7 @@
 </tr>
 </table>
 <p></p>
-<A name="FTTimes"></A>
+<A name="FTTimesUnconstrained"></A>
 <h3>2.8Full-Text Cardinality Selection</h3>
 <p></p>Cardinality selection. Sections 3.3 and 5.2.8.<p></p>
 <ul></ul>
@@ -23374,7 +24820,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23403,12 +24849,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1a_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23433,7 +24873,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23462,12 +24902,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1b_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23492,7 +24926,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23521,12 +24955,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1c_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23551,7 +24979,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23580,12 +25008,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1d_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23610,7 +25032,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23639,12 +25061,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q1e_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23669,7 +25085,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23698,12 +25114,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2a_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23728,7 +25138,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23757,12 +25167,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2b_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23787,7 +25191,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23816,12 +25220,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2c_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23846,7 +25244,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23875,12 +25273,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2d_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23905,7 +25297,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23934,12 +25326,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q2e_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -23964,7 +25350,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -23993,12 +25379,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3a_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24023,7 +25403,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24052,12 +25432,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3b_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24082,7 +25456,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24111,12 +25485,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3c_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24141,7 +25509,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24170,12 +25538,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3d_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24200,7 +25562,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24229,12 +25591,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q3e_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24259,7 +25615,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24288,12 +25644,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4a_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24318,7 +25668,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24347,12 +25697,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4b_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24377,7 +25721,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24406,12 +25750,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4c_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24436,7 +25774,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24465,12 +25803,6 @@
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4d_result.xml</A></td>
 </tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
-</tr>
 </table>
 <p></p>
 <table bgcolor="tan" width="80%">
@@ -24495,7 +25827,7 @@
 <td colspan="3"><B>Spec Citations:</B></td>
 </tr>
 <tr>
-<td colspan="3"><A href="#fttimes">#fttimes</A></td>
+<td colspan="3"><A href="#id-fttimes-option">#id-fttimes-option</A></td>
 </tr>
 <tr>
 <td colspan="2"><B>Query:</B></td><td></td>
@@ -24523,12 +25855,6 @@
                   Comparator:
                   <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e_result.xml">
                      Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTTimes/FTSelection-FTTimes-q4e_result.xml</A></td>
-</tr>
-<tr>
-<td colspan="3">
-                  Error:
-                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0005">
-                     err:FTST0005</A></td>
 </tr>
 </table>
 <p></p>
@@ -25718,10 +27044,1210 @@
 </tr>
 </table>
 <p></p>
+<A name="IgnoreUnconstrained"></A>
+<h3>2.13Unconstrained Ignore Option</h3>
+<p></p>FTIgnore. Sections 3.7 and 5.2.13.<p></p>
+<ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-unconstrained-q1"></a>
+<tr>
+<td><b>FTIgnore-unconstrained-q1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore titles, return titles</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q1.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q1.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-unconstrained-q2"></a>
+<tr>
+<td><b>FTIgnore-unconstrained-q2</b></td><td>
+               Scenario:
+               <A href="#runtime-error">runtime-error</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Bad ignore sequence</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q2.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPTY0004">
+                     err:XPTY0004</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-unconstrained-q3"></a>
+<tr>
+<td><b>FTIgnore-unconstrained-q3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore nothing (implicit)</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q3.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q3.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-unconstrained-q4"></a>
+<tr>
+<td><b>FTIgnore-unconstrained-q4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore nothing (explicit)</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q4.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q4.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q4.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTIgnore-unconstrained-q5"></a>
+<tr>
+<td><b>FTIgnore-unconstrained-q5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Ignore everything</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftignoreoption">#ftignoreoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q5.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q5.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTIgnoreOption/FTIgnore-q5.txt</A></td>
+</tr>
+</table>
+<p></p>
+<A name="ScoringUnconstrained"></A>
+<h3>2.14Unconstrained Scoring</h3>
+<p></p>Scoring. Sections 2.3 and 5.2.14.<p></p>
+<ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-1"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax checking of for+score</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-1.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-1.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-2"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-2</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax checking of for+score with as clause</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-2.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-2.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-2.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-3"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax checking of for+score with position variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-3.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-3.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-3.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-4"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax checking of for+score with position
+        variable and as clause</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-4.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-4.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-4.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-5"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-5</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax checking of for+score with position
+        variable and as clause</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-5.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-5.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-5.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-5.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-6"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-6</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Order by score</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6.txt</A></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6-alt.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-6-alt.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-Var1"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-Var1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Score variable shadowed by let variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var1.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var1.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-Var2"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-Var2</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Score variable between 0 and 1</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var2.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var2.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var2.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var2.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="ForScoreExpr-unconstrained-Var3"></a>
+<tr>
+<td><b>ForScoreExpr-unconstrained-Var3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Score variable shadows gloval</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var3.xq">Queries/XQuery/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var3.txt">
+                     Results/Expressions/FLWORExpr/ForScoreExpr/ForScoreExpr-Var3.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="LetScoreExpr-unconstrained-1"></a>
+<tr>
+<td><b>LetScoreExpr-unconstrained-1</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax: score variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-1.xq">Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-1.txt">
+                     Results/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-1.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="LetScoreExpr-unconstrained-3"></a>
+<tr>
+<td><b>LetScoreExpr-unconstrained-3</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax: score variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-3.xq">Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-3.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-3.txt">
+                     Results/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-3.txt</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="LetScoreExpr-unconstrained-4"></a>
+<tr>
+<td><b>LetScoreExpr-unconstrained-4</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Basic syntax: score variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#section-score-variables">#section-score-variables</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4.xq">Queries/XQuery/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4.txt">
+                     Results/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4.txt</A></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4-alt.txt">
+                     Results/Expressions/FLWORExpr/LetScoreExpr/LetScoreExpr-4-alt.txt</A></td>
+</tr>
+</table>
+<p></p>
 <A name="NegativeWeights"></A>
-<h3>2.13Unconstrained Weight Range</h3>
+<h3>2.15Unconstrained Weight Range</h3>
 <p></p>Negative weights. Sections 3 and 5.2.15.<p></p>
 <ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1d"></a>
+<tr>
+<td><b>FTSelection-Weight-q1d</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with some negative value</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#id-weights-conf">#id-weights-conf</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1d.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1d.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1d_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1d_result.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1e"></a>
+<tr>
+<td><b>FTSelection-Weight-q1e</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with a value of -1000.0</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#id-weights-conf">#id-weights-conf</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1e.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1e.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1e_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1e_result.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1f"></a>
+<tr>
+<td><b>FTSelection-Weight-q1f</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with some negative value passed in a variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#id-weights-conf">#id-weights-conf</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1f_result.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1g"></a>
+<tr>
+<td><b>FTSelection-Weight-q1g</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with a value of -1000.0 passed in a variable</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#id-weights-conf">#id-weights-conf</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1g_result.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="FTSelection-Weight-q1h"></a>
+<tr>
+<td><b>FTSelection-Weight-q1h</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Positive test to demonstrate that weight is supported with a value of -1000.0 passed by an arithmetic operation</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#id-weights-conf">#id-weights-conf</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#ftspec">ftspec</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h_result.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/FTSelection-Weight-q1h_result.xml</A></td>
+</tr>
+</table>
+<p></p>
 <A name="UseCase"></A>
 <h3>3Use Cases</h3>
 <p></p>
