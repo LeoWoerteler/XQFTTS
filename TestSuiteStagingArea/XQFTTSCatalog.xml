@@ -4817,7 +4817,7 @@
       </test-case>
       <test-case is-XPath2="true" name="ft-5.2.11-examples-q5" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find planning then conducting by excluding then from the stop word list. The query calls a stop word list via a uri, then excludes some stop words in the list.</description>
-        <spec-citation spec="XQueryFullText" section-number="5.2.11 section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ft-3.4.7-examples-q5" date="2008-08-21"/>
         <aux-URI role="stopwords">stopwords1</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
