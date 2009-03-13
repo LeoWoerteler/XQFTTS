@@ -1717,7 +1717,7 @@
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q7" date="2009-01-15"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-              <expected-error>FTST0001</expected-error>				  
+              <expected-error>XPST0003</expected-error>				  
             </test-case>
 
             <test-group name="FTSelection">
