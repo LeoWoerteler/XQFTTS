@@ -6,6 +6,6 @@ declare variable $x := 1;
 (: insert-end :)
 
 for $book in $input-context/books/book
-let $cont := $book[$x]/content
+let $cont := $book[@number=$x]/content
 where $cont ftcontains "Testing"
 return $book 
