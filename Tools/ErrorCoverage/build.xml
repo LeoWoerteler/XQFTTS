@@ -30,7 +30,7 @@
 
 
    <target name='getDocuments'>
-      <get src="${sourceDocs}xpath-full-text-10/" dest="temp/fulltext.html"/>
+    <get src="${sourceDocs}xpath-full-text-10/" dest="temp/fulltext.html"/>
    </target>
 
 
