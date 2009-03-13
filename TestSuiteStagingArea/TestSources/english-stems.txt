@@ -5,17 +5,16 @@ train trains training trained
 error errors
 test tests testing tested testers
 picture pictures
-use user
-users user
+use user users
 usable usability
 task tasks
-performance perform performs performing performed
-guides guide
+perform performance performs performing performed
+guide guides
 review reviews reviewed reviewing reviewer reviewers
-iterations iteration iterate
+iterate iteration iterations 
 comment comments
-developer develop
-feeling feel
-completing complete
+develop developer
+feel feeling
+complete completing
 conduct conducting
-measuring measure
+measure measuring 
