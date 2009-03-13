@@ -844,7 +844,7 @@
           <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
           <query name="ft-3.2-examples-q5" date="2008-10-10"/>
           <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
-          <output-file role="principal" compare="Text">ft-3.2-examples-q5.txt</output-file>
+          <output-file role="principal" compare="Inspect">ft-3.2-examples-q5.txt</output-file>
         </test-case>
       </test-group>
       <test-group name="Examples3.3">
