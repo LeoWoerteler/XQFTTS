@@ -1054,7 +1054,7 @@
         <expected-error>FTST0006</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="ft-3.4.7-examples-q3" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Find out whether or not it is true that the document contains propagating of errors without stop words.</description>
+        <description>Find out whether or not it is true that the document contains propagation of errors without stop words.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
