@@ -19,7 +19,7 @@
       </copy>
 
       <replaceregexp
-         file="${stagingArea}/Guidelines for Running the XQuery Full Text Test Suite.html"
+         file="${stagingArea}/GuidelinesForRunningTheFullTextTestSuite.html"
          match="../XQFTTSCatalog.xml"
          replace="XQFTTSCatalogExplain.html"
          />
