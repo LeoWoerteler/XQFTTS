@@ -1,3 +1,6 @@
+
+(: Do not fix. This is a syntax error. :)
+
 (: insert-start :)
 declare ft-option case sensitive case insensitive;
 declare variable $input-context external;
