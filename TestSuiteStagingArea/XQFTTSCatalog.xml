@@ -2444,7 +2444,7 @@
                     <output-file role="principal" compare="Fragment">FTOr-q5.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-three-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Thre way ftor query, one branch false</description>
+                    <description>Three way ftor query, one branch false</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-three-q1" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
@@ -2507,7 +2507,7 @@
                     <expected-error>XPST0003</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="FTOr-andor" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Simple ftor query</description>
+                    <description>Query with ftor and ftand</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-andor" date="2008-11-25"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
@@ -2745,6 +2745,7 @@
                     <query name="FTMildNot-bad1" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>FTDY0017</expected-error>
+                    <expected-error>FTST0001</expected-error>                    
                   </test-case>
                   <test-case is-XPath2="true" name="FTMildNot-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Mild not with bad arg</description>
@@ -2752,6 +2753,7 @@
                     <query name="FTMildNot-bad2" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>FTDY0017</expected-error>
+                    <expected-error>FTST0001</expected-error>                   
                   </test-case>
                   <test-case is-XPath2="true" name="FTMildNot-bad3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTMildNot/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Mild not with bad arg</description>
@@ -2759,6 +2761,7 @@
                     <query name="FTMildNot-bad3" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>FTDY0017</expected-error>
+                    <expected-error>FTST0001</expected-error>                    
                   </test-case>
                 </test-group>
                 <test-group name="MatchOptions">
