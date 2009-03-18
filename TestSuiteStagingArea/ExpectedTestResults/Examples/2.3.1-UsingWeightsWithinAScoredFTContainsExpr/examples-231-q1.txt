@@ -214,7 +214,7 @@
          </chapter>
       </part>
    </content>
-</book></result><result score=""><book number="3">
+</book></result><result score="0.05"><book number="3">
    <metadata>
       <title shortTitle="Usabilityguy Manuscript Guide">John Wesley Usabilityguy: A Register of His 
       Papers</title>
