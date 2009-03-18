@@ -2,5 +2,5 @@
 declare variable $input-context external;
 (: insert-end :)
 
-let $x := 0 return
-$input-context/books/book[para ftcontains ("swift" ftand "software") window $x sentences]/title
+let $x := 2 return
+$input-context/books/book[para ftcontains ("swift" ftand "software") window exactly $x sentences]/title
