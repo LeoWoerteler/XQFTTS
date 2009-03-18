@@ -1128,7 +1128,7 @@
           <output-file role="principal" compare="Text">examples-352-1.txt</output-file>
         </test-case>
         <test-case is-XPath2="true" name="examples-352-2" FilePath="Examples/3.5.2-AndSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Do any book titles contain both "usability" and "testing"?</description>
+          <description>Do any book authors contain both "Millicent" and "Montana"?</description>
           <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And Selection" section-pointer="sec-ftand"/>
           <query name="examples-352-2" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1268,7 +1268,7 @@
           <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-2" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Distance example 1</description>
+          <description>Distance example 2</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
           <query name="examples-363-2" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1276,7 +1276,7 @@
           <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-3" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Distance example 1</description>
+          <description>Distance example 3</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
           <query name="examples-363-3" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1284,15 +1284,15 @@
           <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-4" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Distance example 1</description>
+          <description>Distance example 4</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
           <query name="examples-363-4" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-          <output-file role="principal" compare="XML">examples-363-4.xml</output-file>
+          <output-file role="principal" compare="Fragment">examples-363-4.txt</output-file>
           <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
         </test-case>
         <test-case is-XPath2="true" name="examples-363-5" FilePath="Examples/3.6.3-DistanceSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Distance example 1</description>
+          <description>Distance example 5</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
           <query name="examples-363-5" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1350,7 +1350,7 @@
           <!-- unsupported units -->
         </test-case>
         <test-case is-XPath2="true" name="examples-364-5" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Scope example 5 (same)</description>
+          <description>Scope example 5 (different)</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
           <query name="examples-364-5" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -1361,7 +1361,7 @@
           <!-- unsupported units -->
         </test-case>
         <test-case is-XPath2="true" name="examples-364-5a" FilePath="Examples/3.6.4-ScopeSelection/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Scope example 5 (different)</description>
+          <description>Scope example 5 (same)</description>
           <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
           <query name="examples-364-5a" date="2008-11-11"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
@@ -3273,7 +3273,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.1" section-title="Ordered Selection" section-pointer="ftorder"/>
                     <query name="FTOrder-andor1" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
+                    <output-file role="principal" compare="Fragment">FTOrder-andor1.txt</output-file>
                     <expected-error>FTST0010</expected-error>
                     <!-- restricted order -->
                   </test-case>
