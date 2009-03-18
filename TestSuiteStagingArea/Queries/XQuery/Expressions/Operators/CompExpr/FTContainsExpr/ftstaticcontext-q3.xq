@@ -1,5 +1,5 @@
 (: insert-start :)
-declare ft-option case sensitive with stemming;
+declare ft-option case sensitive case insensitive;
 declare variable $input-context external;
 (: insert-end :)
 
