@@ -3848,6 +3848,15 @@
                     <expected-error>FTST0012</expected-error>
                     <!-- unsupported feature -->
                   </test-case>
+                  <test-case is-XPath2="true" name="FTContent-complex5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>entire content spans, but not contiguous</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
+                    <query name="FTContent-complex5" date="2009-03-19"/>
+                    <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
+                    <output-file role="principal" compare="Text">FTContent-complex5.txt</output-file>
+                    <expected-error>FTST0012</expected-error>
+                    <!-- unsupported feature -->
+                  </test-case>
                 </test-group>
               </test-group>
               <test-group name="Weight">
