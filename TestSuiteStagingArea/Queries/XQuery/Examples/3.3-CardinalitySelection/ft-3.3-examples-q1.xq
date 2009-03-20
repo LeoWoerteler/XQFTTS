@@ -3,4 +3,4 @@
 (: insert-start :)
 (: insert-end :)
 
-//book[. ftcontains "usability" occurs at least 2 times]/@number
+data(//book[. ftcontains "usability" occurs at least 2 times]/@number)
