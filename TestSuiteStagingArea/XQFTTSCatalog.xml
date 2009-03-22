@@ -1686,7 +1686,7 @@
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q3" date="2009-01-15"/>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-              <expected-error>FTST0001</expected-error>			  
+              <expected-error>FTST0019</expected-error>			  
             </test-case>
             <test-case is-XPath2="false" name="ftstaticcontext-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="standard" Creator="Full-Text Task Force">
               <description>Multiple FTOptionDecls, no conflicts..</description>
