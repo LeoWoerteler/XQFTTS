@@ -1,3 +1,5 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+
 (: LetScoreExpr-2: Basic syntax: score variable cannot have as clause :)
 
 (: insert-start :)

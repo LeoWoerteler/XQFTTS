@@ -1,3 +1,6 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+(: VarDecls before FTOptionDecl causes XPST0003 :)
+
 (: insert-start :)
 declare variable $input-context external;
 declare variable $x := 1;

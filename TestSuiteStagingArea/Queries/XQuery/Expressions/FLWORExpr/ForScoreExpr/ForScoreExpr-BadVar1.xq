@@ -1,3 +1,5 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+
 (: ForScoreExpr-1: Bad score variable shadowing :)
 
 (: insert-start :)

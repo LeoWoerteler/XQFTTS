@@ -1,3 +1,5 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+
 (: FTOr-bad2: 'ftor' in nested expression: parse error :)
 
 (: insert-start :)

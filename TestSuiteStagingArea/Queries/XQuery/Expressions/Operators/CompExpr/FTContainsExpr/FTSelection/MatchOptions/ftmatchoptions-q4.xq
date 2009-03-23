@@ -1,3 +1,6 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+(: "case sensitive case insensitive" causes FTST0019 :)
+
 (: insert-start :)
 declare variable $input-context external;
 (: insert-end :)

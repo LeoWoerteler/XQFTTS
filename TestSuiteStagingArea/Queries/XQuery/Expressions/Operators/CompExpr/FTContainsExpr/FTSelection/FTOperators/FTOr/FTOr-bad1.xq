@@ -1,3 +1,5 @@
+(: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
+
 (: FTOr-bad1: 'or' instead of 'ftor': error :)
 
 (: insert-start :)
