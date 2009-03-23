@@ -3525,7 +3525,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.3" section-title="Distance Selection" section-pointer="ftdistance"/>
                     <query name="FTDistance-complexwords2" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTDistance-complexwords2.txt</output-file>
+                    <output-file role="principal" compare="XML">FTDistance-complexwords2.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTDistance-complexwords3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
                     <description>complex ftdistance: positive</description>
@@ -4383,7 +4383,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
         <query name="FTOrder-andor1" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
+        <output-file role="principal" compare="Fragment">FTOrder-andor1.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="FTScopeUnconstrained">
@@ -4754,7 +4754,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
         <query name="FTContent-and1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="XML">FTContent-and1.xml</output-file>
+        <output-file role="principal" compare="Text">FTContent-and1.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="FTCaseUnconstrained">
