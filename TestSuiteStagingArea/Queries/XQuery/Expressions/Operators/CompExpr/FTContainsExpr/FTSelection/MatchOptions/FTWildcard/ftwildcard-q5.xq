@@ -2,7 +2,6 @@
 declare variable $input-context external;
 (: insert-end :)
 
-for $book in $input-context/books/book
-let $cont := $book//content
-where $cont ftcontains "site.?" without wildcards
-return $book
+$input-context/books/book[
+    .//content ftcontains "site.?" without wildcards
+]

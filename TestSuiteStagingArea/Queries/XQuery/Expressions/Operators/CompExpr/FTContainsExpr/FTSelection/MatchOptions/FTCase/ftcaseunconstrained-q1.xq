@@ -2,7 +2,6 @@
 declare variable $input-context external;
 (: insert-end :)
 
-for $book in $input-context/books/book
-let $meta := $book//metadata 
-where $meta ftcontains "ersatz" lowercase
-return $book
+$input-context/books/book[
+  .//metadata ftcontains "ersatz" lowercase
+]

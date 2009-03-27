@@ -5,7 +5,6 @@
 declare variable $input-context external;
 (: insert-end :)
 
-for $book in $input-context/books/book
-let $cont := $book//content
-where $cont ftcontains "test" with stemming without stemming
-return $book
+$input-context/books/book[
+   .//content ftcontains "test" with stemming without stemming
+]
