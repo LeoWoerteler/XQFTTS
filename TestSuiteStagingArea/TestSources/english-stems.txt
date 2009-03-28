@@ -3,19 +3,19 @@ dog dogs
 cat cats
 train trains training trained
 error errors
-test tests testing tested testers
+test tests testing tested 
+tester testers
 picture pictures
-use uses using used user users
-usable usability
+use uses using used 
+user users
 task tasks
-perform performance performs performing performed
+perform performs performing performed
 guide guides
-review reviews reviewed reviewing reviewer reviewers
-iterate iteration iterations 
+review reviews reviewed reviewing 
+reviewer reviewers
+iterate iterating iterated 
 comment comments
-develop developer
 feel feeling
 complete completing
 conduct conducting
 measure measuring 
-propagate propagating propagation
