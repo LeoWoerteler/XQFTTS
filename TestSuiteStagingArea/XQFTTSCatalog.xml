@@ -1042,10 +1042,9 @@
           <description>Examples Section 3.4.7.</description>
         </GroupInfo>
        <test-case is-XPath2="true" name="ft-3.4.7-examples-q1" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Find out whether or not it is true that the document contains propagation of errors. Stop words are provided in the query.  One of the stop words is in the phrase queried.</description>
+        <description>Find out whether or not it is true that the document contains propagating of errors. Stop words are provided in the query.  One of the stop words is in the phrase queried.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ft-3.4.7-examples-q1" date="2008-08-21"/>
-        <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Text">ft-3.4.7-examples-results-q1.txt</output-file>
         <expected-error>FTST0006</expected-error>
@@ -1059,10 +1058,9 @@
         <expected-error>FTST0006</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="ft-3.4.7-examples-q3" FilePath="Examples/3.4.7-StopWordOption/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Find out whether or not it is true that the document contains propagation of errors without stop words.</description>
+        <description>Find out whether or not it is true that the document contains propagating of errors without stop words.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ft-3.4.7-examples-q3" date="2008-08-21"/>
-        <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Text">ft-3.4.7-examples-results-q3.txt</output-file>
       </test-case>
@@ -6129,7 +6127,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>XPTY0004</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q2" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
@@ -6138,7 +6136,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>FTST0009</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q2b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
