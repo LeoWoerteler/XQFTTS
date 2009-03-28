@@ -3032,6 +3032,22 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftstemming-results-q3.xml</output-file>
                   </test-case>
+                        <test-case is-XPath2="false" name="ft-3.4.4-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>With stemming query. Find performed with stemming.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
+                    <query name="ftstemming-q4" date="2009-03-28"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="XML">ftstemming-results-q4.xml</output-file>
+                  </test-case>
+                     <test-case is-XPath2="false" name="ft-3.4.4-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStemming/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>With stemming query. Find improves with stemming.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.4" section-title="Stemming Option" section-pointer="ftstemoption"/>
+                    <query name="ftstemming-q5" date="2009-03-28"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="Fragment">ftstemming-results-q5.txt</output-file>
+                  </test-case>                  
                 </test-group>
                 <test-group name="FTCase">
                   <GroupInfo>
