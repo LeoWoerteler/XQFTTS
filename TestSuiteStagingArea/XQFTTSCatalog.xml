@@ -446,7 +446,12 @@
     <stopwords ID="stopwords3" uri="http://bstore1.example.com/StopWordList3.xml" FileName="TestSources/intentionally-missing.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-28">A (intentionally missing) stop word list for use cases</description>
     </stopwords>
-
+    <stopwords ID="stopwords4" uri="http://bstore1.example.com/StopWordList4.xml" FileName="TestSources/stopwords4.txt" Creator="Full-Text Task Force">
+      <description last-mod="2008-11-28">A fourth stop word list for use cases</description>
+    </stopwords>    
+    <stopwords ID="stopwords5" uri="http://bstore1.example.com/StopWordList5.xml" FileName="TestSources/stopwords5.txt" Creator="Full-Text Task Force">
+      <description last-mod="2008-11-28">A fifth stop word list for use cases</description>
+    </stopwords>    
     <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilitySoundex.xml" FileName="TestSources/soundex.xml" Creator="Full-Text Task Force">
       <description last-mod="2008-11-10">Soundex thesaurus for examples</description>
     </thesaurus>
@@ -3151,6 +3156,68 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <expected-error>FTST0008</expected-error>
       </test-case>
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports some users of. This query calls the union of 2 stop word lists.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q4" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q4.xml</output-file>        
+        <expected-error>FTST0006</expected-error>
+      </test-case>
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports some users of. This query calls the union of a stop word list and a string literal.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q5" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q5.xml</output-file>        
+        <expected-error>FTST0006</expected-error>
+      </test-case>      
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports more users of. This query calls the union of a stop word list and string literals.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q6" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q6.xml</output-file>        
+        <expected-error>FTST0006</expected-error>
+      </test-case>        
+       <test-case is-XPath2="true" name="ft-3.4.7-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find all usability in the web site is so well. This query calls the union of 4 stop word lists.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q7" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <aux-URI role="stopwords">stopwords4</aux-URI>
+        <aux-URI role="stopwords">stopwords5</aux-URI>                        
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q7.xml</output-file>        
+        <expected-error>FTST0006</expected-error>
+      </test-case>  
+        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports more users of. This query calls a stop word list excepting a second stop list.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q8" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>        
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="Fragment">ftstopword-results-q8.txt</output-file>        
+        <expected-error>FTST0006</expected-error>
+       </test-case>         
+        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Does not find all usability in the web site is so well. This query calls the union of 3 stop word lists and the exclusion of a fourth.</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q9" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <aux-URI role="stopwords">stopwords4</aux-URI>
+        <aux-URI role="stopwords">stopwords5</aux-URI>  
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="Fragment">ftstopword-results-q9.txt</output-file>        
+        <expected-error>FTST0006</expected-error>
+      </test-case>        
                 </test-group>
                 <test-group name="ExtensionOption">
                   <GroupInfo>
@@ -4859,6 +4926,62 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <expected-error>FTST0008</expected-error>
       </test-case>
+       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports some users of. This query calls the union of 2 stop word lists.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q4" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q4.xml</output-file>        
+      </test-case>
+      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports some users of. This query calls the union of a stop word list and a string literal.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q5" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q5.xml</output-file>        
+      </test-case>      
+      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports more users of. This query calls the union of a stop word list and string literals.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q6" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q6.xml</output-file>        
+      </test-case>        
+       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find all usability in the web site is so well. This query calls the union of 4 stop word lists.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q7" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <aux-URI role="stopwords">stopwords4</aux-URI>
+        <aux-URI role="stopwords">stopwords5</aux-URI>                        
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="XML">ftstopword-results-q7.xml</output-file>        
+      </test-case>  
+        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Find supports more users of. This query calls a stop word list excepting a second stop list.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q8" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>        
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="Fragment">ftstopword-results-q8.txt</output-file>        
+       </test-case>         
+        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <description>Does not find all usability in the web site is so well. This query calls the union of 3 stop word lists and the exclusion of a fourth.</description>
+        <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q9" date="2009-03-28"/>
+        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>
+        <aux-URI role="stopwords">stopwords4</aux-URI>
+        <aux-URI role="stopwords">stopwords5</aux-URI>  
+        <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+        <output-file role="principal" compare="Fragment">ftstopword-results-q9.txt</output-file>        
+      </test-case>         
     </test-group>
     <test-group name="FTLanguageUnconstrained">
       <GroupInfo>
