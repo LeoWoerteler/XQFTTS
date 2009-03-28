@@ -10,6 +10,6 @@ where $quote ftcontains "millicent"
    ftand "quote.{0-5}" with wildcards with thesaurus at  
    "http://bstore1.example.com/UsabilityThesaurus.xml"
    relationship "synonyms" distance at most 3 words 
-   ftand "usability testing" ftand "iterations" with stemming 
+   ftand "usability testing" ftand "iterating" with stemming 
    distance at most 50 words
 return $book
