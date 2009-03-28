@@ -6129,7 +6129,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>XPTY0004</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q2" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert review methods". This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
@@ -6138,7 +6138,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>FTST0009</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q2b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert review methods". This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performance" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
