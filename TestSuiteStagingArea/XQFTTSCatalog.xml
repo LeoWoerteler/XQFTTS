@@ -1427,7 +1427,7 @@
           <description>Anchoring example 1</description>
           <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
           <query name="examples-37-1" date="2008-12-21"/>
-          <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
+          <input-file role="principal-data" variable="input-context">emptydoc</input-file>
           <output-file role="principal" compare="XML">examples-37-1.xml</output-file>
           <expected-error>FTST0007</expected-error>
           <!-- unsupported ignore -->
