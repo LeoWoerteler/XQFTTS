@@ -6,7 +6,9 @@ declare variable $input-context external;
 for $book in $input-context/books/book[./metadata/publicationInfo/
    (dateIssued|dateRevised) > "2000-12-31" 
    and count(metadata/author) > 1]
-where $subj := $book//subject ftcontains "usability test.*" with wildcards
+let $subj := $book//subject[
+             . ftcontains "usability test.*" with wildcards]
+where $subj
 return <book number="{$book/@number}"> 
           {$book/metadata/title, $book/metadata/author, $subj}
            </book>
