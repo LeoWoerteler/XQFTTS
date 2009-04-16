@@ -6,6 +6,13 @@
       <relationship>UF</relationship>
     </synonym>
   </entry>
+    <entry>
+    <term>duty</term>
+    <synonym>
+      <term>task</term>
+      <relationship>UF</relationship>
+    </synonym>
+  </entry>
   <entry>
     <term>web site components</term>
     <synonym>
