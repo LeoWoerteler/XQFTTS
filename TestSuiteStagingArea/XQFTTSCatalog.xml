@@ -2981,7 +2981,7 @@
                     <output-file role="principal" compare="XML">ftthesaurus-results-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="parse-error" Creator="Full-Text Task Force">
-                    <description>WIth thesaurus query. Find program with thesaurus.</description>
+                    <description>With thesaurus query calls a thesaurus that does not exist.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
                     <query name="ftthesaurus-q4" date="2008-11-28"/>
                     <aux-URI role="thesaurus">technical</aux-URI>
@@ -3000,10 +3000,9 @@
                     <description>Query calling a default thesaurus and an addiitonal thesaurus.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
                     <query name="ftthesaurus-q6" date="2008-11-28"/>
-                    <aux-URI role="thesaurus">usability</aux-URI>
                     <aux-URI role="thesaurus">usability2</aux-URI>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="XML">ftthesaurus-results-q6.xml</output-file>
+                    <output-file role="principal" compare="Fragment">ftthesaurus-results-q6.txt</output-file>
                   </test-case>
                 </test-group>
                 <test-group name="FTStemming">
