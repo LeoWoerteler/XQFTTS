@@ -36,6 +36,21 @@
     </synonym>   
   </entry>
     <entry>
+    <term>web site components</term>
+    <synonym>
+      <term>navigation</term>
+      <relationship>narrower terms</relationship>
+    </synonym>
+    <synonym>
+      <term>layout</term>
+      <relationship>narrower terms</relationship>
+    </synonym>
+     <synonym>
+      <term>terminology</term>
+      <relationship>narrower terms</relationship>
+    </synonym>   
+  </entry>
+    <entry>
     <term>quote</term>
     <synonym>
       <term>remarked</term>
