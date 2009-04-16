@@ -2973,12 +2973,12 @@
                     <output-file role="principal" compare="Fragment">ftthesaurus-results-q2.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="ft-3.4.3-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>WIth thesaurus query. Find program with thesaurus.</description>
+                    <description>With thesaurus query. Find program with thesaurus.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
                     <query name="ftthesaurus-q3" date="2008-11-28"/>
                     <aux-URI role="thesaurus">usability</aux-URI>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="Fragment">ftthesaurus-results-q3.xml</output-file>
+                    <output-file role="principal" compare="XML">ftthesaurus-results-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>WIth thesaurus query. Find program with thesaurus.</description>
