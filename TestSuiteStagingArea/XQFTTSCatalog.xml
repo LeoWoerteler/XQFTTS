@@ -452,6 +452,12 @@
     <stopwords ID="stopwords5" uri="http://bstore1.example.com/StopWordList5.xml" FileName="TestSources/stopwords5.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-28">A fifth stop word list for use cases</description>
     </stopwords>    
+     <thesaurus ID="taxonomy" uri="http://bstore1.example.com/OurTaxonomy.xml" FileName="TestSources/taxonomy.xml" Creator="Full-Text Task Force">
+      <description last-mod="2009-04-16">Taxonomy thesaurus for examples</description>   
+     </thesaurus>  
+    <thesaurus ID="spellcheck" uri="http://bstore1.example.com/spellcheck.xml" FileName="TestSources/spellcheck.xml" Creator="Full-Text Task Force">
+      <description last-mod="2009-04-16">Spellcheck thesaurus for examples</description>
+    </thesaurus>
     <thesaurus ID="soundex" uri="http://bstore1.example.com/UsabilitySoundex.xml" FileName="TestSources/soundex.xml" Creator="Full-Text Task Force">
       <description last-mod="2008-11-10">Soundex thesaurus for examples</description>
     </thesaurus>
@@ -5589,7 +5595,7 @@
         <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
         <query name="thesaurus-queries-results-q5" date="2008-06-26"/>
-        <aux-URI role="thesaurus">usability</aux-URI>
+        <aux-URI role="thesaurus">spellcheck</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
       </test-case>
@@ -5597,7 +5603,7 @@
         <description>Q5 Query on Word Spelled Similarly to Other Words: Find all books which contain words that are close in spelling to "sucessfull". This query finds words using a dictionary of words that are spelled similarly.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.5" section-title="Q5 Query on Word Spelled Similarly to Other Words" section-pointer="thesaurus-queries-results-q5"/>
         <query name="thesaurus-queries-results-q5b" date="2008-06-26"/>
-        <aux-URI role="thesaurus">usability</aux-URI>
+        <aux-URI role="thesaurus">spellcheck</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">thesaurus-queries-results-q5.txt</output-file>
       </test-case>
@@ -5605,7 +5611,7 @@
         <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
         <query name="thesaurus-queries-results-q6" date="2008-06-26"/>
-        <aux-URI role="thesaurus">usability</aux-URI>
+        <aux-URI role="thesaurus">taxonomy</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
       </test-case>
@@ -5613,7 +5619,7 @@
         <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
         <spec-citation spec="FTUseCases" section-number="7.2.6" section-title="Q6 Query on Subordinate Terms Identified by a Taxonomy" section-pointer="thesaurus-queries-results-q6"/>
         <query name="thesaurus-queries-results-q6b" date="2008-06-26"/>
-        <aux-URI role="thesaurus">usability</aux-URI>
+        <aux-URI role="thesaurus">taxonomy</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
       </test-case>
