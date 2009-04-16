@@ -949,7 +949,7 @@
           <description>Examples Section 3.4.3</description>
         </GroupInfo>
         <test-case is-XPath2="true" name="ft-3.4.3-examples-q1" FilePath="Examples/3.4.3-ThesaurusOption/" scenario="standard" Creator="Full-Text Task Force">
-          <description>Find out whether it is true that by searching on tasks by searching on its synonyms you will find duties.</description>
+          <description>Find out whether it is true that by searching on duty and on its synonyms you will find task.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="ThesaurusOption" section-pointer="ftthesaurusoption"/>
           <query name="ft-3.4.3-examples-q1" date="2008-08-21"/>
           <aux-URI role="thesaurus">usability</aux-URI>
