@@ -2984,7 +2984,7 @@
                     <query name="ftthesaurus-q3" date="2008-11-28"/>
                     <aux-URI role="thesaurus">usability</aux-URI>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="XML">ftthesaurus-results-q3.txt</output-file>
+                    <output-file role="principal" compare="Fragment">ftthesaurus-results-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>With thesaurus query calls a thesaurus that does not exist.</description>
