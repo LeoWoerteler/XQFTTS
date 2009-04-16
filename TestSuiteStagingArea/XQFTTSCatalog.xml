@@ -3160,6 +3160,7 @@
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q2" date="2008-11-28"/>
         <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>        
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q2.xml</output-file>
         <expected-error>FTST0006</expected-error>
@@ -3212,6 +3213,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="XML">ftstopword-results-q7.xml</output-file>        
         <expected-error>FTST0006</expected-error>
+        <expected-error>FTST0008</expected-error>       
       </test-case>  
         <test-case is-XPath2="true" name="ft-3.4.7-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
         <description>Find supports more users of. This query calls a stop word list excepting a second stop list.</description>
