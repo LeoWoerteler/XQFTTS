@@ -5,5 +5,5 @@ declare variable $input-context external;
 
 $input-context/books/book[content ftcontains ("successfully" 
 ftand "completing" ftand "tasks"
-window (count(content/part/chapter) * 3) 
+window (count(content/part/chapter) * 4) 
 words with stemming)]/(metadata/title, content)
