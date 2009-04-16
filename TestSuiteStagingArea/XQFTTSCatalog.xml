@@ -6154,7 +6154,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q2.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q3" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of multiple "iterating". This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
+        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "interating"  multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
@@ -6163,7 +6163,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q3b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of multiple "iterating". This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
+        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "interating"  multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
         <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
