@@ -14,6 +14,13 @@
     </synonym>
   </entry>
   <entry>
+    <term>people</term>
+    <synonym>
+      <term>users</term>
+      <relationship>NT</relationship>
+    </synonym>
+  </entry>  
+  <entry>
     <term>web site components</term>
     <synonym>
       <term>navigation</term>
