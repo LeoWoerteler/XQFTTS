@@ -2782,6 +2782,7 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftmatchoptions-results-q1.xml</output-file>
                     <expected-error>FTST0006</expected-error>
+                    <expected-error>FTST0009</expected-error>                     
                   </test-case>
                   <test-case is-XPath2="true" name="ftmatchoptions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
                     <description>There can be multiple match options applied to an FTSelection, written in any order (although there are constraints on processing order). This query applies multiple match options in a random order.</description>
