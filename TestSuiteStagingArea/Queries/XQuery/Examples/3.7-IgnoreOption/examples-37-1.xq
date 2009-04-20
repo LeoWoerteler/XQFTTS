@@ -1,5 +1,4 @@
 <results>{
-let $x := 
 let $x := <book>
    <title>Web Usability and Practice</title>
    <author>Montana <annotation> this author is
