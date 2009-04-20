@@ -1506,7 +1506,7 @@
             <output-file role="principal" compare="Fragment">ForScoreExpr-6-alt.txt</output-file>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="true" name="ForScoreExpr-BadVar1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+          <test-case is-XPath2="true" name="ForScoreExpr-BadVar1" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="runtime-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as main variable: error</description>
             <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-BadVar1" date="2008-09-17"/>
@@ -1514,7 +1514,7 @@
             <expected-error>XQST0089</expected-error>
             <expected-error>FTST0014</expected-error>
           </test-case>
-          <test-case is-XPath2="false" name="ForScoreExpr-BadVar2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+          <test-case is-XPath2="false" name="ForScoreExpr-BadVar2" FilePath="Expressions/FLWORExpr/ForScoreExpr/" scenario="runtime-error" Creator="Full-Text Task Force">
             <description>Score variable has same name as position variable: error</description>
             <spec-citation spec="XQueryFullText" section-number="2.3" section-title="Score Variables" section-pointer="section-score-variables"/>
             <query name="ForScoreExpr-BadVar2" date="2008-09-17"/>
@@ -1667,7 +1667,7 @@
               <output-file role="principal" compare="Text">FTContains-ordercomp1.txt</output-file>
               <output-file role="principal" compare="Text">FTContains-ordercomp1-alt.txt</output-file>
             </test-case>
-            <test-case is-XPath2="true" name="FTContains-badcomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+            <test-case is-XPath2="true" name="FTContains-badcomp1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="runtime-error" Creator="Full-Text Task Force">
               <description>ftcontains higher precedence than other comparison operators</description>
               <spec-citation spec="XQueryFullText" section-number="2.2" section-title="Full-Text Contains Expression" section-pointer="section-ftcontainsexpr"/>
               <query name="FTContains-badcomp1" date="2008-09-22"/>
@@ -1690,7 +1690,7 @@
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
               <expected-error>FOCH0002</expected-error>            
 			</test-case>
-            <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="parse-error" Creator="Full-Text Task Force">
+            <test-case is-XPath2="false" name="ftstaticcontext-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/" scenario="runtime-error" Creator="Full-Text Task Force">
               <description>FTOptionDecl with multiple conflicting FTMatchOptions.</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q3" date="2009-01-15"/>
@@ -2799,7 +2799,7 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftmatchoptions-results-q2.xml</output-file>
                   </test-case>
-                  <test-case is-XPath2="true" name="ftmatchoptions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="ftmatchoptions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both with stemming and without stemming to test and returns an error.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q3" date="2008-11-28"/>
@@ -2807,7 +2807,7 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <expected-error>FTST0019</expected-error>
                   </test-case>
-                  <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="parse-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="ftmatchoptions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both case sensitive and case insensitive to Complete and returns an error.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q4" date="2008-11-28"/>
@@ -2830,7 +2830,7 @@
                     <expected-error>FTST0009</expected-error>                    
                     <expected-error>FTST0013</expected-error>
                   </test-case>
-                  <test-case is-XPath2="false" name="ft-3.4.1-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="parse-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="ft-3.4.1-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Language option is not castable into xs:language.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                     <query name="ftlanguage-q2" date="2008-11-22"/>
@@ -2845,7 +2845,7 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">ftlanguageunconstrained-results-q1.xml</output-file>
       </test-case>
-      <test-case is-XPath2="false" name="ft-3.4.1-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="false" name="ft-3.4.1-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="runtime-error" Creator="Full-Text Task Force">
         <description>Language option is not supported.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
         <query name="ftlanguageunconstrained-q2" date="2008-11-22"/>
@@ -2986,7 +2986,7 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftthesaurus-results-q3.txt</output-file>
                   </test-case>
-                  <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="parse-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="ft-3.4.3-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>With thesaurus query calls a thesaurus that does not exist.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
                     <query name="ftthesaurus-q4" date="2008-11-28"/>
@@ -3171,7 +3171,7 @@
         <expected-error>FTST0006</expected-error>
         <expected-error>FTST0008</expected-error>
       </test-case>
-      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="runtime-error" Creator="Full-Text Task Force">
         <description>Find propagating numerous errors. This query calls a stop word list that does not exist.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q3" date="2008-11-28"/>
@@ -3179,7 +3179,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <expected-error>FTST0008</expected-error>
       </test-case>
-      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports some users of. This query calls the union of 2 stop word lists.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q4" date="2009-03-28"/>
@@ -3189,7 +3189,7 @@
         <output-file role="principal" compare="XML">ftstopword-results-q4.xml</output-file>        
         <expected-error>FTST0006</expected-error>
       </test-case>
-      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports some users of. This query calls the union of a stop word list and a string literal.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q5" date="2009-03-28"/>
@@ -3198,7 +3198,7 @@
         <output-file role="principal" compare="XML">ftstopword-results-q5.xml</output-file>        
         <expected-error>FTST0006</expected-error>
       </test-case>      
-      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports more users of. This query calls the union of a stop word list and string literals.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q6" date="2009-03-28"/>
@@ -3207,7 +3207,7 @@
         <output-file role="principal" compare="XML">ftstopword-results-q6.xml</output-file>        
         <expected-error>FTST0006</expected-error>
       </test-case>        
-       <test-case is-XPath2="true" name="ft-3.4.7-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+       <test-case is-XPath2="true" name="ft-3.4.7-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all usability in the web site is so well. This query calls the union of 4 stop word lists.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q7" date="2009-03-28"/>
@@ -3220,7 +3220,7 @@
         <expected-error>FTST0006</expected-error>
         <expected-error>FTST0008</expected-error>       
       </test-case>  
-        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports more users of. This query calls a stop word list excepting a second stop list.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q8" date="2009-03-28"/>
@@ -3230,7 +3230,7 @@
         <output-file role="principal" compare="Fragment">ftstopword-results-q8.txt</output-file>        
         <expected-error>FTST0006</expected-error>
        </test-case>         
-        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="ft-3.4.7-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Does not find all usability in the web site is so well. This query calls the union of 3 stop word lists and the exclusion of a fourth.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q9" date="2009-03-28"/>
@@ -3255,7 +3255,7 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Text">Extension1.txt</output-file>
                   </test-case>
-                  <test-case is-XPath2="true" name="Extension2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/ExtensionOption/" scenario="parse-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="Extension2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/ExtensionOption/" scenario="runtime-error" Creator="Full-Text Task Force">
                     <description>Extension option syntax: unknown namespace</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.8" section-title="Extension Option" section-pointer="ftextensionoption"/>
                     <query name="Extension2" date="2008-09-22"/>
@@ -4103,7 +4103,7 @@
                 <description>Extension Selections. Section 3.8.</description>
               </GroupInfo>
 
-              <test-case is-XPath2="false" name="FTExtension-Opt-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+              <test-case is-XPath2="false" name="FTExtension-Opt-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                 <description>Negative test to demonstrate that prefix of the ft-option must be defined</description>
                 <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                 <query name="FTExtension-Opt-q1" date="2008-08-25">
@@ -4133,7 +4133,7 @@
                 <expected-error>XPST0003</expected-error>
               </test-case>
 
-              <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+              <test-case is-XPath2="false" name="FTExtension-Opt-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                 <description>Positive case, behavior is implementation defined</description>
                 <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                 <query name="FTExtension-Opt-q4" date="2008-08-25">
@@ -4143,7 +4143,7 @@
                 <expected-error>*</expected-error>
               </test-case>
 
-              <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+              <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                 <description>Negative case</description>
                 <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                 <query name="FTExtension-Opt-q5" date="2008-08-25">
@@ -4154,7 +4154,7 @@
 
               </test-case>
 
-              <test-case is-XPath2="false" name="FTExtension-Opt-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+              <test-case is-XPath2="false" name="FTExtension-Opt-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
                 <description>Negative case</description>
                 <spec-citation spec="XQueryFullText" section-number="3.8" section-title="Extension Selections" section-pointer="id-extension-selections"/>
                 <query name="FTExtension-Opt-q6" date="2008-08-25">
@@ -4942,7 +4942,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q2.xml</output-file>
       </test-case>
-      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="runtime-error" Creator="Full-Text Task Force">
         <description>Find propagating numerous errors. This query calls a stopword list that does not exist.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q3" date="2008-11-28"/>
@@ -4950,7 +4950,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <expected-error>FTST0008</expected-error>
       </test-case>
-       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports some users of. This query calls the union of 2 stop word lists.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q4" date="2009-03-28"/>
@@ -4959,7 +4959,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="XML">ftstopword-results-q4.xml</output-file>        
       </test-case>
-      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports some users of. This query calls the union of a stop word list and a string literal.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q5" date="2009-03-28"/>
@@ -4968,7 +4968,7 @@
         <output-file role="principal" compare="XML">ftstopword-results-q5.xml</output-file>    
         <expected-error>FTST0006</expected-error>            
       </test-case>      
-      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="ft-5.2.11-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports more users of. This query calls the union of a stop word list and string literals.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q6" date="2009-03-28"/>
@@ -4977,7 +4977,7 @@
         <output-file role="principal" compare="XML">ftstopword-results-q6.xml</output-file>   
         <expected-error>FTST0006</expected-error>             
       </test-case>        
-       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+       <test-case is-XPath2="true" name="ft-5.2.11-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all usability in the web site is so well. This query calls the union of 4 stop word lists.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q7" date="2009-03-28"/>
@@ -4988,7 +4988,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="XML">ftstopword-results-q7.xml</output-file>        
       </test-case>  
-        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find supports more users of. This query calls a stop word list excepting a second stop list.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q8" date="2009-03-28"/>
@@ -4997,7 +4997,7 @@
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q8.txt</output-file>        
        </test-case>         
-        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="parse-error" Creator="Full-Text Task Force">
+        <test-case is-XPath2="true" name="ft-5.2.11-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
         <description>Does not find all usability in the web site is so well. This query calls the union of 3 stop word lists and the exclusion of a fourth.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q9" date="2009-03-28"/>
@@ -5021,7 +5021,7 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">ftlanguageunconstrained-results-q1.xml</output-file>
       </test-case>
-      <test-case is-XPath2="false" name="ft-5.2.12-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="parse-error" Creator="Full-Text Task Force">
+      <test-case is-XPath2="false" name="ft-5.2.12-expressions-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="runtime-error" Creator="Full-Text Task Force">
         <description>Language option is not supported.</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.12" section-title="Language Option" section-pointer="ftlanguageoption"/>
         <query name="ftlanguageunconstrained-q2" date="2008-11-22"/>
