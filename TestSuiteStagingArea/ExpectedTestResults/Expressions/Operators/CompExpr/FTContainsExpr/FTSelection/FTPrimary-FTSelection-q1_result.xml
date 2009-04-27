@@ -1,15 +1,13 @@
-<paragraphs>
-<p>Full-text match options modify the matching behaviour of 
+<paragraphs><p>Full-text match options modify the matching behaviour of 
 the <termref def="dt-ftprimary">primary full-text selection</termref> to which 
-they are applied. </p> 
-<p>
+they are applied. </p><p>
 Match options are propagated through the query via the static context.
 For each of the seven match option groups,
 the static context has a component
 that contains one option from that group.
 The seven settings are initialized by the implementation
 in accordance with the table in 
-Appendix <specref ref="id-xqft-static-context-components"></specref>,
+Appendix <specref ref="id-xqft-static-context-components"/>,
 and are modified
 by any <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTOptionDecl" xlink:type="simple">FTOptionDecl</nt>s
 in the <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-Prolog" xlink:type="simple">Prolog</nt>.
@@ -32,8 +30,7 @@ for tokenizing the query strings
 and matching them against the tokens in the text.
 (These inner settings could be seen
 as a parallel set of components in the static context,
-but Section <specref ref="tq-semantics"></specref> models them
+but Section <specref ref="tq-semantics"/> models them
 as structures that get passed as parameters
 to various semantic functions.)
-</p>
-</paragraphs>
+</p></paragraphs>

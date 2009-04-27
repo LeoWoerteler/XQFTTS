@@ -3,7 +3,8 @@ FTWordsValue</nt> part and an optional <nt xmlns:xlink="http://www.w3.org/1999/x
 FTAnyallOption</nt> part. <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTWordsValue" xlink:type="simple">FTWordsValue</nt> specifies the tokens and phrases
 that must be contained in the matches. <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTAnyallOption" xlink:type="simple">FTAnyallOption</nt> specifies how 
 containment is checked. </p><p>The following rules specify how an <nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTWordsValue" xlink:type="simple">FTWordsValue</nt>
-matches tokens and phrases. First, the<nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTWordsValue" xlink:type="simple">FTWordsValue</nt> is converted to a sequence of
+matches tokens and phrases. First, the 
+<nt xmlns:xlink="http://www.w3.org/1999/xlink" def="doc-xquery-FTWordsValue" xlink:type="simple">FTWordsValue</nt> is converted to a sequence of
 strings as though it were an argument to a function with the expected
 type of <code>xs:string*</code>. Then, each of those strings is tokenized into a
 sequence of tokens as 

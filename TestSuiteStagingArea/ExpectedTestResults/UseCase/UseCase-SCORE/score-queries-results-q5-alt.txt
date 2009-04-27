@@ -153,8 +153,7 @@
          </component>
       </part>
    </content>
-</book>
-<book number="1">
+</book><book number="1">
    <metadata>
       <title shortTitle="Improving Web Site Usability">Improving 
       the Usability of a Web Site Through Expert Reviews and 
@@ -276,8 +275,7 @@
          </chapter>
       </part> 
    </content>
-</book>
-<book number="2">
+</book><book number="2">
    <metadata>
       <title shortTitle="Usability Basics">Usability 
       Basics: How to Plan for and Conduct Usability Tests 

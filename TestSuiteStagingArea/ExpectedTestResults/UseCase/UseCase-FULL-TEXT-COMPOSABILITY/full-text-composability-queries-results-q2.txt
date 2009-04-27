@@ -1,7 +1,6 @@
 <title shortTitle="Improving Web Site Usability">Improving 
       the Usability of a Web Site Through Expert Reviews and 
-      Usability Testing</title>
-<content>
+      Usability Testing</title><content>
       <introduction>
          <author>Elina Rose</author>
          <p>The usability of a Web site is how well the 
@@ -86,4 +85,4 @@
             users.</p>
          </chapter>
       </part> 
-</content>
+   </content>

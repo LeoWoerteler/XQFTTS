@@ -5,13 +5,3 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[para ftcontains ftnot "ninja"]/title
-
-
-
-
-
-
-
-
-
-

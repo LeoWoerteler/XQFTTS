@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-//book[.//author ftcontains "Millicent" ftor "Voltaire"]
+$input-context//book[.//author ftcontains "Millicent" ftor "Voltaire"]
