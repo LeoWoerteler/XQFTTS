@@ -3,4 +3,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[para ftcontains 
-("usability" ftand "studies" window 2 words) ftand "swift" distance exactly 2 words]/title
+ ("swift" ftand "persuasion") ftand ("ninja" ftand "software") ordered
+]/title
