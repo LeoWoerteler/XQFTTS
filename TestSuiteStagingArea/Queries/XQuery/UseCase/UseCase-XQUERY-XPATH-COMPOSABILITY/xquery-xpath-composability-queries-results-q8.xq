@@ -3,7 +3,7 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-for $book in $input-context/books/book
+for $books in $input-context/books/book
 let $bookSubject := 
    $books/metadata[./title/@shortTitle 
    ftcontains "Usability Basics"]/subjects/subject
