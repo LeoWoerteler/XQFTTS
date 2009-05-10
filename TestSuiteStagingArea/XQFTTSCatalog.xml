@@ -912,6 +912,7 @@
           <query name="ft-3.4.1-examples-q1" date="2008-08-21"/>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.1-examples-results-q1.txt</output-file>
+          <expected-error>FTST0009</expected-error>          
           <expected-error>FTST0013</expected-error>
         </test-case>
       </test-group>
