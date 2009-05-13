@@ -9,6 +9,6 @@ let $booktext := $book/content ftcontains ("conduct"
    10 words) with stemming 
 let score $s := $booktext ftcontains 
    ("measuring" ftand "success" distance
-   at most 4 words weight 0.8) with stemming 
+   at most 4 words) weight 0.8 with stemming 
 order by $s
 return ($book/metadata/title, $booktext)
