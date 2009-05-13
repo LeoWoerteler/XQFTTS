@@ -170,6 +170,9 @@
     <source ID="FT-37-Example" FileName="TestSources/FT-37-Example.xml" Creator="Mary Holstege">
       <description last-mod="2008-12-21">Contains sample from section 3.7.</description>
     </source>
+     <source ID="ftemptynode" FileName="TestSources/ftemptynode.xml" Creator="Full-Text Task Force">
+      <description last-mod="2009-05-13">Example to support queries matching empty nodes.</description>
+    </source>   
     <!-- Sources from XQuery main testsuite; add if needed
     <source ID="bib2" FileName="TestSources/bib2.xml" Creator="spec-authors">
       <description last-mod="2003-03-25">Bibliography example with extra comments and PIs.</description>
@@ -2959,6 +2962,56 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q14.xml</output-file>
                   </test-case>
+                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q15" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>Bad syntax in wildcard range query -- 1 number not 2.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q15" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <expected-error>FTST0020</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="false" name="ft-3.4.2-expressions-q16" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>Bad syntax in wildcard range query -- hyphen instead of comma.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q16" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <expected-error>FTST0020</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="false" name="ft-3.4.2-expressions-q17" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="parse-error" Creator="Full-Text Task Force">
+                    <description>Bad syntax in wildcard range query -- letters instead of numbers.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q17" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <expected-error>FTST0020</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="false" name="ft-3.4.2-expressions-q18" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Wildcard query where the question mark does not immediately follow the indicator (.), so it is a searchable character not a qualifer.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q18" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <output-file role="principal" compare="Fragment">ftwildcard-results-q18.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.2-expressions-q19" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>FTWildcard and FTTimes query that returns true if the node is empty or contains no tokens -- contains tokens.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q19" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftemptynode</input-file>
+                    <output-file role="principal" compare="Text">ftwildcard-results-q19.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.2-expressions-q20" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>FTWildcard and FTTimes query that returns true if the node is empty or contains no tokens -- empty.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q20" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftemptynode</input-file>
+                    <output-file role="principal" compare="Text">ftwildcard-results-q20.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.2-expressions-q21" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>FTWildcard and FTTimes query that returns true if the node is empty or contains no tokens -- node with content that usually is not tokenized.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
+                    <query name="ftwildcard-q21" date="2009-05-13"/>
+                    <input-file role="principal-data" variable="input-context">ftemptynode</input-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q21.txt</output-file>
+                    <output-file role="principal" compare="Inspect">ftwildcard-results-q21b.txt</output-file>                   
+                  </test-case>                 
                 </test-group>
                 <test-group name="FTThesaurus">
                   <GroupInfo>
