@@ -4537,7 +4537,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.4" section-title="FTOrder Operator" section-pointer="id-ftorder-option"/>
         <query name="FTOrder-andor1" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="Fragment">FTOrder-andor1.txt</output-file>
+        <output-file role="principal" compare="XML">FTOrder-andor1.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="FTScopeUnconstrained">
