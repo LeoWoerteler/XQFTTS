@@ -2967,21 +2967,21 @@
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q15" date="2009-05-13"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>FTST0020</expected-error>
+                    <expected-error>FTDY0020</expected-error>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q16" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Bad syntax in wildcard range query -- hyphen instead of comma.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q16" date="2009-05-13"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>FTST0020</expected-error>
+                    <expected-error>FTDY0020</expected-error>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q17" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Bad syntax in wildcard range query -- letters instead of numbers.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q17" date="2009-05-13"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>FTST0020</expected-error>
+                    <expected-error>FTDY0020</expected-error>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q18" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Wildcard query where the question mark does not immediately follow the indicator (.), so it is a searchable character not a qualifer.</description>
