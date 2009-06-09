@@ -2748,7 +2748,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.5.3" section-title="Mild-Not Selection" section-pointer="sec-ftmildnot"/>
                     <query name="FTMildNot-not1" date="2008-12-03"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTMildNot-not1.xml</output-file>
+                    <output-file role="principal" compare="Fragment">FTMildNot-not1.txt</output-file>
                     <expected-error>FTST0001</expected-error>
                     <!-- unsupported -->
                   </test-case>
@@ -3933,7 +3933,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.5" section-title="Anchoring Selection" section-pointer="ftcontent"/>
                     <query name="FTContent-q2" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTContent-q2.xml</output-file>
+                    <output-file role="principal" compare="Fragment">FTContent-q2.txt</output-file>
                     <expected-error>FTST0012</expected-error>
                     <!-- unsupported feature -->
                     <expected-error>FTST0002</expected-error>
@@ -4317,7 +4317,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.1" section-title="FTMildNotOperator" section-pointer="id-ftmildnot-option"/>
         <query name="FTMildNot-not1" date="2008-12-03"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="XML">FTMildNot-not1.xml</output-file>
+        <output-file role="principal" compare="Fragment">FTMildNot-not1.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="FTUnaryNotUnconstrained">
@@ -4885,7 +4885,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.9" section-title="FTContent Operator" section-pointer="id-ftcontent-option"/>
         <query name="FTContent-q2" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="XML">FTContent-q2.xml</output-file>
+        <output-file role="principal" compare="Fragment">FTContent-q2.txt</output-file>
         <expected-error>FTST0002</expected-error>
         <!-- ftnot restriction 1 -->
       </test-case>

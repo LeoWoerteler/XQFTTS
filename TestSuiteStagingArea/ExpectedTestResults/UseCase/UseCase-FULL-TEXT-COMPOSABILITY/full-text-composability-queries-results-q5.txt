@@ -1,10 +1,6 @@
-<book number="1">
-      <title shortTitle="Improving Web Site Usability">Improving 
+<book number="1"><title shortTitle="Improving Web Site Usability">Improving 
       the Usability of a Web Site Through Expert Reviews and 
-      Usability Testing</title>
-      <author>Millicent Marigold</author>
-      <author>Montana Marigold</author>
-      <introduction>
+      Usability Testing</title><author>Millicent Marigold</author><author>Montana Marigold</author><introduction>
          <author>Elina Rose</author>
          <p>The usability of a Web site is how well the 
          site supports the user in achieving specified 
@@ -25,22 +21,20 @@
          again."</p>
          <p>This book has been approved by the Web Site 
          Users Association.</p>
-      </introduction>
-      <introduction>
-         <p>Expert reviewers identify problems 
-         and recommend changes to web sites based 
-         on research in human computer interaction 
-         and their experience in the field.</p> 
-         <p>Two expert review methods are discussed 
-         here. They are heuristic evaluation and 
-         cognitive walk-through.</p> 
-         <p>Expert review methods should be 
-         initiated early in the development process, 
-         as soon as paper <b>p</b>rototypes 
-         (hand-drawn pictures of Web pages) or 
-         <b>w</b>ireframes (electronic mockups) are 
-         available. They should be conducted using 
-         the hardware and software similar to that 
-         employed by users.</p>
-      </introduction>
-</book>
+      </introduction><introduction>
+            <p>Expert reviewers identify problems 
+            and recommend changes to web sites based 
+            on research in human computer interaction 
+            and their experience in the field.</p> 
+            <p>Two expert review methods are discussed 
+            here. They are heuristic evaluation and 
+            cognitive walk-through.</p> 
+            <p>Expert review methods should be 
+            initiated early in the development process, 
+            as soon as paper <b>p</b>rototypes 
+            (hand-drawn pictures of Web pages) or 
+            <b>w</b>ireframes (electronic mockups) are 
+            available. They should be conducted using 
+            the hardware and software similar to that 
+            employed by users.</p>
+         </introduction></book>
