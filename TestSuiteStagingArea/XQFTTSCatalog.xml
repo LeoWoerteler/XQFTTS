@@ -6224,6 +6224,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
+        <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q3b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "iterating" multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
@@ -6232,6 +6233,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
+       <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q4" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Window Query with Wildcards and Stemming Ignoring Content of a Descendant Element: Find advice on whether an observer in a "usability test" should "correct" or provide "guidance" to the user in a book not authored by Montana Marigold. This query uses synonyms supplied by the user, uses the unary not, nests a Boolean query and a phrase query within a window query, and ignores the tags and content of a descendant element.</description>
