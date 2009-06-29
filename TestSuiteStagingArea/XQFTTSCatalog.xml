@@ -3293,7 +3293,7 @@
         <aux-URI role="stopwords">stopwords4</aux-URI>
         <aux-URI role="stopwords">stopwords5</aux-URI>  
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
-        <output-file role="principal" compare="Fragment">ftstopword-results-q9.txt</output-file>        
+        <output-file role="principal" compare="XML">ftstopword-results-q9.xml</output-file>        
         <expected-error>FTST0006</expected-error>
       </test-case>        
                 </test-group>
