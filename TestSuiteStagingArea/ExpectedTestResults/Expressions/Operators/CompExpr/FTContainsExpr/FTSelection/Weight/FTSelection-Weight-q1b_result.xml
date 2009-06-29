@@ -1,5 +1,4 @@
-<paragraphs>
-<p>Support for everything specified in this document except those
+<paragraphs><p>Support for everything specified in this document except those
           operators and match options specified in 
           <specref ref="id-conform-optional-features"></specref> to be optional.
           If an implementation does not provide a given optional operator or
@@ -7,5 +6,4 @@
           implement any requirements specified in 
           <specref ref="id-conform-optional-features"></specref>
           for implementations that do not provide that operator or match
-          option.</p> 
-</paragraphs>
+          option.</p></paragraphs>
