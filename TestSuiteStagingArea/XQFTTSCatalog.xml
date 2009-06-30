@@ -4204,6 +4204,8 @@
                 </query>
                 <input-file role="principal-data" variable="input-context">ftspec</input-file>
                 <expected-error>*</expected-error>
+                <output-file role="principal" compare="Text">FTExtension-Opt-q4.txt</output-file>
+      </test-case>
               </test-case>
 
               <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
