@@ -45,7 +45,7 @@
 <xsl:stylesheet
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    version="1.0"
-   xmlns:xqts="http://www.w3.org/2005/02/query-test-update"
+   xmlns:xqts="http://www.w3.org/2005/02/query-test-full-text"
    xmlns:xqtsr="http://www.w3.org/2005/02/query-test-XQTSResult">
    
    <xsl:output

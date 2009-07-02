@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
-<test-suite xmlns="http://www.w3.org/2005/02/query-test-update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CatalogDesignDate="2008-02-18" version="0.8.0 dev" SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
+<test-suite xmlns="http://www.w3.org/2005/02/query-test-full-text" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CatalogDesignDate="2008-02-18" version="0.8.0 dev" SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/" XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
-            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-update http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
+            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-full-text http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info>
     <title>XQuery and XPath Full Text 1.0 Test Suite 0.8.0 (Development Version)</title>
@@ -3470,7 +3470,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.2" section-title="Window Selection" section-pointer="ftwindow"/>
                     <query name="FTWindow-complexwords1" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTWindow-complexwords1.txt</output-file>
+                    <output-file role="principal" compare="XML">FTWindow-complexwords1.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="FTWindow-complexwords2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftwindow complex</description>
@@ -4205,7 +4205,6 @@
                 <input-file role="principal-data" variable="input-context">ftspec</input-file>
                 <expected-error>*</expected-error>
                 <output-file role="principal" compare="Text">FTExtension-Opt-q4.txt</output-file>
-      </test-case>
               </test-case>
 
               <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">

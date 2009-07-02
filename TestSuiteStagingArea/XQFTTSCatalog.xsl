@@ -1,5 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:test="http://www.w3.org/2005/02/query-test-update">
+                xmlns:test="http://www.w3.org/2005/02/query-test-full-text">
    <xsl:key name="citation-spec" match="/test-suite/citations/citation-spec" use="@name"/>
 
       <xsl:variable name="TargetLanguage" select="/test:test-suite/@targetLanguage" />
