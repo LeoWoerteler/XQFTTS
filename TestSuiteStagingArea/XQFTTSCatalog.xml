@@ -5,14 +5,14 @@
             xsi:schemaLocation="http://www.w3.org/2005/02/query-test-full-text http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info>
-    <title>XQuery and XPath Full Text 1.0 Test Suite 0.8.0 (Development Version)</title>
+    <title>XQuery and XPath Full Text 1.0 Test Suite 1.0.0 (First Public Version)</title>
     <description>Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
   </test-suite-info>
 
   <citations>
     <citation-spec name="XQueryFullText">
-      <description last-mod="2007-10-11">XQuery and XPath Full Text 1.0</description>
+      <description last-mod="2009-07-09">XQuery and XPath Full Text 1.0</description>
       <spec-URI>http://www.w3.org/TR/xpath-full-text-10/</spec-URI>
     </citation-spec>
     <citation-spec name="XQuery">
