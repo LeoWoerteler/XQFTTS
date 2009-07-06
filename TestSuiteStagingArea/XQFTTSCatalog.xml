@@ -2491,7 +2491,7 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <output-file role="principal" compare="XML">FTOr-expr2.xml</output-file>
                   </test-case> 
-                  <test-case is-XPath2="true" name="FTOr-expr3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="FTOr-expr3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="standard" Creator="Full-Text Task Force">
                     <description>FTOr with empty sequence</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-expr3" date="2008-11-25"/>
