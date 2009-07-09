@@ -1,19 +1,19 @@
-<project name="Build the XQFTTS zip file" default="all">
+<project name="Copy the XQFTTS HTML guides, catalog information, and the like to the public staging area" default="all">
    
    <property name="catalogDir" value="../../TestSuiteStagingArea"/>
    <property name="docDir" value="../../TestSuiteStagingArea/TestSuiteDocumentation"/>
    <property name="stagingArea" value="../../PublicPagesStagingArea"/>
+   <property name="publicationArea" value="../../"/>
    
    
    <target name="all">
       <antcall target="submission"/>
       <antcall target="copyGuides"/>
    </target>
-   
-   
-   
+
+
    <target name="copyGuides">
-      
+
       <copy todir="${stagingArea}">
          <fileset dir="${docDir}"/>
       </copy>
@@ -28,12 +28,13 @@
 
       <copy todir="${stagingArea}" file="${catalogDir}/XQFTTSCatalog.xsl" />
 
-      
+      <copy todir="${stagingArea}" file="${catalogDir}/XQFTTSCatalog.html" />
+
    </target>
-   
-   
+
+
    <target name="submission">
-      
+
       <style
          in="${catalogDir}/XQFTTSCatalog.xml"
          basedir="."
@@ -43,8 +44,7 @@
          <outputproperty name="indent" value="yes" />
          <outputproperty name="method" value="xml" />
       </style>     
-      
-      
+
    </target>
-   
+
 </project>

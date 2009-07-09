@@ -1,4 +1,4 @@
-<project name="XQuery Full Text Test Catalog" default="all">
+<project name="Create the XQuery Full Text Test Catalog description HTML document" default="all">
    
    <description>
    Build HTML version of the catalog

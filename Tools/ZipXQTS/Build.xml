@@ -2,29 +2,26 @@
 <!-- I've set the ANT_OPTS environment variable to -Xmx256M               -->
 
 <project name="Build the XQFTTS zip file" default="build">
-   
+
    <property name="version" value="development"/>
    <property name="zipfile" value="../../PublicPagesStagingArea/XQFTTS_${version}.zip"/>
    <property name="stagingArea" value="../../TestSuiteStagingArea"/>
    <property name="catalog" value="${stagingArea}/XQFTTSCatalog.xml"/>
    <property name="XQueryXzipfile" value="../../AdditionalFiles/XQueryX.zip"/>
-   
-   
+
+
    <target name="build">
-      
+
       <!-- Remove the old XQTS zip file, if it exists. -->
-      
       <delete file="${zipfile}"/>
-      
+
       <!-- Create an initial XQTS zip file with the contents of our staging area. -->
-      
       <zip
          destfile="${zipfile}">
          <fileset dir="${stagingArea}" includes="**"/>
       </zip>
-      
+
       <!-- Update the XQTS zip file with the XQueryX test cases -->
-      
 <!--
       <zip
          destfile="${zipfile}"
@@ -42,20 +39,20 @@
       </antcall>
 -->
    </target>
-   
+
    <target name="catalog">
+
       <antcall target="mergeZipFile">
          <param name="zipFileName" value="submission-frans.zip"/>
       </antcall>
-      
+
    </target>
 
 
-   
    <target name="mergeZipFile">
-      
+
       <property name="additionalZip" value="../../AdditionalFiles/${zipFileName}"/>
-      
+
       <!-- get the catalog file -->
 <!--
       <unzip src="${additionalZip}" dest="temp/source" >
@@ -69,7 +66,7 @@
             <include name="XQFTTSCatalog.xml"/>
          </patternset>
       </unzip>
-      
+
       <style in="temp/catalog/XQFTTSCatalog.xml"
          out="temp/result/XQFTTSCatalog.xml"
          basedir="."
@@ -84,9 +81,9 @@
          <zipfileset src="${additionalZip}" includes="ExpectedTestResults/**/*.*"/>
          <fileset file="temp/result/XQFTTSCatalog.xml"/>
       </zip>
-      
+
       <delete dir="temp"/>
 
    </target>
-   
+
 </project>
