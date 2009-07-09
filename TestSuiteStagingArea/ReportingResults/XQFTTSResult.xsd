@@ -2,7 +2,8 @@
 <xsd:schema
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:xqts="http://www.w3.org/2005/02/query-test-full-text"
-   xmlns:xqtsr="http://www.w3.org/2005/02/query-test-XQTSResult">
+   xmlns:xqtsr="http://www.w3.org/2005/02/query-test-XQTSResult"
+   targetNamespace="http://www.w3.org/2005/02/query-test-XQTSResult">
 
    <xsd:element
       name="p"

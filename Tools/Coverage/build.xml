@@ -14,7 +14,7 @@
       name="destination"
       value=""
       />
-   
+
    <property
       name="sourceDocs"
       value="http://www.w3.org/TR/"
@@ -37,7 +37,6 @@
       <delete dir="temp" /> 
    </target>
    
-
 
    <target name='getDocuments'>
       <get src="${sourceDocs}xpath-full-text-10/" dest="temp/fulltext.html"/>
