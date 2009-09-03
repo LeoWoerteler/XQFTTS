@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>XPath/XQuery/XQueryX Full Text Interoperability Test Suite</h1>
-<h6>[Version: 0.8.0 dev Catalog Design Date: 2008-02-18]</h6>
+<h6>[Version: 1.0.0 Catalog Design Date: 2008-02-18]</h6>
 <h2>Introduction</h2>
 <P>
                The following document is an XSLT transform of the XQuery and XPath Full Text 1.0 test catalog. The test 
@@ -381,6 +381,9 @@
 <A href="#UseCase-SCORE">3.16Use Case "SCORE"</A>
 </li>
 </ul>
+</li>
+<li>
+<A href="#Catalog">4Consistency in XQFTTS Catalog</A>
 </li>
 </ul>
 <A name="MinimalConformance"></A>
@@ -12401,7 +12404,7 @@
 <tr>
 <td><b>FTOr-expr3</b></td><td>
                Scenario:
-               <A href="#runtime-error">runtime-error</A></td><td>
+               <A href="#standard">standard</A></td><td>
                Creator:
                Full-Text Task Force</td>
 </tr>
@@ -15635,7 +15638,7 @@
 <tr>
 <td><b>ft-3.4.2-expressions-q15</b></td><td>
                Scenario:
-               <A href="#parse-error">parse-error</A></td><td>
+               <A href="#runtime-error">runtime-error</A></td><td>
                Creator:
                Full-Text Task Force</td>
 </tr>
@@ -15686,7 +15689,7 @@
 <tr>
 <td><b>ft-3.4.2-expressions-q16</b></td><td>
                Scenario:
-               <A href="#parse-error">parse-error</A></td><td>
+               <A href="#runtime-error">runtime-error</A></td><td>
                Creator:
                Full-Text Task Force</td>
 </tr>
@@ -15737,7 +15740,7 @@
 <tr>
 <td><b>ft-3.4.2-expressions-q17</b></td><td>
                Scenario:
-               <A href="#parse-error">parse-error</A></td><td>
+               <A href="#runtime-error">runtime-error</A></td><td>
                Creator:
                Full-Text Task Force</td>
 </tr>
@@ -29799,8 +29802,8 @@
                   Role:
                   <A href="#principal">principal</A></td><td>
                   Comparator:
-                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q9.txt">
-                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q9.txt</A></td>
+                  <A href="#Fragment">Fragment</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q9.xml">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q9.xml</A></td>
 </tr>
 </table>
 <p></p>
@@ -39097,6 +39100,176 @@ title and a third element if the second element does not exist. This query finds
                   Comparator:
                   <A href="#Inspect">Inspect</A></td><td><A href="ExpectedTestResults/UseCase/UseCase-SCORE/score-queries-results-q6-alt.txt">
                      Results/UseCase/UseCase-SCORE/score-queries-results-q6-alt.txt</A></td>
+</tr>
+</table>
+<p></p>
+<A name="Catalog"></A>
+<h3>4Consistency in XQFTTS Catalog</h3>
+<p></p>
+<p></p>
+<ul></ul>
+<table bgcolor="tan" width="80%">
+<a name="Catalog001"></a>
+<tr>
+<td><b>Catalog001</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Andreas Behm, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Check variable name is used, if source is not "emptydoc"</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#title">#title</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Catalog/Catalog001.xq">Queries/XQuery/Catalog/Catalog001.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#XQFTTSCatalog">XQFTTSCatalog</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Catalog/Catalog001.xml">
+                     Results/Catalog/Catalog001.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="Catalog002"></a>
+<tr>
+<td><b>Catalog002</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Andreas Behm, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">test all standard test cases have at least one output file</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#title">#title</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Catalog/Catalog002.xq">Queries/XQuery/Catalog/Catalog002.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#XQFTTSCatalog">XQFTTSCatalog</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Catalog/Catalog002.xml">
+                     Results/Catalog/Catalog002.xml</A></td>
+</tr>
+</table>
+<p></p>
+<table bgcolor="tan" width="80%">
+<a name="Catalog003"></a>
+<tr>
+<td><b>Catalog003</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Andreas Behm, Jim</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">test all error test cases have at least one expected error</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#title">#title</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Catalog/Catalog003.xq">Queries/XQuery/Catalog/Catalog003.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#XQFTTSCatalog">XQFTTSCatalog</A></td><td></td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#XML">XML</A></td><td><A href="ExpectedTestResults/Catalog/Catalog003.xml">
+                     Results/Catalog/Catalog003.xml</A></td>
 </tr>
 </table>
 <p></p>
