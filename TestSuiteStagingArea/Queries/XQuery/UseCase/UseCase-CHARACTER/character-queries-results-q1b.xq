@@ -1,7 +1,7 @@
 (: insert-start :)
 declare variable $input-context external;
-(: nsert-end :)
+(: insert-end :)
 
 
 $input-context/books/book[content ftcontains "résumé.?" 
-with wildcards diacritics sensitive]
+using wildcards using diacritics sensitive]

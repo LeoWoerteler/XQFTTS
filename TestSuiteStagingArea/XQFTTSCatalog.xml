@@ -626,7 +626,7 @@
       <description last-mod="2008-02-18">It is implementation-defined what a stem of a token is. It is implementation-defined whether the stemming is based on an algorithm, dictionary, or mixed approach.</description>
     </implementation-defined-item>
     <implementation-defined-item name="StopWord Option" spec="XQueryFullText">
-      <description last-mod="2008-02-18">Normally a stop word matches exactly one token, but there may be implementation-defined conditions, under which a stop word may match a different number of tokens.  The "with default stop words" option specifies that an implementation-defined collection of stop words is used.</description>
+      <description last-mod="2008-02-18">Normally a stop word matches exactly one token, but there may be implementation-defined conditions, under which a stop word may match a different number of tokens.  The "using default stop words" option specifies that an implementation-defined collection of stop words is used.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Extension Option" spec="XQueryFullText">
       <description last-mod="2008-02-18">An extension option is a match option that acts in an implementation-defined way. Each implementation recognizes an implementation-defined set of namespace URIs used to denote extension options.</description>
@@ -2804,7 +2804,7 @@
                     <output-file role="principal" compare="XML">ftmatchoptions-results-q2.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="ftmatchoptions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="runtime-error" Creator="Full-Text Task Force">
-                    <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both with stemming and without stemming to test and returns an error.</description>
+                    <description>Only one match option from any given match option group may be applied to an FTWord or FTSelection. This query applies both stemming and no stemming to test and returns an error.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q3" date="2008-11-28"/>
                     <aux-URI role="stemming-dictionary">english</aux-URI>
@@ -2878,21 +2878,21 @@
                     <output-file role="principal" compare="Inspect">ftwildcard-results-q2b.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="ft-3.4.2-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query containing a period. The period is an indicator. Find site. where the indicator is replaced by any one character.</description>
+                    <description>Using wildcard (suffix) query containing a period. The period is an indicator. Find site. where the indicator is replaced by any one character.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q3" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q3.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="ft-3.4.2-expressions-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard query containing a question mark not preceded by a period. There is no period, no indicator. Find site? where the question mark is a question mark.</description>
+                    <description>Using wildcard query containing a question mark not preceded by a period. There is no period, no indicator. Find site? where the question mark is a question mark.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q4" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q4.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="ft-3.4.2-expressions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>Without wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Depending on the tokenization find "site" or "site.?" where the period is a period and the question mark is a question mark.</description>
+                    <description>Using no wildcard query containing a period and a question mark. The period is a period. The question mark is a question mark. Depending on the tokenization find "site" or "site.?" where the period is a period and the question mark is a question mark.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q5" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -2900,63 +2900,63 @@
                     <output-file role="principal" compare="Inspect">ftwildcard-results-q5b.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find site.? where the period and the question mark are replaced by zero or one characters.</description>
+                    <description>Using wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find site.? where the period and the question mark are replaced by zero or one characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q6" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q6.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find completi.? where the period and the question mark are replaced by zero or one characters.</description>
+                    <description>Using wildcard (suffix) query containing a period and a question mark. The period is an indicator. The question mark is a qualifier. Find completi.? where the period and the question mark are replaced by zero or one characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q7" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q7.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query containing a period and an asterisk. The period is an indicator. The asterisk is a qualifier. Find completi.* where the period and the asterisk are replaced by zero or more characters.</description>
+                    <description>Using wildcard (suffix) query containing a period and an asterisk. The period is an indicator. The asterisk is a qualifier. Find completi.* where the period and the asterisk are replaced by zero or more characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q8" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q8.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query containing a period and a plus sign. The period is an indicator. The plus sign is a qualifier. Find completi.+ where the period and the plus sign are replaced by one or more characters.</description>
+                    <description>Using wildcard (suffix) query containing a period and a plus sign. The period is an indicator. The plus sign is a qualifier. Find completi.+ where the period and the plus sign are replaced by one or more characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q9" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q9.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (infix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that begins with u, ends with e, and has 3-4 characters between the u and the e.</description>
+                    <description>Using wildcard (infix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that begins with u, ends with e, and has 3-4 characters between the u and the e.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q10" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q10.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q11" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (prefix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that ends with proved, and has 0-2 beginning characters.</description>
+                    <description>Using wildcard (prefix) query containing a period and two numbers separated by a period enclosed in curly braces. The period is an indicator. The two numbers separated by a period enclosed in curly braces is a qualifier. Find a word that ends with proved, and has 0-2 beginning characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q11" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftwildcard-results-q11.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q12" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (prefix and suffix) query containing two indicators and two qualifiers. Find a word containing view with zero or more adidtional beginning characters and one or more ending characters.</description>
+                    <description>Using wildcard (prefix and suffix) query containing two indicators and two qualifiers. Find a word containing view with zero or more additional beginning characters and one or more ending characters.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q12" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q12.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q13" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query with a backslash preceding the period. Find specialist\. where the period is a period, not an indicator.</description>
+                    <description>Using wildcard (suffix) query with a backslash preceding the period. Find specialist\. where the period is a period, not an indicator.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q13" date="2008-11-28"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="XML">ftwildcard-results-q13.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="false" name="ft-3.4.2-expressions-q14" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
-                    <description>With wildcard (suffix) query with a backslash preceding the question mark. Find next.\? where the period is a indicator and the question mark is a queston mark, not a qualifier.</description>
+                    <description>Using wildcard (suffix) query with a backslash preceding the question mark. Find next.\? where the period is a indicator and the question mark is a queston mark, not a qualifier.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.2" section-title="Wildcard Option" section-pointer="ftwildcardoption"/>
                     <query name="ftwildcard-q14" date="2008-11-28"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -4203,8 +4203,8 @@
                   <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
                 </query>
                 <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                <output-file role="principal" compare="Text">FTExtension-Opt-q4.txt</output-file>
                 <expected-error>*</expected-error>
+                <output-file role="principal" compare="Text">FTExtension-Opt-q4.txt</output-file>
               </test-case>
 
               <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">
@@ -6201,8 +6201,8 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>XPTY0004</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q2" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element using Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element using Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -6210,16 +6210,16 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <expected-error>FTST0009</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q2b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q2 Phrase and Distance Query in an Instance of an Element with Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
-        <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element with Stemming" section-pointer="full-text-composability-queries-results-q2"/>
+        <description>Q2 Phrase and Distance Query in an Instance of an Element using Stemming: Find all paragraphs in books which discuss the role of "task performing" in "expert reviewer" methods. This query finds multiple words close to each other and a phrase in one instance of an element.</description>
+        <spec-citation spec="FTUseCases" section-number="15.2.2" section-title="Q2 Phrase and Distance Query in an Instance of an Element using Stemming" section-pointer="full-text-composability-queries-results-q2"/>
         <query name="full-text-composability-queries-results-q2b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q2.txt</output-file>
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q3" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "iterating" multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
-        <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
+        <description>Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "iterating" multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
+        <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <aux-URI role="thesaurus">usability</aux-URI>
@@ -6228,8 +6228,8 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
       </test-case>
       <test-case is-XPath2="true" name="full-text-composability-queries-results-q3b" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "iterating" multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
-        <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query with Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
+        <description>Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support: Find all books on "usability testing" which "quote" "Millicent Marigold" on the value of "iterating" multiple times. This query finds multiple words in three nested levels of distance queries. It uses wildcards, stemming, and thesaurus support.</description>
+        <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
@@ -6237,8 +6237,8 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
        <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
       </test-case>
       <test-case is-XPath2="false" name="full-text-composability-queries-results-q4" FilePath="UseCase/UseCase-FULL-TEXT-COMPOSABILITY/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Q4 Window Query with Wildcards and Stemming Ignoring Content of a Descendant Element: Find advice on whether an observer in a "usability test" should "correct" or provide "guidance" to the user in a book not authored by Montana Marigold. This query uses synonyms supplied by the user, uses the unary not, nests a Boolean query and a phrase query within a window query, and ignores the tags and content of a descendant element.</description>
-        <spec-citation spec="FTUseCases" section-number="15.2.4" section-title="Q4 Window Query with Wildcards and Stemming Ignoring Content of a Descendant Element" section-pointer="full-text-composability-queries-results-q4"/>
+        <description>Q4 Window Query using Wildcards and Stemming Ignoring Content of a Descendant Element: Find advice on whether an observer in a "usability test" should "correct" or provide "guidance" to the user in a book not authored by Montana Marigold. This query uses synonyms supplied by the user, uses the unary not, nests a Boolean query and a phrase query within a window query, and ignores the tags and content of a descendant element.</description>
+        <spec-citation spec="FTUseCases" section-number="15.2.4" section-title="Q4 Window Query using Wildcards and Stemming Ignoring Content of a Descendant Element" section-pointer="full-text-composability-queries-results-q4"/>
         <query name="full-text-composability-queries-results-q4" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>

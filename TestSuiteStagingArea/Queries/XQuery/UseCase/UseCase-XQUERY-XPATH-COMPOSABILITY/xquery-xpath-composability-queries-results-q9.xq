@@ -8,5 +8,5 @@ let $cont := $book/content
 where $cont ftcontains ("successfully" 
    ftand "completing" ftand "tasks"
    window (count($cont/part/chapter) * 4) 
-   words) with stemming
+   words) using stemming
 return ($book/metadata/title, $cont)

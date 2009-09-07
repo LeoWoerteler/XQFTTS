@@ -1,8 +1,8 @@
 (: Note to maintainers: This query has an intentional syntax error. Do not "fix" it. :)
-(: "case sensitive case insensitive" causes FTST0019 :)
+(: "using case sensitive using case insensitive" causes FTST0019 :)
 
 (: insert-start :)
-declare ft-option case sensitive case insensitive;
+declare ft-option using case sensitive using case insensitive;
 declare variable $input-context external;
 (: insert-end :)
 

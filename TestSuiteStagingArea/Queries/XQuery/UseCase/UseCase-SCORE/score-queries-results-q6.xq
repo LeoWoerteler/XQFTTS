@@ -6,9 +6,9 @@ declare variable $input-context external;
 for $book in $input-context/books/book
 let $booktext := $book/content ftcontains ("conduct" 
    ftand "usability" ftand "tests" distance at most 
-   10 words) with stemming 
+   10 words) using stemming 
 let score $s := $booktext ftcontains 
    (("measuring" ftand "success" distance
-   at most 4 words) weight 0.8) with stemming 
+   at most 4 words) weight 0.8) using stemming 
 order by $s
 return ($book/metadata/title, $booktext)

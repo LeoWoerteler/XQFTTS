@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 $input-context/books/book/metadata/title[. ftcontains 
 "improv.* the usability of a web site through expert 
-reviews and usability testing" with wildcards entire 
+reviews and usability testing" using wildcards entire 
 content]

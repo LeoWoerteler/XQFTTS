@@ -10,5 +10,5 @@ declare variable $input-context external;
 
 $input-context//para[. ftcontains
          ("Kinder" ftand "Platz" distance exactly 1 words)
-         with stemming
-         option exq:compounds "distance=1" ]
+         using stemming
+         using option exq:compounds "distance=1" ]

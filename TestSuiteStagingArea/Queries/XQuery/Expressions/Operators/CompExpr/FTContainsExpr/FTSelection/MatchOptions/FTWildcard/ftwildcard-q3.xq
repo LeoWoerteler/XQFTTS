@@ -3,5 +3,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[
-    .//content ftcontains "site." with wildcards
+    .//content ftcontains "site." using wildcards
 ]

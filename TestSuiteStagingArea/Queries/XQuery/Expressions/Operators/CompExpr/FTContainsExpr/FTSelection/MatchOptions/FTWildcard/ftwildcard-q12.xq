@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $cont := $book//content
-where $meta ftcontains ".*view.+" with wildcards
+where $cont ftcontains ".*view.+" using wildcards
 return $book

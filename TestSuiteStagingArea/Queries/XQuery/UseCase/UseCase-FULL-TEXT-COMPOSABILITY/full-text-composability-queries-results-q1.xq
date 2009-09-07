@@ -4,7 +4,7 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-where $book//subject[. ftcontains "网站可用性" language "zh"]
+where $book//subject[. ftcontains "网站可用性" using language "zh"]
    and $book/content/introduction/author[. ftcontains 
    "Elina" ftand "Rose" distance at most 3 words]
    and $book/content[. ftcontains "Millicent" ftand "Marigold" 

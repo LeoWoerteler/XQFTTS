@@ -5,5 +5,5 @@ declare variable $input-context external;
 
 $input-context/books/book[.//chapter ftcontains "at any computer 
 workstation or in a lab" without content 
-.//footnote[. ftcontains "workstation." with wildcards]]
+.//footnote[. ftcontains "workstation." using wildcards]]
 /(metadata/title, .//chapter)

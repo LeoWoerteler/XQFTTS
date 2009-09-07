@@ -25,7 +25,7 @@ for $book in $input-context/books/book
 let $irrelevantParts := 
    for $part in $book//part
    let score $score := $part ftcontains "usability test.*" 
-      with wildcards
+      using wildcards
    where $score < 0.5
    return $part
 where count($irrelevantParts) < count($book//part)

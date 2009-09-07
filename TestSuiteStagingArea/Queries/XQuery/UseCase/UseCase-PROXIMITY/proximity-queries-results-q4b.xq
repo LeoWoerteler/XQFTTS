@@ -4,4 +4,4 @@ declare variable $input-context external;
 
 
 $input-context/books/book[content ftcontains ("users" ftand "would" 
-ftand "know" ftand "step" same sentence) with stemming]
+ftand "know" ftand "step" same sentence) using stemming]

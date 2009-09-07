@@ -4,4 +4,4 @@ declare variable $input-context external;
 
 
 $input-context/books/book[content ftcontains "test." 
-with wildcards]
+using wildcards]

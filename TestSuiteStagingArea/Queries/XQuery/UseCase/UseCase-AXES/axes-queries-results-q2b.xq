@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 
 $input-context/books/book[.//chapter/p ftcontains "usability" 
-ftand "test" with stemming]/(metadata/title, 
+ftand "test" using stemming]/(metadata/title, 
 .//chapter/p/step[1], .//chapter/p/step[2])

@@ -1,5 +1,5 @@
 (: insert-start :)
-declare ft-option case sensitive;
+declare ft-option using case sensitive;
 declare default function namespace "http://example.org/functions";
 declare variable $input-context external;
 declare variable $x := 1;

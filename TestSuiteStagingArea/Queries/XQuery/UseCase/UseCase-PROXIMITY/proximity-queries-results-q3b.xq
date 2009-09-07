@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 
 $input-context/books/book[content ftcontains ("users" ftand 
-"feeling") with stemming ftand "well served" 
+"feeling") using stemming ftand "well served" 
 ftor "well-served" ordered window 15 words]

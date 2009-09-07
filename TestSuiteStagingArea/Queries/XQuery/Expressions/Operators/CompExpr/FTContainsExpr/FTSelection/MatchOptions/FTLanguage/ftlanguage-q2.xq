@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context//book[metadata/subjects/subject ftcontains "heuristic" language "123"]
+$input-context//book[metadata/subjects/subject ftcontains "heuristic" using language "123"]

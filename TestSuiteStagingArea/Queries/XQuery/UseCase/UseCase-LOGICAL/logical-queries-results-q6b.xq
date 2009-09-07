@@ -1,10 +1,10 @@
 (: insert-start :)
 declare variable $input-context external;
-(: nsert-end :)
+(: insert-end :)
 
 
 $input-context//books/book[./content ftcontains ("résumés" 
-diacritics sensitive ftor "drafts" ftor "correspondence") 
+using diacritics sensitive ftor "drafts" ftor "correspondence") 
 ftand ftnot "book drafts"]
 
 

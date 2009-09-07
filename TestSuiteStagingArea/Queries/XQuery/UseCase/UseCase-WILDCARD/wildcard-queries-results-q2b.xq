@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 
 $input-context/books/book[content ftcontains ".?way" 
-with wildcards]
+using wildcards]
 

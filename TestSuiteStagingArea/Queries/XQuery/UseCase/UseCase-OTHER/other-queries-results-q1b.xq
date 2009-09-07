@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 
 $input-context/books/book[metadata/title/@shortTitle ftcontains 
-"improve" with stemming ftand "web" ftand "usability" 
+"improve" using stemming ftand "web" ftand "usability" 
 distance at most 2 words]/metadata/title

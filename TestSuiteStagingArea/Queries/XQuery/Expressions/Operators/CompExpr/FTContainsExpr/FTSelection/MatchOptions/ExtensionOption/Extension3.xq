@@ -7,6 +7,6 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context//metadata/title ftcontains "Usability" 
-    option ex:option1 "ignored" diacritics sensitive option ex:option2 "more to ignore"
-
-
+    using option ex:option1 "ignored"
+    using diacritics sensitive
+    using option ex:option2 "more to ignore"

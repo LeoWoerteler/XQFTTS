@@ -1,6 +1,6 @@
 (: insert-start :)
-declare ft-option case sensitive;
-declare ft-option with stemming without wildcards;
+declare ft-option using case sensitive;
+declare ft-option using stemming using no wildcards;
 declare variable $input-context external;
 (: insert-end :)
 

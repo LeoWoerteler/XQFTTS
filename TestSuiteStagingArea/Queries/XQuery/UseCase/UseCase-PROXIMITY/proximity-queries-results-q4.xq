@@ -6,5 +6,5 @@ declare variable $input-context external;
 for $book in $input-context/books/book
 let $cont := $book/content
 where $cont ftcontains ("users" ftand "would" ftand "know" 
-   ftand "step"  same sentence) with stemming
+   ftand "step"  same sentence) using stemming
 return $book

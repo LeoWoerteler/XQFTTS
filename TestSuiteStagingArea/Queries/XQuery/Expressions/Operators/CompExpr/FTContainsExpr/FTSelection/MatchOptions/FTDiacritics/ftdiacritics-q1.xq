@@ -3,5 +3,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[
-  ./content ftcontains "resumes" diacritics sensitive
+  ./content ftcontains "resumes" using diacritics sensitive
 ]

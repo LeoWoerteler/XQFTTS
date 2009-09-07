@@ -4,5 +4,6 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context//metadata/title ftcontains "Usability" option unknown:option "bad"
+$input-context//metadata/title ftcontains "Usability"
+  using option unknown:option "bad"
 
