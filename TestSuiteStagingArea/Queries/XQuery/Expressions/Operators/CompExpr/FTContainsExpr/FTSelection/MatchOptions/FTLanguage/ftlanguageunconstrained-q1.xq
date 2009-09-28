@@ -2,4 +2,6 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context//book[metadata/subjects/subject ftcontains "heuristic" using language "en" ftand "heuristique" using language "fr"]
+$input-context//book[metadata/subjects/subject ftcontains "heuristic"
+  using language "en" and metadata/subjects/subject ftcontains
+  "heuristique" using language "fr"]
