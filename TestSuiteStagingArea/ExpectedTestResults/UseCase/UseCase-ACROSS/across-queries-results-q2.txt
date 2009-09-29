@@ -1,4 +1,4 @@
-<result score="0.223"><book number="1">
+<book number="1">
    <metadata>
       <title shortTitle="Improving Web Site Usability">Improving 
       the Usability of a Web Site Through Expert Reviews and 
@@ -120,4 +120,4 @@
          </chapter>
       </part> 
    </content>
-</book></result>
+</book>
