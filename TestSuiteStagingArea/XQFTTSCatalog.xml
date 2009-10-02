@@ -4155,7 +4155,7 @@
                 <spec-citation spec="XQueryFullText" section-number="3.7" section-title="Ignore Option" section-pointer="ftignoreoption"/>
                 <query name="FTIgnore-q5" date="2008-12-21"/>
                 <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                <output-file role="principal" compare="Fragment">FTIgnore-q5.txt</output-file>
+                <output-file role="principal" compare="XML">FTIgnore-q5.xml</output-file>
                 <expected-error>FTST0007</expected-error>
                 <!-- unsupported operand -->
               </test-case>
@@ -5131,7 +5131,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.13" section-title="FTIgnoreOption" section-pointer="id-ftignore-option"/>
         <query name="FTIgnore-q5" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="Fragment">FTIgnore-q5.txt</output-file>
+        <output-file role="principal" compare="XML">FTIgnore-q5.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="ScoringUnconstrained">

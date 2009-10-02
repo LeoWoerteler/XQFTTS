@@ -1,5 +1,4 @@
 (: FTMildNot-q2: mild not :)
-(: No matches :)
 
 (: insert-start :)
 declare variable $input-context external;
