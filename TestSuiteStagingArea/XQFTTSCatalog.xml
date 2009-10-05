@@ -871,7 +871,7 @@
           <spec-citation spec="XQueryFullText" section-number="3.3" section-title="Cardinality Selection" section-pointer="fttimes"/>
           <query name="ft-3.3-examples-q1" date="2008-10-10"/>
           <contextItem role="principal-data">FT-3-examples-source-document</contextItem>
-          <output-file role="principal" compare="XML">ft-3.3-examples-q1.txt</output-file>
+          <output-file role="principal" compare="Text">ft-3.3-examples-q1.txt</output-file>
           <expected-error>FTST0005</expected-error>        
         </test-case>
         <test-case is-XPath2="true" name="ft-3.3-examples-q2" FilePath="Examples/3.3-CardinalitySelection/" scenario="standard" Creator="Jim Melton">
