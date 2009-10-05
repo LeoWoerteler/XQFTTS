@@ -445,6 +445,9 @@
     <stopwords ID="stopwords1" uri="http://bstore1.example.com/StopWordList.xml" FileName="TestSources/stopwords.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-10">Stop word list for use cases</description>
     </stopwords>
+    <stopwords ID="stopwords1def" uri="##default" FileName="TestSources/stopwords.txt" Creator="Full-Text Task Force">
+      <description last-mod="2009-10-05">Stop word list for use cases (as default stop word list)</description>
+    </stopwords>
     <stopwords ID="stopwords2" uri="http://bstore1.example.com/StopWordList2.xml" FileName="TestSources/stopwords2.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-28">A second stop word list for use cases</description>
     </stopwords>
@@ -3216,7 +3219,7 @@
         query calls a default stop word list. The default stop word list is stopword1.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q1" date="2008-11-28"/>
-        <aux-URI role="stopwords">defaultsw</aux-URI>
+        <aux-URI role="stopwords">stopwords1def</aux-URI>
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q1.xml</output-file>
         <expected-error>FTST0006</expected-error>
