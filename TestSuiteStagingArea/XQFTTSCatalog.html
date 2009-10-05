@@ -218,6 +218,9 @@
 <th>ID</th><th>URI</th><th>File Name</th>
 </tr>
 <tr>
+<td><A name="defaultsw"><b>defaultsw</b></A></td><td><A href="##default">##default</A></td><td><A href="./TestSources/defaultsw.txt">TestSources/defaultsw.txt</A></td>
+</tr>
+<tr>
 <td><A name="stopwords1"><b>stopwords1</b></A></td><td><A href="http://bstore1.example.com/StopWordList.xml">http://bstore1.example.com/StopWordList.xml</A></td><td><A href="./TestSources/stopwords.txt">TestSources/stopwords.txt</A></td>
 </tr>
 <tr>
@@ -237,6 +240,9 @@
 <table>
 <tr>
 <th>ID</th><th>Type</th><th>URI</th><th>File Name</th>
+</tr>
+<tr>
+<td><A name="defaultthes"><b>defaultthes</b></A></td><td></td><td><A href="##default">##default</A></td><td><A href="./TestSources/defaultthes.xml">TestSources/defaultthes.xml</A></td>
 </tr>
 <tr>
 <td><A name="taxonomy"><b>taxonomy</b></A></td><td></td><td><A href="http://bstore1.example.com/OurTaxonomy.xml">http://bstore1.example.com/OurTaxonomy.xml</A></td><td><A href="./TestSources/taxonomy.xml">TestSources/taxonomy.xml</A></td>
@@ -1732,6 +1738,13 @@
                   <A href="#principal-data">principal-data</A></td><td>
                   Source ID:
                   <A href="#FT-3-examples-source-document">FT-3-examples-source-document</A></td><td></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#stopwords">stopwords</A></td><td>
+                  Source ID:
+                  <A href="#defaultsw">defaultsw</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
 <td colspan="3"><B>Outputs:</B></td>
@@ -16351,6 +16364,13 @@
                   Role:
                   <A href="#thesaurus">thesaurus</A></td><td>
                   Source ID:
+                  <A href="#defaultthes">defaultthes</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#thesaurus">thesaurus</A></td><td>
+                  Source ID:
                   <A href="#usability2">usability2</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
@@ -17271,7 +17291,8 @@
 <td colspan="3"><B>Description:</B></td>
 </tr>
 <tr>
-<td colspan="3">Find propagating (allow any intervening word) errors. This query calls a default stop word list. The default stop word list is stopword1.</td>
+<td colspan="3">Find propagating (allow any intervening word) errors. This
+        query calls a default stop word list. The default stop word list is stopword1.</td>
 </tr>
 <tr>
 <td colspan="3"></td>
@@ -17305,7 +17326,7 @@
                   Role:
                   <A href="#stopwords">stopwords</A></td><td>
                   Source ID:
-                  <A href="#stopwords1">stopwords1</A></td><td>(as auxiliary URI)</td>
+                  <A href="#defaultsw">defaultsw</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
 <td colspan="3"><B>Outputs:</B></td>

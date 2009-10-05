@@ -439,7 +439,9 @@
       <description last-mod="2006-04-11">Library module with variable on different namespace than target.</description>
     </module>  
 -->
-
+    <stopwords ID="defaultsw" uri="##default" FileName="TestSources/defaultsw.txt" Creator="Full-Text Task Force">
+      <description last-mod="2009-10--5">Default stop word list</description>
+    </stopwords>
     <stopwords ID="stopwords1" uri="http://bstore1.example.com/StopWordList.xml" FileName="TestSources/stopwords.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-10">Stop word list for use cases</description>
     </stopwords>
@@ -455,6 +457,9 @@
     <stopwords ID="stopwords5" uri="http://bstore1.example.com/StopWordList5.xml" FileName="TestSources/stopwords5.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-28">A fifth stop word list for use cases</description>
     </stopwords>    
+    <thesaurus ID="defaultthes" uri="##default" FileName="TestSources/defaultthes.xml" Creator="Full-Text Task Force">
+      <description last-mod="2009-10-05">Default thesaurus</description>
+    </thesaurus>
      <thesaurus ID="taxonomy" uri="http://bstore1.example.com/OurTaxonomy.xml" FileName="TestSources/taxonomy.xml" Creator="Full-Text Task Force">
       <description last-mod="2009-04-16">Taxonomy thesaurus for examples</description>   
      </thesaurus>  
@@ -913,6 +918,7 @@
           <description>Query where the language option is used to select the appropriate stop word list.</description>
           <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
           <query name="ft-3.4.1-examples-q1" date="2008-08-21"/>
+          <aux-URI role="stopwords">defaultsw</aux-URI>
           <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
           <output-file role="principal" compare="Fragment">ft-3.4.1-examples-results-q1.txt</output-file>
           <expected-error>FTST0009</expected-error>          
@@ -3060,6 +3066,7 @@
                     <description>Query calling a default thesaurus and an addiitonal thesaurus.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
                     <query name="ftthesaurus-q6" date="2008-11-28"/>
+                    <aux-URI role="thesaurus">defaultthes</aux-URI>
                     <aux-URI role="thesaurus">usability2</aux-URI>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftthesaurus-results-q6.txt</output-file>
@@ -3205,10 +3212,11 @@
                     <description>Stop Word option. Section 3.4.7.</description>
                   </GroupInfo>
                  <test-case is-XPath2="true" name="ft-3.4.7-expressions-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Find propagating (allow any intervening word) errors. This query calls a default stop word list. The default stop word list is stopword1.</description>
+        <description>Find propagating (allow any intervening word) errors. This
+        query calls a default stop word list. The default stop word list is stopword1.</description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q1" date="2008-11-28"/>
-        <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">defaultsw</aux-URI>
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q1.xml</output-file>
         <expected-error>FTST0006</expected-error>
