@@ -3,6 +3,6 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[content ftcontains ".?way" 
+$input-context/books/book[content contains text ".?way" 
 using wildcards]
 

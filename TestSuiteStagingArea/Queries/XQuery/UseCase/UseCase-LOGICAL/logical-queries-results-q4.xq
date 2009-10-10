@@ -4,7 +4,7 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book 
-where $book ftcontains ftnot "us.* testing" using 
+where $book contains text ftnot "us.* testing" using 
    wildcards
 return $book
 

@@ -2,4 +2,4 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context/books/book[.//content ftcontains "propagating numerous errors" using stop words default]
+$input-context/books/book[.//content contains text "propagating numerous errors" using stop words default]

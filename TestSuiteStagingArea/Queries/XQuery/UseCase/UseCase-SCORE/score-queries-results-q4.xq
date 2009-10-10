@@ -24,7 +24,7 @@ declare function local:filter ( $nodes
 for $book in $input-context/books/book
 let $irrelevantParts := 
    for $part in $book//part
-   let score $score := $part ftcontains "usability test.*" 
+   let score $score := $part contains text "usability test.*" 
       using wildcards
    where $score < 0.5
    return $part

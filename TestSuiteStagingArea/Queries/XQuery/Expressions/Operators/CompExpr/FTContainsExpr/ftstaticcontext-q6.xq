@@ -7,5 +7,5 @@ declare variable $x := 1;
 
 for $book in $input-context/books/book
 let $cont := $book[@number=$x]/content
-where $cont ftcontains "Testing"
+where $cont contains text "Testing"
 return $book 

@@ -3,5 +3,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[content ftcontains "test.{3,4}"
+$input-context/books/book[content contains text "test.{3,4}"
 using wildcards]

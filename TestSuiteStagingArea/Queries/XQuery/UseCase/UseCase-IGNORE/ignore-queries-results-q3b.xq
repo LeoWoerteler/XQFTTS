@@ -3,7 +3,7 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[.//chapter ftcontains "at any computer 
+$input-context/books/book[.//chapter contains text "at any computer 
 workstation or in a lab" without content 
-.//footnote[. ftcontains "workstation." using wildcards]]
+.//footnote[. contains text "workstation." using wildcards]]
 /(metadata/title, .//chapter)

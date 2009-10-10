@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 
 for $book in $input-context/books/book
-where $book ftcontains "AIDS" using case insensitive
+where $book contains text "AIDS" using case insensitive
 return $book

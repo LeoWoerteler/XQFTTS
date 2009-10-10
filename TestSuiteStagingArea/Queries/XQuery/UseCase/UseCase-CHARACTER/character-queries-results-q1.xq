@@ -5,6 +5,6 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $cont := $book/content
-where $cont ftcontains "résumé.?" using wildcards 
+where $cont contains text "résumé.?" using wildcards 
    using diacritics sensitive
 return $book

@@ -3,7 +3,7 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[. ftcontains "sucessfull" 
+$input-context/books/book[. contains text "sucessfull" 
 using thesaurus at 
 "http://bstore1.example.com/spellcheck.xml" 
 relationship "misspelling of"]

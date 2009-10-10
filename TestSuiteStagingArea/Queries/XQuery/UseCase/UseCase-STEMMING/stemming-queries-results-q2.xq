@@ -5,6 +5,6 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $cont := $book/content 
-where $cont ftcontains ("usability" using stemming ftand "testing" 
+where $cont contains text ("usability" using stemming ftand "testing" 
    phrase) ftor ("users" using stemming ftand "testing" phrase)
 return $book

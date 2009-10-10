@@ -7,5 +7,5 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $cont := $book//content
-where $cont ftcontains "Complete" using case sensitive using case insensitive
+where $cont contains text "Complete" using case sensitive using case insensitive
 return $book

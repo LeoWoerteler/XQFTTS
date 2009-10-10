@@ -3,4 +3,4 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[. ftcontains "AIDS" using uppercase]
+$input-context/books/book[. contains text "AIDS" using uppercase]

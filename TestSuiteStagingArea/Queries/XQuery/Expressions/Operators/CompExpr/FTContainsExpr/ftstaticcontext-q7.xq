@@ -10,5 +10,5 @@ declare ft-option using case sensitive;
 
 for $book in $input-context/books/book
 let $cont := $book[@number=$x]/content
-where $cont ftcontains "Testing"
+where $cont contains text "Testing"
 return $book 

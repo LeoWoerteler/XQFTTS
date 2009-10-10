@@ -5,5 +5,5 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book 
 let $cont := $book/content
-where $cont ftcontains "web" ftor "software"
+where $cont contains text "web" ftor "software"
 return $book

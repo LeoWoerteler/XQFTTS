@@ -5,7 +5,7 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $chap := $book//chapter[
-   . ftcontains "users can be tested at any 
+   . contains text "users can be tested at any 
    computer workstation or in a lab" without content 
    .//footnote]
 return ($book/metadata/title, $chap)

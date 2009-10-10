@@ -6,5 +6,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 $input-context/books/book[
-   .//content ftcontains "test" using stemming using no stemming
+   .//content contains text "test" using stemming using no stemming
 ]

@@ -3,7 +3,7 @@ declare variable $input-context external;
 (: insert-end :)
 
 
-$input-context/books/book[content ftcontains (("millicent" 
+$input-context/books/book[content contains text (("millicent" 
 ftand "marigold" ordered distance at most 3 words)
 ftand "quote.{0,5}" using wildcards using thesaurus at 
 "http://bstore1.example.com/UsabilityThesaurus.xml"

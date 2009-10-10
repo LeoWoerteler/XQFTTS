@@ -2,5 +2,5 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context/books/book[. ftcontains "AIDS" using case 
+$input-context/books/book[. contains text "AIDS" using case 
 insensitive]

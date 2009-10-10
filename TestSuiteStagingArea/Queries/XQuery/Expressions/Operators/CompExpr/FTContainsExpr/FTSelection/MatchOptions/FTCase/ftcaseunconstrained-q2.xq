@@ -4,5 +4,5 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $meta := $book//metadata 
-where $meta ftcontains "evaluating" using uppercase
+where $meta contains text "evaluating" using uppercase
 return $book

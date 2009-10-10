@@ -5,5 +5,5 @@ declare variable $input-context external;
 
 for $book in $input-context/books/book
 let $cont := $book/content
-where $cont ftcontains "test" using stemming
+where $cont contains text "test" using stemming
 return $book
