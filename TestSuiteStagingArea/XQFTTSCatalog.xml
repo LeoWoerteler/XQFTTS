@@ -2521,7 +2521,7 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>XPST0003</expected-error>
                   </test-case>
-                  <test-case is-XPath2="true" name="FTOr-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="runtime-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="FTOr-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTOr/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Bad nesting with 'ftor'</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.1" section-title="Or-Selection" section-pointer="sec-ftor"/>
                     <query name="FTOr-bad2" date="2008-11-25"/>
@@ -2604,7 +2604,7 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>XPST0003</expected-error>
                   </test-case>
-                  <test-case is-XPath2="true" name="FTAnd-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="runtime-error" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="true" name="FTAnd-bad2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTAnd/" scenario="parse-error" Creator="Full-Text Task Force">
                     <description>Bad nesting with 'ftand'</description>
                     <spec-citation spec="XQueryFullText" section-number="3.5.2" section-title="And-Selection" section-pointer="sec-ftand"/>
                     <query name="FTAnd-bad2" date="2008-10-09"/>
