@@ -87,7 +87,7 @@
                     </xqxft:ftPrimary>
                     <xqxft:ftMatchOptions>
                       <xqxft:stopword>
-                        <xqxft:without/>
+                        <xqxft:noStopwords/>
                       </xqxft:stopword>
                     </xqxft:ftMatchOptions>
                   </xqxft:ftPrimaryWithOptions>

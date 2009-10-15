@@ -15,7 +15,7 @@
       </xqxft:ftOptionDecl>
       <xqxft:ftOptionDecl>
         <xqxft:stem>
-          <xqxft:value>with stemming</xqxft:value>
+          <xqxft:value>stemming</xqxft:value>
         </xqxft:stem>
         <xqxft:case>
           <xqxft:value>case insensitive</xqxft:value>

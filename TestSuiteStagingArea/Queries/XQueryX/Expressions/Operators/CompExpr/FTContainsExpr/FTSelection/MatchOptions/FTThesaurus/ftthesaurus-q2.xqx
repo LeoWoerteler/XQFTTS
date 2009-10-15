@@ -65,7 +65,7 @@
                       </xqxft:ftPrimary>
                       <xqxft:ftMatchOptions>
                         <xqxft:thesaurus>
-                          <xqxft:without/>
+                          <xqxft:noThesauri/>
                         </xqxft:thesaurus>
                       </xqxft:ftMatchOptions>
                     </xqxft:ftPrimaryWithOptions>

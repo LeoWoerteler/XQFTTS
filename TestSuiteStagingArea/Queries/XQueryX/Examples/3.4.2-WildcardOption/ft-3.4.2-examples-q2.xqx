@@ -72,7 +72,7 @@
                 </xqxft:ftPrimary>
                 <xqxft:ftMatchOptions>
                   <xqxft:wildcard>
-                    <xqxft:value>with wildcards</xqxft:value>
+                    <xqxft:value>wildcards</xqxft:value>
                   </xqxft:wildcard>
                 </xqxft:ftMatchOptions>
               </xqxft:ftPrimaryWithOptions>

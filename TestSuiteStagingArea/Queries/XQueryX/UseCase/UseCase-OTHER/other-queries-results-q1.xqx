@@ -87,7 +87,7 @@
                             </xqxft:ftPrimary>
                             <xqxft:ftMatchOptions>
                               <xqxft:stem>
-                                <xqxft:value>with stemming</xqxft:value>
+                                <xqxft:value>stemming</xqxft:value>
                               </xqxft:stem>
                             </xqxft:ftMatchOptions>
                           </xqxft:ftPrimaryWithOptions>

@@ -13,7 +13,7 @@
           <xqxft:value>case sensitive</xqxft:value>
         </xqxft:case>
         <xqxft:stem>
-          <xqxft:value>with stemming</xqxft:value>
+          <xqxft:value>stemming</xqxft:value>
         </xqxft:stem>
       </xqxft:ftOptionDecl>
       <xqx:varDecl>

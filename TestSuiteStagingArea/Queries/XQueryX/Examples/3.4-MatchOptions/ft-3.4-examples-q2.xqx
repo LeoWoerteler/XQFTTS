@@ -58,13 +58,13 @@
                     <xqxft:value>de</xqxft:value>
                   </xqxft:language>
                   <xqxft:wildcard>
-                    <xqxft:value>without wildcards</xqxft:value>
+                    <xqxft:value>no wildcards</xqxft:value>
                   </xqxft:wildcard>
                   <xqxft:thesaurus>
-                    <xqxft:without/>
+                    <xqxft:noThesauri/>
                   </xqxft:thesaurus>
                   <xqxft:stem>
-                    <xqxft:value>without stemming</xqxft:value>
+                    <xqxft:value>no stemming</xqxft:value>
                   </xqxft:stem>
                   <xqxft:case>
                     <xqxft:value>case insensitive</xqxft:value>
@@ -73,7 +73,7 @@
                     <xqxft:value>diacritics insensitive</xqxft:value>
                   </xqxft:diacritics>
                   <xqxft:stopword>
-                    <xqxft:without/>
+                    <xqxft:noStopwords/>
                   </xqxft:stopword>
                 </xqxft:ftMatchOptions>
               </xqxft:ftPrimaryWithOptions>

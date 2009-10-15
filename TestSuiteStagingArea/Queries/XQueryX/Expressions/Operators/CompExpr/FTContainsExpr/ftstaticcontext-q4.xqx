@@ -15,10 +15,10 @@
       </xqxft:ftOptionDecl>
       <xqxft:ftOptionDecl>
         <xqxft:stem>
-          <xqxft:value>with stemming</xqxft:value>
+          <xqxft:value>stemming</xqxft:value>
         </xqxft:stem>
         <xqxft:wildcard>
-          <xqxft:value>without wildcards</xqxft:value>
+          <xqxft:value>no wildcards</xqxft:value>
         </xqxft:wildcard>
       </xqxft:ftOptionDecl>
       <xqx:varDecl>
