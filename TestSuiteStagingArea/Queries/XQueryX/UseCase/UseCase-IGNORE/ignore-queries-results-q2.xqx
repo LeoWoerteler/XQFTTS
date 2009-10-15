@@ -62,59 +62,63 @@
                 <xqx:stepExpr>
                   <xqx:xpathAxis>child</xqx:xpathAxis>
                   <xqx:nameTest>chapter</xqx:nameTest>
+                  <xqx:predicates>
+                    <xqxft:ftContainsExpr>
+                      <xqxft:ftRangeExpr>
+                        <xqx:pathExpr>
+                          <xqx:stepExpr>
+                            <xqx:filterExpr>
+                              <xqx:contextItemExpr/>
+                            </xqx:filterExpr>
+                          </xqx:stepExpr>
+                        </xqx:pathExpr>
+                      </xqxft:ftRangeExpr>
+                      <xqxft:ftSelectionExpr>
+                        <xqxft:ftSelection>
+                          <xqxft:ftSelectionSource>
+                            <xqxft:ftPrimaryWithOptions>
+                              <xqxft:ftPrimary>
+                                <xqxft:ftWords>
+                                  <xqxft:ftWordsValue>
+                                    <xqxft:ftWordsExpression>
+                                      <xqx:stringConstantExpr>
+                                        <xqx:value>users can be tested at any 
+   computer workstation or in a lab</xqx:value>
+                                      </xqx:stringConstantExpr>
+                                    </xqxft:ftWordsExpression>
+                                  </xqxft:ftWordsValue>
+                                </xqxft:ftWords>
+                              </xqxft:ftPrimary>
+                            </xqxft:ftPrimaryWithOptions>
+                          </xqxft:ftSelectionSource>
+                          <xqxft:ftPosFilter>
+                          </xqxft:ftPosFilter>
+                        </xqxft:ftSelection>
+                      </xqxft:ftSelectionExpr>
+                      <xqxft:ftIgnoreOption>
+                        <xqx:pathExpr>
+                          <xqx:stepExpr>
+                            <xqx:filterExpr>
+                              <xqx:contextItemExpr/>
+                            </xqx:filterExpr>
+                          </xqx:stepExpr>
+                          <xqx:stepExpr>
+                            <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
+                            <xqx:anyKindTest/>
+                          </xqx:stepExpr>
+                          <xqx:stepExpr>
+                            <xqx:xpathAxis>child</xqx:xpathAxis>
+                            <xqx:nameTest>footnote</xqx:nameTest>
+                          </xqx:stepExpr>
+                        </xqx:pathExpr>
+                      </xqxft:ftIgnoreOption>
+                    </xqxft:ftContainsExpr>
+                  </xqx:predicates>
                 </xqx:stepExpr>
               </xqx:pathExpr>
             </xqx:letExpr>
           </xqx:letClauseItem>
         </xqx:letClause>
-        <xqx:whereClause>
-          <xqxft:ftContainsExpr>
-            <xqxft:ftRangeExpr>
-              <xqx:varRef>
-                <xqx:name>chap</xqx:name>
-              </xqx:varRef>
-            </xqxft:ftRangeExpr>
-            <xqxft:ftSelectionExpr>
-              <xqxft:ftSelection>
-                <xqxft:ftSelectionSource>
-                  <xqxft:ftPrimaryWithOptions>
-                    <xqxft:ftPrimary>
-                      <xqxft:ftWords>
-                        <xqxft:ftWordsValue>
-                          <xqxft:ftWordsExpression>
-                            <xqx:stringConstantExpr>
-                              <xqx:value>users can be tested at any 
-   computer workstation or in a lab</xqx:value>
-                            </xqx:stringConstantExpr>
-                          </xqxft:ftWordsExpression>
-                        </xqxft:ftWordsValue>
-                      </xqxft:ftWords>
-                    </xqxft:ftPrimary>
-                  </xqxft:ftPrimaryWithOptions>
-                </xqxft:ftSelectionSource>
-                <xqxft:ftPosFilter>
-                </xqxft:ftPosFilter>
-              </xqxft:ftSelection>
-            </xqxft:ftSelectionExpr>
-            <xqxft:ftIgnoreOption>
-              <xqx:pathExpr>
-                <xqx:stepExpr>
-                  <xqx:filterExpr>
-                    <xqx:contextItemExpr/>
-                  </xqx:filterExpr>
-                </xqx:stepExpr>
-                <xqx:stepExpr>
-                  <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
-                  <xqx:anyKindTest/>
-                </xqx:stepExpr>
-                <xqx:stepExpr>
-                  <xqx:xpathAxis>child</xqx:xpathAxis>
-                  <xqx:nameTest>footnote</xqx:nameTest>
-                </xqx:stepExpr>
-              </xqx:pathExpr>
-            </xqxft:ftIgnoreOption>
-          </xqxft:ftContainsExpr>
-        </xqx:whereClause>
         <xqx:returnClause>
           <xqx:sequenceExpr>
             <xqx:pathExpr>
