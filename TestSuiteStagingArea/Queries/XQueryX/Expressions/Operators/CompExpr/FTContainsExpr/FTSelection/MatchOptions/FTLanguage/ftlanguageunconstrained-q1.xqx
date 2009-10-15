@@ -30,28 +30,28 @@
           <xqx:xpathAxis>child</xqx:xpathAxis>
           <xqx:nameTest>book</xqx:nameTest>
           <xqx:predicates>
-            <xqxft:ftContainsExpr>
-              <xqxft:ftRangeExpr>
-                <xqx:pathExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>metadata</xqx:nameTest>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>subjects</xqx:nameTest>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>subject</xqx:nameTest>
-                  </xqx:stepExpr>
-                </xqx:pathExpr>
-              </xqxft:ftRangeExpr>
-              <xqxft:ftSelectionExpr>
-                <xqxft:ftSelection>
-                  <xqxft:ftSelectionSource>
-                    <xqxft:ftAnd>
-                      <xqx:firstOperand>
+            <xqx:andOp>
+              <xqx:firstOperand>
+                <xqxft:ftContainsExpr>
+                  <xqxft:ftRangeExpr>
+                    <xqx:pathExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>metadata</xqx:nameTest>
+                      </xqx:stepExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>subjects</xqx:nameTest>
+                      </xqx:stepExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>subject</xqx:nameTest>
+                      </xqx:stepExpr>
+                    </xqx:pathExpr>
+                  </xqxft:ftRangeExpr>
+                  <xqxft:ftSelectionExpr>
+                    <xqxft:ftSelection>
+                      <xqxft:ftSelectionSource>
                         <xqxft:ftPrimaryWithOptions>
                           <xqxft:ftPrimary>
                             <xqxft:ftWords>
@@ -70,8 +70,34 @@
                             </xqxft:language>
                           </xqxft:ftMatchOptions>
                         </xqxft:ftPrimaryWithOptions>
-                      </xqx:firstOperand>
-                      <xqx:secondOperand>
+                      </xqxft:ftSelectionSource>
+                      <xqxft:ftPosFilter>
+                      </xqxft:ftPosFilter>
+                    </xqxft:ftSelection>
+                  </xqxft:ftSelectionExpr>
+                </xqxft:ftContainsExpr>
+              </xqx:firstOperand>
+              <xqx:secondOperand>
+                <xqxft:ftContainsExpr>
+                  <xqxft:ftRangeExpr>
+                    <xqx:pathExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>metadata</xqx:nameTest>
+                      </xqx:stepExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>subjects</xqx:nameTest>
+                      </xqx:stepExpr>
+                      <xqx:stepExpr>
+                        <xqx:xpathAxis>child</xqx:xpathAxis>
+                        <xqx:nameTest>subject</xqx:nameTest>
+                      </xqx:stepExpr>
+                    </xqx:pathExpr>
+                  </xqxft:ftRangeExpr>
+                  <xqxft:ftSelectionExpr>
+                    <xqxft:ftSelection>
+                      <xqxft:ftSelectionSource>
                         <xqxft:ftPrimaryWithOptions>
                           <xqxft:ftPrimary>
                             <xqxft:ftWords>
@@ -90,14 +116,14 @@
                             </xqxft:language>
                           </xqxft:ftMatchOptions>
                         </xqxft:ftPrimaryWithOptions>
-                      </xqx:secondOperand>
-                    </xqxft:ftAnd>
-                  </xqxft:ftSelectionSource>
-                  <xqxft:ftPosFilter>
-                  </xqxft:ftPosFilter>
-                </xqxft:ftSelection>
-              </xqxft:ftSelectionExpr>
-            </xqxft:ftContainsExpr>
+                      </xqxft:ftSelectionSource>
+                      <xqxft:ftPosFilter>
+                      </xqxft:ftPosFilter>
+                    </xqxft:ftSelection>
+                  </xqxft:ftSelectionExpr>
+                </xqxft:ftContainsExpr>
+              </xqx:secondOperand>
+            </xqx:andOp>
           </xqx:predicates>
         </xqx:stepExpr>
       </xqx:pathExpr>
