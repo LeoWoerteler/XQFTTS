@@ -6144,7 +6144,7 @@
         <spec-citation spec="FTUseCases" section-number="14.2.1" section-title="Q1 Distance Query Ignoring Content of All Descendant Elements" section-pointer="ignore-queries-results-q1"/>
         <query name="ignore-queries-results-q1" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">ignore-queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="XML">ignore-queries-results-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="true" name="ignore-queries-results-q1b" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q1 Distance Query Ignoring Content of All Descendant Elements: Find advice on whether the observer should "correct" or provide "guidance" to the user during usability "testing". This query ignores the content of all descendant elements.</description>
