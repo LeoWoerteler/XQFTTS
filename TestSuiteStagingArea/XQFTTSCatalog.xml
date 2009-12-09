@@ -6151,7 +6151,7 @@
         <spec-citation spec="FTUseCases" section-number="14.2.1" section-title="Q1 Distance Query Ignoring Content of All Descendant Elements" section-pointer="ignore-queries-results-q1"/>
         <query name="ignore-queries-results-q1b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">ignore-queries-results-q1.txt</output-file>
+        <output-file role="principal" compare="XML">ignore-queries-results-q1.xml</output-file>
       </test-case>
       <test-case is-XPath2="false" name="ignore-queries-results-q2" FilePath="UseCase/UseCase-IGNORE/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q2 Phrase Query Ignoring Content of Descendant Element Specified by XPath Expression: Find all book chapters containing "users can be tested at any computer
