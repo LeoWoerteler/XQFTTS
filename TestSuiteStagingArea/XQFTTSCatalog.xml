@@ -4118,6 +4118,33 @@
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <expected-error>XPTY0004</expected-error>
                 </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q4" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that weight expr without open/close brace is ambiguous bug 7247</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q4" date="2009-01-07">
+                    <description>using weight without open/close brace having ambiguous issue</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that weight expr with old ftcontains syntax is not supported</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q5" date="2009-01-07">
+                    <description>using weight with old ftcontains syntax</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
+                <test-case is-XPath2="false" name="FTSelection-Weight-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/Weight/" scenario="parse-error" Creator="Full-Text Task Force, Zhen Hua Liu">
+                  <description>Negative test to demonstrate that weight expr without open/close brace is not supported</description>
+                  <spec-citation spec="XQueryFullText" section-number="3" section-title="Full-Text Selections" section-pointer="ftselections"/>
+                  <query name="FTSelection-Weight-q6" date="2009-01-07">
+                    <description>using weight without open/close brace</description>
+                  </query>
+                  <input-file role="principal-data" variable="input-context">ftspec</input-file>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
               </test-group>
             </test-group>
             <test-group name="FTIgnoreOption">
