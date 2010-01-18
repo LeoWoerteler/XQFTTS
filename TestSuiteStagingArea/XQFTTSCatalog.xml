@@ -329,7 +329,7 @@
     </source>
 -->
 
-    <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-XQFTTSCatalog" FileName="XQFTTSCatalog.xsd">
+    <schema ID="XQFTTSCatalogxsd" uri="http://www.w3.org/2005/02/query-test-full-text" FileName="XQFTTSCatalog.xsd">
       <description last-mod="2005-04-14">Schema for XQFTTSCatalog</description>
     </schema>
     <schema ID="ftusecasesxsd" uri="" FileName="TestSources/ftusecases.xsd">
@@ -440,7 +440,7 @@
     </module>  
 -->
     <stopwords ID="defaultsw" uri="##default" FileName="TestSources/defaultsw.txt" Creator="Full-Text Task Force">
-      <description last-mod="2009-10--5">Default stop word list</description>
+      <description last-mod="2009-10-05">Default stop word list</description>
     </stopwords>
     <stopwords ID="stopwords1" uri="http://bstore1.example.com/StopWordList.xml" FileName="TestSources/stopwords.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-10">Stop word list for use cases</description>
@@ -4241,8 +4241,8 @@
                   <description>Positive case, behavior is implementation defined and output is implementation defined.</description>
                 </query>
                 <input-file role="principal-data" variable="input-context">ftspec</input-file>
-                <expected-error>*</expected-error>
                 <output-file role="principal" compare="Text">FTExtension-Opt-q4.txt</output-file>
+                <expected-error>*</expected-error>
               </test-case>
 
               <test-case is-XPath2="false" name="FTExtension-Opt-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTExtensionSelections/" scenario="runtime-error" Creator="Full-Text Task Force, Zhen Hua Liu">

@@ -419,7 +419,7 @@
                         <xs:attribute name="ID" type="xs:ID" use="required" />
                         <xs:attribute name="FileName" type="xs:anyURI" use="required" />
                         <xs:attribute name="Creator" type="xs:string" use="required" />
-                        <xs:attribute name="uri" type="uri-or-default" use="required" />
+                        <xs:attribute name="uri" type="test:uri-or-default" use="required" />
                      </xs:extension>
                   </xs:complexContent>
                </xs:complexType>
@@ -432,7 +432,7 @@
                         <xs:attribute name="ID" type="xs:ID" use="required" />
                         <xs:attribute name="FileName" type="xs:anyURI" use="required" />
                         <xs:attribute name="Creator" type="xs:string" use="required" />
-                        <xs:attribute name="uri" type="uri-or-default" use="required" />
+                        <xs:attribute name="uri" type="test:uri-or-default" use="required" />
                      </xs:extension>
                   </xs:complexContent>
                </xs:complexType>
