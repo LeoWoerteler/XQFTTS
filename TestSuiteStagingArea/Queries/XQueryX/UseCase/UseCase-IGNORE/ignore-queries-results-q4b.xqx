@@ -29,6 +29,42 @@
         <xqx:stepExpr>
           <xqx:xpathAxis>child</xqx:xpathAxis>
           <xqx:nameTest>book</xqx:nameTest>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
+          <xqx:anyKindTest/>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:xpathAxis>child</xqx:xpathAxis>
+          <xqx:nameTest>chapter</xqx:nameTest>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:filterExpr>
+            <xqx:sequenceExpr>
+              <xqx:unionOp>
+                <xqx:firstOperand>
+                  <xqx:pathExpr>
+                    <xqx:stepExpr>
+                      <xqx:xpathAxis>child</xqx:xpathAxis>
+                      <xqx:nameTest>p</xqx:nameTest>
+                    </xqx:stepExpr>
+                  </xqx:pathExpr>
+                </xqx:firstOperand>
+                <xqx:secondOperand>
+                  <xqx:pathExpr>
+                    <xqx:stepExpr>
+                      <xqx:xpathAxis>child</xqx:xpathAxis>
+                      <xqx:nameTest>p</xqx:nameTest>
+                    </xqx:stepExpr>
+                    <xqx:stepExpr>
+                      <xqx:xpathAxis>child</xqx:xpathAxis>
+                      <xqx:nameTest>footnote</xqx:nameTest>
+                    </xqx:stepExpr>
+                  </xqx:pathExpr>
+                </xqx:secondOperand>
+              </xqx:unionOp>
+            </xqx:sequenceExpr>
+          </xqx:filterExpr>
           <xqx:predicates>
             <xqxft:ftContainsExpr>
               <xqxft:ftRangeExpr>
@@ -36,42 +72,6 @@
                   <xqx:stepExpr>
                     <xqx:filterExpr>
                       <xqx:contextItemExpr/>
-                    </xqx:filterExpr>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
-                    <xqx:anyKindTest/>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>chapter</xqx:nameTest>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:filterExpr>
-                      <xqx:sequenceExpr>
-                        <xqx:unionOp>
-                          <xqx:firstOperand>
-                            <xqx:pathExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>p</xqx:nameTest>
-                              </xqx:stepExpr>
-                            </xqx:pathExpr>
-                          </xqx:firstOperand>
-                          <xqx:secondOperand>
-                            <xqx:pathExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>p</xqx:nameTest>
-                              </xqx:stepExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>footnote</xqx:nameTest>
-                              </xqx:stepExpr>
-                            </xqx:pathExpr>
-                          </xqx:secondOperand>
-                        </xqx:unionOp>
-                      </xqx:sequenceExpr>
                     </xqx:filterExpr>
                   </xqx:stepExpr>
                 </xqx:pathExpr>
@@ -130,14 +130,53 @@
               </xqxft:ftSelectionExpr>
               <xqxft:ftIgnoreOption>
                 <xqx:pathExpr>
+                  <xqx:rootExpr/>
                   <xqx:stepExpr>
-                    <xqx:filterExpr>
-                      <xqx:contextItemExpr/>
-                    </xqx:filterExpr>
+                    <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
+                    <xqx:anyKindTest/>
                   </xqx:stepExpr>
                   <xqx:stepExpr>
                     <xqx:xpathAxis>child</xqx:xpathAxis>
                     <xqx:nameTest>footnote</xqx:nameTest>
+                    <xqx:predicates>
+                      <xqxft:ftContainsExpr>
+                        <xqxft:ftRangeExpr>
+                          <xqx:pathExpr>
+                            <xqx:stepExpr>
+                              <xqx:filterExpr>
+                                <xqx:contextItemExpr/>
+                              </xqx:filterExpr>
+                            </xqx:stepExpr>
+                          </xqx:pathExpr>
+                        </xqxft:ftRangeExpr>
+                        <xqxft:ftSelectionExpr>
+                          <xqxft:ftSelection>
+                            <xqxft:ftSelectionSource>
+                              <xqxft:ftPrimaryWithOptions>
+                                <xqxft:ftPrimary>
+                                  <xqxft:ftWords>
+                                    <xqxft:ftWordsValue>
+                                      <xqxft:ftWordsExpression>
+                                        <xqx:stringConstantExpr>
+                                          <xqx:value>workstation.</xqx:value>
+                                        </xqx:stringConstantExpr>
+                                      </xqxft:ftWordsExpression>
+                                    </xqxft:ftWordsValue>
+                                  </xqxft:ftWords>
+                                </xqxft:ftPrimary>
+                                <xqxft:ftMatchOptions>
+                                  <xqxft:wildcard>
+                                    <xqxft:value>wildcards</xqxft:value>
+                                  </xqxft:wildcard>
+                                </xqxft:ftMatchOptions>
+                              </xqxft:ftPrimaryWithOptions>
+                            </xqxft:ftSelectionSource>
+                            <xqxft:ftPosFilter>
+                            </xqxft:ftPosFilter>
+                          </xqxft:ftSelection>
+                        </xqxft:ftSelectionExpr>
+                      </xqxft:ftContainsExpr>
+                    </xqx:predicates>
                   </xqx:stepExpr>
                 </xqx:pathExpr>
               </xqxft:ftIgnoreOption>
@@ -149,6 +188,10 @@
             <xqx:sequenceExpr>
               <xqx:sequenceExpr>
                 <xqx:pathExpr>
+                  <xqx:stepExpr>
+                    <xqx:xpathAxis>ancestor</xqx:xpathAxis>
+                    <xqx:nameTest>book</xqx:nameTest>
+                  </xqx:stepExpr>
                   <xqx:stepExpr>
                     <xqx:xpathAxis>child</xqx:xpathAxis>
                     <xqx:nameTest>metadata</xqx:nameTest>
@@ -164,45 +207,14 @@
                       <xqx:contextItemExpr/>
                     </xqx:filterExpr>
                   </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
-                    <xqx:anyKindTest/>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>chapter</xqx:nameTest>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:filterExpr>
-                      <xqx:sequenceExpr>
-                        <xqx:unionOp>
-                          <xqx:firstOperand>
-                            <xqx:pathExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>p</xqx:nameTest>
-                              </xqx:stepExpr>
-                            </xqx:pathExpr>
-                          </xqx:firstOperand>
-                          <xqx:secondOperand>
-                            <xqx:pathExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>p</xqx:nameTest>
-                              </xqx:stepExpr>
-                              <xqx:stepExpr>
-                                <xqx:xpathAxis>child</xqx:xpathAxis>
-                                <xqx:nameTest>footnote</xqx:nameTest>
-                              </xqx:stepExpr>
-                            </xqx:pathExpr>
-                          </xqx:secondOperand>
-                        </xqx:unionOp>
-                      </xqx:sequenceExpr>
-                    </xqx:filterExpr>
-                  </xqx:stepExpr>
                 </xqx:pathExpr>
               </xqx:sequenceExpr>
             </xqx:sequenceExpr>
+          </xqx:filterExpr>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:filterExpr>
+            <xqx:contextItemExpr/>
           </xqx:filterExpr>
         </xqx:stepExpr>
       </xqx:pathExpr>

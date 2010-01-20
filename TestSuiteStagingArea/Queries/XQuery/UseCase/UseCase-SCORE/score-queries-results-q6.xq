@@ -8,6 +8,7 @@ let $booktext := $book/content [. contains text ("conduct"
    10 words) using stemming] 
 let score $s := $booktext contains text 
    (("measuring" ftand "success" distance
-   at most 4 words) weight {0.8}) using stemming 
-order by $s
+   at most 4 words) weight {1.8}) using stemming 
+where $booktext
+order by $s descending
 return ($book/metadata/title, $booktext)

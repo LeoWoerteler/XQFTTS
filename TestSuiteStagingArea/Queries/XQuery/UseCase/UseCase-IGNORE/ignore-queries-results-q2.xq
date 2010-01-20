@@ -8,4 +8,5 @@ let $chap := $book//chapter[
    . contains text "users can be tested at any 
    computer workstation or in a lab" without content 
    .//footnote]
+where $chap
 return ($book/metadata/title, $chap)

@@ -2,8 +2,8 @@
 declare variable $input-context external;
 (: insert-end :)
 
-$input-context//books/book//chapter [. contains text 
+$input-context/books/book//chapter/(p|p/footnote)[. contains text 
 "workstation" ftand "lab" distance at most 6 words 
 without content //footnote[. 
    contains text "workstation." using wildcards]]   
-/(metadata/title, .//chapter/(p|p/footnote))
+/(ancestor::book/metadata/title, .)/.

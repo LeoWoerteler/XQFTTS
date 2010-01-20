@@ -119,6 +119,11 @@
             </xqx:letExpr>
           </xqx:letClauseItem>
         </xqx:letClause>
+        <xqx:whereClause>
+          <xqx:varRef>
+            <xqx:name>chap</xqx:name>
+          </xqx:varRef>
+        </xqx:whereClause>
         <xqx:returnClause>
           <xqx:sequenceExpr>
             <xqx:pathExpr>

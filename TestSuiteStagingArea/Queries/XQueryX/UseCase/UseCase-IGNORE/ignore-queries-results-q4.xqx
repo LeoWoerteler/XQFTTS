@@ -44,7 +44,7 @@
         <xqx:letClause>
           <xqx:letClauseItem>
             <xqx:typedVariableBinding>
-              <xqx:varName>where</xqx:varName>
+              <xqx:varName>matches</xqx:varName>
             </xqx:typedVariableBinding>
             <xqx:letExpr>
               <xqx:pathExpr>
@@ -173,6 +173,11 @@
             </xqx:letExpr>
           </xqx:letClauseItem>
         </xqx:letClause>
+        <xqx:whereClause>
+          <xqx:varRef>
+            <xqx:name>matches</xqx:name>
+          </xqx:varRef>
+        </xqx:whereClause>
         <xqx:returnClause>
           <xqx:sequenceExpr>
             <xqx:pathExpr>
@@ -193,7 +198,7 @@
               </xqx:stepExpr>
             </xqx:pathExpr>
             <xqx:varRef>
-              <xqx:name>where</xqx:name>
+              <xqx:name>matches</xqx:name>
             </xqx:varRef>
           </xqx:sequenceExpr>
         </xqx:returnClause>

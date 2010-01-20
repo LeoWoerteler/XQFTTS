@@ -29,6 +29,14 @@
         <xqx:stepExpr>
           <xqx:xpathAxis>child</xqx:xpathAxis>
           <xqx:nameTest>book</xqx:nameTest>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
+          <xqx:anyKindTest/>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:xpathAxis>child</xqx:xpathAxis>
+          <xqx:nameTest>chapter</xqx:nameTest>
           <xqx:predicates>
             <xqxft:ftContainsExpr>
               <xqxft:ftRangeExpr>
@@ -37,14 +45,6 @@
                     <xqx:filterExpr>
                       <xqx:contextItemExpr/>
                     </xqx:filterExpr>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
-                    <xqx:anyKindTest/>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>chapter</xqx:nameTest>
                   </xqx:stepExpr>
                 </xqx:pathExpr>
               </xqxft:ftRangeExpr>
@@ -57,7 +57,7 @@
                           <xqxft:ftWordsValue>
                             <xqxft:ftWordsExpression>
                               <xqx:stringConstantExpr>
-                                <xqx:value>users can be 
+                                <xqx:value>users can be
 tested at any computer workstation or in a lab</xqx:value>
                               </xqx:stringConstantExpr>
                             </xqxft:ftWordsExpression>
@@ -96,6 +96,10 @@ tested at any computer workstation or in a lab</xqx:value>
               <xqx:sequenceExpr>
                 <xqx:pathExpr>
                   <xqx:stepExpr>
+                    <xqx:xpathAxis>ancestor</xqx:xpathAxis>
+                    <xqx:nameTest>book</xqx:nameTest>
+                  </xqx:stepExpr>
+                  <xqx:stepExpr>
                     <xqx:xpathAxis>child</xqx:xpathAxis>
                     <xqx:nameTest>metadata</xqx:nameTest>
                   </xqx:stepExpr>
@@ -110,17 +114,14 @@ tested at any computer workstation or in a lab</xqx:value>
                       <xqx:contextItemExpr/>
                     </xqx:filterExpr>
                   </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>descendant-or-self</xqx:xpathAxis>
-                    <xqx:anyKindTest/>
-                  </xqx:stepExpr>
-                  <xqx:stepExpr>
-                    <xqx:xpathAxis>child</xqx:xpathAxis>
-                    <xqx:nameTest>chapter</xqx:nameTest>
-                  </xqx:stepExpr>
                 </xqx:pathExpr>
               </xqx:sequenceExpr>
             </xqx:sequenceExpr>
+          </xqx:filterExpr>
+        </xqx:stepExpr>
+        <xqx:stepExpr>
+          <xqx:filterExpr>
+            <xqx:contextItemExpr/>
           </xqx:filterExpr>
         </xqx:stepExpr>
       </xqx:pathExpr>

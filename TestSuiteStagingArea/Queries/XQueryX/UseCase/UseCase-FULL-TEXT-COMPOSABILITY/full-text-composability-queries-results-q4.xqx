@@ -92,17 +92,18 @@
         <xqx:whereClause>
           <xqx:andOp>
             <xqx:firstOperand>
-              <xqxft:ftContainsExpr>
-                <xqxft:ftRangeExpr>
-                  <xqx:varRef>
-                    <xqx:name>au</xqx:name>
-                  </xqx:varRef>
-                </xqxft:ftRangeExpr>
-                <xqxft:ftSelectionExpr>
-                  <xqxft:ftSelection>
-                    <xqxft:ftSelectionSource>
-                      <xqxft:ftUnaryNot>
-                        <xqx:operand>
+              <xqx:functionCallExpr>
+                <xqx:functionName>not</xqx:functionName>
+                <xqx:arguments>
+                  <xqxft:ftContainsExpr>
+                    <xqxft:ftRangeExpr>
+                      <xqx:varRef>
+                        <xqx:name>au</xqx:name>
+                      </xqx:varRef>
+                    </xqxft:ftRangeExpr>
+                    <xqxft:ftSelectionExpr>
+                      <xqxft:ftSelection>
+                        <xqxft:ftSelectionSource>
                           <xqxft:ftPrimaryWithOptions>
                             <xqxft:ftPrimary>
                               <xqxft:parenthesized>
@@ -147,14 +148,14 @@
                               </xqxft:parenthesized>
                             </xqxft:ftPrimary>
                           </xqxft:ftPrimaryWithOptions>
-                        </xqx:operand>
-                      </xqxft:ftUnaryNot>
-                    </xqxft:ftSelectionSource>
-                    <xqxft:ftPosFilter>
-                    </xqxft:ftPosFilter>
-                  </xqxft:ftSelection>
-                </xqxft:ftSelectionExpr>
-              </xqxft:ftContainsExpr>
+                        </xqxft:ftSelectionSource>
+                        <xqxft:ftPosFilter>
+                        </xqxft:ftPosFilter>
+                      </xqxft:ftSelection>
+                    </xqxft:ftSelectionExpr>
+                  </xqxft:ftContainsExpr>
+                </xqx:arguments>
+              </xqx:functionCallExpr>
             </xqx:firstOperand>
             <xqx:secondOperand>
               <xqxft:ftContainsExpr>
@@ -166,124 +167,136 @@
                 <xqxft:ftSelectionExpr>
                   <xqxft:ftSelection>
                     <xqxft:ftSelectionSource>
-                      <xqxft:ftOr>
+                      <xqxft:ftAnd>
                         <xqx:firstOperand>
-                          <xqxft:ftOr>
-                            <xqx:firstOperand>
-                              <xqxft:ftOr>
-                                <xqx:firstOperand>
-                                  <xqxft:ftOr>
-                                    <xqx:firstOperand>
-                                      <xqxft:ftPrimaryWithOptions>
-                                        <xqxft:ftPrimary>
-                                          <xqxft:ftWords>
-                                            <xqxft:ftWordsValue>
-                                              <xqxft:ftWordsExpression>
-                                                <xqx:stringConstantExpr>
-                                                  <xqx:value>correct</xqx:value>
-                                                </xqx:stringConstantExpr>
-                                              </xqxft:ftWordsExpression>
-                                            </xqxft:ftWordsValue>
-                                          </xqxft:ftWords>
-                                        </xqxft:ftPrimary>
-                                      </xqxft:ftPrimaryWithOptions>
-                                    </xqx:firstOperand>
-                                    <xqx:secondOperand>
-                                      <xqxft:ftPrimaryWithOptions>
-                                        <xqxft:ftPrimary>
-                                          <xqxft:ftWords>
-                                            <xqxft:ftWordsValue>
-                                              <xqxft:ftWordsExpression>
-                                                <xqx:stringConstantExpr>
-                                                  <xqx:value>comment</xqx:value>
-                                                </xqx:stringConstantExpr>
-                                              </xqxft:ftWordsExpression>
-                                            </xqxft:ftWordsValue>
-                                          </xqxft:ftWords>
-                                        </xqxft:ftPrimary>
-                                        <xqxft:ftMatchOptions>
-                                          <xqxft:stem>
-                                            <xqxft:value>stemming</xqxft:value>
-                                          </xqxft:stem>
-                                        </xqxft:ftMatchOptions>
-                                      </xqxft:ftPrimaryWithOptions>
-                                    </xqx:secondOperand>
-                                  </xqxft:ftOr>
-                                </xqx:firstOperand>
-                                <xqx:secondOperand>
-                                  <xqxft:ftPrimaryWithOptions>
-                                    <xqxft:ftPrimary>
-                                      <xqxft:ftWords>
-                                        <xqxft:ftWordsValue>
-                                          <xqxft:ftWordsExpression>
-                                            <xqx:stringConstantExpr>
-                                              <xqx:value>guidance</xqx:value>
-                                            </xqx:stringConstantExpr>
-                                          </xqxft:ftWordsExpression>
-                                        </xqxft:ftWordsValue>
-                                      </xqxft:ftWords>
-                                    </xqxft:ftPrimary>
-                                  </xqxft:ftPrimaryWithOptions>
-                                </xqx:secondOperand>
-                              </xqxft:ftOr>
-                            </xqx:firstOperand>
-                            <xqx:secondOperand>
-                              <xqxft:ftPrimaryWithOptions>
-                                <xqxft:ftPrimary>
-                                  <xqxft:ftWords>
-                                    <xqxft:ftWordsValue>
-                                      <xqxft:ftWordsExpression>
-                                        <xqx:stringConstantExpr>
-                                          <xqx:value>assistance</xqx:value>
-                                        </xqx:stringConstantExpr>
-                                      </xqxft:ftWordsExpression>
-                                    </xqxft:ftWordsValue>
-                                  </xqxft:ftWords>
-                                </xqxft:ftPrimary>
-                              </xqxft:ftPrimaryWithOptions>
-                            </xqx:secondOperand>
-                          </xqxft:ftOr>
+                          <xqxft:ftPrimaryWithOptions>
+                            <xqxft:ftPrimary>
+                              <xqxft:parenthesized>
+                                <xqxft:ftSelection>
+                                  <xqxft:ftSelectionSource>
+                                    <xqxft:ftOr>
+                                      <xqx:firstOperand>
+                                        <xqxft:ftOr>
+                                          <xqx:firstOperand>
+                                            <xqxft:ftOr>
+                                              <xqx:firstOperand>
+                                                <xqxft:ftOr>
+                                                  <xqx:firstOperand>
+                                                    <xqxft:ftPrimaryWithOptions>
+                                                      <xqxft:ftPrimary>
+                                                        <xqxft:ftWords>
+                                                          <xqxft:ftWordsValue>
+                                                            <xqxft:ftWordsExpression>
+                                                              <xqx:stringConstantExpr>
+                                                                <xqx:value>correct</xqx:value>
+                                                              </xqx:stringConstantExpr>
+                                                            </xqxft:ftWordsExpression>
+                                                          </xqxft:ftWordsValue>
+                                                        </xqxft:ftWords>
+                                                      </xqxft:ftPrimary>
+                                                    </xqxft:ftPrimaryWithOptions>
+                                                  </xqx:firstOperand>
+                                                  <xqx:secondOperand>
+                                                    <xqxft:ftPrimaryWithOptions>
+                                                      <xqxft:ftPrimary>
+                                                        <xqxft:ftWords>
+                                                          <xqxft:ftWordsValue>
+                                                            <xqxft:ftWordsExpression>
+                                                              <xqx:stringConstantExpr>
+                                                                <xqx:value>comment</xqx:value>
+                                                              </xqx:stringConstantExpr>
+                                                            </xqxft:ftWordsExpression>
+                                                          </xqxft:ftWordsValue>
+                                                        </xqxft:ftWords>
+                                                      </xqxft:ftPrimary>
+                                                      <xqxft:ftMatchOptions>
+                                                        <xqxft:stem>
+                                                          <xqxft:value>stemming</xqxft:value>
+                                                        </xqxft:stem>
+                                                      </xqxft:ftMatchOptions>
+                                                    </xqxft:ftPrimaryWithOptions>
+                                                  </xqx:secondOperand>
+                                                </xqxft:ftOr>
+                                              </xqx:firstOperand>
+                                              <xqx:secondOperand>
+                                                <xqxft:ftPrimaryWithOptions>
+                                                  <xqxft:ftPrimary>
+                                                    <xqxft:ftWords>
+                                                      <xqxft:ftWordsValue>
+                                                        <xqxft:ftWordsExpression>
+                                                          <xqx:stringConstantExpr>
+                                                            <xqx:value>guidance</xqx:value>
+                                                          </xqx:stringConstantExpr>
+                                                        </xqxft:ftWordsExpression>
+                                                      </xqxft:ftWordsValue>
+                                                    </xqxft:ftWords>
+                                                  </xqxft:ftPrimary>
+                                                </xqxft:ftPrimaryWithOptions>
+                                              </xqx:secondOperand>
+                                            </xqxft:ftOr>
+                                          </xqx:firstOperand>
+                                          <xqx:secondOperand>
+                                            <xqxft:ftPrimaryWithOptions>
+                                              <xqxft:ftPrimary>
+                                                <xqxft:ftWords>
+                                                  <xqxft:ftWordsValue>
+                                                    <xqxft:ftWordsExpression>
+                                                      <xqx:stringConstantExpr>
+                                                        <xqx:value>assistance</xqx:value>
+                                                      </xqx:stringConstantExpr>
+                                                    </xqxft:ftWordsExpression>
+                                                  </xqxft:ftWordsValue>
+                                                </xqxft:ftWords>
+                                              </xqxft:ftPrimary>
+                                            </xqxft:ftPrimaryWithOptions>
+                                          </xqx:secondOperand>
+                                        </xqxft:ftOr>
+                                      </xqx:firstOperand>
+                                      <xqx:secondOperand>
+                                        <xqxft:ftPrimaryWithOptions>
+                                          <xqxft:ftPrimary>
+                                            <xqxft:ftWords>
+                                              <xqxft:ftWordsValue>
+                                                <xqxft:ftWordsExpression>
+                                                  <xqx:stringConstantExpr>
+                                                    <xqx:value>help</xqx:value>
+                                                  </xqx:stringConstantExpr>
+                                                </xqxft:ftWordsExpression>
+                                              </xqxft:ftWordsValue>
+                                            </xqxft:ftWords>
+                                          </xqxft:ftPrimary>
+                                        </xqxft:ftPrimaryWithOptions>
+                                      </xqx:secondOperand>
+                                    </xqxft:ftOr>
+                                  </xqxft:ftSelectionSource>
+                                  <xqxft:ftPosFilter>
+                                  </xqxft:ftPosFilter>
+                                </xqxft:ftSelection>
+                              </xqxft:parenthesized>
+                            </xqxft:ftPrimary>
+                          </xqxft:ftPrimaryWithOptions>
                         </xqx:firstOperand>
                         <xqx:secondOperand>
-                          <xqxft:ftAnd>
-                            <xqx:firstOperand>
-                              <xqxft:ftPrimaryWithOptions>
-                                <xqxft:ftPrimary>
-                                  <xqxft:ftWords>
-                                    <xqxft:ftWordsValue>
-                                      <xqxft:ftWordsExpression>
-                                        <xqx:stringConstantExpr>
-                                          <xqx:value>help</xqx:value>
-                                        </xqx:stringConstantExpr>
-                                      </xqxft:ftWordsExpression>
-                                    </xqxft:ftWordsValue>
-                                  </xqxft:ftWords>
-                                </xqxft:ftPrimary>
-                              </xqxft:ftPrimaryWithOptions>
-                            </xqx:firstOperand>
-                            <xqx:secondOperand>
-                              <xqxft:ftPrimaryWithOptions>
-                                <xqxft:ftPrimary>
-                                  <xqxft:ftWords>
-                                    <xqxft:ftWordsValue>
-                                      <xqxft:ftWordsExpression>
-                                        <xqx:stringConstantExpr>
-                                          <xqx:value>usability test.*</xqx:value>
-                                        </xqx:stringConstantExpr>
-                                      </xqxft:ftWordsExpression>
-                                    </xqxft:ftWordsValue>
-                                  </xqxft:ftWords>
-                                </xqxft:ftPrimary>
-                                <xqxft:ftMatchOptions>
-                                  <xqxft:wildcard>
-                                    <xqxft:value>wildcards</xqxft:value>
-                                  </xqxft:wildcard>
-                                </xqxft:ftMatchOptions>
-                              </xqxft:ftPrimaryWithOptions>
-                            </xqx:secondOperand>
-                          </xqxft:ftAnd>
+                          <xqxft:ftPrimaryWithOptions>
+                            <xqxft:ftPrimary>
+                              <xqxft:ftWords>
+                                <xqxft:ftWordsValue>
+                                  <xqxft:ftWordsExpression>
+                                    <xqx:stringConstantExpr>
+                                      <xqx:value>usability test.*</xqx:value>
+                                    </xqx:stringConstantExpr>
+                                  </xqxft:ftWordsExpression>
+                                </xqxft:ftWordsValue>
+                              </xqxft:ftWords>
+                            </xqxft:ftPrimary>
+                            <xqxft:ftMatchOptions>
+                              <xqxft:wildcard>
+                                <xqxft:value>wildcards</xqxft:value>
+                              </xqxft:wildcard>
+                            </xqxft:ftMatchOptions>
+                          </xqxft:ftPrimaryWithOptions>
                         </xqx:secondOperand>
-                      </xqxft:ftOr>
+                      </xqxft:ftAnd>
                     </xqxft:ftSelectionSource>
                     <xqxft:ftPosFilter>
                       <xqxft:ftWindow>
@@ -301,7 +314,9 @@
                   <xqx:pathExpr>
                     <xqx:stepExpr>
                       <xqx:filterExpr>
-                        <xqx:contextItemExpr/>
+                        <xqx:varRef>
+                          <xqx:name>co</xqx:name>
+                        </xqx:varRef>
                       </xqx:filterExpr>
                     </xqx:stepExpr>
                     <xqx:stepExpr>
