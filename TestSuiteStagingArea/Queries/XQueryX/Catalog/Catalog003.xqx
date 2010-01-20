@@ -24,7 +24,7 @@
                   <xqx:functionName>doc</xqx:functionName>
                   <xqx:arguments>
                     <xqx:stringConstantExpr>
-                      <xqx:value>../../../../XQFTTSCatalog.xml</xqx:value>
+                      <xqx:value>../../../XQFTTSCatalog.xml</xqx:value>
                     </xqx:stringConstantExpr>
                   </xqx:arguments>
                 </xqx:functionCallExpr>
