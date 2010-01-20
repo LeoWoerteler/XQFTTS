@@ -46,57 +46,26 @@
                       <xqx:firstOperand>
                         <xqxft:ftPrimaryWithOptions>
                           <xqxft:ftPrimary>
-                            <xqxft:parenthesized>
-                              <xqxft:ftSelection>
-                                <xqxft:ftSelectionSource>
-                                  <xqxft:ftAnd>
-                                    <xqx:firstOperand>
-                                      <xqxft:ftPrimaryWithOptions>
-                                        <xqxft:ftPrimary>
-                                          <xqxft:ftWords>
-                                            <xqxft:ftWordsValue>
-                                              <xqxft:ftWordsExpression>
-                                                <xqx:stringConstantExpr>
-                                                  <xqx:value>persuasion</xqx:value>
-                                                </xqx:stringConstantExpr>
-                                              </xqxft:ftWordsExpression>
-                                            </xqxft:ftWordsValue>
-                                          </xqxft:ftWords>
-                                        </xqxft:ftPrimary>
-                                      </xqxft:ftPrimaryWithOptions>
-                                    </xqx:firstOperand>
-                                    <xqx:secondOperand>
-                                      <xqxft:ftPrimaryWithOptions>
-                                        <xqxft:ftPrimary>
-                                          <xqxft:ftWords>
-                                            <xqxft:ftWordsValue>
-                                              <xqxft:ftWordsExpression>
-                                                <xqx:stringConstantExpr>
-                                                  <xqx:value>ninja</xqx:value>
-                                                </xqx:stringConstantExpr>
-                                              </xqxft:ftWordsExpression>
-                                            </xqxft:ftWordsValue>
-                                          </xqxft:ftWords>
-                                          <xqxft:ftTimes>
-                                            <xqxft:ftRange>
-                                              <xqxft:exactlyRange>
-                                                <xqxft:value>
-                                                  <xqx:integerConstantExpr>
-                                                    <xqx:value>1</xqx:value>
-                                                  </xqx:integerConstantExpr>
-                                                </xqxft:value>
-                                              </xqxft:exactlyRange>
-                                            </xqxft:ftRange>
-                                          </xqxft:ftTimes>
-                                        </xqxft:ftPrimary>
-                                      </xqxft:ftPrimaryWithOptions>
-                                    </xqx:secondOperand>
-                                  </xqxft:ftAnd>
-                                </xqxft:ftSelectionSource>
-                                <xqxft:ftPosFilter>
-                                </xqxft:ftPosFilter>
-                              </xqxft:ftSelection>
-                            </xqxft:parenthesized>
+                            <xqxft:ftWords>
+                              <xqxft:ftWordsValue>
+                                <xqxft:ftWordsExpression>
+                                  <xqx:stringConstantExpr>
+                                    <xqx:value>blues</xqx:value>
+                                  </xqx:stringConstantExpr>
+                                </xqxft:ftWordsExpression>
+                              </xqxft:ftWordsValue>
+                            </xqxft:ftWords>
+                            <xqxft:ftTimes>
+                              <xqxft:ftRange>
+                                <xqxft:exactlyRange>
+                                  <xqxft:value>
+                                    <xqx:integerConstantExpr>
+                                      <xqx:value>1</xqx:value>
+                                    </xqx:integerConstantExpr>
+                                  </xqxft:value>
+                                </xqxft:exactlyRange>
+                              </xqxft:ftRange>
+                            </xqxft:ftTimes>
                           </xqxft:ftPrimary>
                         </xqxft:ftPrimaryWithOptions>
                       </xqx:firstOperand>
@@ -107,7 +76,7 @@
                               <xqxft:ftWordsValue>
                                 <xqxft:ftWordsExpression>
                                   <xqx:stringConstantExpr>
-                                    <xqx:value>ninja coder</xqx:value>
+                                    <xqx:value>oxford blues</xqx:value>
                                   </xqx:stringConstantExpr>
                                 </xqxft:ftWordsExpression>
                               </xqxft:ftWordsValue>
