@@ -6,5 +6,5 @@ declare variable $input-context external;
 (: insert-end :)
 
 <standard-no-outputfile>{
-  doc("./XQFTTSCatalog.xml")//*:test-case[@scenario = "standard"][fn:count(*:output-file) = 0]/@name/string()
+  doc("../../../XQFTTSCatalog.xml")//*:test-case[@scenario = "standard"][fn:count(*:output-file) = 0]/@name/string()
 }</standard-no-outputfile>
