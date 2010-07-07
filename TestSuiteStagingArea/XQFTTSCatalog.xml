@@ -2848,6 +2848,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                     <query name="ftlanguage-q2" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+                    <expected-error>XPTY0004</expected-error> 
                     <expected-error>FTST0009</expected-error> 
                     <expected-error>FTST0013</expected-error>
                   </test-case>
