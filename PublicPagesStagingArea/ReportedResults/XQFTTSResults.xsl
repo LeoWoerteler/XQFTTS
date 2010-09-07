@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 
 <!--                                                                         -->
-<!-- Generate a report for one or more XQTS result reports                   -->
+<!-- Generate a report for one or more XQFTTS result reports                 -->
 <!--                                                                         -->
 <!-- Author: Andrew Eisenberg                                                -->
 <!--                                                                         -->
@@ -500,6 +500,9 @@
                         </td>
                         <td>untested</td>
                      </tr>
+                     <tr>
+                       <td colspan="8" align="right">Figures are quoted as Passed / Failed / Total (any discrepancy represents tests not run or not reported)</td>
+                     </tr>
                   </table>
             </td>
          </tr>
@@ -558,7 +561,7 @@
                         <xsl:if test="./xqtsr:test-suite-result/xqtsr:test-run/xqtsr:test-suite/@version != $XQTSversion">
                            <br/>
                            <font size="-1">
-                              <xsl:text>(XQTS </xsl:text>
+                              <xsl:text>(XQFTTS </xsl:text>
                               <xsl:value-of select="./xqtsr:test-suite-result/xqtsr:test-run/xqtsr:test-suite/@version" />
                               <xsl:text>)</xsl:text>
                            </font>
@@ -670,6 +673,7 @@
                         name='failed'
                         select="count($results[@result='fail'])"
                         />
+
                      <xsl:variable name="total">
                         <xsl:choose>
                            <xsl:when test="$syntax='XQueryX'">
@@ -680,6 +684,18 @@
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
+                     
+                     <xsl:variable name='attempted'>
+                        <xsl:choose>
+                          <xsl:when test="$title='Minimal Conformance'">
+                            <!-- tests for minimal conformance are treated as failed if not run -->
+                            <xsl:value-of select="$total"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="$passed + $failed"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>   
                      
                      <xsl:attribute name="bgcolor">
                         <xsl:choose>
