@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="XQFTTSCatalog.xsl" ?>
-<test-suite xmlns="http://www.w3.org/2005/02/query-test-full-text" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CatalogDesignDate="2008-02-18" version="1.0.2" SourceOffsetPath="./" ResultOffsetPath="ExpectedTestResults/"
-            XQueryQueryOffsetPath="Queries/XQuery/" XQueryXQueryOffsetPath="Queries/XQueryX/" XQueryFileExtension=".xq" XQueryXFileExtension=".xqx"
-            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-full-text http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
+<test-suite xmlns="http://www.w3.org/2005/02/query-test-full-text"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            CatalogDesignDate="2008-02-18"
+            version="1.0.2"
+            SourceOffsetPath="./"
+            ResultOffsetPath="ExpectedTestResults/"
+            XQueryQueryOffsetPath="Queries/XQuery/"
+            XQueryXQueryOffsetPath="Queries/XQueryX/"
+            XQueryFileExtension=".xq"
+            XQueryXFileExtension=".xqx"
+            xsi:schemaLocation="http://www.w3.org/2005/02/query-test-full-text
+                                http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info>
-    <title>XQuery and XPath Full Text 1.0 Test Suite 1.0.2</title>
+    <title>XQuery and XPath Full Text 1.0 Test Suite v1.0.2</title>
     <description>Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
   </test-suite-info>
@@ -2672,7 +2681,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
                     <query name="FTNot-q2" date="2008-11-24"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTNot-q2.txt</output-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q2.xml</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTNot-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftnot with ftor query</description>
@@ -2882,7 +2891,6 @@
                     <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                     <query name="ftlanguage-q2" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>XPTY0004</expected-error> 
                     <expected-error>FTST0009</expected-error> 
                     <expected-error>FTST0013</expected-error>
                   </test-case>
@@ -4418,7 +4426,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
         <query name="FTNot-unconstrained-q5" date="2008-11-24"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q5.txt</output-file>
+        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q5.xml</output-file>
         <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
       </test-case>
       <test-case is-XPath2="true" name="FTNot-unconstrained-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
@@ -5513,7 +5521,7 @@
         <spec-citation spec="FTUseCases" section-number="3.2.6" section-title="Q6 Query on Entire Document" section-pointer="across-queries-results-q6"/>
         <query name="across-queries-results-q6" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q6.xml</output-file>
       </test-case>
     </test-group>
     <test-group name="UseCase-OTHER">
