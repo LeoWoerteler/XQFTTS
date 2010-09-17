@@ -610,11 +610,7 @@
     </implementation-defined-item>
 
     <implementation-defined-item name="Tokenization" spec="XQueryFullText">
-      <description last-mod="2008-02-18">Tokenization, including the definition of the term "tokens", SHOULD be implementation-defined. Implementations SHOULD expose the rules and sample results of tokenization as much as possible to enable users to predict and interpret the results of tokenization. Tokenization is defined more formally in 4.1 Tokenization.</description>
-    </implementation-defined-item>
-<!-- the next item, token, does not currently have a corresponding item in the spec itself -->
-    <implementation-defined-item name="token" spec="XQueryFullText">
-      <description last-mod="2008-02-18">A token is a non-empty sequence of characters returned by a tokenizer as a basic unit to be searched. Beyond that, tokens are implementation-defined.</description>
+      <description last-mod="2010-09-17">Tokenization, including the definition of the term "tokens", SHOULD be implementation-defined. Implementations SHOULD expose the rules and sample results of tokenization as much as possible to enable users to predict and interpret the results of tokenization.</description>
     </implementation-defined-item>
     <implementation-defined-item name="phrase" spec="XQueryFullText">
       <description last-mod="2008-02-18">A phrase is an ordered sequence of any number of tokens. Beyond that, phrases are implementation-defined.</description>
@@ -625,12 +621,15 @@
     <implementation-defined-item name="paragraph" spec="XQueryFullText">
       <description last-mod="2010-09-16">A paragraph is an ordered sequence of any number of tokens. Beyond that, paragraphs are implementation-defined. An implementation is not required to support paragraphs.</description>
     </implementation-defined-item>
+    <implementation-defined-item name="Markup Effect Token Boundaries" spec="XQueryFullText">
+      <description last-mod="2010-09-16">Implementations are free to provide implementation-defined ways to differentiate between markup's effect on token boundaries during tokenization.</description>
+    </implementation-defined-item>
     <implementation-defined-item name="Scoring Expressions" spec="XQueryFullText">
       <description last-mod="2010-09-16">The set of expressions (of form ExprSingle) that can be assigned to a score variable in a let-clause is implementation-defined. The result of passing an expression to the scoring algorithm that it does not support is implementation-defined.</description>
     </implementation-defined-item>
 <!-- the next item, Matching, does not currently have a corresponding item in the spec itself -->
     <implementation-defined-item name="Matching" spec="XQueryFullText">
-      <description last-mod="2008-02-18">Matching of the tokens in a query phrase to tokens in XDM is implementation-defined.</description>
+      <description last-mod="2010-09-17">When a sequence of query tokens is considered as a phrase, it matches a sequence of tokens in the tokenized form of the text being searched only if the two sequences correspond in an implementation-defined way.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Match Option Order" spec="XQueryFullText">
       <description last-mod="2010-09-16">The match option application order, subject to the stated constraints, is implementation-defined.</description>
@@ -642,47 +641,43 @@
       <description last-mod="2010-09-16">The set of valid language identifiers is implementation-defined.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Language Option Undefined" spec="XQueryFullText">
-      <description last-mod="2010-09-16">The behavior of the implementation when it encounters a language identifier it does not support is implementation-defined.</description>
+      <description last-mod="2010-09-17">If an invalid language identifier is specified, then the behavior is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Mismatched Languages" spec="XQueryFullText">
+      <description last-mod="2010-09-17">When a processor evaluates text in a document that is governed by an xml:lang attribute and the portion of the full-text query doing that evaluation contains an FTLanguageOption that specifies a different language from the language specified by the governing xml:lang attribute, the language-related behavior of that full-text query is implementation-defined.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Thesaurus Option" spec="XQueryFullText">
       <description last-mod="2010-09-16">It is implementation-defined which thesaurus relationships an implementation supports.</description>
     </implementation-defined-item>
-    <implementation-defined-item name="Thesaurus Option" spec="XQueryFullText">
-      <description last-mod="2010-09-16">The behavior of the implementation when it encounters a combination of thesauri, levels, and relationships that it does not support is implementation-defined.</description>
+    <implementation-defined-item name="Thesaurus Relationships" spec="XQueryFullText">
+      <description last-mod="2010-09-17">If a query specifies thesaurus relationships or levels not supported by the thesaurus, or does not specify a relationship, the behavior is implementation-defined.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Stemming Option" spec="XQueryFullText">
       <description last-mod="2010-09-16">It is implementation-defined what a stem of a token is and whether stemming will based on an algorithm, dictionary, or mixed approach.</description>
     </implementation-defined-item>
-    <implementation-defined-item name="StopWord Option Match Number" spec="XQueryFullText">
-      <description last-mod="2010-09-16">When a stop word is specified in a query, then the number of tokens in the text that are matched by that stop word is implementation-defined.</description>
-    </implementation-defined-item>
-    <implementation-defined-item name="StopWord Option Default" spec="XQueryFullText">
-      <description last-mod="2010-09-16">When the option "using stop words default" is used, an implementation-defined collection of stop words is used.</description>
-    </implementation-defined-item>
-    <implementation-defined-item name="Extension Option" spec="XQueryFullText">
-      <description last-mod="2010-09-16">Which namespace URIs will be recognized for denoting extension options is implementation-defined, as is the syntax and behavior of recognized options.</description>
-    </implementation-defined-item>
-    <implementation-defined-item name="Extension Selection" spec="XQueryFullText">
-      <description last-mod="2010-09-16">Which namespace URIs will be recognized for denoting extension selection pragmas is implementation-defined, as is the syntax and behavior of recognized pragmas.</description>
-    </implementation-defined-item>
-
-    <implementation-defined-item name="Markup Effect Token Boundaries" spec="XQueryFullText">
-      <description last-mod="2010-09-16">Implementations are free to provide implementation-defined ways to differentiate between markup's effect on token boundaries during tokenization.</description>
-    </implementation-defined-item>
-    <implementation-defined-item name="Tokenization With Wildcards" spec="XQueryFullText">
-      <description last-mod="2010-09-16">How text with wildcard indicators and qualifiers is tokenized is implementation-defined.</description>
-    </implementation-defined-item>
     <implementation-defined-item name="Query Token In Stopword List" spec="XQueryFullText">
       <description last-mod="2010-09-16">An implementation-defined comparison is used to determine whether a query token appears in the collection of stop words defined by the applicable stop word option.</description>
     </implementation-defined-item>
-    <implementation-defined-item name="Static Context Items" spec="XQueryFullText">
-      <description last-mod="2010-09-16">Certain values in the static context (see C Static Context Components) that can be overwritten or augmented by implementations are implementation-defined.</description>
+    <implementation-defined-item name="StopWord Option Match Number" spec="XQueryFullText">
+      <description last-mod="2010-09-17">Normally a stop word matches exactly one token, but there may be implementation-defined  conditions, under which a stop word may match a different number of tokens.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="StopWord Option Default" spec="XQueryFullText">
+      <description last-mod="2010-09-17">The "stop words default" option specifies that an implementation-defined  collection of stop words is used.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Extension Option" spec="XQueryFullText">
+      <description last-mod="2010-09-17">An implementation recognizes an implementation-defined  set of namespace URIs used to denote extension options. The effect of each, including its error behavior, is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Extension Selection" spec="XQueryFullText">
+      <description last-mod="2010-09-17">An implementation recognizes an implementation-defined  set of namespace URIs used to denote extension selection pragmas. The effect of each, including its error behavior, is implementation-defined.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Equal Items Different Tokens" spec="XQueryFullText">
       <description last-mod="2010-09-16">The conditions under which tokenization of two equal items produces different tokens is implementation-defined.</description>
     </implementation-defined-item>
-    <implementation-defined-item name="Restricting Score Expressions" spec="XQueryFullText">
-      <description last-mod="2010-09-16">The restrictions on allowable expressions used to compute scores are implementation-defined.</description>
+    <implementation-defined-item name="FTIgnoreOption" spec="XQueryFullText">
+      <description last-mod="2010-09-17">An implementation may impose an implementation-defined  restriction on the operand of FTIgnoreOption.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Static Context Items" spec="XQueryFullText">
+      <description last-mod="2010-09-17">For certain full-text components of the static context (see C Static Context Components), the default initial value of the component can be overwritten or augmented with an implementation-defined value or values.</description>
     </implementation-defined-item>
 
     <!-- More to be added as the need is recognized
