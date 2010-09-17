@@ -627,7 +627,6 @@
     <implementation-defined-item name="Scoring Expressions" spec="XQueryFullText">
       <description last-mod="2010-09-16">The set of expressions (of form ExprSingle) that can be assigned to a score variable in a let-clause is implementation-defined. The result of passing an expression to the scoring algorithm that it does not support is implementation-defined.</description>
     </implementation-defined-item>
-<!-- the next item, Matching, does not currently have a corresponding item in the spec itself -->
     <implementation-defined-item name="Matching" spec="XQueryFullText">
       <description last-mod="2010-09-17">When a sequence of query tokens is considered as a phrase, it matches a sequence of tokens in the tokenized form of the text being searched only if the two sequences correspond in an implementation-defined way.</description>
     </implementation-defined-item>

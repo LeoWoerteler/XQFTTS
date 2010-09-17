@@ -44285,14 +44285,6 @@
                </td>
                <td valign="top">Tokenization, including the definition of the term "tokens", SHOULD be implementation-defined. Implementations SHOULD expose
                   the rules and sample results of tokenization as much as possible to enable users to predict and interpret the results of tokenization.
-                  Tokenization is defined more formally in 4.1 Tokenization.
-               </td>
-            </tr>
-            <tr>
-               <td valign="top">[XQueryFullText]<br>token
-               </td>
-               <td valign="top">A token is a non-empty sequence of characters returned by a tokenizer as a basic unit to be searched. Beyond that, tokens
-                  are implementation-defined.
                </td>
             </tr>
             <tr>
@@ -44303,80 +44295,135 @@
             <tr>
                <td valign="top">[XQueryFullText]<br>sentence
                </td>
-               <td valign="top">A sentence is an ordered sequence of any number of tokens. Beyond that, sentences are implementation-defined. A tokenizer
+               <td valign="top">A sentence is an ordered sequence of any number of tokens. Beyond that, sentences are implementation-defined. An implementation
                   is not required to support sentences.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>paragraph
                </td>
-               <td valign="top">A paragraph is an ordered sequence of any number of tokens. Beyond that, paragraphs are implementation-defined. A tokenizer
+               <td valign="top">A paragraph is an ordered sequence of any number of tokens. Beyond that, paragraphs are implementation-defined. An implementation
                   is not required to support paragraphs.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Markup Effect Token Boundaries
+               </td>
+               <td valign="top">Implementations are free to provide implementation-defined ways to differentiate between markup's effect on token boundaries
+                  during tokenization.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Scoring Expressions
                </td>
-               <td valign="top">The set of expressions supported by the scoring algorithm is implementation-defined. If an expression not supported by the
-                  scoring algorithm is passed to the scoring algorithm, the result is implementation-defined.
+               <td valign="top">The set of expressions (of form ExprSingle) that can be assigned to a score variable in a let-clause is implementation-defined.
+                  The result of passing an expression to the scoring algorithm that it does not support is implementation-defined.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Matching
                </td>
-               <td valign="top">Matching of the tokens in a query phrase to tokens in XDM is implementation-defined.</td>
+               <td valign="top">When a sequence of query tokens is considered as a phrase, it matches a sequence of tokens in the tokenized form of the text
+                  being searched only if the two sequences correspond in an implementation-defined way.
+               </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Match Option Order
                </td>
-               <td valign="top">The full order of the application of match options is implementation-defined.</td>
+               <td valign="top">The match option application order, subject to the stated constraints, is implementation-defined.</td>
             </tr>
             <tr>
-               <td valign="top">[XQueryFullText]<br>Language Option
+               <td valign="top">[XQueryFullText]<br>Language Option Tokenization
                </td>
-               <td valign="top">The "language" option influences tokenization, stemming, and stop words in an implementation-defined way. The "language" option
-                  MAY influence the behavior of other match options in an implementation-defined way. The set of valid language identifiers
-                  among the standardized set is implementation-defined. It is implementation-defined what additional language identifiers, if
-                  any, are valid. If an invalid language identifier is specified, then the behavior is implementation-defined. When an XQuery
-                  and XPath Full Text processor evaluates text in a document that is governed by an xml:lang attribute and the portion of the
-                  full-text query doing that evaluation contains an FTLanguageOption that specifies a different language from the language specified
-                  by the governing xml:lang attribute, the language-related behavior of that full-text query is implementation-defined.
+               <td valign="top">The "language" option influences tokenization, stemming, and stop words in an implementation-defined way. It MAY influence
+                  the behavior of other match options in an implementation-defined way.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Language Option Valid ID
+               </td>
+               <td valign="top">The set of valid language identifiers is implementation-defined.</td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Language Option Undefined
+               </td>
+               <td valign="top">If an invalid language identifier is specified, then the behavior is implementation-defined.</td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Mismatched Languages
+               </td>
+               <td valign="top">When a processor evaluates text in a document that is governed by an xml:lang attribute and the portion of the full-text query
+                  doing that evaluation contains an FTLanguageOption that specifies a different language from the language specified by the
+                  governing xml:lang attribute, the language-related behavior of that full-text query is implementation-defined.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Thesaurus Option
                </td>
-               <td valign="top">The set of relationships supported by an implementation is implementation-defined. If a query specifies thesaurus relationships
-                  or levels not supported by the thesaurus, the behavior is implementation-defined.
+               <td valign="top">It is implementation-defined which thesaurus relationships an implementation supports.</td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Thesaurus Relationships
+               </td>
+               <td valign="top">If a query specifies thesaurus relationships or levels not supported by the thesaurus, or does not specify a relationship,
+                  the behavior is implementation-defined.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Stemming Option
                </td>
-               <td valign="top">It is implementation-defined what a stem of a token is. It is implementation-defined whether the stemming is based on an algorithm,
-                  dictionary, or mixed approach.
+               <td valign="top">It is implementation-defined what a stem of a token is and whether stemming will based on an algorithm, dictionary, or mixed
+                  approach.
                </td>
             </tr>
             <tr>
-               <td valign="top">[XQueryFullText]<br>StopWord Option
+               <td valign="top">[XQueryFullText]<br>Query Token In Stopword List
                </td>
-               <td valign="top">Normally a stop word matches exactly one token, but there may be implementation-defined conditions, under which a stop word
-                  may match a different number of tokens.  The "using default stop words" option specifies that an implementation-defined collection
-                  of stop words is used.
+               <td valign="top">An implementation-defined comparison is used to determine whether a query token appears in the collection of stop words defined
+                  by the applicable stop word option.
                </td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>StopWord Option Match Number
+               </td>
+               <td valign="top">Normally a stop word matches exactly one token, but there may be implementation-defined  conditions, under which a stop word
+                  may match a different number of tokens.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>StopWord Option Default
+               </td>
+               <td valign="top">The "stop words default" option specifies that an implementation-defined  collection of stop words is used.</td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Extension Option
                </td>
-               <td valign="top">An extension option is a match option that acts in an implementation-defined way. Each implementation recognizes an implementation-defined
-                  set of namespace URIs used to denote extension options.
+               <td valign="top">An implementation recognizes an implementation-defined  set of namespace URIs used to denote extension options. The effect
+                  of each, including its error behavior, is implementation-defined.
                </td>
             </tr>
             <tr>
                <td valign="top">[XQueryFullText]<br>Extension Selection
                </td>
-               <td valign="top">An extension selection is a full-text selection whose semantics are implementation-defined.  Each implementation recognizes
-                  an implementation-defined set of namespace URIs used to denote pragmas.
+               <td valign="top">An implementation recognizes an implementation-defined  set of namespace URIs used to denote extension selection pragmas.
+                  The effect of each, including its error behavior, is implementation-defined.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Equal Items Different Tokens
+               </td>
+               <td valign="top">The conditions under which tokenization of two equal items produces different tokens is implementation-defined.</td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>FTIgnoreOption
+               </td>
+               <td valign="top">An implementation may impose an implementation-defined  restriction on the operand of FTIgnoreOption.</td>
+            </tr>
+            <tr>
+               <td valign="top">[XQueryFullText]<br>Static Context Items
+               </td>
+               <td valign="top">For certain full-text components of the static context (see C Static Context Components), the default initial value of the
+                  component can be overwritten or augmented with an implementation-defined value or values.
                </td>
             </tr>
          </table>
