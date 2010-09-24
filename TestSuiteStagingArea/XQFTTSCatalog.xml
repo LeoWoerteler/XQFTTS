@@ -2286,6 +2286,18 @@
                   <input-file role="principal-data" variable="input-context">ftspec</input-file>
                   <output-file role="principal" compare="XML">FTPrimary-FTWords-phrase-q4c_result.xml</output-file>
                 </test-case>
+                <test-case is-XPath2="true" name="FTWordsValue-IntegerLiteral" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="parse-error" Creator="Michael Dyck">
+                  <description>Attempts to use an IntegerLiteral as an FTWordsValue</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTWordsValue-IntegerLiteral" date="2010-09-23"/>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
+                <test-case is-XPath2="true" name="FTWordsValue-DecimalLiteral" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTWords/" scenario="parse-error" Creator="Michael Dyck">
+                  <description>Attempts to use a DecimalLiteral as an FTWordsValue</description>
+                  <spec-citation spec="XQueryFullText" section-number="3.2" section-title="Search Tokens and Phrases" section-pointer="ftwords"/>
+                  <query name="FTWordsValue-DecimalLiteral" date="2010-09-23"/>
+                  <expected-error>XPST0003</expected-error>
+                </test-case>
               </test-group>
 
 
