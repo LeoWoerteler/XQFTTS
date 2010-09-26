@@ -3973,6 +3973,149 @@
                     <expected-error>FTST0003</expected-error>
                     <!-- unsupported units -->
                   </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-01" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of one single-sentence StringInclude.
+                      Yields false because there's only one StringInclude.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-01" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-01.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-02" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of two single-sentence StringIncludes.
+                      Clearly yields false.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-02" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-02.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-03" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of two single-sentence StringIncludes.
+                      Clearly yields true.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-03" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-03.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-04" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of two single-sentence StringIncludes.
+                      Although each "one" is in the same sentence as a "two",
+                      you can still find a "one" and a "two" in different sentences.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-04" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-04.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-05" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of three single-sentence StringIncludes.
+                      Clearly yields true.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-05" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-05.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-06" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of three single-sentence StringIncludes.
+                      Yields false because "one" and "two" are both in the first sentence.
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-06" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-06.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-07" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>
+                      Filter a match consisting of one multi-sentence StringInclude.
+                      Yields false because there's only one StringInclude
+                      (despite the fact that it straddles two sentences).
+                    </description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-07" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-07.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-08" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of two StringIncludes, one of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-08" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-08.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-09" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of two StringIncludes, one of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-09" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-09.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of two StringIncludes, both of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-10" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-10.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-11" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of two StringIncludes, both of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-11" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-11.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-12" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of two StringIncludes, both of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-12" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-12.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-13" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of three StringIncludes, one of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-13" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-13.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-14" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of three StringIncludes, one of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-14" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-14.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="different-sentence-15" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTScope/" scenario="standard" Creator="Michael Dyck">
+                    <description>Filter a match consisting of three StringIncludes, one of them multi-sentence.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.6.4" section-title="Scope Selection" section-pointer="ftscope"/>
+                    <query name="different-sentence-15" date="2010-09-26"/>
+                    <output-file role="principal" compare="Text">different-sentence-15.txt</output-file>
+                    <expected-error>FTST0003</expected-error>
+                    <expected-error>FTST0004</expected-error>
+                  </test-case>
                 </test-group>
                 <test-group name="FTContent">
                   <GroupInfo>
