@@ -3,7 +3,7 @@
 <test-suite xmlns="http://www.w3.org/2005/02/query-test-full-text"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             CatalogDesignDate="2008-02-18"
-            version="1.0.2"
+            version="1.0.3"
             SourceOffsetPath="./"
             ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/"
@@ -14,7 +14,7 @@
                                 http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info>
-    <title>XQuery and XPath Full Text 1.0 Test Suite v1.0.2</title>
+    <title>XQuery and XPath Full Text 1.0 Test Suite v1.0.3</title>
     <description>Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
   </test-suite-info>
