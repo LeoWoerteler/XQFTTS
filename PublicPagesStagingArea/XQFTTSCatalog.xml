@@ -2687,7 +2687,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.5.4" section-title="Not-Selection" section-pointer="sec-ftnot"/>
                     <query name="FTNot-q2" date="2008-11-24"/>
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-                    <output-file role="principal" compare="Fragment">FTNot-q2.xml</output-file>
+                    <output-file role="principal" compare="Fragment">FTNot-q2.txt</output-file>
                   </test-case>
                   <test-case is-XPath2="true" name="FTNot-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftnot with ftor query</description>
@@ -3424,6 +3424,7 @@
                   <query name="FTPosFilter-q5" date="2009-02-26"/>
                   <input-file role="principal-data" variable="input-context">emptydoc</input-file>
                   <output-file role="principal" compare="Text">FTPosFilter-q5.txt</output-file>
+                  <expected-error>FTST0004</expected-error>
                 </test-case>
                 <test-case is-XPath2="true" name="FTPosFilter-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
                   <description>Processing order for multiple positional filters</description>
@@ -3431,6 +3432,7 @@
                   <query name="FTPosFilter-q6" date="2009-02-26"/>
                   <input-file role="principal-data" variable="input-context">emptydoc</input-file>
                   <output-file role="principal" compare="Text">FTPosFilter-q6.txt</output-file>
+                  <expected-error>FTST0004</expected-error>
                 </test-case>
                 <test-group name="FTOrder">
                   <GroupInfo>
@@ -4575,7 +4577,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.2" section-title="FTUnaryNot Operator" section-pointer="id-unary-not-option"/>
         <query name="FTNot-unconstrained-q5" date="2008-11-24"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
-        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q5.xml</output-file>
+        <output-file role="principal" compare="Fragment">FTNot-unconstrained-q5.txt</output-file>
         <!-- <expected-error>FTST0003</expected-error> unsupported units (words)? -->
       </test-case>
       <test-case is-XPath2="true" name="FTNot-unconstrained-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/FTOperators/FTUnaryNot/" scenario="standard" Creator="Full-Text Task Force">
@@ -5670,7 +5672,7 @@
         <spec-citation spec="FTUseCases" section-number="3.2.6" section-title="Q6 Query on Entire Document" section-pointer="across-queries-results-q6"/>
         <query name="across-queries-results-q6" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="Fragment">across-queries-results-q6.xml</output-file>
+        <output-file role="principal" compare="Fragment">across-queries-results-q6.txt</output-file>
       </test-case>
     </test-group>
     <test-group name="UseCase-OTHER">
