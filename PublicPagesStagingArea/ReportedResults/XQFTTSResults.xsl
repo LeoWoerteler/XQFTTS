@@ -127,6 +127,7 @@
    
    <!-- colors -->
    
+   <xsl:variable name="betterthanperfectcolor" select='"seagreen"'/>
    <xsl:variable name="perfectcolor" select='"mediumseagreen"'/>
    <xsl:variable name="passcolor" select='"palegreen"'/>
    <xsl:variable name="failcolor" select='"coral"'/>
@@ -183,7 +184,7 @@
                <p>
                   This document contains the results of running the
                   <a href="http://dev.w3.org/2007/xpath-full-text-10-test-suite/">XPath and XQuery Full Text 1.0 Test Suite</a>
-                  on one or more implementaions of XPath and XQuery Full Text.
+                  on one or more implementations of XPath and XQuery Full Text 1.0.
                </p>
                
                <p>
@@ -699,6 +700,11 @@
                      
                      <xsl:attribute name="bgcolor">
                         <xsl:choose>
+                           <xsl:when test='$passed > $total and $passed != 0'>
+<!-- 2010-12-03, Jim: If the number of tests passed is greater than the total number of tests that should have been run,
+     then mark the results as "better than perfect". -->
+                              <xsl:value-of select="$betterthanperfectcolor"/>
+                           </xsl:when>
                            <xsl:when test='$passed=$total and $passed != 0'>
                               <xsl:value-of select="$perfectcolor"/>
                            </xsl:when>
@@ -755,7 +761,9 @@
                                  </xsl:otherwise>
                               </xsl:choose>
                            </xsl:variable>
-                           <xsl:if test="$total = count($results[@result='pass']) and $total != 0">
+<!-- 2010-12-03, Jim: Replaced "$total = count..." with "$total &lt;= count..." to "better than perfect"
+     results would be counted as successful instead of unsuccessful -->:
+                           <xsl:if test="$total &lt;= count($results[@result='pass']) and $total != 0">
                               <xsl:value-of select="1"/>
                            </xsl:if>
                         </xsl:for-each>
