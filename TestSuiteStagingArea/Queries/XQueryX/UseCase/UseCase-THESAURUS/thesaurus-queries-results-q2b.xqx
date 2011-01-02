@@ -59,7 +59,7 @@
                           <xqxft:thesauri>
                             <xqxft:thesaurusID>
                               <xqxft:at>http://bstore1.example.com/UsabilityThesaurus.xml</xqxft:at>
-                              <xqxft:relationship>narrower terms</xqxft:relationship>
+                              <xqxft:relationship>narrower term</xqxft:relationship>
                               <xqxft:levels>
                                 <xqxft:atMostRange>
                                   <xqxft:value>
