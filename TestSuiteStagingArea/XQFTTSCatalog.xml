@@ -651,6 +651,9 @@
     <implementation-defined-item name="Thesaurus Relationships" spec="XQueryFullText">
       <description last-mod="2010-09-17">If a query specifies thesaurus relationships or levels not supported by the thesaurus, or does not specify a relationship, the behavior is implementation-defined.</description>
     </implementation-defined-item>
+    <implementation-defined-item name="Thesaurus Levels" spec="XQueryFullText">
+      <description last-mod="2011-01-04">If a query does not specify the number of levels, and the implementation does not follow the default of querying all levels of hierarchical relationships, then the number of levels of hierarchical relationships queries is implementation-defined.</description>
+    </implementation-defined-item>
     <implementation-defined-item name="Stemming Option" spec="XQueryFullText">
       <description last-mod="2010-09-16">It is implementation-defined what a stem of a token is and whether stemming will based on an algorithm, dictionary, or mixed approach.</description>
     </implementation-defined-item>
