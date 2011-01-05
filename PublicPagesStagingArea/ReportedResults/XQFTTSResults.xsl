@@ -152,7 +152,6 @@
    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
    
    <xsl:template match="/">
-<xsl:message>Number of reported results: <xsl:value-of select="count($results)"/></xsl:message>      
       <html xmlns="http://www.w3.org/1999/xhtml">
          <head>
             <title>
@@ -284,13 +283,10 @@
                      name="result"
                      select="./xqtsr:test-suite-result/xqtsr:implementation"
                      />
-<xsl:message>Result reported from <xsl:value-of select="./xqtsr:test-suite-result/xqtsr:implementation/@name"/></xsl:message>
                   <!-- Skip implementations that wish to be anonymous -->
                   
                   <xsl:if test="not($result/xqtsr:organization/@anonymous = 'true')">
-<xsl:message>anonymous != 'true'</xsl:message>
                      <h3>
-<xsl:message>Value of h3 element = <xsl:value-of select="$result/@name"/></xsl:message>
                         <xsl:value-of select="$result/@name"/>		  
                      </h3>
                      <blockquote>
