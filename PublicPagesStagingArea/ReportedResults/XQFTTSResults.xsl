@@ -152,7 +152,7 @@
    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
    
    <xsl:template match="/">
-      
+<xsl:message>Number of reported results: <xsl:value-of select="count($results)"/></xsl:message>      
       <html xmlns="http://www.w3.org/1999/xhtml">
          <head>
             <title>
@@ -242,9 +242,9 @@
                   <xsl:otherwise>0</xsl:otherwise>
                </xsl:choose>
             </xsl:variable>
-            
+
             <xsl:if test='($detailsp + $impdefp + $summaryp) > 1'>
-               
+
                <hr/>            
                
                <h3>Contents</h3>
@@ -284,11 +284,13 @@
                      name="result"
                      select="./xqtsr:test-suite-result/xqtsr:implementation"
                      />
-                  
+<xsl:message>Result reported from <xsl:value-of select="./xqtsr:test-suite-result/xqtsr:implementation/@name"/></xsl:message>
                   <!-- Skip implementations that wish to be anonymous -->
                   
                   <xsl:if test="not($result/xqtsr:organization/@anonymous = 'true')">
+<xsl:message>anonymous != 'true'</xsl:message>
                      <h3>
+<xsl:message>Value of h3 element = <xsl:value-of select="$result/@name"/></xsl:message>
                         <xsl:value-of select="$result/@name"/>		  
                      </h3>
                      <blockquote>
@@ -743,8 +745,10 @@
                </xsl:for-each>
                
                <xsl:if test='$summaryColumns = 1'>
+
                   <td align="center">
                      <xsl:variable name="totalresults" select="count($results)"/>
+
                      <xsl:variable name="passresults">
                         <xsl:for-each select="$results">
                            <xsl:variable
@@ -761,18 +765,19 @@
                                  </xsl:otherwise>
                               </xsl:choose>
                            </xsl:variable>
-<!-- 2010-12-03, Jim: Replaced "$total = count..." with "$total &lt;= count..." to "better than perfect"
-     results would be counted as successful instead of unsuccessful -->:
+<!-- 2010-12-03, Jim: Replaced "$total = count..." with "$total &lt;= count..." so "better than perfect"
+     results would be counted as successful instead of unsuccessful -->
                            <xsl:if test="$total &lt;= count($results[@result='pass']) and $total != 0">
                               <xsl:value-of select="1"/>
                            </xsl:if>
                         </xsl:for-each>
                      </xsl:variable>
-                     
+
                      <xsl:variable
                         name='passed'
                         select="string-length($passresults)"
                         />
+
                      <xsl:attribute name="bgcolor">
                         <xsl:choose>
                            <xsl:when test='($totalresults="1" and $passed="1") or $passed >= 2'>
