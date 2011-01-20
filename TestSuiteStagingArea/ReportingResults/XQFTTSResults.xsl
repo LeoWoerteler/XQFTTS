@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 
 <!--                                                                         -->
-<!-- Generate a report for one or more XQTS result reports                   -->
+<!-- Generate a report for one or more XQFTTS result reports                 -->
 <!--                                                                         -->
 <!-- Author: Andrew Eisenberg                                                -->
 <!--                                                                         -->
@@ -34,10 +34,9 @@
 <!--                                                                         -->
 <!--   2008-03-14    Adjusted to work with XQuery Update Test Suite.         -->
 <!--                                                                         -->
-<!--   2008-06-26    Adjusted to work with XQuery Full Text Test Suite.      -->
+<!--   2008-06-26    Adjsuted to work with XQuery Full Text Test Suite.      -->
 <!--                                                                         -->
-<!--   2009-08-24    Fixed some inappropriate namespaces to ident FT         -->
-
+<!--   2011-01-20    Added a link to the Java parsing applet.                -->
 
 
 
@@ -130,6 +129,7 @@
    
    <!-- colors -->
    
+   <xsl:variable name="betterthanperfectcolor" select='"seagreen"'/>
    <xsl:variable name="perfectcolor" select='"mediumseagreen"'/>
    <xsl:variable name="passcolor" select='"palegreen"'/>
    <xsl:variable name="failcolor" select='"coral"'/>
@@ -154,7 +154,6 @@
    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
    
    <xsl:template match="/">
-      
       <html xmlns="http://www.w3.org/1999/xhtml">
          <head>
             <title>
@@ -186,7 +185,7 @@
                <p>
                   This document contains the results of running the
                   <a href="http://dev.w3.org/2007/xpath-full-text-10-test-suite/">XPath and XQuery Full Text 1.0 Test Suite</a>
-                  on one or more implementaions of XPath and XQuery Full Text.
+                  on one or more implementations of XPath and XQuery Full Text 1.0.
                </p>
                
                <p>
@@ -207,6 +206,10 @@
                   </xsl:if>
                </p>
                
+               <p>A Java applet that parses XQuery and XPath Full Text 1.0 expressions is available at
+                  <a href="http://www.w3.org/2010/02/qt-applets/xquery10-fulltext/">http://www.w3.org/2010/02/qt-applets/xquery10-fulltext/</a>.
+               </p>
+
                <xsl:apply-templates>
                   <xsl:with-param name='summary' select="'yes'"/>
                </xsl:apply-templates>
@@ -244,9 +247,9 @@
                   <xsl:otherwise>0</xsl:otherwise>
                </xsl:choose>
             </xsl:variable>
-            
+
             <xsl:if test='($detailsp + $impdefp + $summaryp) > 1'>
-               
+
                <hr/>            
                
                <h3>Contents</h3>
@@ -286,7 +289,6 @@
                      name="result"
                      select="./xqtsr:test-suite-result/xqtsr:implementation"
                      />
-                  
                   <!-- Skip implementations that wish to be anonymous -->
                   
                   <xsl:if test="not($result/xqtsr:organization/@anonymous = 'true')">
@@ -503,6 +505,9 @@
                         </td>
                         <td>untested</td>
                      </tr>
+                     <tr>
+                       <td colspan="8" align="right">Figures are quoted as Passed / Failed / Total (any discrepancy represents tests not run or not reported)</td>
+                     </tr>
                   </table>
             </td>
          </tr>
@@ -561,7 +566,7 @@
                         <xsl:if test="./xqtsr:test-suite-result/xqtsr:test-run/xqtsr:test-suite/@version != $XQTSversion">
                            <br/>
                            <font size="-1">
-                              <xsl:text>(XQTS </xsl:text>
+                              <xsl:text>(XQFTTS </xsl:text>
                               <xsl:value-of select="./xqtsr:test-suite-result/xqtsr:test-run/xqtsr:test-suite/@version" />
                               <xsl:text>)</xsl:text>
                            </font>
@@ -673,6 +678,7 @@
                         name='failed'
                         select="count($results[@result='fail'])"
                         />
+
                      <xsl:variable name="total">
                         <xsl:choose>
                            <xsl:when test="$syntax='XQueryX'">
@@ -684,8 +690,25 @@
                         </xsl:choose>
                      </xsl:variable>
                      
+                     <xsl:variable name='attempted'>
+                        <xsl:choose>
+                          <xsl:when test="$title='Minimal Conformance'">
+                            <!-- tests for minimal conformance are treated as failed if not run -->
+                            <xsl:value-of select="$total"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="$passed + $failed"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>   
+                     
                      <xsl:attribute name="bgcolor">
                         <xsl:choose>
+                           <xsl:when test='$passed > $total and $passed != 0'>
+<!-- 2010-12-03, Jim: If the number of tests passed is greater than the total number of tests that should have been run,
+     then mark the results as "better than perfect". -->
+                              <xsl:value-of select="$betterthanperfectcolor"/>
+                           </xsl:when>
                            <xsl:when test='$passed=$total and $passed != 0'>
                               <xsl:value-of select="$perfectcolor"/>
                            </xsl:when>
@@ -724,8 +747,10 @@
                </xsl:for-each>
                
                <xsl:if test='$summaryColumns = 1'>
+
                   <td align="center">
                      <xsl:variable name="totalresults" select="count($results)"/>
+
                      <xsl:variable name="passresults">
                         <xsl:for-each select="$results">
                            <xsl:variable
@@ -742,16 +767,19 @@
                                  </xsl:otherwise>
                               </xsl:choose>
                            </xsl:variable>
-                           <xsl:if test="$total = count($results[@result='pass']) and $total != 0">
+<!-- 2010-12-03, Jim: Replaced "$total = count..." with "$total &lt;= count..." so "better than perfect"
+     results would be counted as successful instead of unsuccessful -->
+                           <xsl:if test="$total &lt;= count($results[@result='pass']) and $total != 0">
                               <xsl:value-of select="1"/>
                            </xsl:if>
                         </xsl:for-each>
                      </xsl:variable>
-                     
+
                      <xsl:variable
                         name='passed'
                         select="string-length($passresults)"
                         />
+
                      <xsl:attribute name="bgcolor">
                         <xsl:choose>
                            <xsl:when test='($totalresults="1" and $passed="1") or $passed >= 2'>

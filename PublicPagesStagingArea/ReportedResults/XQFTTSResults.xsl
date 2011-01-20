@@ -35,6 +35,8 @@
 <!--   2008-03-14    Adjusted to work with XQuery Update Test Suite.         -->
 <!--                                                                         -->
 <!--   2008-06-26    Adjsuted to work with XQuery Full Text Test Suite.      -->
+<!--                                                                         -->
+<!--   2011-01-20    Added a link to the Java parsing applet.                -->
 
 
 
@@ -204,6 +206,10 @@
                   </xsl:if>
                </p>
                
+               <p>A Java applet that parses XQuery and XPath Full Text 1.0 expressions is available at
+                  <a href="http://www.w3.org/2010/02/qt-applets/xquery10-fulltext/">http://www.w3.org/2010/02/qt-applets/xquery10-fulltext/</a>.
+               </p>
+
                <xsl:apply-templates>
                   <xsl:with-param name='summary' select="'yes'"/>
                </xsl:apply-templates>
