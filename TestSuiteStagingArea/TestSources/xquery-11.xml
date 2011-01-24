@@ -1,4 +1,4 @@
-<spec xmlns:e="http://www.w3.org/1999/XSL/Spec/ElementSyntax" id="spec-top" w3c-doctype="wd">
+<spec id="spec-top" w3c-doctype="wd">
 
 <header id="id-spec-header">
 <title>XQuery 1.1</title>
@@ -329,6 +329,9 @@ and are not normative.</p></div1>
 <!--
 ====================================================================
  $Log: xquery-11.xml,v $
+ Revision 1.2  2011/01/24 18:32:54  mholstege
+ 11718 remove useless namespace declaration
+
  Revision 1.1  2008/06/26 10:16:02  jmelton
  Adding most of the QT specs as corpus
 

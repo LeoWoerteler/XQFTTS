@@ -1,4 +1,4 @@
-<spec xmlns:e="http://www.w3.org/1999/XSL/Spec/ElementSyntax" id="spec-top" w3c-doctype="cr">
+<spec id="spec-top" w3c-doctype="cr">
 <header>
 <title>XQuery Update Facility 1.0</title>
 <w3c-designation>CR-xquery-update-10</w3c-designation>
