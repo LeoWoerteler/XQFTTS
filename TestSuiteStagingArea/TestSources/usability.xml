@@ -100,11 +100,14 @@
     <term>infrastructure</term>
     <synonym>
       <term>networks</term>
-          <synonym>
-          <term>Web</term>
-          <relationship>NT</relationship>
-      </synonym>
       <relationship>NT</relationship>
     </synonym>
   </entry>      
+  <entry>
+     <term>networks</term>
+	 <synonym>
+       <term>Web</term>
+       <relationship>NT</relationship>
+	 </synonym>
+  </entry>
 </thesaurus>
