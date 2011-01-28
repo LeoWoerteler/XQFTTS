@@ -1,4 +1,4 @@
-(: ForScoreExpr-2: Basic syntax: with as clause :)
+(: ForScoreExpr-2: Basic syntax :)
 
 (: insert-start :)
 declare variable $input-context external;
