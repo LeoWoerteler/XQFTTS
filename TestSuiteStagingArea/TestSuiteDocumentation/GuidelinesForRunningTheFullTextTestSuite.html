@@ -39,6 +39,15 @@ containing
 all test results in the format shown below, that can be sent to the
 working group.<br>
 </p>
+<h2>Tests of Optional Features</h2>
+<p>The test catalog includes a section (the Optional Features group) that
+provides tests for positive support of various optional features. In many
+cases these tests duplicate tests in the minimal conformance section except
+that error codes indicating non-support of a feature are disallowed. An
+implementation that does not support a particular optional feature does not
+need to execute the tests in the corresponding subgroup of the optional
+features group, and may exclude the relevant group from their report.
+</p>
 <h2>Test Suite Customization</h2>
 <p>In order to run the test suite on an XPath and XQuery Full Text
 1.0 implementation, implementers may customize the test suite and make
@@ -308,6 +317,13 @@ question is the default thesaurus.  As with stop word lists and thesauri in
 general, the referenced file is used to provide guidance as to the expected
 contribution from those resources.
 </p>
+<p>There are some cases where the test is testing that a special source is
+unknown. In these cases the query references a resource that does not exist.
+For example, the thesaurus &quot;technical&quot; references a file 
+&quot;Testsources/intentionally-missing.xml&quot;.  The test harness
+implementation is expected to reflect this as an unknown resource in the static 
+context.
+</p>
 <h3>Sentences and Paragraphs</h3>
 <p>The subject of sentences and paragraphs requires some consideration for implementations
 planning to run the test suite. 
@@ -466,7 +482,7 @@ Submitting XQFTTS Results<br>
 XQuery 1.0 Serialization</a></p>
 <hr>
 <address> <a href="http://www.w3.org/Help/Webmaster">Webmaster</a>
-&middot; Last modified: $Date: 2009/10/05 16:30:16 $ by
+&middot; Last modified: $Date: 2011/02/22 19:05:58 $ by
 $Author: mholstege $ </address>
 <p><a rel="Copyright"
  href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
