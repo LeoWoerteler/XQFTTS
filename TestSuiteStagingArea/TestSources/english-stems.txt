@@ -20,3 +20,5 @@ complete completing
 conduct conducting
 measure measuring 
 plan planning
+aid aids
+AIDS AIDS

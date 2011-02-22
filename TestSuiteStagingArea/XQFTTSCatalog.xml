@@ -2880,6 +2880,22 @@
                     <expected-error>FTST0019</expected-error>
                     <expected-error>FOCH0002</expected-error>					
                   </test-case>
+                  <test-case is-XPath2="true" name="ftmatchoptions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Stemming applies before the case option.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                    <query name="ftmatchoptions-q5" date="2011-02-22"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file> 
+                    <output-file role="principal" compare="Text">ftmatchoptions-results-q5.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ftmatchoptions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Stemming applies before the case option.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                    <query name="ftmatchoptions-q6" date="2011-02-22"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file> 
+                    <output-file role="principal" compare="Text">ftmatchoptions-results-q6.txt</output-file>
+                  </test-case>
                 </test-group>
                 <test-group name="FTLanguage">
                   <GroupInfo>
