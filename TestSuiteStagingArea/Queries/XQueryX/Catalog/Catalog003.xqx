@@ -20,14 +20,9 @@
           <xqx:pathExpr>
             <xqx:stepExpr>
               <xqx:filterExpr>
-                <xqx:functionCallExpr>
-                  <xqx:functionName>doc</xqx:functionName>
-                  <xqx:arguments>
-                    <xqx:stringConstantExpr>
-                      <xqx:value>../../../XQFTTSCatalog.xml</xqx:value>
-                    </xqx:stringConstantExpr>
-                  </xqx:arguments>
-                </xqx:functionCallExpr>
+                <xqx:varRef>
+                  <xqx:name>input-context</xqx:name>
+                </xqx:varRef>
               </xqx:filterExpr>
             </xqx:stepExpr>
             <xqx:stepExpr>
