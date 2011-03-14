@@ -5261,6 +5261,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q2" date="2008-11-28"/>
         <aux-URI role="stopwords">stopwords1</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>		
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q2.xml</output-file>
       </test-case>
@@ -6498,6 +6499,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
+		<aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
        <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
