@@ -3,7 +3,7 @@
 <test-suite xmlns="http://www.w3.org/2005/02/query-test-full-text"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             CatalogDesignDate="2008-02-18"
-            version="1.0.3"
+            version="1.0.4"
             SourceOffsetPath="./"
             ResultOffsetPath="ExpectedTestResults/"
             XQueryQueryOffsetPath="Queries/XQuery/"
@@ -14,7 +14,7 @@
                                 http://dev.w3.org/2007/xpath-full-text-10-test-suite/TestSuiteStagingArea/XQFTTSCatalog.xsd">
 
   <test-suite-info>
-    <title>XQuery and XPath Full Text 1.0 Test Suite v1.0.3</title>
+    <title>XQuery and XPath Full Text 1.0 Test Suite v1.0.4</title>
     <description>Test Suite for XQuery and XPath Full-Text 1.0. 
       See http://dev.w3.org/2007/xpath-full-text-10-test-suite/.</description>
   </test-suite-info>
@@ -650,6 +650,9 @@
     </implementation-defined-item>
     <implementation-defined-item name="Thesaurus Relationships" spec="XQueryFullText">
       <description last-mod="2010-09-17">If a query specifies thesaurus relationships or levels not supported by the thesaurus, or does not specify a relationship, the behavior is implementation-defined.</description>
+    </implementation-defined-item>
+    <implementation-defined-item name="Thesaurus Levels" spec="XQueryFullText">
+      <description last-mod="2011-01-04">If a query does not specify the number of levels, and the implementation does not follow the default of querying all levels of hierarchical relationships, then the number of levels of hierarchical relationships queries is implementation-defined.</description>
     </implementation-defined-item>
     <implementation-defined-item name="Stemming Option" spec="XQueryFullText">
       <description last-mod="2010-09-16">It is implementation-defined what a stem of a token is and whether stemming will based on an algorithm, dictionary, or mixed approach.</description>
@@ -2877,6 +2880,22 @@
                     <expected-error>FTST0019</expected-error>
                     <expected-error>FOCH0002</expected-error>					
                   </test-case>
+                  <test-case is-XPath2="true" name="ftmatchoptions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Stemming applies before the case option.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                    <query name="ftmatchoptions-q5" date="2011-02-22"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file> 
+                    <output-file role="principal" compare="Text">ftmatchoptions-results-q5.txt</output-file>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ftmatchoptions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                    <description>Stemming applies before the case option.</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
+                    <query name="ftmatchoptions-q6" date="2011-02-22"/>
+                    <aux-URI role="stemming-dictionary">english</aux-URI>
+                    <input-file role="principal-data" variable="input-context">emptydoc</input-file> 
+                    <output-file role="principal" compare="Text">ftmatchoptions-results-q6.txt</output-file>
+                  </test-case>
                 </test-group>
                 <test-group name="FTLanguage">
                   <GroupInfo>
@@ -2897,7 +2916,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.4.1" section-title="Language Option" section-pointer="ftlanguageoption"/>
                     <query name="ftlanguage-q2" date="2008-11-22"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <expected-error>FTST0009</expected-error> 
+                    <expected-error>XPTY0004</expected-error> 
                     <expected-error>FTST0013</expected-error>
                   </test-case>
           <test-case is-XPath2="false" name="ft-3.4.1-expressions-q3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTLanguage/" scenario="standard" Creator="Full-Text Task Force">
@@ -3656,7 +3675,7 @@
                     <spec-citation spec="XQueryFullText" section-number="3.6.2" section-title="Window Selection" section-pointer="ftwindow"/>
                     <query name="FTWindow-paragraphs3" date="2008-12-21"/>
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-                    <output-file role="principal" compare="XML">FTWindow-paragraphs3.xml</output-file>
+                    <output-file role="principal" compare="Text">FTWindow-paragraphs3.txt</output-file>
                     <expected-error>FTST0003</expected-error>
                     <!-- Unsupported unit -->
                   </test-case>
@@ -4652,7 +4671,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
         <query name="FTWindow-paragraphs3" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">FTWindow-paragraphs3.xml</output-file>
+        <output-file role="principal" compare="Text">FTWindow-paragraphs3.txt</output-file>
       </test-case>
       <test-case is-XPath2="true" name="FTDistance-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTDistance/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftdistance exactly n sentences: positive</description>
@@ -5242,7 +5261,7 @@
         <spec-citation spec="XQueryFullText" section-number="5.2.11" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
         <query name="ftstopword-q2" date="2008-11-28"/>
         <aux-URI role="stopwords">stopwords1</aux-URI>
-		<aux-URI role="stopwords">stopwords2</aux-URI>
+        <aux-URI role="stopwords">stopwords2</aux-URI>		
         <input-file role="principal-data" variable="input-context">FT-3-examples-source-document</input-file>
         <output-file role="principal" compare="Fragment">ftstopword-results-q2.xml</output-file>
       </test-case>
@@ -5509,6 +5528,19 @@
         <output-file role="principal" compare="XML">FTSelection-Weight-q1h_result.xml</output-file>
       </test-case>
     </test-group>
+    <test-group name="UseCase-ACROSS-optional">
+      <GroupInfo>
+        <title>Use Case "ACROSS"; optional aspects</title>
+        <description>Query across element boundaries. Section 3.</description>
+      </GroupInfo>
+      <test-case is-XPath2="true" name="across-queries-results-q2b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
+        <description>Find all part introductions containing the word "prototypes".</description>
+        <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
+        <query name="across-queries-results-q2b" date="2008-04-04"/>
+        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
+        <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
+      </test-case>
+	</test-group>
   </test-group>
   <test-group name="UseCase">
     <GroupInfo>
@@ -5626,13 +5658,7 @@
         <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
         <output-file role="principal" compare="Fragment">across-queries-results-q2.txt</output-file>
       </test-case>
-      <test-case is-XPath2="true" name="across-queries-results-q2b" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
-        <description>Find all part introductions containing the word "prototypes".</description>
-        <spec-citation spec="FTUseCases" section-number="3.2.2" section-title="Q2 Query Across Descendent Elements (Highlighting Tags)" section-pointer="across-queries-results-q2"/>
-        <query name="across-queries-results-q2b" date="2008-04-04"/>
-        <input-file role="principal-data" variable="input-context">ftusecases</input-file>
-        <output-file role="principal" compare="XML">across-queries-results-q2.xml</output-file>
-      </test-case>
+	  <!-- Moved q2b to optional section -->
       <test-case is-XPath2="false" name="across-queries-results-q3" FilePath="UseCase/UseCase-ACROSS/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all book text with the word "tests".</description>
         <spec-citation spec="FTUseCases" section-number="3.2.3" section-title="Q3 Query Across Descendent Elements (Substantive Tags)" section-pointer="across-queries-results-q3"/>
@@ -6473,7 +6499,7 @@ workstation or in a lab" ignoring footnotes. This query finds book chapters cont
         <spec-citation spec="FTUseCases" section-number="15.2.3" section-title="Q3 Nested Distance Query using Wildcards, Stemming, and Thesaurus Support" section-pointer="full-text-composability-queries-results-q3"/>
         <query name="full-text-composability-queries-results-q3b" date="2008-06-26"/>
         <aux-URI role="stemming-dictionary">english</aux-URI>
-        <aux-URI role="thesaurus">usability</aux-URI>		
+		<aux-URI role="thesaurus">usability</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">full-text-composability-queries-results-q3.xml</output-file>
        <output-file role="principal" compare="Fragment">full-text-composability-queries-results-q3b.txt</output-file>       
