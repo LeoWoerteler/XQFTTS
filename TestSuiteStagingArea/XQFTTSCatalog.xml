@@ -1804,6 +1804,7 @@
                 <query name="FTPrimary-FTWords-FTTimes-q1" date="2008-08-18"/>
                 <input-file role="principal-data" variable="input-context">ftspec</input-file>
                 <output-file role="principal" compare="XML">FTPrimary-FTWords-FTTimes-q1_result.xml</output-file>
+				<expected-error>FTST0005</expected-error>
               </test-case>
               <test-case is-XPath2="false" name="FTPrimary-FTSelection-q1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/" scenario="standard" Creator="Full-Text Task Force, Jim">
                 <description>Positive test to demonstrate that queries comprising an FTPrimary that is an FTWords are supported.</description>
@@ -2839,6 +2840,7 @@
                     <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
                     <expected-error>FTDY0017</expected-error>
                     <expected-error>FTST0001</expected-error>                    
+					<expected-error>FTST0005</expected-error>
                   </test-case>
                 </test-group>
                 <test-group name="MatchOptions">
@@ -3083,6 +3085,7 @@
                     <query name="ftwildcard-q20" date="2009-05-13"/>
                     <input-file role="principal-data" variable="input-context">ftemptynode</input-file>
                     <output-file role="principal" compare="Text">ftwildcard-results-q20.txt</output-file>
+					<expected-error>FTST0005</expected-error>
                   </test-case>
                   <test-case is-XPath2="true" name="ft-3.4.2-expressions-q21" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTWildcard/" scenario="standard" Creator="Full-Text Task Force">
                     <description>FTWildcard and FTTimes query that returns true if the node is empty or contains no tokens -- node with content that usually is not tokenized.</description>
@@ -3091,6 +3094,7 @@
                     <input-file role="principal-data" variable="input-context">ftemptynode</input-file>
                     <output-file role="principal" compare="Inspect">ftwildcard-results-q21.txt</output-file>
                     <output-file role="principal" compare="Inspect">ftwildcard-results-q21b.txt</output-file>                   
+					<expected-error>FTST0005</expected-error>
                   </test-case>                 
                 </test-group>
                 <test-group name="FTThesaurus">
@@ -6254,6 +6258,7 @@
         <query name="cardinality-queries-results-q4" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">cardinality-queries-results-q4.xml</output-file>
+		<expected-error>FTST0005</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="cardinality-queries-results-q4b" FilePath="UseCase/UseCase-CARDINALITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Occurrence Count Query: Find all books which repeat the phrase "expert review methods" in the text at least two times. This query finds a phrase which is repeated a specified number of times.</description>
@@ -6261,6 +6266,7 @@
         <query name="cardinality-queries-results-q4b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">cardinality-queries-results-q4.xml</output-file>
+		<expected-error>FTST0005</expected-error>
       </test-case>
     </test-group>
     <test-group name="UseCase-PROXIMITY">
