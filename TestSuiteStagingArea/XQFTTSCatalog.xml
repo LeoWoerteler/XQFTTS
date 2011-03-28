@@ -3453,6 +3453,7 @@
                   <query name="FTPosFilter-q5" date="2009-02-26"/>
                   <input-file role="principal-data" variable="input-context">emptydoc</input-file>
                   <output-file role="principal" compare="Text">FTPosFilter-q5.txt</output-file>
+                  <expected-error>FTST0003</expected-error>
                   <expected-error>FTST0004</expected-error>
                 </test-case>
                 <test-case is-XPath2="true" name="FTPosFilter-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/" scenario="standard" Creator="Full-Text Task Force">
@@ -3461,6 +3462,7 @@
                   <query name="FTPosFilter-q6" date="2009-02-26"/>
                   <input-file role="principal-data" variable="input-context">emptydoc</input-file>
                   <output-file role="principal" compare="Text">FTPosFilter-q6.txt</output-file>
+                  <expected-error>FTST0003</expected-error>
                   <expected-error>FTST0004</expected-error>
                 </test-case>
                 <test-group name="FTOrder">
@@ -6319,6 +6321,7 @@
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q4.xml</output-file>
+		<expected-error>FTST0003</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="proximity-queries-results-q4b" FilePath="UseCase/UseCase-PROXIMITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Unordered Within a Sentence Query: Find all books which discuss "questions asked during cognitive walk-throughs". This query finds books with multiple words in any order within a sentence.</description>
@@ -6327,6 +6330,7 @@
         <aux-URI role="stemming-dictionary">english</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q4.xml</output-file>
+		<expected-error>FTST0003</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="proximity-queries-results-q5" FilePath="UseCase/UseCase-PROXIMITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q5 Unordered Within a Paragraph Query: Find all paragraphs which define what "Web site usability" is. This query finds books with multiple words and phrases in any order within a paragraph.</description>
@@ -6335,6 +6339,7 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q5.xml</output-file>
         <output-file role="principal" compare="Fragment">proximity-queries-results-q5-alt.txt</output-file>
+		<expected-error>FTST0003</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="proximity-queries-results-q5b" FilePath="UseCase/UseCase-PROXIMITY/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q5 Unordered Within a Paragraph Query: Find all paragraphs which define what "Web site usability" is. This query finds books with multiple words and phrases in any order within a paragraph.</description>
@@ -6343,6 +6348,7 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">proximity-queries-results-q5.xml</output-file>
         <output-file role="principal" compare="Fragment">proximity-queries-results-q5-alt.txt</output-file>
+		<expected-error>FTST0003</expected-error>
       </test-case>
     </test-group>
     <test-group name="UseCase-AXES">
