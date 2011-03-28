@@ -5624,6 +5624,7 @@
         <query name="element-queries-results-q6" date="2008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
+		<expected-error>FTST0012</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q6b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find all book titles which start with "improving" followed within 2 words by "usability".</description>
@@ -5631,6 +5632,7 @@
         <query name="element-queries-results-q6b" date="2008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">element-queries-results-q6.xml</output-file>
+		<expected-error>FTST0012</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="element-queries-results-q7" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find the phrase when it is the entire content of an element.</description>
@@ -5638,6 +5640,7 @@
         <query name="element-queries-results-q7" date="2008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
+		<expected-error>FTST0012</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="element-queries-results-q7b" FilePath="UseCase/UseCase-ELEMENT/" scenario="standard" Creator="Full-Text Task Force">
         <description>Find the phrase when it is the entire content of an element.</description>
@@ -5645,6 +5648,7 @@
         <query name="element-queries-results-q7b" date="2008-04-04"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">element-queries-results-q7.xml</output-file>
+		<expected-error>FTST0012</expected-error>
       </test-case>
     </test-group>
     <test-group name="UseCase-ACROSS">
