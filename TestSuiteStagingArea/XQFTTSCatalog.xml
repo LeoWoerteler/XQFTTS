@@ -5965,6 +5965,7 @@
         <aux-URI role="thesaurus">taxonomy</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
+		<expected-error>FTST0015</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="thesaurus-queries-results-q6b" FilePath="UseCase/UseCase-THESAURUS/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q6 Query on Subordinate Terms Identified by a Taxonomy: Find out whether John Wesley Usabilityguy included research on "AIDS" and "other infectious diseases" among the charities he supported. This query finds words using a taxonomy to identify subordinate terms.</description>
@@ -5973,6 +5974,7 @@
         <aux-URI role="thesaurus">taxonomy</aux-URI>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">thesaurus-queries-results-q6.xml</output-file>
+		<expected-error>FTST0015</expected-error>
       </test-case>
     </test-group>
     <test-group name="UseCase-STOP-WORD">
@@ -6076,6 +6078,7 @@
         <query name="character-queries-results-q3" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">character-queries-results-q3.xml</output-file>
+		<expected-error>FTST0015</expected-error>
       </test-case>
       <test-case is-XPath2="true" name="character-queries-results-q3b" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q3 Query on Word with Upper Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word in upper case characters.</description>
@@ -6083,6 +6086,7 @@
         <query name="character-queries-results-q3b" date="2008-06-26"/>
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="XML">character-queries-results-q3.xml</output-file>
+		<expected-error>FTST0015</expected-error>
       </test-case>
       <test-case is-XPath2="false" name="character-queries-results-q4" FilePath="UseCase/UseCase-CHARACTER/" scenario="standard" Creator="Full-Text Task Force">
         <description>Q4 Query on Word with Upper Case and Lower Case Characters: Find out whether John Wesley Usabilityguy included research on "AIDS" among the charities he supported. This query finds a word with upper or lower case characters.</description>
