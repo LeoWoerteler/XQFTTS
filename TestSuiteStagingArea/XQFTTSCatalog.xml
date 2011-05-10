@@ -2885,7 +2885,7 @@
                     <expected-error>FTST0019</expected-error>
                     <expected-error>FOCH0002</expected-error>					
                   </test-case>
-                  <test-case is-XPath2="true" name="ftmatchoptions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="ftmatchoptions-q5" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Stemming applies before the case option.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q5" date="2011-02-22"/>
@@ -2893,7 +2893,7 @@
                     <input-file role="principal-data" variable="input-context">emptydoc</input-file> 
                     <output-file role="principal" compare="Text">ftmatchoptions-results-q5.txt</output-file>
                   </test-case>
-                  <test-case is-XPath2="true" name="ftmatchoptions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="ftmatchoptions-q6" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/" scenario="standard" Creator="Full-Text Task Force">
                     <description>Stemming applies before the case option.</description>
                     <spec-citation spec="XQueryFullText" section-number="3.4" section-title="Match Options" section-pointer="ftmatchoptions"/>
                     <query name="ftmatchoptions-q6" date="2011-02-22"/>
@@ -3680,7 +3680,7 @@
                     <expected-error>FTST0003</expected-error>
                     <!-- Unsupported unit -->
                   </test-case>
-                  <test-case is-XPath2="true" name="FTWindow-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
+                  <test-case is-XPath2="false" name="FTWindow-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
                     <description>ftwindow paragraphs, at edge of range</description>
                     <spec-citation spec="XQueryFullText" section-number="3.6.2" section-title="Window Selection" section-pointer="ftwindow"/>
                     <query name="FTWindow-paragraphs3" date="2008-12-21"/>
@@ -4642,7 +4642,7 @@
         <title>Unconstrained FTUnit/FTBigUnit</title>
         <description>Sentences and paragraphs. Sections 3.6 and 5.3.3.</description>
       </GroupInfo>
-      <test-case is-XPath2="true" name="FTWindow-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="false" name="FTWindow-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftwindow sentences, at edge of range</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
         <query name="FTWindow-sentences1" date="2008-12-21"/>
@@ -6716,21 +6716,21 @@ title and a third element if the second element does not exist. This query finds
          <title>Consistency in XQFTTS Catalog</title>
          <description/>
       </GroupInfo>
-      <test-case is-XPath2="true" name="Catalog001" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
+      <test-case is-XPath2="false" name="Catalog001" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
          <description>Check variable name is used, if source is not "emptydoc"</description>
          <spec-citation spec="XQueryFullText" section-number="XQueryFullText" section-title="XQuery and XPath Full Text 1.0" section-pointer="title"/>
          <query name="Catalog001" date="2009-07-05"/>
          <input-file role="principal-data" variable="input-context">XQFTTSCatalog</input-file>
          <output-file role="principal" compare="XML">Catalog001.xml</output-file>
       </test-case>
-      <test-case is-XPath2="true" name="Catalog002" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
+      <test-case is-XPath2="false" name="Catalog002" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
          <description>test all standard test cases have at least one output file</description>
          <spec-citation spec="XQueryFullText" section-number="XQueryFullText" section-title="XQuery and XPath Full Text 1.0" section-pointer="title"/>
          <query name="Catalog002" date="2009-07-05"/>
          <input-file role="principal-data" variable="input-context">XQFTTSCatalog</input-file>
          <output-file role="principal" compare="XML">Catalog002.xml</output-file>
       </test-case>
-      <test-case is-XPath2="true" name="Catalog003" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
+      <test-case is-XPath2="false" name="Catalog003" FilePath="Catalog/" scenario="standard" Creator="Andreas Behm, Jim">
          <description>test all error test cases have at least one expected error</description>
          <spec-citation spec="XQueryFullText" section-number="XQueryFullText" section-title="XQuery and XPath Full Text 1.0" section-pointer="title"/>
          <query name="Catalog003" date="2009-07-05"/>
