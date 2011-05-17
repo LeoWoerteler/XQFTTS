@@ -1,9 +1,7 @@
-<book number="2">
-   <title shortTitle="Usability Basics">Usability 
-   Basics: How to Plan for and Conduct Usability Tests 
-   on Web Site Thereby Improving the Usability of Your 
-   Web Site</title>
-   <content>
+<book number="2"><title shortTitle="Usability Basics">Usability 
+      Basics: How to Plan for and Conduct Usability Tests 
+      on Web Site Thereby Improving the Usability of Your 
+      Web Site</title><content>
       <introduction>
          <p>This is a basic handbook for planning and 
          conducting usability tests on Web sites. Usability 
@@ -66,5 +64,4 @@
             tasks.</p>
          </chapter>
       </part>
-   </content>
-</book>
+   </content></book>
