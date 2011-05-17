@@ -22,3 +22,8 @@ measure measuring
 plan planning
 aid aids
 AIDS AIDS
+Dog Dogs
+Cat Cats
+Improve Improves Improving Improved
+Plan Planning
+Conduct Conducting
