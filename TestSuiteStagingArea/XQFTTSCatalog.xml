@@ -5152,8 +5152,6 @@
         <query name="FTContent-q1" date="2008-12-21"/>
         <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
         <output-file role="principal" compare="XML">FTContent-q1.xml</output-file>
-        <expected-error>FTST0012</expected-error>
-        <!-- unsupported feature -->
       </test-case>
       <test-case is-XPath2="true" name="FTContent-unconstrained-q2" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTContent/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftnot at start</description>
