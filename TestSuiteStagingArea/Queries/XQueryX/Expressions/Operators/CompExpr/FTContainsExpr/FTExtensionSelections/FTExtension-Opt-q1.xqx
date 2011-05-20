@@ -45,7 +45,7 @@
                         <xqxft:ftExtensionSelection>
                           <xqxft:pragma>
                             <xqx:pragmaName xqx:prefix="oraxqft">user-index</xqx:pragmaName>
-                             <xqx:pragmaContents></xqx:pragmaContents>
+                            <xqx:pragmaContents></xqx:pragmaContents>
                           </xqxft:pragma>
                           <xqxft:ftSelection>
                             <xqxft:ftSelectionSource>

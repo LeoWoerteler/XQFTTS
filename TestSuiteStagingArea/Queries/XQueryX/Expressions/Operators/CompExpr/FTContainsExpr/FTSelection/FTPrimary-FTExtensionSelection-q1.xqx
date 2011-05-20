@@ -84,7 +84,7 @@
                           <xqxft:ftExtensionSelection>
                             <xqxft:pragma>
                               <xqx:pragmaName xqx:prefix="exq">classifier</xqx:pragmaName>
-                               <xqx:pragmaContents>with class 'Antonyms' </xqx:pragmaContents>
+                              <xqx:pragmaContents>with class 'Antonyms' </xqx:pragmaContents>
                             </xqxft:pragma>
                             <xqxft:ftSelection>
                               <xqxft:ftSelectionSource>
