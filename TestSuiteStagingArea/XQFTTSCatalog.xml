@@ -4642,7 +4642,7 @@
         <title>Unconstrained FTUnit/FTBigUnit</title>
         <description>Sentences and paragraphs. Sections 3.6 and 5.3.3.</description>
       </GroupInfo>
-      <test-case is-XPath2="false" name="FTWindow-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="true" name="FTWindow-unconstrained-sentences1" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftwindow sentences, at edge of range</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
         <query name="FTWindow-sentences1" date="2008-12-21"/>
@@ -4677,7 +4677,7 @@
         <input-file role="principal-data" variable="input-context">ftusecases</input-file>
         <output-file role="principal" compare="Fragment">FTWindow-paragraphs2.txt</output-file>
       </test-case>
-      <test-case is-XPath2="true" name="FTWindow-unconstrained-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
+      <test-case is-XPath2="false" name="FTWindow-unconstrained-paragraphs3" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/" scenario="standard" Creator="Full-Text Task Force">
         <description>ftwindow paragraphs, at edge of range</description>
         <spec-citation spec="XQueryFullText" section-number="5.2.3" section-title="FTUnit and FTBigUnit" section-pointer="id-ftunit-option"/>
         <query name="FTWindow-paragraphs3" date="2008-12-21"/>
