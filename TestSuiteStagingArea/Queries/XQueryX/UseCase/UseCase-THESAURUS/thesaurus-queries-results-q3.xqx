@@ -123,13 +123,9 @@
                             <xqxft:at>http://bstore1.example.com/UsabilityThesaurus.xml</xqxft:at>
                             <xqxft:relationship>BT</xqxft:relationship>
                             <xqxft:levels>
-                              <xqxft:exactlyRange>
-                                <xqxft:value>
-                                  <xqx:integerConstantExpr>
-                                    <xqx:value>1</xqx:value>
-                                  </xqx:integerConstantExpr>
-                                </xqxft:value>
-                              </xqxft:exactlyRange>
+                              <xqxft:exactlyLiteralRange>
+                                <xqxft:value>1</xqxft:value>
+                              </xqxft:exactlyLiteralRange>
                             </xqxft:levels>
                           </xqxft:thesaurusID>
                         </xqxft:thesauri>
