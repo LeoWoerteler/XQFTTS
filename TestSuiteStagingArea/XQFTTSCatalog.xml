@@ -3156,6 +3156,38 @@
                     <input-file role="principal-data" variable="input-context">ftusecases</input-file>
                     <output-file role="principal" compare="Fragment">ftthesaurus-results-q6.txt</output-file>
                   </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.3-expressions-q7" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Michael Dyck">
+                    <description>Violate FTLiteralRange 'exactly' syntax</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+                    <query name="ftthesaurus-q7" date="2011-07-11"/>
+                    <aux-URI role="thesaurus">usability</aux-URI>
+                    <output-file role="principal" compare="Text">ftthesaurus-results-q7.txt</output-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.3-expressions-q8" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Michael Dyck">
+                    <description>Violate FTLiteralRange 'at least' syntax</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+                    <query name="ftthesaurus-q8" date="2011-07-11"/>
+                    <aux-URI role="thesaurus">usability</aux-URI>
+                    <output-file role="principal" compare="Text">ftthesaurus-results-q8.txt</output-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.3-expressions-q9" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Michael Dyck">
+                    <description>Violate FTLiteralRange 'at most' syntax</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+                    <query name="ftthesaurus-q9" date="2011-07-11"/>
+                    <aux-URI role="thesaurus">usability</aux-URI>
+                    <output-file role="principal" compare="Text">ftthesaurus-results-q9.txt</output-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
+                  <test-case is-XPath2="true" name="ft-3.4.3-expressions-q10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/" scenario="standard" Creator="Michael Dyck">
+                    <description>Violate FTLiteralRange 'from to' syntax</description>
+                    <spec-citation spec="XQueryFullText" section-number="3.4.3" section-title="Thesaurus Option" section-pointer="ftthesaurusoption"/>
+                    <query name="ftthesaurus-q10" date="2011-07-11"/>
+                    <aux-URI role="thesaurus">usability</aux-URI>
+                    <output-file role="principal" compare="Text">ftthesaurus-results-q10.txt</output-file>
+                    <expected-error>XPST0003</expected-error>
+                  </test-case>
                 </test-group>
                 <test-group name="FTStemming">
                   <GroupInfo>
