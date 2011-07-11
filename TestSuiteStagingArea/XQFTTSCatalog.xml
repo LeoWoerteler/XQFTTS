@@ -21,7 +21,7 @@
 
   <citations>
     <citation-spec name="XQueryFullText">
-      <description last-mod="2009-07-09">XQuery and XPath Full Text 1.0</description>
+      <descriptio last-mod="2009-07-09">XQuery and XPath Full Text 1.0</description>
       <spec-URI>http://www.w3.org/TR/xpath-full-text-10/</spec-URI>
     </citation-spec>
     <citation-spec name="XQuery">
@@ -774,6 +774,7 @@
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat.</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="examples-222-q1" date="2008-06-26"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1.txt</output-file>
         </test-case>
@@ -781,6 +782,7 @@
           <description>Find the author of each book with a title containing a token with the same root as dog and the token cat.</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="examples-222-q1b" date="2009-01-15"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q1b.txt</output-file>
         </test-case>       
@@ -788,6 +790,7 @@
           <description>Find books that have a price of less than 50 and a title which contains a token with the same root as train.</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="examples-222-q2" date="2009-01-15"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q2.txt</output-file>
         </test-case>   
@@ -795,6 +798,7 @@
           <description>Finds books where either the title contains the token dog and the token cat and the content does not contain a token with the same root as train, or where the title fails to have one of the matching tokens but the content does.</description>
           <spec-citation spec="XQueryFullText" section-number="2.2.2" section-title="Examples" section-pointer="section-ftcontainsexpr-examples"/>
           <query name="examples-222-q3" date="2009-01-15"/>
+          <aux-URI role="stemming-dictionary">english</aux-URI>
           <input-file role="principal-data" variable="input-context">ftbookexample</input-file>
           <output-file role="principal" compare="XML">ft-222-examples-results-q3.txt</output-file>
         </test-case>        
@@ -1742,6 +1746,7 @@
               <description>FTOptionDecl with multiple FTMatchOptions.</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q2" date="2009-01-15"/>
+              <aux-URI role="stemming-dictionary">english</aux-URI>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q2.txt</output-file>
               <expected-error>FOCH0002</expected-error>            
@@ -1757,6 +1762,7 @@
               <description>Multiple FTOptionDecls, no conflicts..</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q4" date="2009-01-15"/>
+              <aux-URI role="stemming-dictionary">english</aux-URI>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q4.txt</output-file>
               <expected-error>FOCH0002</expected-error>
@@ -1765,6 +1771,7 @@
               <description>Multiple FTOptionDecls, one "conflict", no error.</description>
               <spec-citation spec="XQueryFullText" section-number="2.4" section-title="Extensions to the Static Context" section-pointer="section-extensions-static-context"/>
               <query name="ftstaticcontext-q5" date="2009-01-15"/>
+              <aux-URI role="stemming-dictionary">english</aux-URI>
               <input-file role="principal-data" variable="input-context">ftusecases</input-file>
               <output-file role="principal" compare="Fragment">ftstaticcontext-results-q5.txt</output-file>
               <expected-error>FOCH0002</expected-error>
