@@ -3428,7 +3428,7 @@
         <description>An edge case where both query and content contain nothing but stopwords. Test case tokenization does not remove stop words from documents at indexing time, and so reports a match. However, reasonable implementations may remove stop words at indexing time and therefore will report no match.
 </description>
         <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
-        <query name="ftstopword-q1" date="2011-07-26"/>
+        <query name="ftstopword-q10" date="2011-07-26"/>
         <aux-URI role="stopwords">stopwords6</aux-URI>
         <input-file role="principal-data" variable="input-context">emptydoc</input-file>
         <output-file role="principal" compare="Text">ftstopword-results-q10.txt</output-file>
