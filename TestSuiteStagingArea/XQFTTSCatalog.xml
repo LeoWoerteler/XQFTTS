@@ -469,6 +469,9 @@
     <stopwords ID="stopwords5" uri="http://bstore1.example.com/StopWordList5.xml" FileName="TestSources/stopwords5.txt" Creator="Full-Text Task Force">
       <description last-mod="2008-11-28">A fifth stop word list for use cases</description>
     </stopwords>    
+    <stopwords ID="stopwords6" uri="http://example.com/HamletStopWordList.xml" FileName="TestSources/stopwords6.txt" Creator="Full-Text Task Force">
+      <description last-mod="2011-07-25">A stop word list for edge cases</description>
+    </stopwords>    
     <thesaurus ID="defaultthes" uri="##default" FileName="TestSources/defaultthes.xml" Creator="Full-Text Task Force">
       <description last-mod="2009-10-05">Default thesaurus</description>
     </thesaurus>
@@ -3421,6 +3424,17 @@
         <output-file role="principal" compare="XML">ftstopword-results-q9.xml</output-file>        
         <expected-error>FTST0006</expected-error>
       </test-case>        
+      <test-case is-XPath2="true" name="ft-3.4.7-expressions-q10" FilePath="Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/" scenario="standard" Creator="Full-Text Task Force">
+        <description>An edge case where both query and content contain nothing but stopwords. Test case tokenization does not remove stop words from documents at indexing time, and so reports a match. However, reasonable implementations may remove stop words at indexing time and therefore will report no match.
+</description>
+        <spec-citation spec="XQueryFullText" section-number="3.4.7" section-title="Stop Word Option" section-pointer="ftstopwordoption"/>
+        <query name="ftstopword-q1" date="2011-07-26"/>
+        <aux-URI role="stopwords">stopwords6</aux-URI>
+        <input-file role="principal-data" variable="input-context">emptydoc</input-file>
+        <output-file role="principal" compare="Text">ftstopword-results-q10.txt</output-file>
+        <expected-error>FTST0006</expected-error>
+        <expected-error>FTST0008</expected-error>
+      </test-case>
                 </test-group>
                 <test-group name="ExtensionOption">
                   <GroupInfo>

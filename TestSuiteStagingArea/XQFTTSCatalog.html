@@ -238,6 +238,9 @@
 <tr>
 <td><A name="stopwords5"><b>stopwords5</b></A></td><td><A href="http://bstore1.example.com/StopWordList5.xml">http://bstore1.example.com/StopWordList5.xml</A></td><td><A href="./TestSources/stopwords5.txt">TestSources/stopwords5.txt</A></td>
 </tr>
+<tr>
+<td><A name="stopwords6"><b>stopwords6</b></A></td><td><A href="http://example.com/HamletStopWordList.xml">http://example.com/HamletStopWordList.xml</A></td><td><A href="./TestSources/stopwords6.txt">TestSources/stopwords6.txt</A></td>
+</tr>
 </table>
 <h2>Thesauri</h2>
 <table>
@@ -616,6 +619,13 @@
                   <A href="#ftbookexample">ftbookexample</A></td><td></td>
 </tr>
 <tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
 <td colspan="3"><B>Outputs:</B></td>
 </tr>
 <tr>
@@ -671,6 +681,13 @@
                   <A href="#ftbookexample">ftbookexample</A></td><td></td>
 </tr>
 <tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
 <td colspan="3"><B>Outputs:</B></td>
 </tr>
 <tr>
@@ -724,6 +741,13 @@
                   <A href="#ftbookexample">ftbookexample</A></td><td></td>
 </tr>
 <tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
 <td colspan="3"><B>Outputs:</B></td>
 </tr>
 <tr>
@@ -775,6 +799,13 @@
                   <A href="#principal-data">principal-data</A></td><td>
                   Source ID:
                   <A href="#ftbookexample">ftbookexample</A></td><td></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
 <td colspan="3"><B>Outputs:</B></td>
@@ -6559,6 +6590,13 @@
                   <A href="#ftusecases">ftusecases</A></td><td></td>
 </tr>
 <tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
 <td colspan="3"><B>Outputs:</B></td>
 </tr>
 <tr>
@@ -6669,6 +6707,13 @@
                   <A href="#ftusecases">ftusecases</A></td><td></td>
 </tr>
 <tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
 <td colspan="3"><B>Outputs:</B></td>
 </tr>
 <tr>
@@ -6726,6 +6771,13 @@
                   <A href="#principal-data">principal-data</A></td><td>
                   Source ID:
                   <A href="#ftusecases">ftusecases</A></td><td></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#stemming-dictionary">stemming-dictionary</A></td><td>
+                  Source ID:
+                  <A href="#english">english</A></td><td>(as auxiliary URI)</td>
 </tr>
 <tr>
 <td colspan="3"><B>Outputs:</B></td>
@@ -16630,6 +16682,250 @@
 </tr>
 </table>
 <p></p>
+<table width="80%" bgcolor="tan">
+<a name="ft-3.4.3-expressions-q7"></a>
+<tr>
+<td><b>ft-3.4.3-expressions-q7</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Michael Dyck</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Violate FTLiteralRange 'exactly' syntax</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftthesaurusoption">#ftthesaurusoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q7.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q7.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#thesaurus">thesaurus</A></td><td>
+                  Source ID:
+                  <A href="#usability">usability</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q7.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q7.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table width="80%" bgcolor="tan">
+<a name="ft-3.4.3-expressions-q8"></a>
+<tr>
+<td><b>ft-3.4.3-expressions-q8</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Michael Dyck</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Violate FTLiteralRange 'at least' syntax</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftthesaurusoption">#ftthesaurusoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q8.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q8.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#thesaurus">thesaurus</A></td><td>
+                  Source ID:
+                  <A href="#usability">usability</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q8.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q8.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table width="80%" bgcolor="tan">
+<a name="ft-3.4.3-expressions-q9"></a>
+<tr>
+<td><b>ft-3.4.3-expressions-q9</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Michael Dyck</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Violate FTLiteralRange 'at most' syntax</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftthesaurusoption">#ftthesaurusoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q9.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q9.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#thesaurus">thesaurus</A></td><td>
+                  Source ID:
+                  <A href="#usability">usability</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q9.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q9.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
+<table width="80%" bgcolor="tan">
+<a name="ft-3.4.3-expressions-q10"></a>
+<tr>
+<td><b>ft-3.4.3-expressions-q10</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Michael Dyck</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">Violate FTLiteralRange 'from to' syntax</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftthesaurusoption">#ftthesaurusoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q10.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-q10.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#thesaurus">thesaurus</A></td><td>
+                  Source ID:
+                  <A href="#usability">usability</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q10.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTThesaurus/ftthesaurus-results-q10.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRXPST0003">
+                     err:XPST0003</A></td>
+</tr>
+</table>
+<p></p>
 <A name="FTStemming"></A>
 <h3>1.2.2.1.1.1.3.9Full-Text Stemming Match Option</h3>
 <p></p>Stemming option. Section 3.4.4.<p></p>
@@ -18205,6 +18501,81 @@
                   Error:
                   <A href="http://www.w3.org/TR/xquery/#ERRFTST0006">
                      err:FTST0006</A></td>
+</tr>
+</table>
+<p></p>
+<table width="80%" bgcolor="tan">
+<a name="ft-3.4.7-expressions-q10"></a>
+<tr>
+<td><b>ft-3.4.7-expressions-q10</b></td><td>
+               Scenario:
+               <A href="#standard">standard</A></td><td>
+               Creator:
+               Full-Text Task Force</td>
+</tr>
+<tr>
+<td colspan="3"><B>Description:</B></td>
+</tr>
+<tr>
+<td colspan="3">An edge case where both query and content contain nothing but stopwords. Test case tokenization does not remove stop words from documents at indexing time, and so reports a match. However, reasonable implementations may remove stop words at indexing time and therefore will report no match.
+</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3"><B>Spec Citations:</B></td>
+</tr>
+<tr>
+<td colspan="3"><A href="#ftstopwordoption">#ftstopwordoption</A></td>
+</tr>
+<tr>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
+</tr>
+<tr>
+<td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-q1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-q1.xq</A></td>
+</tr>
+<tr>
+<td colspan="3"><B>Inputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal-data">principal-data</A></td><td>
+                  Source ID:
+                  <A href="#emptydoc">emptydoc</A></td><td></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#stopwords">stopwords</A></td><td>
+                  Source ID:
+                  <A href="#stopwords6">stopwords6</A></td><td>(as auxiliary URI)</td>
+</tr>
+<tr>
+<td colspan="3"><B>Outputs:</B></td>
+</tr>
+<tr>
+<td>
+                  Role:
+                  <A href="#principal">principal</A></td><td>
+                  Comparator:
+                  <A href="#Text">Text</A></td><td><A href="ExpectedTestResults/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q10.txt">
+                     Results/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/MatchOptions/FTStopWord/ftstopword-results-q10.txt</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0006">
+                     err:FTST0006</A></td>
+</tr>
+<tr>
+<td colspan="3">
+                  Error:
+                  <A href="http://www.w3.org/TR/xquery/#ERRFTST0008">
+                     err:FTST0008</A></td>
 </tr>
 </table>
 <p></p>
@@ -26310,7 +26681,9 @@
 <td colspan="3"><A href="#id-ftunit-option">#id-ftunit-option</A></td>
 </tr>
 <tr>
-<td colspan="2"><B>Query:</B></td><td></td>
+<td colspan="2"><B>Query:</B></td><td>
+                  (XPath 2.0)
+               </td>
 </tr>
 <tr>
 <td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/FTWindow-sentences1.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/FTWindow-sentences1.xq</A></td>
@@ -26581,9 +26954,7 @@
 <td colspan="3"><A href="#id-ftunit-option">#id-ftunit-option</A></td>
 </tr>
 <tr>
-<td colspan="2"><B>Query:</B></td><td>
-                  (XPath 2.0)
-               </td>
+<td colspan="2"><B>Query:</B></td><td></td>
 </tr>
 <tr>
 <td colspan="3"><A href="Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/FTWindow-paragraphs3.xq">Queries/XQuery/Expressions/Operators/CompExpr/FTContainsExpr/FTSelection/PositionalFilters/FTWindow/FTWindow-paragraphs3.xq</A></td>
