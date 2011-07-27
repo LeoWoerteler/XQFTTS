@@ -6,6 +6,6 @@
    tokenization may see a variance of this test, reporting no match.
  :)
 
-declase ft-option using stop words "http://example.com/HamletStopWordList.xml";
+declare ft-option using stop words at "http://example.com/HamletStopWordList.xml";
 
 "to be or not to be" contains text "to"
