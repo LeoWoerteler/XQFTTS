@@ -23,13 +23,7 @@
               <xqx:predicates>
                 <xqxft:ftContainsExpr>
                   <xqxft:ftRangeExpr>
-                    <xqx:pathExpr>
-                      <xqx:stepExpr>
-                        <xqx:filterExpr>
-                          <xqx:contextItemExpr/>
-                        </xqx:filterExpr>
-                      </xqx:stepExpr>
-                    </xqx:pathExpr>
+                    <xqx:contextItemExpr/>
                   </xqxft:ftRangeExpr>
                   <xqxft:ftSelectionExpr>
                     <xqxft:ftSelection>

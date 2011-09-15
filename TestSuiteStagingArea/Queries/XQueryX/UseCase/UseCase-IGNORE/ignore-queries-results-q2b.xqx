@@ -40,13 +40,7 @@
           <xqx:predicates>
             <xqxft:ftContainsExpr>
               <xqxft:ftRangeExpr>
-                <xqx:pathExpr>
-                  <xqx:stepExpr>
-                    <xqx:filterExpr>
-                      <xqx:contextItemExpr/>
-                    </xqx:filterExpr>
-                  </xqx:stepExpr>
-                </xqx:pathExpr>
+                <xqx:contextItemExpr/>
               </xqxft:ftRangeExpr>
               <xqxft:ftSelectionExpr>
                 <xqxft:ftSelection>
@@ -108,13 +102,7 @@ tested at any computer workstation or in a lab</xqx:value>
                     <xqx:nameTest>title</xqx:nameTest>
                   </xqx:stepExpr>
                 </xqx:pathExpr>
-                <xqx:pathExpr>
-                  <xqx:stepExpr>
-                    <xqx:filterExpr>
-                      <xqx:contextItemExpr/>
-                    </xqx:filterExpr>
-                  </xqx:stepExpr>
-                </xqx:pathExpr>
+                <xqx:contextItemExpr/>
               </xqx:sequenceExpr>
             </xqx:sequenceExpr>
           </xqx:filterExpr>
